@@ -33,7 +33,7 @@ class SnippetBasic extends StatelessWidget {
                 icon: Icons.code,
                 onPressed: () =>
                     Navigator.of(context).pushNamed(AppRoutes.SNIPPET_ADVANCED),
-              )
+              ),
             ],
           ),
         ),
