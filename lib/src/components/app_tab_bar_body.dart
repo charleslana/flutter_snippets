@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
 
-class AppTabBarCode extends StatelessWidget {
+class AppTabBarBody extends StatelessWidget {
   final Widget? widget;
   final String data;
 
-  const AppTabBarCode({
+  const AppTabBarBody({
     Key? key,
     this.widget,
     required this.data,
