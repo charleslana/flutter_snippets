@@ -1,0 +1,57 @@
+// variável
+// pode ser alterada no escopo
+// declarando com "var" não pode tipar
+
+void main() {
+    var example1 = 'Primeiro';
+    example1 = 'Primeiro alterado';
+    print(example1); 
+}
+
+// variável com tipagem
+
+void main() {
+    int example2 = 2;
+    print(example2); 
+}
+
+// constantes
+// pode tipar
+
+void main() {
+    const String example3 = 'Terceiro';
+    // não pode ser declarado novamente em sua inicialização
+    // example3 = 'Terceiro alterado';
+    print(example3); 
+}
+
+// final
+// pode tipar
+
+void main() {
+    final String example4 = 'Quarto';
+    // não pode ser declarado novamente em sua inicialização
+    // example4 = 'Quarto alterado';
+    print(example4); 
+}
+
+// static em classes
+
+class Example5 {
+  static const String example5 = 'Quinto';
+}
+
+void main() {
+  final _example5 = Example5.example5;
+  print(_example5);
+}
+
+// late
+// pode tipar
+// é inicializada lentamente, até que a variável seja declarada
+
+void main() {
+  late bool example6;
+  example6 = true;
+  print(example6);
+}

@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_snippets/src/constants/app_constants.dart';
+
+class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
+  final String text;
+
+  const AppBarWithTab({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Size get preferredSize => Size.fromHeight(130);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      title: Text(text),
+      bottom: TabBar(
+        tabs: [
+          Tab(
+            icon: Icon(Icons.visibility),
+            text: AppConstants.TEXT_BAR_WITH_BAR_EXAMPLE,
+          ),
+          Tab(
+            icon: Icon(Icons.code),
+            text: AppConstants.TEXT_BAR_WITH_BAR_CODE,
+          ),
+        ],
+      ),
+    );
+  }
+}

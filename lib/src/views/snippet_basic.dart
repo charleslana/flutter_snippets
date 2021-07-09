@@ -31,8 +31,8 @@ class SnippetBasic extends StatelessWidget {
               AppCard(
                 text: AppConstants.TEXT_CARD_BASIC_VARIABLES,
                 icon: Icons.code,
-                onPressed: () =>
-                    Navigator.of(context).pushNamed(AppRoutes.SNIPPET_ADVANCED),
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(AppRoutes.SNIPPET_VARIABLES),
               ),
             ],
           ),
