@@ -1,0 +1,10 @@
+// concatenação de strings
+
+void main() {
+  int x = 100, y = 200;
+  
+  print('x é ' + x.toString()); // x é 100
+  print('x é $x'); // x é 100
+  print('x é ${x}'); // x é 100
+  print('x + y é ${x + y}'); // x + y é 300
+}

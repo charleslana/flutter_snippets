@@ -52,6 +52,12 @@ class SnippetBasic extends StatelessWidget {
                 onPressed: () => Navigator.of(context)
                     .pushNamed(AppRoutes.SNIPPET_MATH_OPERATIONS),
               ),
+              AppCard(
+                text: AppConstants.TEXT_CARD_BASIC_CONCAT_STRINGS,
+                icon: Icons.text_snippet,
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(AppRoutes.SNIPPET_CONCAT_STRINGS),
+              ),
             ],
           ),
         ),

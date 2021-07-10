@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_comments.dart';
+import 'package:flutter_snippets/src/snippets/snippet_concat_strings.dart';
 import 'package:flutter_snippets/src/snippets/snippet_math_operations.dart';
 import 'package:flutter_snippets/src/snippets/snippet_types.dart';
 import 'package:flutter_snippets/src/snippets/snippet_variables.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
           AppRoutes.SNIPPET_VARIABLES: (_) => SnippetVariables(),
           AppRoutes.SNIPPET_TYPES: (_) => SnippetTypes(),
           AppRoutes.SNIPPET_MATH_OPERATIONS: (_) => SnippetMathOperations(),
+          AppRoutes.SNIPPET_CONCAT_STRINGS: (_) => SnippetConcatStrings(),
         },
       ),
     );
