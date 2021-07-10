@@ -21,12 +21,18 @@ class SnippetBasic extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
-                  AppConstants.TEXT_TITLE_BASIC,
+                  AppConstants.TEXT_CARD_BASIC_DART,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
                   ),
                 ),
+              ),
+              AppCard(
+                text: AppConstants.TEXT_CARD_BASIC_COMMENTS,
+                icon: Icons.textsms,
+                onPressed: () =>
+                    Navigator.of(context).pushNamed(AppRoutes.SNIPPET_COMMENTS),
               ),
               AppCard(
                 text: AppConstants.TEXT_CARD_BASIC_VARIABLES,

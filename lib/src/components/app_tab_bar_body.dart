@@ -39,6 +39,7 @@ class AppTabBarBody extends StatelessWidget {
           child: Card(
             elevation: 0,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: EdgeInsets.all(10),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_comments.dart';
 import 'package:flutter_snippets/src/snippets/snippet_types.dart';
 import 'package:flutter_snippets/src/snippets/snippet_variables.dart';
 import 'package:flutter_snippets/src/views/snippet_advanced.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
           AppRoutes.SNIPPET_ADVANCED: (_) => SnippetAdvanced(),
           AppRoutes.SNIPPET_WIDGETS: (_) => SnippetWidgets(),
           AppRoutes.SNIPPET_ANIMATIONS: (_) => SnippetAnimations(),
+          AppRoutes.SNIPPET_COMMENTS: (_) => SnippetComments(),
           AppRoutes.SNIPPET_VARIABLES: (_) => SnippetVariables(),
           AppRoutes.SNIPPET_TYPES: (_) => SnippetTypes(),
         },
