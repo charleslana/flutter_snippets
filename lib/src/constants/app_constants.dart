@@ -14,4 +14,9 @@ class AppConstants {
   static const TEXT_CARD_BASIC_NULL_SAFETY = 'Segurança Nula';
   static const TEXT_CARD_BASIC_FLUX_CONTROL = 'Controle de Fluxo';
   static const TEXT_CARD_BASIC_FUNCTIONS_PARAMETERS = 'Funções e Parâmetros';
+  static const TEXT_CARD_ADVANCED_DART = 'Dart Avançado';
+  static const TEXT_CARD_ADVANCED_CLASSES = 'Classes';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_CLASSES = 'Classes';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_PRIVATE_PUBLIC =
+      'Propriedades privadas e públicas';
 }

@@ -55,3 +55,12 @@ void main() {
   example6 = true;
   print(example6);
 }
+
+// void
+
+void main() {
+  // variable void
+  void text = 'Text';
+  
+  // print(text); // não há retorno
+}

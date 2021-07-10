@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_classes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_classes_private_public.dart';
 import 'package:flutter_snippets/src/snippets/snippet_comments.dart';
 import 'package:flutter_snippets/src/snippets/snippet_concat_strings.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flux_control.dart';
@@ -11,6 +13,7 @@ import 'package:flutter_snippets/src/snippets/snippet_variables.dart';
 import 'package:flutter_snippets/src/views/snippet_advanced.dart';
 import 'package:flutter_snippets/src/views/snippet_animations.dart';
 import 'package:flutter_snippets/src/views/snippet_basic.dart';
+import 'package:flutter_snippets/src/views/snippet_filter.dart';
 import 'package:flutter_snippets/src/views/snippet_widgets.dart';
 
 void main() {
@@ -43,6 +46,10 @@ class MyApp extends StatelessWidget {
           AppRoutes.SNIPPET_FLUX_CONTROL: (_) => SnippetFluxControl(),
           AppRoutes.SNIPPET_FUNCTIONS_PARAMETERS: (_) =>
               SnippetFunctionsParameters(),
+          AppRoutes.SNIPPET_FILTER: (_) => SnippetFilter(),
+          AppRoutes.SNIPPET_CLASSES: (_) => SnippetClasses(),
+          AppRoutes.SNIPPET_CLASSES_PRIVATE_PUBLIC: (_) =>
+              SnippetClassesPrivatePublic(),
         },
       ),
     );
