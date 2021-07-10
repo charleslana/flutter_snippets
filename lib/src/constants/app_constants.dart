@@ -12,4 +12,5 @@ class AppConstants {
   static const TEXT_CARD_BASIC_MATH_OPERATIONS = 'Operações Matemáticas';
   static const TEXT_CARD_BASIC_CONCAT_STRINGS = 'Concatenação de Strings';
   static const TEXT_CARD_BASIC_NULL_SAFETY = 'Segurança Nula';
+  static const TEXT_CARD_BASIC_FLUX_CONTROL = 'Controle de Fluxo';
 }

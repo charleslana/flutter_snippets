@@ -38,9 +38,20 @@ class AppTabBarBody extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: Card(
             elevation: 0,
-            child: Column(
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Text(
+                      data,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Align(
@@ -54,17 +65,6 @@ class AppTabBarBody extends StatelessWidget {
                           color: Colors.white,
                         ),
                         onPressed: () => AppUtils().copyCode(data, context),
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: Text(
-                      data,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
                       ),
                     ),
                   ),

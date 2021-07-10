@@ -64,6 +64,12 @@ class SnippetBasic extends StatelessWidget {
                 onPressed: () => Navigator.of(context)
                     .pushNamed(AppRoutes.SNIPPET_NULL_SAFETY),
               ),
+              AppCard(
+                text: AppConstants.TEXT_CARD_BASIC_FLUX_CONTROL,
+                icon: Icons.repeat,
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(AppRoutes.SNIPPET_FLUX_CONTROL),
+              ),
             ],
           ),
         ),

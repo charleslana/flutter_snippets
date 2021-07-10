@@ -1,0 +1,56 @@
+// controle de fluxo
+// if else
+
+void main() {
+  final bool condition = false;
+
+  if (condition) {
+    print(true);
+  } else {
+    print(false);
+  }
+
+  // switch case
+
+  final String command = 'APPROVED';
+
+  switch (command) {
+    case 'PENDING':
+      print(command);
+      break;
+    case 'APPROVED':
+      print(command);
+      break;
+    case 'DENIED':
+      print(command);
+      break;
+    default:
+      print(command);
+  }
+
+  // while
+
+  late bool isDone = true;
+
+  while (isDone) {
+    print('join');
+    isDone = false;
+  }
+
+  do {
+    print('rejoin');
+    isDone = true;
+  } while (!isDone);
+
+  // for
+
+  for (var i = 0; i < 5; i++) {
+    print(i);
+  }
+
+  // for each
+  final List<int> numbers = [0, 1, 2, 3, 4, 5];
+  for (var number in numbers) {
+    print(number);
+  }
+}
