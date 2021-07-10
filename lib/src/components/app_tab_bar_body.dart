@@ -13,6 +13,8 @@ class AppTabBarBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DefaultTabController.of(context)!.animateTo(0);
+
     return TabBarView(
       children: [
         Padding(

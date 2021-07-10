@@ -1,0 +1,13 @@
+void main() {
+  int number = 1; // número inteiro
+
+  double numberDecimal = 1.0; // número decimal
+
+  num numberBoth = 1; // número inteiro ou decimal
+
+  String string = 'Hello'; // texto
+
+  bool isActive = true; // valor lógico
+
+  dynamic mutable = '0string'; // valor mutável , indiferente
+}
