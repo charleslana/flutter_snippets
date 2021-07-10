@@ -36,7 +36,7 @@ class SnippetBasic extends StatelessWidget {
               ),
               AppCard(
                 text: AppConstants.TEXT_CARD_BASIC_VARIABLES,
-                icon: Icons.code,
+                icon: Icons.memory,
                 onPressed: () => Navigator.of(context)
                     .pushNamed(AppRoutes.SNIPPET_VARIABLES),
               ),
@@ -45,6 +45,12 @@ class SnippetBasic extends StatelessWidget {
                 icon: Icons.title,
                 onPressed: () =>
                     Navigator.of(context).pushNamed(AppRoutes.SNIPPET_TYPES),
+              ),
+              AppCard(
+                text: AppConstants.TEXT_CARD_BASIC_MATH_OPERATIONS,
+                icon: Icons.calculate,
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(AppRoutes.SNIPPET_MATH_OPERATIONS),
               ),
             ],
           ),

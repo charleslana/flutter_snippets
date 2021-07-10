@@ -9,4 +9,5 @@ class AppConstants {
   static const TEXT_CARD_BASIC_COMMENTS = 'Comentários';
   static const TEXT_CARD_BASIC_VARIABLES = 'Variáveis';
   static const TEXT_CARD_BASIC_TYPES = 'Tipagens';
+  static const TEXT_CARD_BASIC_MATH_OPERATIONS = 'Operações Matemáticas';
 }

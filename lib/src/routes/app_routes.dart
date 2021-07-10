@@ -6,4 +6,5 @@ class AppRoutes {
   static const SNIPPET_COMMENTS = '/snippet-comments';
   static const SNIPPET_VARIABLES = '/snippet-variables';
   static const SNIPPET_TYPES = '/snippet-types';
+  static const SNIPPET_MATH_OPERATIONS = '/snippet-math-operations';
 }
