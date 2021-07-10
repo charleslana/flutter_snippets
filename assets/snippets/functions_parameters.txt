@@ -1,0 +1,51 @@
+// funções
+
+void main() {
+  int add(int x, int y) {
+    return x + y;
+  }
+
+  print(add(5, 2));
+
+  // função de seta
+  // quando há apenas um resultado
+
+  int sum(int x, int y) => x + y;
+
+  print(sum(1, 2));
+
+  // parâmetro opcional
+  // o parâmetro "y" tem um valor padrão e pode ou nao ser usado
+
+  int sumOptional(int x, [int y = 1]) {
+    return x + y;
+  }
+
+  print(sumOptional(1, 1));
+  print(sumOptional(1));
+
+  // parâmetro nomeado
+  // necessário utilizar o caractere "{}" entre os parâmetros
+  // para ser o campo obrigatório usa o "required" antes do parâmetro
+  // campo não obrigatório utiliza o caractere "?" no final da tipagem
+  // nomeados não precisa de ordem especifica
+
+  void setConfig({
+    required String basePath,
+    required String appPath,
+    required int retry,
+    required int maxThread,
+    required String defaultController,
+    String? noRequired,
+  }) {
+    print(appPath);
+  }
+
+  setConfig(
+    appPath: '/app',
+    basePath: '/',
+    retry: 10,
+    maxThread: 4,
+    defaultController: 'Main',
+  );
+}
