@@ -1,0 +1,40 @@
+// null safety
+// válida se a variável é nula e retorna um valor padrão
+
+void main() {
+  String? input;
+  String defaultValue = 'Padrão';
+  String output;
+  
+  output = input ?? defaultValue;
+  
+  if (input != null) {
+    output = input;
+  } else {
+    output = defaultValue;
+  }
+  
+  print(output);
+}
+
+// exemplo em classe
+// propriedade nula
+// a propriedade "value2" não é requerida
+// o caractere "?" aplica que deverá ser nulo
+// enquanto o caractere "!" faz com que o valor não seja nulo
+
+class Calculate {
+  late int value1;
+  late int? value2;
+
+  Calculate({required this.value1, this.value2});
+
+  int sum() {
+    return value2 == null ? value1 : (value1 + value2!);
+  }
+}
+
+void main() {
+  final sum = Calculate(value1: 1).sum();
+  print(sum);
+}

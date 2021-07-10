@@ -58,6 +58,12 @@ class SnippetBasic extends StatelessWidget {
                 onPressed: () => Navigator.of(context)
                     .pushNamed(AppRoutes.SNIPPET_CONCAT_STRINGS),
               ),
+              AppCard(
+                text: AppConstants.TEXT_CARD_BASIC_NULL_SAFETY,
+                icon: Icons.vpn_key,
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(AppRoutes.SNIPPET_NULL_SAFETY),
+              ),
             ],
           ),
         ),

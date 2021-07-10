@@ -8,4 +8,5 @@ class AppRoutes {
   static const SNIPPET_TYPES = '/snippet-types';
   static const SNIPPET_MATH_OPERATIONS = '/snippet-math-operations';
   static const SNIPPET_CONCAT_STRINGS = '/snippet-concat-strings';
+  static const SNIPPET_NULL_SAFETY = '/snippet-null-safety';
 }

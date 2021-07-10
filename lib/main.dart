@@ -3,6 +3,7 @@ import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_comments.dart';
 import 'package:flutter_snippets/src/snippets/snippet_concat_strings.dart';
 import 'package:flutter_snippets/src/snippets/snippet_math_operations.dart';
+import 'package:flutter_snippets/src/snippets/snippet_null_safety.dart';
 import 'package:flutter_snippets/src/snippets/snippet_types.dart';
 import 'package:flutter_snippets/src/snippets/snippet_variables.dart';
 import 'package:flutter_snippets/src/views/snippet_advanced.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           AppRoutes.SNIPPET_TYPES: (_) => SnippetTypes(),
           AppRoutes.SNIPPET_MATH_OPERATIONS: (_) => SnippetMathOperations(),
           AppRoutes.SNIPPET_CONCAT_STRINGS: (_) => SnippetConcatStrings(),
+          AppRoutes.SNIPPET_NULL_SAFETY: (_) => SnippetNullSafety()
         },
       ),
     );
