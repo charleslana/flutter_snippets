@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_classes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_classes_getter_setter.dart';
 import 'package:flutter_snippets/src/snippets/snippet_classes_private_public.dart';
 import 'package:flutter_snippets/src/snippets/snippet_comments.dart';
 import 'package:flutter_snippets/src/snippets/snippet_concat_strings.dart';
@@ -50,6 +51,8 @@ class MyApp extends StatelessWidget {
           AppRoutes.SNIPPET_CLASSES: (_) => SnippetClasses(),
           AppRoutes.SNIPPET_CLASSES_PRIVATE_PUBLIC: (_) =>
               SnippetClassesPrivatePublic(),
+          AppRoutes.SNIPPET_CLASSES_GETTER_SETTER: (_) =>
+              SnippetClassesGetterSetter(),
         },
       ),
     );

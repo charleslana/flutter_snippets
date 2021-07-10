@@ -50,6 +50,12 @@ class SnippetAdvanced extends StatelessWidget {
                         onPressed: () => Navigator.of(context).pushNamed(
                             AppRoutes.SNIPPET_CLASSES_PRIVATE_PUBLIC),
                       ),
+                      SnippetFilterListModel(
+                        text: AppConstants
+                            .TEXT_CARD_ADVANCED_CLASSES_FILTER_GETTER_SETTER,
+                        onPressed: () => Navigator.of(context)
+                            .pushNamed(AppRoutes.SNIPPET_CLASSES_GETTER_SETTER),
+                      ),
                     ],
                     bottomNavigationBarIndex: 1,
                   ),

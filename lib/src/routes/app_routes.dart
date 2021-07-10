@@ -15,4 +15,5 @@ class AppRoutes {
   static const SNIPPET_CLASSES = '/snippet-classes';
   static const SNIPPET_CLASSES_PRIVATE_PUBLIC =
       '/snippet-classes-private-public';
+  static const SNIPPET_CLASSES_GETTER_SETTER = '/snippet-classes-getter-setter';
 }

@@ -19,4 +19,6 @@ class AppConstants {
   static const TEXT_CARD_ADVANCED_CLASSES_FILTER_CLASSES = 'Classes';
   static const TEXT_CARD_ADVANCED_CLASSES_FILTER_PRIVATE_PUBLIC =
       'Propriedades privadas e públicas';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_GETTER_SETTER =
+      'Getter e Setter';
 }
