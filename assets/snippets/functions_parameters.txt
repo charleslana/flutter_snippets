@@ -8,7 +8,7 @@ void main() {
   print(add(5, 2));
 
   // função de seta
-  // quando há apenas um resultado
+  // quando há apenas um trecho
 
   int sum(int x, int y) => x + y;
 

@@ -3,10 +3,10 @@
 class People {
   late String _name;
 
-  // Getter
+  // getter
   String get name => _name;
 
-  // Setter
+  // setter
   void set name(String name) => _name = name;
 
   String show() => _name;

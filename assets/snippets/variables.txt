@@ -59,7 +59,7 @@ void main() {
 // void
 
 void main() {
-  // variable void
+  // variável void
   void text = 'Text';
   
   // print(text); // não há retorno

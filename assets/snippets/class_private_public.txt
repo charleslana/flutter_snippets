@@ -1,4 +1,4 @@
-// propriedades privada e pública
+// propriedades privadas e públicas
 // para uso de privado usa o caractere "_" antes do campo
 
 class MyClass {
