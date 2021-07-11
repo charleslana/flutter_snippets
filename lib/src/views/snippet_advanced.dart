@@ -148,6 +148,30 @@ class SnippetAdvanced extends StatelessWidget {
                   ),
                 ),
               ),
+              AppCard(
+                text: AppConstants.TEXT_CARD_ADVANCED_LIST,
+                icon: Icons.list,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.SNIPPET_SHOW,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.TXT_SNIPPET_LIST,
+                    title: AppConstants.TEXT_CARD_ADVANCED_LIST,
+                    bottomNavigationBarIndex: 1,
+                  ),
+                ),
+              ),
+              AppCard(
+                text: AppConstants.TEXT_CARD_ADVANCED_MAP,
+                icon: Icons.map,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.SNIPPET_SHOW,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.TXT_SNIPPET_MAP,
+                    title: AppConstants.TEXT_CARD_ADVANCED_MAP,
+                    bottomNavigationBarIndex: 1,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

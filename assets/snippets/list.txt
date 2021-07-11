@@ -1,0 +1,69 @@
+// lista
+// adicionar e remover
+// percorrer
+
+class Product {
+  final String _title;
+  final bool _active;
+  final double _price;
+
+  Product(this._title, this._active, this._price);
+
+  double get price => _price;
+
+  bool get active => _active;
+
+  String get title => _title;
+}
+
+class ShoppingCart {
+  List<Product> _products = [];
+
+  List<Product> get products => this._products;
+
+  void addItem(Product product) {
+    this.products.add(product);
+  }
+
+  void removeItem(Product product) {
+    this.products.remove(product);
+  }
+
+  double total() {
+    double total = 0;
+    this.products.forEach((Product product) {
+      total += product.price;
+    });
+
+    return total;
+  }
+
+  double totalOnlyActive() {
+    double total = 0;
+    this.products.forEach((Product product) {
+      if (product._active) {
+        total += product.price;
+      }
+    });
+
+    return total;
+  }
+}
+
+void main() {
+  final shopping = ShoppingCart();
+
+  final pen = Product('Caneta', true, 4.75);
+  shopping.addItem(pen);
+
+  final pencil = Product('Lápis', false, 1.25);
+  shopping.addItem(pencil);
+
+  print('Total da compra: ${shopping.total()}');
+
+  print('Total de apenas produto ativo: ${shopping.totalOnlyActive()}');
+
+  shopping.removeItem(pencil);
+
+  print('Total com o Lápis removido: ${shopping.total()}');
+}
