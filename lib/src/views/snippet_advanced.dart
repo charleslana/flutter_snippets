@@ -91,6 +91,58 @@ class SnippetAdvanced extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SnippetFilterListModel(
+                        text: AppConstants
+                            .TEXT_CARD_ADVANCED_CLASSES_FILTER_EXTENDS,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.SNIPPET_SHOW,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.TXT_SNIPPET_CLASS_EXTENDS,
+                            title: AppConstants
+                                .TEXT_CARD_ADVANCED_CLASSES_FILTER_EXTENDS,
+                            bottomNavigationBarIndex: 1,
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppConstants
+                            .TEXT_CARD_ADVANCED_CLASSES_FILTER_ABSTRACT,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.SNIPPET_SHOW,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.TXT_SNIPPET_CLASS_ABSTRACT,
+                            title: AppConstants
+                                .TEXT_CARD_ADVANCED_CLASSES_FILTER_ABSTRACT,
+                            bottomNavigationBarIndex: 1,
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppConstants
+                            .TEXT_CARD_ADVANCED_CLASSES_FILTER_IMPLEMENTS,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.SNIPPET_SHOW,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.TXT_SNIPPET_CLASS_IMPLEMENTS,
+                            title: AppConstants
+                                .TEXT_CARD_ADVANCED_CLASSES_FILTER_IMPLEMENTS,
+                            bottomNavigationBarIndex: 1,
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppConstants
+                            .TEXT_CARD_ADVANCED_CLASSES_FILTER_POLYMORPHISM,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.SNIPPET_SHOW,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.TXT_SNIPPET_CLASS_POLYMORPHISM,
+                            title: AppConstants
+                                .TEXT_CARD_ADVANCED_CLASSES_FILTER_POLYMORPHISM,
+                            bottomNavigationBarIndex: 1,
+                          ),
+                        ),
+                      ),
                     ],
                     bottomNavigationBarIndex: 1,
                   ),

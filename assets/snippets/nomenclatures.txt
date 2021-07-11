@@ -1,0 +1,17 @@
+// nomenclaturas
+
+// para classe utiliza-se o PascalCase
+
+class MyClass {}
+
+// para variável de propriedade ou escopo utiliza-se o camelCase
+
+void myCamelCase = null;
+
+// para constantes utiliza-se o snake_case com caixa alta
+
+const MY_SNAKE_CASE = null;
+
+// para rotas de navegação utiliza-se o kebab-case
+
+final String myRoute = 'my-route';

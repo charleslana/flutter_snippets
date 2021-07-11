@@ -1,0 +1,97 @@
+// estender classe
+
+class Animal {
+  String name = 'Animal';
+
+  void eat() {
+    print('Animais comem');
+  }
+}
+
+class Bird extends Animal {
+  @override
+  String name = 'Pássaro';
+
+  void fly() {
+    print('Pássaros voam');
+  }
+}
+
+void main() {
+  var animal = Animal();
+  print(animal.name);
+  animal.eat();
+
+  var bird = Bird();
+  print(bird.name);
+  bird.eat();
+  bird.fly();
+}
+
+// estender várias classes
+// neste caso a uma limitação da classe estendida
+// a classe estendida não deve estender de outra
+
+class Vehicle {
+  void move() {
+    print('move');
+  }
+}
+
+class FlyObject {
+  void fly() {
+    print('voa');
+  }
+}
+
+class Airplane extends Vehicle with FlyObject {
+  void fly() => print('voa');
+}
+
+class Animal {
+  void eat() {
+    print('come');
+  }
+}
+
+class Bird extends Animal with FlyObject {
+  void fly() {
+    print('voa');
+  }
+}
+
+void main() {
+  var airplane = Airplane();
+  airplane.move();
+  airplane.fly();
+
+  var bird = Bird();
+  bird.eat();
+  bird.fly();
+}
+
+// classe estendida com o with
+
+class Parent1 {
+  void function1() => print('function 1');
+}
+
+class Parent2 {
+  void function2() => print('function 2');
+}
+
+class Parent3 {
+  void function3() => print('function 3');
+}
+
+class Child with Parent1, Parent2, Parent3 {
+  void function4() => print('function 4');
+}
+
+void main() {
+  var child = Child();
+  child.function1();
+  child.function2();
+  child.function3();
+  child.function4();
+}

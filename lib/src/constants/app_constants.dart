@@ -8,6 +8,7 @@ class AppConstants {
   static const TEXT_CARD_BASIC_DART = 'Dart Básico';
   static const TEXT_CARD_BASIC_COMMENTS = 'Comentários';
   static const TEXT_CARD_BASIC_VARIABLES = 'Variáveis';
+  static const TEXT_CARD_BASIC_NOMENCLATURES = 'Nomenclaturas';
   static const TEXT_CARD_BASIC_TYPES = 'Tipagens';
   static const TEXT_CARD_BASIC_MATH_OPERATIONS = 'Operações Matemáticas';
   static const TEXT_CARD_BASIC_CONCAT_STRINGS = 'Concatenação de Strings';
@@ -22,9 +23,14 @@ class AppConstants {
   static const TEXT_CARD_ADVANCED_CLASSES_FILTER_GETTER_SETTER =
       'Getter e Setter';
   static const TEXT_CARD_ADVANCED_CLASSES_FILTER_CONSTRUCTOR = 'Construtor';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_EXTENDS = 'Estender';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_ABSTRACT = 'Abstrato';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_IMPLEMENTS = 'Implementos';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_POLYMORPHISM = 'Polimorfismo';
 
   static const TXT_SNIPPET_COMMENTS = 'comments';
   static const TXT_SNIPPET_VARIABLES = 'variables';
+  static const TXT_SNIPPET_NOMENCLATURES = 'nomenclatures';
   static const TXT_SNIPPET_TYPES = 'types';
   static const TXT_SNIPPET_MATH_OPERATIONS = 'math_operations';
   static const TXT_SNIPPET_CONCAT_STRINGS = 'concat_strings';
@@ -35,4 +41,8 @@ class AppConstants {
   static const TXT_SNIPPET_CLASS_PRIVATE_PUBLIC = 'class_private_public';
   static const TXT_SNIPPET_CLASS_GETTER_SETTER = 'getter_setter';
   static const TXT_SNIPPET_CLASS_CONSTRUCTOR = 'constructor';
+  static const TXT_SNIPPET_CLASS_EXTENDS = 'extends';
+  static const TXT_SNIPPET_CLASS_ABSTRACT = 'abstract';
+  static const TXT_SNIPPET_CLASS_IMPLEMENTS = 'implements';
+  static const TXT_SNIPPET_CLASS_POLYMORPHISM = 'polymorphism';
 }

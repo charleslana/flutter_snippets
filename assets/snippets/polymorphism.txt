@@ -1,0 +1,42 @@
+// polimorfismo ou sobrescrever
+
+class Vehicle {
+  String name = 'Veículo';
+
+  void move() {
+    print('$name move');
+  }
+
+  void addFuel(int fuel) {}
+}
+
+class Airplane extends Vehicle {
+  late int _fuel;
+
+  // sobrescrita
+
+  @override
+  String name = 'Airbus A380';
+
+  // sobrescrita
+  
+  @override
+  void addFuel(int fuel) {
+    _fuel = fuel;
+  }
+
+  void fly() {
+    print('$name voa com $_fuel litro(s)');
+  }
+}
+
+void main() {
+  var vehicle = Vehicle();
+  print(vehicle.name);
+  vehicle.move();
+
+  var airPlane = Airplane();
+  print(airPlane.name);
+  airPlane.addFuel(15);
+  airPlane.fly();
+}

@@ -1,0 +1,28 @@
+// implementação ou interface
+// usa-se o implements
+
+abstract class ORMInterface {
+  void fromJson(Map<String, dynamic> _map);
+}
+
+abstract class ORM implements ORMInterface {
+  String collection = 'padrão';
+
+  void first(Map<String, dynamic> _map2) {
+    print('Coleção $collection');
+  }
+}
+
+class Person extends ORM {
+  String collection = 'personagens';
+
+  void fromJson(Map<String, dynamic> _map) {
+    print('Aqui é obrigatório');
+  }
+}
+
+void main() {
+  var person = Person();
+  person.first({});
+  person.fromJson({});
+}
