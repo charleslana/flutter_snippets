@@ -78,6 +78,19 @@ class SnippetAdvanced extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SnippetFilterListModel(
+                        text: AppConstants
+                            .TEXT_CARD_ADVANCED_CLASSES_FILTER_CONSTRUCTOR,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.SNIPPET_SHOW,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.TXT_SNIPPET_CLASS_CONSTRUCTOR,
+                            title: AppConstants
+                                .TEXT_CARD_ADVANCED_CLASSES_FILTER_CONSTRUCTOR,
+                            bottomNavigationBarIndex: 1,
+                          ),
+                        ),
+                      ),
                     ],
                     bottomNavigationBarIndex: 1,
                   ),

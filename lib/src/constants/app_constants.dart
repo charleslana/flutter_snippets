@@ -21,6 +21,7 @@ class AppConstants {
       'Propriedades privadas e públicas';
   static const TEXT_CARD_ADVANCED_CLASSES_FILTER_GETTER_SETTER =
       'Getter e Setter';
+  static const TEXT_CARD_ADVANCED_CLASSES_FILTER_CONSTRUCTOR = 'Construtor';
 
   static const TXT_SNIPPET_COMMENTS = 'comments';
   static const TXT_SNIPPET_VARIABLES = 'variables';
@@ -33,4 +34,5 @@ class AppConstants {
   static const TXT_SNIPPET_CLASS = 'class';
   static const TXT_SNIPPET_CLASS_PRIVATE_PUBLIC = 'class_private_public';
   static const TXT_SNIPPET_CLASS_GETTER_SETTER = 'getter_setter';
+  static const TXT_SNIPPET_CLASS_CONSTRUCTOR = 'constructor';
 }
