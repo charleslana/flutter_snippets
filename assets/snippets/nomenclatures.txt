@@ -8,6 +8,10 @@ class MyClass {}
 
 void myCamelCase = null;
 
+// para nomes de arquivos do dart utiliza-se snake_case
+
+my_snake_case.dart
+
 // para constantes utiliza-se o snake_case com caixa alta
 
 const MY_SNAKE_CASE = null;
