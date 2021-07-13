@@ -33,6 +33,11 @@ class AppConstants {
   static const TEXT_CARD_ADVANCED_LIST = 'Lista';
   static const TEXT_CARD_ADVANCED_MAP = 'Mapeamento';
 
+  static const TEXT_CARD_WIDGETS_CREATE = 'Criação';
+  static const TEXT_CARD_WIDGET_STATELESS = 'Widget Sem estado';
+  static const TEXT_CARD_WIDGET_STATEFUL = 'Widget Com estado';
+  static const TEXT_CARD_WIDGETS_BASIC = 'Widgets Básico';
+
   static const TXT_SNIPPET_COMMENTS = 'comments';
   static const TXT_SNIPPET_VARIABLES = 'variables';
   static const TXT_SNIPPET_NOMENCLATURES = 'nomenclatures';
@@ -52,4 +57,7 @@ class AppConstants {
   static const TXT_SNIPPET_CLASS_POLYMORPHISM = 'polymorphism';
   static const TXT_SNIPPET_LIST = 'list';
   static const TXT_SNIPPET_MAP = 'map';
+
+  static const TXT_SNIPPET_WIDGET_STATELESS = 'widget_stateless';
+  static const TXT_SNIPPET_WIDGET_STATEFUL = 'widget_stateful';
 }

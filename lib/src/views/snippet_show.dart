@@ -17,7 +17,7 @@ class _SnippetShowState extends State<SnippetShow>
   SnippetShowModel? _snippet;
   String? _data;
   bool _isLoading = true;
-  TabController? _tabController;
+  late TabController _tabController;
 
   Future<void> _loadData() async {
     final loadedData = await TxtService().loadData(_snippet!.data);
@@ -31,6 +31,12 @@ class _SnippetShowState extends State<SnippetShow>
   void initState() {
     super.initState();
     _tabController = TabController(vsync: this, length: 2);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController.dispose();
   }
 
   @override
@@ -52,12 +58,12 @@ class _SnippetShowState extends State<SnippetShow>
           : Scaffold(
               appBar: AppBarWithTab(
                 text: _snippet!.title,
-                tabController: _tabController!,
+                tabController: _tabController,
               ),
               body: AppTabBarBody(
                 widget: _snippet!.widget,
                 data: _data!,
-                tabController: _tabController!,
+                tabController: _tabController,
               ),
               bottomNavigationBar: AppBottomNavigationBar(
                 index: _snippet!.bottomNavigationBarIndex,
