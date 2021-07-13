@@ -12,10 +12,12 @@ class SnippetShow extends StatefulWidget {
   _SnippetShowState createState() => _SnippetShowState();
 }
 
-class _SnippetShowState extends State<SnippetShow> {
+class _SnippetShowState extends State<SnippetShow>
+    with TickerProviderStateMixin {
   SnippetShowModel? _snippet;
   String? _data;
   bool _isLoading = true;
+  TabController? _tabController;
 
   Future<void> _loadData() async {
     final loadedData = await TxtService().loadData(_snippet!.data);
@@ -23,6 +25,12 @@ class _SnippetShowState extends State<SnippetShow> {
       _data = loadedData;
       _isLoading = false;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(vsync: this, length: 2);
   }
 
   @override
@@ -42,8 +50,15 @@ class _SnippetShowState extends State<SnippetShow> {
               child: CircularProgressIndicator(),
             )
           : Scaffold(
-              appBar: AppBarWithTab(text: _snippet!.title),
-              body: AppTabBarBody(widget: _snippet!.widget, data: _data!),
+              appBar: AppBarWithTab(
+                text: _snippet!.title,
+                tabController: _tabController!,
+              ),
+              body: AppTabBarBody(
+                widget: _snippet!.widget,
+                data: _data!,
+                tabController: _tabController!,
+              ),
               bottomNavigationBar: AppBottomNavigationBar(
                 index: _snippet!.bottomNavigationBarIndex,
               ),

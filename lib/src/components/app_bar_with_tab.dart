@@ -3,10 +3,12 @@ import 'package:flutter_snippets/src/constants/app_constants.dart';
 
 class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
   final String text;
+  final TabController tabController;
 
   const AppBarWithTab({
     Key? key,
     required this.text,
+    required this.tabController,
   }) : super(key: key);
 
   @override
@@ -17,6 +19,7 @@ class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(text),
       bottom: TabBar(
+        controller: tabController,
         tabs: [
           Tab(
             icon: Icon(Icons.visibility),

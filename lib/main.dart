@@ -14,24 +14,21 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Snippets',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        initialRoute: AppRoutes.SNIPPET_BASIC,
-        routes: {
-          AppRoutes.SNIPPET_BASIC: (_) => SnippetBasic(),
-          AppRoutes.SNIPPET_ADVANCED: (_) => SnippetAdvanced(),
-          AppRoutes.SNIPPET_WIDGETS: (_) => SnippetWidgets(),
-          AppRoutes.SNIPPET_ANIMATIONS: (_) => SnippetAnimations(),
-          AppRoutes.SNIPPET_SHOW: (_) => SnippetShow(),
-          AppRoutes.SNIPPET_FILTER: (_) => SnippetFilter(),
-        },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Snippets',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      initialRoute: AppRoutes.SNIPPET_BASIC,
+      routes: {
+        AppRoutes.SNIPPET_BASIC: (_) => SnippetBasic(),
+        AppRoutes.SNIPPET_ADVANCED: (_) => SnippetAdvanced(),
+        AppRoutes.SNIPPET_WIDGETS: (_) => SnippetWidgets(),
+        AppRoutes.SNIPPET_ANIMATIONS: (_) => SnippetAnimations(),
+        AppRoutes.SNIPPET_SHOW: (_) => SnippetShow(),
+        AppRoutes.SNIPPET_FILTER: (_) => SnippetFilter(),
+      },
     );
   }
 }

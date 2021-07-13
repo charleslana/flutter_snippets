@@ -14,21 +14,33 @@ class AppCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.blue[400],
-      child: InkWell(
-        splashColor: Colors.white.withAlpha(30),
-        onTap: onPressed,
-        child: ListTile(
-          leading: Icon(
-            icon,
-            color: Colors.white,
-          ),
-          title: Text(
-            text,
-            style: TextStyle(color: Colors.white),
-          ),
+    final height = MediaQuery.of(context).size.height / 7.5;
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 5),
+      child: ElevatedButton(
+        child: Row(
+          children: [
+            Icon(
+              icon,
+              size: 30,
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  text,
+                  style: TextStyle(fontSize: 18),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
         ),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.blue[400],
+          minimumSize: Size(double.maxFinite, height),
+        ),
+        onPressed: onPressed,
       ),
     );
   }
