@@ -1,0 +1,58 @@
+// SafeArea impede que os widgets ultrapassem o limite de cantos arredondados ou cortes da tela
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                'SafeArea a esquerda',
+              ),
+            ),
+            Align(
+              alignment: Alignment.topRight,
+              child: Text(
+                'SafeArea a direita',
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'SafeArea a esquerda',
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Text(
+                'SafeArea a direita',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

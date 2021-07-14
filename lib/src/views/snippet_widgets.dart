@@ -4,6 +4,7 @@ import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 
@@ -65,6 +66,18 @@ class SnippetWidgets extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
                   ),
+                ),
+              ),
+              AppMenu(
+                text: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
+                icon: Icons.phonelink_lock,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.SNIPPET_SHOW,
+                  arguments: SnippetShowModel(
+                      data: AppConstants.TXT_SNIPPET_WIDGET_SAFEAREA,
+                      title: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
+                      bottomNavigationBarIndex: 2,
+                      widget: SnippetSafeArea()),
                 ),
               ),
             ],

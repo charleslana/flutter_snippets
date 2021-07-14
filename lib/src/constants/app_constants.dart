@@ -34,9 +34,10 @@ class AppConstants {
   static const TEXT_MENU_ADVANCED_MAP = 'Mapeamento';
 
   static const TEXT_MENU_WIDGETS_CREATE = 'Criação';
+  static const TEXT_MENU_WIDGETS_BASIC = 'Widgets Básico';
   static const TEXT_MENU_WIDGET_STATELESS = 'Widget Sem estado';
   static const TEXT_MENU_WIDGET_STATEFUL = 'Widget Com estado';
-  static const TEXT_MENU_WIDGETS_BASIC = 'Widgets Básico';
+  static const TEXT_MENU_WIDGET_SAFEAREA = 'SafeArea';
 
   static const TXT_SNIPPET_COMMENTS = 'comments';
   static const TXT_SNIPPET_VARIABLES = 'variables';
@@ -60,4 +61,5 @@ class AppConstants {
 
   static const TXT_SNIPPET_WIDGET_STATELESS = 'widget_stateless';
   static const TXT_SNIPPET_WIDGET_STATEFUL = 'widget_stateful';
+  static const TXT_SNIPPET_WIDGET_SAFEAREA = 'widget_safe_area';
 }
