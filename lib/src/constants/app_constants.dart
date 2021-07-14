@@ -1,4 +1,9 @@
 class AppConstants {
+  static const BOTTOM_NAVIGATION_BAR_BASIC = 'Básico';
+  static const BOTTOM_NAVIGATION_BAR_ADVANCED = 'Avançado';
+  static const BOTTOM_NAVIGATION_BAR_WIDGETS = 'Widgets';
+  static const BOTTOM_NAVIGATION_BAR_ANIMATIONS = 'Animações';
+
   static const TEXT_TITLE_BASIC = 'Snippets Básico';
   static const TEXT_TITLE_ADVANCED = 'Snippets Avançados';
   static const TEXT_TITLE_WIDGETS = 'Snippets Widgets';
@@ -33,8 +38,10 @@ class AppConstants {
   static const TEXT_MENU_ADVANCED_LIST = 'Lista';
   static const TEXT_MENU_ADVANCED_MAP = 'Mapeamento';
 
-  static const TEXT_MENU_WIDGETS_CREATE = 'Criação';
+  static const TEXT_MENU_WIDGETS = 'Widgets';
+  static const TEXT_MENU_WIDGETS_CREATE = 'Widgets de criação';
   static const TEXT_MENU_WIDGETS_BASIC = 'Widgets Básico';
+  static const TEXT_MENU_WIDGETS_ADVANCED = 'Widgets Avançados';
   static const TEXT_MENU_WIDGET_STATELESS = 'Widget Sem estado';
   static const TEXT_MENU_WIDGET_STATEFUL = 'Widget Com estado';
   static const TEXT_MENU_WIDGET_SAFEAREA = 'SafeArea';
