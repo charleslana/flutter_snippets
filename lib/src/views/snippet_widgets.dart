@@ -74,10 +74,11 @@ class SnippetWidgets extends StatelessWidget {
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
-                      data: AppConstants.TXT_SNIPPET_WIDGET_SAFEAREA,
-                      title: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
-                      bottomNavigationBarIndex: 2,
-                      widget: SnippetSafeArea()),
+                    data: AppConstants.TXT_SNIPPET_WIDGET_SAFEAREA,
+                    title: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
+                    bottomNavigationBarIndex: 2,
+                    widget: SnippetSafeArea(),
+                  ),
                 ),
               ),
             ],
