@@ -14,7 +14,7 @@ class AppMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height / 7.5;
+    final height = MediaQuery.of(context).size.height / 9.8;
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 5),
       child: ElevatedButton(
