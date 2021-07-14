@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AppCard extends StatelessWidget {
+class AppMenu extends StatelessWidget {
   final String text;
   final IconData icon;
   final VoidCallback onPressed;
 
-  const AppCard({
+  const AppMenu({
     Key? key,
     required this.text,
     required this.icon,

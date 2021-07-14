@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
-import 'package:flutter_snippets/src/components/app_card.dart';
+import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
@@ -24,34 +24,34 @@ class SnippetWidgets extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
-                  AppConstants.TEXT_CARD_WIDGETS_CREATE,
+                  AppConstants.TEXT_MENU_WIDGETS_CREATE,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
                   ),
                 ),
               ),
-              AppCard(
-                text: AppConstants.TEXT_CARD_WIDGET_STATELESS,
+              AppMenu(
+                text: AppConstants.TEXT_MENU_WIDGET_STATELESS,
                 icon: Icons.flip_to_front,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_WIDGET_STATELESS,
-                    title: AppConstants.TEXT_CARD_WIDGET_STATELESS,
+                    title: AppConstants.TEXT_MENU_WIDGET_STATELESS,
                     bottomNavigationBarIndex: 2,
                     widget: SnippetStateless(),
                   ),
                 ),
               ),
-              AppCard(
-                text: AppConstants.TEXT_CARD_WIDGET_STATEFUL,
+              AppMenu(
+                text: AppConstants.TEXT_MENU_WIDGET_STATEFUL,
                 icon: Icons.swap_vert,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_WIDGET_STATEFUL,
-                    title: AppConstants.TEXT_CARD_WIDGET_STATEFUL,
+                    title: AppConstants.TEXT_MENU_WIDGET_STATEFUL,
                     bottomNavigationBarIndex: 2,
                     widget: SnippetStateful(),
                   ),
@@ -60,7 +60,7 @@ class SnippetWidgets extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
-                  AppConstants.TEXT_CARD_WIDGETS_BASIC,
+                  AppConstants.TEXT_MENU_WIDGETS_BASIC,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
