@@ -37,7 +37,6 @@ class AppMenu extends StatelessWidget {
           ],
         ),
         style: ElevatedButton.styleFrom(
-          primary: Colors.blue[400],
           minimumSize: Size(double.maxFinite, height),
         ),
         onPressed: onPressed,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
+import 'package:flutter_snippets/src/widget/change_theme_button_widget.dart';
 
 class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
   final String text;
@@ -18,6 +19,9 @@ class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(text),
+      actions: [
+        ChangeThemeButtonWidget(),
+      ],
       bottom: TabBar(
         controller: tabController,
         tabs: [

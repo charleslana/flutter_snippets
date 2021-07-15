@@ -9,6 +9,7 @@ import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
+import 'package:flutter_snippets/src/widget/change_theme_button_widget.dart';
 
 class SnippetWidgets extends StatelessWidget {
   const SnippetWidgets({Key? key}) : super(key: key);
@@ -19,6 +20,9 @@ class SnippetWidgets extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppConstants.TEXT_TITLE_WIDGETS),
+          actions: [
+            ChangeThemeButtonWidget(),
+          ],
         ),
         body: Padding(
           padding: EdgeInsets.all(10.0),
@@ -31,6 +35,7 @@ class SnippetWidgets extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
+                    color: Theme.of(context).iconTheme.color,
                   ),
                 ),
               ),

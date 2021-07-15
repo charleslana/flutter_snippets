@@ -30,7 +30,6 @@ class AppTabBarBody extends StatelessWidget {
                     child: Text(
                       data,
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
                         fontSize: 16.0,
                       ),
                     ),
@@ -49,7 +48,6 @@ class AppTabBarBody extends StatelessWidget {
                     child: Text(
                       data,
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
                         fontSize: 16.0,
                       ),
                     ),
@@ -60,12 +58,11 @@ class AppTabBarBody extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: CircleAvatar(
+                      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                       radius: 20,
-                      backgroundColor: Colors.blue[400],
                       child: IconButton(
                         icon: Icon(
                           Icons.content_copy,
-                          color: Colors.white,
                         ),
                         onPressed: () => AppUtils().copyCode(data, context),
                       ),

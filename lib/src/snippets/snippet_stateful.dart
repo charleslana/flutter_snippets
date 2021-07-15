@@ -38,14 +38,9 @@ class _SnippetStatefulState extends State<SnippetStateful> {
                 'Adicionar +1',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.white,
                 ),
               ),
               onPressed: _increment,
-              style: ElevatedButton.styleFrom(
-                primary: Theme.of(context).primaryColor,
-                onPrimary: Colors.white,
-              ),
             ),
             SizedBox(
               height: 10,
@@ -63,10 +58,6 @@ class _SnippetStatefulState extends State<SnippetStateful> {
                   _count = 0;
                 });
               },
-              style: ElevatedButton.styleFrom(
-                primary: Theme.of(context).primaryColor,
-                onPrimary: Colors.white,
-              ),
             ),
           ],
         ),

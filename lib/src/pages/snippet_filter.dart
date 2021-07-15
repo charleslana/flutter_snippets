@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
+import 'package:flutter_snippets/src/widget/change_theme_button_widget.dart';
 
 class SnippetFilter extends StatelessWidget {
   const SnippetFilter({Key? key}) : super(key: key);
@@ -14,6 +15,9 @@ class SnippetFilter extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(filter.title),
+          actions: [
+            ChangeThemeButtonWidget(),
+          ],
         ),
         body: Wrap(
           children: List.generate(filter.snippets.length, (index) {
@@ -23,17 +27,10 @@ class SnippetFilter extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextButton(
                 onPressed: item.onPressed,
-                style: TextButton.styleFrom(
-                  primary: Colors.white,
-                  backgroundColor: Colors.blue,
-                ),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                   child: Text(
                     item.text,
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
                   ),
                 ),
               ),

@@ -43,9 +43,6 @@ class AppBottomNavigationBar extends StatelessWidget {
     return BottomNavigationBar(
       currentIndex: index,
       onTap: (int index) => _navigateToScreens(index),
-      backgroundColor: Colors.white,
-      selectedItemColor: Colors.blue,
-      unselectedItemColor: Colors.black,
       type: BottomNavigationBarType.fixed,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(

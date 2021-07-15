@@ -4,6 +4,7 @@ import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/widget/change_theme_button_widget.dart';
 
 class SnippetBasic extends StatelessWidget {
   const SnippetBasic({Key? key}) : super(key: key);
@@ -14,6 +15,9 @@ class SnippetBasic extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppConstants.TEXT_TITLE_BASIC),
+          actions: [
+            ChangeThemeButtonWidget(),
+          ],
         ),
         body: Padding(
           padding: EdgeInsets.all(10.0),
@@ -26,6 +30,7 @@ class SnippetBasic extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
+                    color: Theme.of(context).iconTheme.color,
                   ),
                 ),
               ),
