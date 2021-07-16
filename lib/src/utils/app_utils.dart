@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class AppUtils {
-  copyCode(String data, BuildContext context) {
+  void copyCode(String data, BuildContext context) {
     final copy = ClipboardData(text: data);
     Clipboard.setData(copy).then(
       (_) => {

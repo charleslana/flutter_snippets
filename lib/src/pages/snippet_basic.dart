@@ -4,7 +4,8 @@ import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
-import 'package:flutter_snippets/src/widget/change_theme_button_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetBasic extends StatelessWidget {
   const SnippetBasic({Key? key}) : super(key: key);
@@ -14,10 +15,10 @@ class SnippetBasic extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(AppConstants.TEXT_TITLE_BASIC),
-          actions: [
-            ChangeThemeButtonWidget(),
-          ],
+          title: Text(
+            AppLocalizations.of(context)!.appBarTitleBasic,
+          ),
+          actions: ListIconsAppBarWidget().listWidgets,
         ),
         body: Padding(
           padding: EdgeInsets.all(10.0),

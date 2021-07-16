@@ -1,0 +1,6 @@
+{
+    "language": "Português",
+    "helloWorld": "Olá Mundo!",
+    "hello": "Olá {username}",
+    "appBarTitleBasic": "Snippets Básico"
+}

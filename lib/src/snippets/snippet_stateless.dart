@@ -8,6 +8,7 @@ class SnippetStateless extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Stateless'),
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Text(

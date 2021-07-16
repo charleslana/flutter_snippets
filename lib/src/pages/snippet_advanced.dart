@@ -6,7 +6,7 @@ import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
-import 'package:flutter_snippets/src/widget/change_theme_button_widget.dart';
+import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetAdvanced extends StatelessWidget {
   const SnippetAdvanced({Key? key}) : super(key: key);
@@ -17,9 +17,7 @@ class SnippetAdvanced extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppConstants.TEXT_TITLE_ADVANCED),
-          actions: [
-            ChangeThemeButtonWidget(),
-          ],
+          actions: ListIconsAppBarWidget().listWidgets,
         ),
         body: Padding(
           padding: EdgeInsets.all(10.0),

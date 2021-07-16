@@ -21,6 +21,7 @@ class _SnippetStatefulState extends State<SnippetStateful> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Stateful'),
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Column(
