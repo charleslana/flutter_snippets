@@ -27,7 +27,7 @@ class SnippetBasic extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
-                  AppConstants.TEXT_MENU_BASIC_DART,
+                  AppLocalizations.of(context)!.menuBasicDart,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
@@ -36,109 +36,114 @@ class SnippetBasic extends StatelessWidget {
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_COMMENTS,
+                text: AppLocalizations.of(context)!.menuBasicComments,
                 icon: Icons.textsms,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_COMMENTS,
-                    title: AppConstants.TEXT_MENU_BASIC_COMMENTS,
+                    title: AppLocalizations.of(context)!.menuBasicComments,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_VARIABLES,
+                text: AppLocalizations.of(context)!.menuBasicVariables,
                 icon: Icons.memory,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_VARIABLES,
-                    title: AppConstants.TEXT_MENU_BASIC_VARIABLES,
+                    title: AppLocalizations.of(context)!.menuBasicVariables,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_NOMENCLATURES,
+                text: AppLocalizations.of(context)!.menuBasicNomenclatures,
                 icon: Icons.create,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_NOMENCLATURES,
-                    title: AppConstants.TEXT_MENU_BASIC_NOMENCLATURES,
+                    title: AppLocalizations.of(context)!.menuBasicNomenclatures,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_TYPES,
+                text: AppLocalizations.of(context)!.menuBasicTypes,
                 icon: Icons.title,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_TYPES,
-                    title: AppConstants.TEXT_MENU_BASIC_TYPES,
+                    title: AppLocalizations.of(context)!.menuBasicTypes,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_MATH_OPERATIONS,
+                text: AppLocalizations.of(context)!.menuBasicMathOperations,
                 icon: Icons.calculate,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_MATH_OPERATIONS,
-                    title: AppConstants.TEXT_MENU_BASIC_MATH_OPERATIONS,
+                    title:
+                        AppLocalizations.of(context)!.menuBasicMathOperations,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_CONCAT_STRINGS,
+                text: AppLocalizations.of(context)!
+                    .menuBasicConcatenationStrings,
                 icon: Icons.text_snippet,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_CONCAT_STRINGS,
-                    title: AppConstants.TEXT_MENU_BASIC_CONCAT_STRINGS,
+                    data: AppConstants.TXT_SNIPPET_CONCATENATION_STRINGS,
+                    title: AppLocalizations.of(context)!
+                        .menuBasicConcatenationStrings,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_NULL_SAFETY,
+                text: AppLocalizations.of(context)!.menuBasicNullSafety,
                 icon: Icons.vpn_key,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_NULL_SAFETY,
-                    title: AppConstants.TEXT_MENU_BASIC_NULL_SAFETY,
+                    title: AppLocalizations.of(context)!.menuBasicNullSafety,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_FLUX_CONTROL,
+                text: AppLocalizations.of(context)!.menuBasicFluxControl,
                 icon: Icons.repeat,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_FLUX_CONTROL,
-                    title: AppConstants.TEXT_MENU_BASIC_FLUX_CONTROL,
+                    title: AppLocalizations.of(context)!.menuBasicFluxControl,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_BASIC_FUNCTIONS_PARAMETERS,
+                text:
+                    AppLocalizations.of(context)!.menuBasicFunctionsParameters,
                 icon: Icons.functions,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_FUNCTIONS_PARAMETERS,
-                    title: AppConstants.TEXT_MENU_BASIC_FUNCTIONS_PARAMETERS,
+                    title: AppLocalizations.of(context)!
+                        .menuBasicFunctionsParameters,
                     bottomNavigationBarIndex: 0,
                   ),
                 ),

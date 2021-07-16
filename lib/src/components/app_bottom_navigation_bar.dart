@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppBottomNavigationBar extends StatelessWidget {
   final int index;
@@ -47,19 +47,19 @@ class AppBottomNavigationBar extends StatelessWidget {
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.description),
-          label: AppConstants.BOTTOM_NAVIGATION_BAR_BASIC,
+          label: AppLocalizations.of(context)!.bottomNavigationBarBasic,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.school),
-          label: AppConstants.BOTTOM_NAVIGATION_BAR_ADVANCED,
+          label: AppLocalizations.of(context)!.bottomNavigationBarAdvanced,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.widgets),
-          label: AppConstants.BOTTOM_NAVIGATION_BAR_WIDGETS,
+          label: AppLocalizations.of(context)!.bottomNavigationBarWidget,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.animation),
-          label: AppConstants.BOTTOM_NAVIGATION_BAR_ANIMATIONS,
+          label: AppLocalizations.of(context)!.bottomNavigationBarAnimations,
         ),
       ],
     );

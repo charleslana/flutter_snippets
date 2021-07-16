@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/constants/app_constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
@@ -25,11 +25,11 @@ class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
         tabs: [
           Tab(
             icon: Icon(Icons.visibility),
-            text: AppConstants.TEXT_BAR_WITH_BAR_EXAMPLE,
+            text: AppLocalizations.of(context)!.tabBarTitleExample,
           ),
           Tab(
             icon: Icon(Icons.code),
-            text: AppConstants.TEXT_BAR_WITH_BAR_CODE,
+            text: AppLocalizations.of(context)!.tabBarTitleCode,
           ),
         ],
       ),

@@ -6,6 +6,7 @@ import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetAdvanced extends StatelessWidget {
@@ -16,7 +17,7 @@ class SnippetAdvanced extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(AppConstants.TEXT_TITLE_ADVANCED),
+          title: Text(AppLocalizations.of(context)!.appBarTitleAdvanced),
           actions: ListIconsAppBarWidget().listWidgets,
         ),
         body: Padding(
@@ -26,7 +27,7 @@ class SnippetAdvanced extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
-                  AppConstants.TEXT_MENU_ADVANCED_DART,
+                  AppLocalizations.of(context)!.menuAdvancedDart,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
@@ -35,113 +36,113 @@ class SnippetAdvanced extends StatelessWidget {
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_ADVANCED_CLASSES,
+                text: AppLocalizations.of(context)!.menuAdvancedClasses,
                 icon: Icons.class_,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_FILTER,
                   arguments: SnippetFilterModel(
-                    title: AppConstants.TEXT_MENU_ADVANCED_CLASSES,
+                    title: AppLocalizations.of(context)!.menuAdvancedClasses,
                     snippets: [
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_CLASSES,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterClasses,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_CLASSES,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterClasses,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_PRIVATE_PUBLIC,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterPrivatePublic,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS_PRIVATE_PUBLIC,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_PRIVATE_PUBLIC,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterPrivatePublic,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_GETTER_SETTER,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterGetterSetter,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS_GETTER_SETTER,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_GETTER_SETTER,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterGetterSetter,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_CONSTRUCTOR,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterConstructor,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS_CONSTRUCTOR,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_CONSTRUCTOR,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterConstructor,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_EXTENDS,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterExtends,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS_EXTENDS,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_EXTENDS,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterExtends,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_ABSTRACT,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterAbstract,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS_ABSTRACT,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_ABSTRACT,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterAbstract,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_IMPLEMENTS,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterImplements,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS_IMPLEMENTS,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_IMPLEMENTS,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterImplements,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants
-                            .TEXT_MENU_ADVANCED_CLASSES_FILTER_POLYMORPHISM,
+                        text: AppLocalizations.of(context)!
+                            .menuAdvancedFilterPolymorphism,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_CLASS_POLYMORPHISM,
-                            title: AppConstants
-                                .TEXT_MENU_ADVANCED_CLASSES_FILTER_POLYMORPHISM,
+                            title: AppLocalizations.of(context)!
+                                .menuAdvancedFilterPolymorphism,
                             bottomNavigationBarIndex: 1,
                           ),
                         ),
@@ -152,25 +153,25 @@ class SnippetAdvanced extends StatelessWidget {
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_ADVANCED_LIST,
+                text: AppLocalizations.of(context)!.menuAdvancedList,
                 icon: Icons.list,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_LIST,
-                    title: AppConstants.TEXT_MENU_ADVANCED_LIST,
+                    title: AppLocalizations.of(context)!.menuAdvancedList,
                     bottomNavigationBarIndex: 1,
                   ),
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_ADVANCED_MAP,
+                text: AppLocalizations.of(context)!.menuAdvancedMap,
                 icon: Icons.map,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_SHOW,
                   arguments: SnippetShowModel(
                     data: AppConstants.TXT_SNIPPET_MAP,
-                    title: AppConstants.TEXT_MENU_ADVANCED_MAP,
+                    title: AppLocalizations.of(context)!.menuAdvancedMap,
                     bottomNavigationBarIndex: 1,
                   ),
                 ),

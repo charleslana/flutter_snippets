@@ -9,6 +9,7 @@ import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetWidgets extends StatelessWidget {
@@ -19,7 +20,7 @@ class SnippetWidgets extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(AppConstants.TEXT_TITLE_WIDGETS),
+          title: Text(AppLocalizations.of(context)!.appBarTitleWidget),
           actions: ListIconsAppBarWidget().listWidgets,
         ),
         body: Padding(
@@ -29,7 +30,7 @@ class SnippetWidgets extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
-                  AppConstants.TEXT_MENU_WIDGETS,
+                  AppLocalizations.of(context)!.menuWidget,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
@@ -38,32 +39,36 @@ class SnippetWidgets extends StatelessWidget {
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_WIDGETS_CREATE,
+                text: AppLocalizations.of(context)!.menuWidgetCreate,
                 icon: Icons.add,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_FILTER,
                   arguments: SnippetFilterModel(
-                    title: AppConstants.TEXT_MENU_WIDGETS_CREATE,
+                    title: AppLocalizations.of(context)!.menuWidgetCreate,
                     snippets: [
                       SnippetFilterListModel(
-                        text: AppConstants.TEXT_MENU_WIDGET_STATELESS,
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetCreateStateless,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_WIDGET_STATELESS,
-                            title: AppConstants.TEXT_MENU_WIDGET_STATELESS,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetCreateStateless,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetStateless(),
                           ),
                         ),
                       ),
                       SnippetFilterListModel(
-                        text: AppConstants.TEXT_MENU_WIDGET_STATEFUL,
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetCreateStateful,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_WIDGET_STATEFUL,
-                            title: AppConstants.TEXT_MENU_WIDGET_STATEFUL,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetCreateStateful,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetStateful(),
                           ),
@@ -75,20 +80,22 @@ class SnippetWidgets extends StatelessWidget {
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_WIDGETS_BASIC,
+                text: AppLocalizations.of(context)!.menuWidgetBasic,
                 icon: Icons.flip_to_front,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_FILTER,
                   arguments: SnippetFilterModel(
-                    title: AppConstants.TEXT_MENU_WIDGETS_BASIC,
+                    title: AppLocalizations.of(context)!.menuWidgetBasic,
                     snippets: [
                       SnippetFilterListModel(
-                        text: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicSafeArea,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_WIDGET_SAFEAREA,
-                            title: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicSafeArea,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetSafeArea(),
                           ),
@@ -100,20 +107,22 @@ class SnippetWidgets extends StatelessWidget {
                 ),
               ),
               AppMenu(
-                text: AppConstants.TEXT_MENU_WIDGETS_ADVANCED,
+                text: AppLocalizations.of(context)!.menuWidgetAdvanced,
                 icon: Icons.swap_vert,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.SNIPPET_FILTER,
                   arguments: SnippetFilterModel(
-                    title: AppConstants.TEXT_MENU_WIDGETS_ADVANCED,
+                    title: AppLocalizations.of(context)!.menuWidgetAdvanced,
                     snippets: [
                       SnippetFilterListModel(
-                        text: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicSafeArea,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.SNIPPET_SHOW,
                           arguments: SnippetShowModel(
                             data: AppConstants.TXT_SNIPPET_WIDGET_SAFEAREA,
-                            title: AppConstants.TEXT_MENU_WIDGET_SAFEAREA,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicSafeArea,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetSafeArea(),
                           ),

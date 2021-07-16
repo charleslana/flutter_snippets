@@ -15,8 +15,6 @@ class AppTabBarBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    tabController.animateTo(0);
-
     return TabBarView(
       controller: tabController,
       children: [
@@ -58,7 +56,8 @@ class AppTabBarBody extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: CircleAvatar(
-                      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                      backgroundColor:
+                          Theme.of(context).scaffoldBackgroundColor,
                       radius: 20,
                       child: IconButton(
                         icon: Icon(
