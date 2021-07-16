@@ -16,27 +16,27 @@ class AppBottomNavigationBar extends StatelessWidget {
     void _navigateToScreens(int index) {
       switch (index) {
         case 0:
-          currentRoute != AppRoutes.SNIPPET_BASIC
-              ? Navigator.of(context).pushNamed(AppRoutes.SNIPPET_BASIC)
+          currentRoute != AppRoutes.snippetBasic
+              ? Navigator.of(context).pushNamed(AppRoutes.snippetBasic)
               : null;
           break;
         case 1:
-          currentRoute != AppRoutes.SNIPPET_ADVANCED
-              ? Navigator.of(context).pushNamed(AppRoutes.SNIPPET_ADVANCED)
+          currentRoute != AppRoutes.snippetAdvanced
+              ? Navigator.of(context).pushNamed(AppRoutes.snippetAdvanced)
               : null;
           break;
         case 2:
-          currentRoute != AppRoutes.SNIPPET_WIDGETS
-              ? Navigator.of(context).pushNamed(AppRoutes.SNIPPET_WIDGETS)
+          currentRoute != AppRoutes.snippetWidgets
+              ? Navigator.of(context).pushNamed(AppRoutes.snippetWidgets)
               : null;
           break;
         case 3:
-          currentRoute != AppRoutes.SNIPPET_ANIMATIONS
-              ? Navigator.of(context).pushNamed(AppRoutes.SNIPPET_ANIMATIONS)
+          currentRoute != AppRoutes.snippetAnimations
+              ? Navigator.of(context).pushNamed(AppRoutes.snippetAnimations)
               : null;
           break;
         default:
-          Navigator.of(context).pushNamed(AppRoutes.SNIPPET_BASIC);
+          Navigator.of(context).pushNamed(AppRoutes.snippetBasic);
       }
     }
 

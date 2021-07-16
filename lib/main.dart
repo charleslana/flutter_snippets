@@ -67,14 +67,14 @@ class MyAppMaterial extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      initialRoute: AppRoutes.SNIPPET_BASIC,
+      initialRoute: AppRoutes.snippetBasic,
       routes: {
-        AppRoutes.SNIPPET_BASIC: (_) => SnippetBasic(),
-        AppRoutes.SNIPPET_ADVANCED: (_) => SnippetAdvanced(),
-        AppRoutes.SNIPPET_WIDGETS: (_) => SnippetWidgets(),
-        AppRoutes.SNIPPET_ANIMATIONS: (_) => SnippetAnimations(),
-        AppRoutes.SNIPPET_SHOW: (_) => SnippetShow(),
-        AppRoutes.SNIPPET_FILTER: (_) => SnippetFilter(),
+        AppRoutes.snippetBasic: (_) => SnippetBasic(),
+        AppRoutes.snippetAdvanced: (_) => SnippetAdvanced(),
+        AppRoutes.snippetWidgets: (_) => SnippetWidgets(),
+        AppRoutes.snippetAnimations: (_) => SnippetAnimations(),
+        AppRoutes.snippetShow: (_) => SnippetShow(),
+        AppRoutes.snippetFilter: (_) => SnippetFilter(),
       },
     );
   }

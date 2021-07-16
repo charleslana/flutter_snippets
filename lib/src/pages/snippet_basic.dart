@@ -39,9 +39,9 @@ class SnippetBasic extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuBasicComments,
                 icon: Icons.textsms,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_COMMENTS,
+                    data: AppConstants.txtSnippetComments,
                     title: AppLocalizations.of(context)!.menuBasicComments,
                     bottomNavigationBarIndex: 0,
                   ),
@@ -51,9 +51,9 @@ class SnippetBasic extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuBasicVariables,
                 icon: Icons.memory,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_VARIABLES,
+                    data: AppConstants.txtSnippetVariables,
                     title: AppLocalizations.of(context)!.menuBasicVariables,
                     bottomNavigationBarIndex: 0,
                   ),
@@ -63,9 +63,9 @@ class SnippetBasic extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuBasicNomenclatures,
                 icon: Icons.create,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_NOMENCLATURES,
+                    data: AppConstants.txtSnippetNomenclatures,
                     title: AppLocalizations.of(context)!.menuBasicNomenclatures,
                     bottomNavigationBarIndex: 0,
                   ),
@@ -75,9 +75,9 @@ class SnippetBasic extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuBasicTypes,
                 icon: Icons.title,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_TYPES,
+                    data: AppConstants.txtSnippetTypes,
                     title: AppLocalizations.of(context)!.menuBasicTypes,
                     bottomNavigationBarIndex: 0,
                   ),
@@ -87,9 +87,9 @@ class SnippetBasic extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuBasicMathOperations,
                 icon: Icons.calculate,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_MATH_OPERATIONS,
+                    data: AppConstants.txtSnippetMathOperations,
                     title:
                         AppLocalizations.of(context)!.menuBasicMathOperations,
                     bottomNavigationBarIndex: 0,
@@ -97,13 +97,13 @@ class SnippetBasic extends StatelessWidget {
                 ),
               ),
               AppMenu(
-                text: AppLocalizations.of(context)!
-                    .menuBasicConcatenationStrings,
+                text:
+                    AppLocalizations.of(context)!.menuBasicConcatenationStrings,
                 icon: Icons.text_snippet,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_CONCATENATION_STRINGS,
+                    data: AppConstants.txtSnippetConcatenationStrings,
                     title: AppLocalizations.of(context)!
                         .menuBasicConcatenationStrings,
                     bottomNavigationBarIndex: 0,
@@ -114,9 +114,9 @@ class SnippetBasic extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuBasicNullSafety,
                 icon: Icons.vpn_key,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_NULL_SAFETY,
+                    data: AppConstants.txtSnippetNullSafety,
                     title: AppLocalizations.of(context)!.menuBasicNullSafety,
                     bottomNavigationBarIndex: 0,
                   ),
@@ -126,9 +126,9 @@ class SnippetBasic extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuBasicFluxControl,
                 icon: Icons.repeat,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_FLUX_CONTROL,
+                    data: AppConstants.txtSnippetFluxControl,
                     title: AppLocalizations.of(context)!.menuBasicFluxControl,
                     bottomNavigationBarIndex: 0,
                   ),
@@ -139,9 +139,9 @@ class SnippetBasic extends StatelessWidget {
                     AppLocalizations.of(context)!.menuBasicFunctionsParameters,
                 icon: Icons.functions,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_FUNCTIONS_PARAMETERS,
+                    data: AppConstants.txtSnippetFunctionsParameters,
                     title: AppLocalizations.of(context)!
                         .menuBasicFunctionsParameters,
                     bottomNavigationBarIndex: 0,

@@ -39,7 +39,7 @@ class SnippetAdvanced extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuAdvancedClasses,
                 icon: Icons.class_,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_FILTER,
+                  AppRoutes.snippetFilter,
                   arguments: SnippetFilterModel(
                     title: AppLocalizations.of(context)!.menuAdvancedClasses,
                     snippets: [
@@ -47,9 +47,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterClasses,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS,
+                            data: AppConstants.txtSnippetClass,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterClasses,
                             bottomNavigationBarIndex: 1,
@@ -60,9 +60,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterPrivatePublic,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS_PRIVATE_PUBLIC,
+                            data: AppConstants.txtSnippetClassPrivatePublic,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterPrivatePublic,
                             bottomNavigationBarIndex: 1,
@@ -73,9 +73,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterGetterSetter,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS_GETTER_SETTER,
+                            data: AppConstants.txtSnippetClassGetterSetter,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterGetterSetter,
                             bottomNavigationBarIndex: 1,
@@ -86,9 +86,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterConstructor,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS_CONSTRUCTOR,
+                            data: AppConstants.txtSnippetClassConstructor,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterConstructor,
                             bottomNavigationBarIndex: 1,
@@ -99,9 +99,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterExtends,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS_EXTENDS,
+                            data: AppConstants.txtSnippetClassExtends,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterExtends,
                             bottomNavigationBarIndex: 1,
@@ -112,9 +112,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterAbstract,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS_ABSTRACT,
+                            data: AppConstants.txtSnippetClassAbstract,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterAbstract,
                             bottomNavigationBarIndex: 1,
@@ -125,9 +125,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterImplements,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS_IMPLEMENTS,
+                            data: AppConstants.txtSnippetClassImplements,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterImplements,
                             bottomNavigationBarIndex: 1,
@@ -138,9 +138,9 @@ class SnippetAdvanced extends StatelessWidget {
                         text: AppLocalizations.of(context)!
                             .menuAdvancedFilterPolymorphism,
                         onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.SNIPPET_SHOW,
+                          AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
-                            data: AppConstants.TXT_SNIPPET_CLASS_POLYMORPHISM,
+                            data: AppConstants.txtSnippetClassPolymorphism,
                             title: AppLocalizations.of(context)!
                                 .menuAdvancedFilterPolymorphism,
                             bottomNavigationBarIndex: 1,
@@ -156,9 +156,9 @@ class SnippetAdvanced extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuAdvancedList,
                 icon: Icons.list,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_LIST,
+                    data: AppConstants.txtSnippetList,
                     title: AppLocalizations.of(context)!.menuAdvancedList,
                     bottomNavigationBarIndex: 1,
                   ),
@@ -168,9 +168,9 @@ class SnippetAdvanced extends StatelessWidget {
                 text: AppLocalizations.of(context)!.menuAdvancedMap,
                 icon: Icons.map,
                 onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.SNIPPET_SHOW,
+                  AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.TXT_SNIPPET_MAP,
+                    data: AppConstants.txtSnippetMap,
                     title: AppLocalizations.of(context)!.menuAdvancedMap,
                     bottomNavigationBarIndex: 1,
                   ),
