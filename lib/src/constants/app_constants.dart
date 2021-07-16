@@ -65,7 +65,6 @@ class AppConstants {
   static const TXT_SNIPPET_CLASS_POLYMORPHISM = 'polymorphism';
   static const TXT_SNIPPET_LIST = 'list';
   static const TXT_SNIPPET_MAP = 'map';
-
   static const TXT_SNIPPET_WIDGET_STATELESS = 'widget_stateless';
   static const TXT_SNIPPET_WIDGET_STATEFUL = 'widget_stateful';
   static const TXT_SNIPPET_WIDGET_SAFEAREA = 'widget_safe_area';
