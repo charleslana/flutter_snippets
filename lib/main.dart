@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
               ThemeProvider(isOn: prefs!.getBool('isDarkMode')),
         ),
         ChangeNotifierProvider(
-          create: (context) => LocaleProvider(),
+          create: (context) =>
+              LocaleProvider(languageCode: prefs!.getString('languageCode')),
         ),
       ],
       child: MyAppMaterial(),

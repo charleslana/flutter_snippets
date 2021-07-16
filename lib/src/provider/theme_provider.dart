@@ -4,6 +4,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 class ThemeProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.system;
 
+  ThemeProvider({required dynamic isOn}) {
+    themeMode = isOn == null
+        ? ThemeMode.system
+        : isOn == true
+            ? ThemeMode.dark
+            : ThemeMode.light;
+  }
+
   bool get isDarkMode => themeMode == ThemeMode.dark;
 
   Future<void> toggleTheme(bool isOn) async {
@@ -16,14 +24,6 @@ class ThemeProvider extends ChangeNotifier {
       prefs.setBool('isDarkMode', false);
     }
     notifyListeners();
-  }
-
-  ThemeProvider({required dynamic isOn}) {
-    themeMode = isOn == null
-        ? ThemeMode.system
-        : isOn == true
-            ? ThemeMode.dark
-            : ThemeMode.light;
   }
 }
 
