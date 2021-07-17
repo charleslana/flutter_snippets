@@ -24,4 +24,5 @@ class AppConstants {
   static final txtSnippetWidgetCircularProgressIndicator =
       'circular_progress_indicator';
   static final txtSnippetWidgetContainer = 'container';
+  static final txtSnippetWidgetText = 'text';
 }
