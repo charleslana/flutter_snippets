@@ -26,4 +26,5 @@ class AppConstants {
   static final txtSnippetWidgetContainer = 'container';
   static final txtSnippetWidgetText = 'text';
   static final txtSnippetWidgetTextOverflow = 'text_overflow';
+  static final txtSnippetWidgetTextStyle = 'text_style';
 }

@@ -14,6 +14,7 @@ import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_overflow.dart';
+import 'package:flutter_snippets/src/snippets/snippet_text_style.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetWidgets extends StatelessWidget {
@@ -158,6 +159,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicTextOverflow,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetTextOverflow(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicTextStyle,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetTextStyle,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicTextStyle,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetTextStyle(),
                           ),
                         ),
                       ),

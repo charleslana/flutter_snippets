@@ -40,11 +40,12 @@
     "menuWidgetCreate": "Widgets de Creación",
     "menuWidgetCreateStateless": "Widget Apátrida",
     "menuWidgetCreateStateful": "Widget Con el estado",
-    "menuWidgetBasic": "Widget Básico",
-    "menuWidgetAdvanced": "Widget Avanzado",
+    "menuWidgetBasic": "Widgets Básico",
+    "menuWidgetAdvanced": "Widgets Avanzado",
     "menuWidgetBasicSafeArea": "SafeArea",
     "menuWidgetBasicCircularProgressIndicator": "CircularProgressIndicator",
     "menuWidgetBasicContainer": "Container",
     "menuWidgetBasicText": "Texto",
-    "menuWidgetBasicTextOverflow": "Texto con Overflow"
+    "menuWidgetBasicTextOverflow": "Texto con Overflow",
+    "menuWidgetBasicTextStyle": "Texto estilizado"
 }
