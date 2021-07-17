@@ -21,5 +21,7 @@ class AppConstants {
   static final txtSnippetWidgetStateless = 'widget_stateless';
   static final txtSnippetWidgetStateful = 'widget_stateful';
   static final txtSnippetWidgetSafeArea = 'widget_safe_area';
-  static final txtSnippetWidgetCircularProgressIndicator = 'circular_progress_indicator';
+  static final txtSnippetWidgetCircularProgressIndicator =
+      'circular_progress_indicator';
+  static final txtSnippetWidgetContainer = 'container';
 }

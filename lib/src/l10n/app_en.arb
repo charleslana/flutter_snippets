@@ -57,5 +57,6 @@
     "menuWidgetBasic": "Widget Basic",
     "menuWidgetAdvanced": "Widget Advanced",
     "menuWidgetBasicSafeArea": "SafeArea",
-    "menuWidgetBasicCircularProgressIndicator": "CircularProgressIndicator"
+    "menuWidgetBasicCircularProgressIndicator": "CircularProgressIndicator",
+    "menuWidgetBasicContainer": "Container"
 }
