@@ -13,6 +13,7 @@ import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text.dart';
+import 'package:flutter_snippets/src/snippets/snippet_text_overflow.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetWidgets extends StatelessWidget {
@@ -134,8 +135,7 @@ class SnippetWidgets extends StatelessWidget {
                         ),
                       ),
                       SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicText,
+                        text: AppLocalizations.of(context)!.menuWidgetBasicText,
                         onPressed: () => Navigator.of(context).pushNamed(
                           AppRoutes.snippetShow,
                           arguments: SnippetShowModel(
@@ -144,6 +144,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicText,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetText(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicTextOverflow,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetTextOverflow,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicTextOverflow,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetTextOverflow(),
                           ),
                         ),
                       ),

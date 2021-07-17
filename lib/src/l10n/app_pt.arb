@@ -45,5 +45,6 @@
     "menuWidgetBasicSafeArea": "SafeArea",
     "menuWidgetBasicCircularProgressIndicator": "CircularProgressIndicator",
     "menuWidgetBasicContainer": "Container",
-    "menuWidgetBasicText": "Texto"
+    "menuWidgetBasicText": "Texto",
+    "menuWidgetBasicTextOverflow": "Texto com Overflow"
 }

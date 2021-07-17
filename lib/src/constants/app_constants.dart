@@ -25,4 +25,5 @@ class AppConstants {
       'circular_progress_indicator';
   static final txtSnippetWidgetContainer = 'container';
   static final txtSnippetWidgetText = 'text';
+  static final txtSnippetWidgetTextOverflow = 'text_overflow';
 }
