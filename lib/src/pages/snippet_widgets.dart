@@ -6,6 +6,7 @@ import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
@@ -101,6 +102,21 @@ class SnippetWidgets extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicCircularProgressIndicator,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants
+                                .txtSnippetWidgetCircularProgressIndicator,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicCircularProgressIndicator,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetCircularProgressIndicator(),
+                          ),
+                        ),
+                      ),
                     ],
                     bottomNavigationBarIndex: 2,
                   ),
@@ -113,22 +129,7 @@ class SnippetWidgets extends StatelessWidget {
                   AppRoutes.snippetFilter,
                   arguments: SnippetFilterModel(
                     title: AppLocalizations.of(context)!.menuWidgetAdvanced,
-                    snippets: [
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicSafeArea,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSafeArea,
-                            title: AppLocalizations.of(context)!
-                                .menuWidgetBasicSafeArea,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSafeArea(),
-                          ),
-                        ),
-                      ),
-                    ],
+                    snippets: [],
                     bottomNavigationBarIndex: 2,
                   ),
                 ),

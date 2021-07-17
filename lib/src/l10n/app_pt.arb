@@ -42,5 +42,6 @@
     "menuWidgetCreateStateful": "Widget Com estado",
     "menuWidgetBasic": "Widget Básico",
     "menuWidgetAdvanced": "Widget Avançado",
-    "menuWidgetBasicSafeArea": "SafeArea"
+    "menuWidgetBasicSafeArea": "SafeArea",
+    "menuWidgetBasicCircularProgressIndicator": "CircularProgressIndicator"
 }
