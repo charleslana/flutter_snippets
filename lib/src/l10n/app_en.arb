@@ -79,5 +79,6 @@
     "menuWidgetBasicBottomSheet": "BottomSheet",
     "menuWidgetBasicMediaQuery": "MediaQuery",
     "menuWidgetBasicGestureDetector": "GestureDetector",
-    "menuWidgetBasicInkWell": "InkWell"
+    "menuWidgetBasicInkWell": "InkWell",
+    "menuWidgetBasicCard": "Card"
 }

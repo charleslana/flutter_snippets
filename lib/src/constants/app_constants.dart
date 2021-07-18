@@ -46,4 +46,5 @@ class AppConstants {
   static final txtSnippetWidgetMediaQuery = 'widget_media_query';
   static final txtSnippetWidgetGestureDetector = 'widget_gesture_detector';
   static final txtSnippetWidgetInkWell = 'widget_ink_well';
+  static final txtSnippetWidgetCard = 'widget_card';
 }
