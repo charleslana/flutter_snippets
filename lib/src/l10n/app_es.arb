@@ -66,5 +66,6 @@
     "menuWidgetBasicMediaQuery": "MediaQuery",
     "menuWidgetBasicGestureDetector": "GestureDetector",
     "menuWidgetBasicInkWell": "InkWell",
-    "menuWidgetBasicCard": "Card"
+    "menuWidgetBasicCard": "Card",
+    "menuWidgetBasicFutureBuilder": "FutureBuilder"
 }
