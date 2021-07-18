@@ -51,5 +51,6 @@
     "menuWidgetBasicTextDefaultStyle": "Texto com estilo padrão",
     "menuWidgetBasicRichText": "RichText",
     "menuWidgetBasicColumn": "Coluna",
-    "menuWidgetBasicRow": "Linhas"
+    "menuWidgetBasicRow": "Linhas",
+    "menuWidgetBasicDivider": "Divisor"
 }

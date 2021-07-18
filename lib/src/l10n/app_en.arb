@@ -65,5 +65,6 @@
     "menuWidgetBasicTextDefaultStyle": "Default styled text",
     "menuWidgetBasicRichText": "RichText",
     "menuWidgetBasicColumn": "Column",
-    "menuWidgetBasicRow": "Row"
+    "menuWidgetBasicRow": "Row",
+    "menuWidgetBasicDivider": "Divider"
 }
