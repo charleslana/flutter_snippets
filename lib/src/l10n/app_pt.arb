@@ -57,7 +57,8 @@
     "menuWidgetBasicTextButton": "TextButton",
     "menuWidgetBasicElevatedButton": "ElevatedButton",
     "menuWidgetBasicElevatedButtonIcon": "ElevatedButton com Ícone",
-    "menuWidgetBasicIconBackground": "Ícone com fundo",
     "menuWidgetBasicOutlinedButton": "OutlinedButton",
+    "menuWidgetBasicIcon": "Ícone",
+    "menuWidgetBasicIconBackground": "Ícone com fundo",
     "menuWidgetBasicImage": "Imagem"
 }

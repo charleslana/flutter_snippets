@@ -37,7 +37,8 @@ class AppConstants {
   static final txtSnippetWidgetElevatedButton = 'widget_elevated_button';
   static final txtSnippetWidgetElevatedButtonIcon =
       'widget_elevated_button_icon';
-  static final txtSnippetWidgetIconBackground = 'widget_icon_background';
   static final txtSnippetWidgetOutlinedButton = 'widget_outlined_button';
+  static final txtSnippetWidgetIcon = 'widget_icon';
+  static final txtSnippetWidgetIconBackground = 'widget_icon_background';
   static final txtSnippetWidgetImage = 'widget_image';
 }
