@@ -13,6 +13,7 @@ import 'package:flutter_snippets/src/snippets/snippet_divider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon_background.dart';
+import 'package:flutter_snippets/src/snippets/snippet_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rich_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_row.dart';
@@ -338,6 +339,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicOutlinedButton,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetOutlinedButton(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text:
+                            AppLocalizations.of(context)!.menuWidgetBasicImage,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetImage,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicImage,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetImage(),
                           ),
                         ),
                       ),
