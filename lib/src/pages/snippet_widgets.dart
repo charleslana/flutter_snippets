@@ -8,6 +8,7 @@ import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/pages/snippet_container.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
+import 'package:flutter_snippets/src/snippets/snippet_column.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rich_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
@@ -203,6 +204,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicRichText,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetRichText(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text:
+                            AppLocalizations.of(context)!.menuWidgetBasicColumn,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetColumn,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicColumn,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetColumn(),
                           ),
                         ),
                       ),

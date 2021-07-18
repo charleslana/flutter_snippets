@@ -49,5 +49,6 @@
     "menuWidgetBasicTextOverflow": "Texto con Overflow",
     "menuWidgetBasicTextStyle": "Texto estilizado",
     "menuWidgetBasicTextDefaultStyle": "Texto con estilo predeterminado",
-    "menuWidgetBasicRichText": "RichText"
+    "menuWidgetBasicRichText": "RichText",
+    "menuWidgetBasicColumn": "Columna"
 }
