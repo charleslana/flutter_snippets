@@ -8,11 +8,13 @@ import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/pages/snippet_container.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
+import 'package:flutter_snippets/src/snippets/snippet_rich_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text.dart';
+import 'package:flutter_snippets/src/snippets/snippet_text_default_style.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_overflow.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_style.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
@@ -173,6 +175,34 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicTextStyle,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetTextStyle(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicTextDefaultStyle,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetTextDefaultStyle,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicTextDefaultStyle,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetTextDefaultStyle(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicRichText,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetRichText,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicRichText,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetRichText(),
                           ),
                         ),
                       ),

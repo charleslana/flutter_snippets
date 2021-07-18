@@ -47,5 +47,7 @@
     "menuWidgetBasicContainer": "Container",
     "menuWidgetBasicText": "Texto",
     "menuWidgetBasicTextOverflow": "Texto con Overflow",
-    "menuWidgetBasicTextStyle": "Texto estilizado"
+    "menuWidgetBasicTextStyle": "Texto estilizado",
+    "menuWidgetBasicTextDefaultStyle": "Texto con estilo predeterminado",
+    "menuWidgetBasicRichText": "RichText"
 }

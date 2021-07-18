@@ -1,0 +1,44 @@
+// RichText
+// múltiplos textos.
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: RichText(
+          text: TextSpan(
+            text: 'Olá ',
+            style: Theme.of(context).textTheme.headline4,
+            children: [
+              TextSpan(
+                text: 'bold',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              TextSpan(text: ' Mundo!'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

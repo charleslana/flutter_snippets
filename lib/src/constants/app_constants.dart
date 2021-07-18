@@ -22,9 +22,11 @@ class AppConstants {
   static final txtSnippetWidgetStateful = 'widget_stateful';
   static final txtSnippetWidgetSafeArea = 'widget_safe_area';
   static final txtSnippetWidgetCircularProgressIndicator =
-      'circular_progress_indicator';
-  static final txtSnippetWidgetContainer = 'container';
-  static final txtSnippetWidgetText = 'text';
-  static final txtSnippetWidgetTextOverflow = 'text_overflow';
-  static final txtSnippetWidgetTextStyle = 'text_style';
+      'widget_circular_progress_indicator';
+  static final txtSnippetWidgetContainer = 'widget_container';
+  static final txtSnippetWidgetText = 'widget_text';
+  static final txtSnippetWidgetTextOverflow = 'widget_text_overflow';
+  static final txtSnippetWidgetTextStyle = 'widget_text_style';
+  static final txtSnippetWidgetTextDefaultStyle = 'widget_text_default_style';
+  static final txtSnippetWidgetRichText = 'widget_rich_text';
 }

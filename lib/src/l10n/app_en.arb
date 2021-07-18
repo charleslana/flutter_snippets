@@ -61,5 +61,7 @@
     "menuWidgetBasicContainer": "Container",
     "menuWidgetBasicText": "Text",
     "menuWidgetBasicTextOverflow": "Text with Overflow",
-    "menuWidgetBasicTextStyle": "Text with style"
+    "menuWidgetBasicTextStyle": "Text with style",
+    "menuWidgetBasicTextDefaultStyle": "Default styled text",
+    "menuWidgetBasicRichText": "RichText"
 }
