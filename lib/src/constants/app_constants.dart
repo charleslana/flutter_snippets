@@ -33,4 +33,5 @@ class AppConstants {
   static final txtSnippetWidgetRow = 'widget_row';
   static final txtSnippetWidgetDivider = 'widget_divider';
   static final txtSnippetWidgetVerticalDivider = 'widget_vertical_divider';
+  static final txtSnippetWidgetTextButton = 'widget_text_button';
 }

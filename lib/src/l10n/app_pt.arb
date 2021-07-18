@@ -53,5 +53,6 @@
     "menuWidgetBasicColumn": "Coluna",
     "menuWidgetBasicRow": "Linhas",
     "menuWidgetBasicDivider": "Divisor",
-    "menuWidgetBasicVerticalDivider": "Divisor Vertical"
+    "menuWidgetBasicVerticalDivider": "Divisor Vertical",
+    "menuWidgetBasicTextButton": "TextButton"
 }
