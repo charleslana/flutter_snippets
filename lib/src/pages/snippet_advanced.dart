@@ -176,6 +176,18 @@ class SnippetAdvanced extends StatelessWidget {
                   ),
                 ),
               ),
+              AppMenu(
+                text: AppLocalizations.of(context)!.menuAdvancedOperatorSpread,
+                icon: Icons.add_road,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetOperatorSpread,
+                    title: AppLocalizations.of(context)!.menuAdvancedOperatorSpread,
+                    bottomNavigationBarIndex: 1,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

@@ -36,6 +36,7 @@
     "menuAdvancedFilterPolymorphism": "Polimorfismo",
     "menuAdvancedList": "Lista",
     "menuAdvancedMap": "Map",
+    "menuAdvancedOperatorSpread": "Operador Spread",
     "menuWidget": "Widgets",
     "menuWidgetCreate": "Widgets de Creación",
     "menuWidgetCreateStateless": "Widget Apátrida",
@@ -60,5 +61,6 @@
     "menuWidgetBasicOutlinedButton": "OutlinedButton",
     "menuWidgetBasicIcon": "Icono",
     "menuWidgetBasicIconBackground": "Icono con fondo",
-    "menuWidgetBasicImage": "Imagen"
+    "menuWidgetBasicImage": "Imagen",
+    "menuWidgetBasicBottomSheet": "BottomSheet"
 }

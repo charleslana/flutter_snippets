@@ -18,6 +18,7 @@ class AppConstants {
   static final txtSnippetClassPolymorphism = 'polymorphism';
   static final txtSnippetList = 'list';
   static final txtSnippetMap = 'map';
+  static final txtSnippetOperatorSpread = 'operator_spread';
   static final txtSnippetWidgetStateless = 'widget_stateless';
   static final txtSnippetWidgetStateful = 'widget_stateful';
   static final txtSnippetWidgetSafeArea = 'widget_safe_area';
@@ -41,4 +42,5 @@ class AppConstants {
   static final txtSnippetWidgetIcon = 'widget_icon';
   static final txtSnippetWidgetIconBackground = 'widget_icon_background';
   static final txtSnippetWidgetImage = 'widget_image';
+  static final txtSnippetWidgetBottomSheet = 'widget_bottom_sheet';
 }
