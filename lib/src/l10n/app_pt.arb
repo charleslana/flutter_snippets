@@ -50,5 +50,6 @@
     "menuWidgetBasicTextStyle": "Texto com estilização",
     "menuWidgetBasicTextDefaultStyle": "Texto com estilo padrão",
     "menuWidgetBasicRichText": "RichText",
-    "menuWidgetBasicColumn": "Coluna"
+    "menuWidgetBasicColumn": "Coluna",
+    "menuWidgetBasicRow": "Linhas"
 }

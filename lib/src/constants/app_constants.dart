@@ -30,4 +30,5 @@ class AppConstants {
   static final txtSnippetWidgetTextDefaultStyle = 'widget_text_default_style';
   static final txtSnippetWidgetRichText = 'widget_rich_text';
   static final txtSnippetWidgetColumn = 'widget_column';
+  static final txtSnippetWidgetRow = 'widget_row';
 }
