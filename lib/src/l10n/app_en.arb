@@ -66,5 +66,6 @@
     "menuWidgetBasicRichText": "RichText",
     "menuWidgetBasicColumn": "Column",
     "menuWidgetBasicRow": "Row",
-    "menuWidgetBasicDivider": "Divider"
+    "menuWidgetBasicDivider": "Divider",
+    "menuWidgetBasicVerticalDivider": "Divider Vertical"
 }

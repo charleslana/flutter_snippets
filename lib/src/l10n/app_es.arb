@@ -52,5 +52,6 @@
     "menuWidgetBasicRichText": "RichText",
     "menuWidgetBasicColumn": "Columna",
     "menuWidgetBasicRow": "Líneas",
-    "menuWidgetBasicDivider": "Divisor"
+    "menuWidgetBasicDivider": "Divisor",
+    "menuWidgetBasicVerticalDivider": "Divisor Vertical"
 }
