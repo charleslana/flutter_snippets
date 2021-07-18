@@ -35,4 +35,6 @@ class AppConstants {
   static final txtSnippetWidgetVerticalDivider = 'widget_vertical_divider';
   static final txtSnippetWidgetTextButton = 'widget_text_button';
   static final txtSnippetWidgetElevatedButton = 'widget_elevated_button';
+  static final txtSnippetWidgetElevatedButtonIcon =
+      'widget_elevated_button_icon';
 }
