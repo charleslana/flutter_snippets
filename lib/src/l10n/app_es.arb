@@ -63,5 +63,7 @@
     "menuWidgetBasicIconBackground": "Icono con fondo",
     "menuWidgetBasicImage": "Imagen",
     "menuWidgetBasicBottomSheet": "BottomSheet",
-    "menuWidgetBasicMediaQuery": "MediaQuery"
+    "menuWidgetBasicMediaQuery": "MediaQuery",
+    "menuWidgetBasicGestureDetector": "GestureDetector",
+    "menuWidgetBasicInkWell": "InkWell"
 }

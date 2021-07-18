@@ -13,9 +13,11 @@ import 'package:flutter_snippets/src/snippets/snippet_column.dart';
 import 'package:flutter_snippets/src/snippets/snippet_divider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart';
+import 'package:flutter_snippets/src/snippets/snippet_gesture_detector.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon_background.dart';
 import 'package:flutter_snippets/src/snippets/snippet_image.dart';
+import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
 import 'package:flutter_snippets/src/snippets/snippet_media_query.dart';
 import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rich_text.dart';
@@ -397,6 +399,34 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicMediaQuery,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetMediaQuery(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicGestureDetector,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetGestureDetector,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicGestureDetector,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetGestureDetector(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicInkWell,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetInkWell,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicInkWell,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetInkWell(),
                           ),
                         ),
                       ),

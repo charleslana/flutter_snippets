@@ -44,4 +44,6 @@ class AppConstants {
   static final txtSnippetWidgetImage = 'widget_image';
   static final txtSnippetWidgetBottomSheet = 'widget_bottom_sheet';
   static final txtSnippetWidgetMediaQuery = 'widget_media_query';
+  static final txtSnippetWidgetGestureDetector = 'widget_gesture_detector';
+  static final txtSnippetWidgetInkWell = 'widget_ink_well';
 }
