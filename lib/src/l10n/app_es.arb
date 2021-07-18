@@ -56,5 +56,6 @@
     "menuWidgetBasicVerticalDivider": "Divisor Vertical",
     "menuWidgetBasicTextButton": "TextButton",
     "menuWidgetBasicElevatedButton": "ElevatedButton",
-    "menuWidgetBasicElevatedButtonIcon": "ElevatedButton con Icono"
+    "menuWidgetBasicElevatedButtonIcon": "ElevatedButton con Icono",
+    "menuWidgetBasicIconBackground": "Icono con fondo"
 }

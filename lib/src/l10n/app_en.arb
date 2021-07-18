@@ -70,5 +70,6 @@
     "menuWidgetBasicVerticalDivider": "Divider Vertical",
     "menuWidgetBasicTextButton": "TextButton",
     "menuWidgetBasicElevatedButton": "ElevatedButton",
-    "menuWidgetBasicElevatedButtonIcon": "ElevatedButton with Icon"
+    "menuWidgetBasicElevatedButtonIcon": "ElevatedButton with Icon",
+    "menuWidgetBasicIconBackground": "Icon with background"
 }
