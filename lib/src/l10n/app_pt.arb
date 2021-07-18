@@ -62,5 +62,6 @@
     "menuWidgetBasicIcon": "Ícone",
     "menuWidgetBasicIconBackground": "Ícone com fundo",
     "menuWidgetBasicImage": "Imagem",
-    "menuWidgetBasicBottomSheet": "BottomSheet"
+    "menuWidgetBasicBottomSheet": "BottomSheet",
+    "menuWidgetBasicMediaQuery": "MediaQuery"
 }

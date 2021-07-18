@@ -43,4 +43,5 @@ class AppConstants {
   static final txtSnippetWidgetIconBackground = 'widget_icon_background';
   static final txtSnippetWidgetImage = 'widget_image';
   static final txtSnippetWidgetBottomSheet = 'widget_bottom_sheet';
+  static final txtSnippetWidgetMediaQuery = 'widget_media_query';
 }
