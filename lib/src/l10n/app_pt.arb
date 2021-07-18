@@ -54,5 +54,6 @@
     "menuWidgetBasicRow": "Linhas",
     "menuWidgetBasicDivider": "Divisor",
     "menuWidgetBasicVerticalDivider": "Divisor Vertical",
-    "menuWidgetBasicTextButton": "TextButton"
+    "menuWidgetBasicTextButton": "TextButton",
+    "menuWidgetBasicElevatedButton": "ElevatedButton"
 }

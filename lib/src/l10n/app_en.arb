@@ -68,5 +68,6 @@
     "menuWidgetBasicRow": "Row",
     "menuWidgetBasicDivider": "Divider",
     "menuWidgetBasicVerticalDivider": "Divider Vertical",
-    "menuWidgetBasicTextButton": "TextButton"
+    "menuWidgetBasicTextButton": "TextButton",
+    "menuWidgetBasicElevatedButton": "ElevatedButton"
 }
