@@ -68,5 +68,6 @@
     "menuWidgetBasicInkWell": "InkWell",
     "menuWidgetBasicCard": "Card",
     "menuWidgetBasicFutureBuilder": "FutureBuilder",
-    "menuWidgetBasicStack": "Apilar"
+    "menuWidgetBasicStack": "Apilar",
+    "menuWidgetBasicPageView": "PageView"
 }
