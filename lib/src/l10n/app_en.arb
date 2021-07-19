@@ -84,5 +84,6 @@
     "menuWidgetBasicFutureBuilder": "FutureBuilder",
     "menuWidgetBasicStack": "Stack",
     "menuWidgetBasicPageView": "PageView",
-    "menuWidgetBasicTable": "Table"
+    "menuWidgetBasicTable": "Table",
+    "menuWidgetBasicSnackBar": "SnackBar"
 }

@@ -70,5 +70,6 @@
     "menuWidgetBasicFutureBuilder": "FutureBuilder",
     "menuWidgetBasicStack": "Apilar",
     "menuWidgetBasicPageView": "PageView",
-    "menuWidgetBasicTable": "Tabla"
+    "menuWidgetBasicTable": "Tabla",
+    "menuWidgetBasicSnackBar": "SnackBar"
 }
