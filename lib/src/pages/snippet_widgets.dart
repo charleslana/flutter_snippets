@@ -25,6 +25,7 @@ import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rich_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_row.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
+import 'package:flutter_snippets/src/snippets/snippet_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -456,6 +457,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicFutureBuilder,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetFutureBuilder(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text:
+                            AppLocalizations.of(context)!.menuWidgetBasicStack,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetStack,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicStack,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetStack(),
                           ),
                         ),
                       ),

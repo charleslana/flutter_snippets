@@ -67,5 +67,6 @@
     "menuWidgetBasicGestureDetector": "GestureDetector",
     "menuWidgetBasicInkWell": "InkWell",
     "menuWidgetBasicCard": "Card",
-    "menuWidgetBasicFutureBuilder": "FutureBuilder"
+    "menuWidgetBasicFutureBuilder": "FutureBuilder",
+    "menuWidgetBasicStack": "Apilar"
 }

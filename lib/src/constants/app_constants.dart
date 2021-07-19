@@ -48,4 +48,5 @@ class AppConstants {
   static final txtSnippetWidgetInkWell = 'widget_ink_well';
   static final txtSnippetWidgetCard = 'widget_card';
   static final txtSnippetWidgetFutureBuilder = 'widget_future_builder';
+  static final txtSnippetWidgetStack = 'widget_stack';
 }
