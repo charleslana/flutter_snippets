@@ -73,5 +73,6 @@
     "menuWidgetBasicTable": "Tabela",
     "menuWidgetBasicSnackBar": "SnackBar",
     "menuWidgetBasicDialog": "Dialog",
-    "menuWidgetBasicListView": "ListView"
+    "menuWidgetBasicListView": "ListView",
+    "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator"
 }
