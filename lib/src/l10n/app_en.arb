@@ -85,5 +85,6 @@
     "menuWidgetBasicStack": "Stack",
     "menuWidgetBasicPageView": "PageView",
     "menuWidgetBasicTable": "Table",
-    "menuWidgetBasicSnackBar": "SnackBar"
+    "menuWidgetBasicSnackBar": "SnackBar",
+    "menuWidgetBasicDialog": "Dialog"
 }

@@ -71,5 +71,6 @@
     "menuWidgetBasicStack": "Pilha",
     "menuWidgetBasicPageView": "PageView",
     "menuWidgetBasicTable": "Tabela",
-    "menuWidgetBasicSnackBar": "SnackBar"
+    "menuWidgetBasicSnackBar": "SnackBar",
+    "menuWidgetBasicDialog": "Dialog"
 }

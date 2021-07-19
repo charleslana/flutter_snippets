@@ -71,5 +71,6 @@
     "menuWidgetBasicStack": "Apilar",
     "menuWidgetBasicPageView": "PageView",
     "menuWidgetBasicTable": "Tabla",
-    "menuWidgetBasicSnackBar": "SnackBar"
+    "menuWidgetBasicSnackBar": "SnackBar",
+    "menuWidgetBasicDialog": "Dialog"
 }

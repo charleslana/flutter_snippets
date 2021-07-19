@@ -52,4 +52,5 @@ class AppConstants {
   static final txtSnippetWidgetPageView = 'widget_page_view';
   static final txtSnippetWidgetTable = 'widget_table';
   static final txtSnippetWidgetSnackBar = 'widget_snack_bar';
+  static final txtSnippetWidgetDialog = 'widget_dialog';
 }
