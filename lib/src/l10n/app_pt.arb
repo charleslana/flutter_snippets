@@ -69,5 +69,6 @@
     "menuWidgetBasicCard": "Card",
     "menuWidgetBasicFutureBuilder": "FutureBuilder",
     "menuWidgetBasicStack": "Pilha",
-    "menuWidgetBasicPageView": "PageView"
+    "menuWidgetBasicPageView": "PageView",
+    "menuWidgetBasicTable": "Tabela"
 }
