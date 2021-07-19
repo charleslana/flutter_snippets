@@ -17,23 +17,25 @@ class SnippetFilter extends StatelessWidget {
           title: Text(filter.title),
           actions: ListIconsAppBarWidget().listWidgets,
         ),
-        body: Wrap(
-          children: List.generate(filter.snippets.length, (index) {
-            final item = filter.snippets[index];
+        body: SingleChildScrollView(
+          child: Wrap(
+            children: List.generate(filter.snippets.length, (index) {
+              final item = filter.snippets[index];
 
-            return Padding(
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-              child: TextButton(
-                onPressed: item.onPressed,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                  child: Text(
-                    item.text,
+              return Padding(
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                child: TextButton(
+                  onPressed: item.onPressed,
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                    child: Text(
+                      item.text,
+                    ),
                   ),
                 ),
-              ),
-            );
-          }),
+              );
+            }),
+          ),
         ),
         bottomNavigationBar: AppBottomNavigationBar(
           index: filter.bottomNavigationBarIndex,

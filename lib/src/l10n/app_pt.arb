@@ -72,5 +72,6 @@
     "menuWidgetBasicPageView": "PageView",
     "menuWidgetBasicTable": "Tabela",
     "menuWidgetBasicSnackBar": "SnackBar",
-    "menuWidgetBasicDialog": "Dialog"
+    "menuWidgetBasicDialog": "Dialog",
+    "menuWidgetBasicListView": "ListView"
 }

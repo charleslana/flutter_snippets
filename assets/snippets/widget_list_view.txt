@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('List View'),
+      ),
+      body: ListView(
+        children: [
+          ListTile(
+            leading: Icon(Icons.map),
+            title: Text('Mapa'),
+            trailing: Icon(Icons.settings),
+          ),
+          ListTile(
+            leading: Icon(Icons.photo_album),
+            title: Text('Álbum'),
+            trailing: Icon(Icons.settings),
+          ),
+          ListTile(
+            leading: Icon(Icons.phone),
+            title: Text('Fone'),
+            trailing: Icon(Icons.settings),
+          ),
+        ],
+      ),
+    );
+  }
+}
