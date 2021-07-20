@@ -7,15 +7,6 @@
     "@helloWorld": {
         "description": "A programmer greeting"
     },
-    "hello": "Hello {username}",
-    "@hello": {
-        "description": "A welcome message",
-        "placeholder": {
-            "username": {
-                "type": "String"
-            }
-        }
-    },
     "bottomNavigationBarBasic": "Basic",
     "bottomNavigationBarAdvanced": "Advanced",
     "bottomNavigationBarWidget": "Widgets",
@@ -28,6 +19,21 @@
     "tabBarTitleCode": "Code",
     "utilCopyCodeMessage": "Code copied",
     "utilCopyCodeClose": "Close",
+    "filterSearchLabel": "Search {filter}",
+    "@filterSearchLabel": {
+        "type": "text",
+        "placeholders": {
+            "filter": {}
+        }
+    },
+    "filterSearchHint": "{filter}",
+    "@filterSearchHint": {
+        "type": "text",
+        "placeholders": {
+            "filter": {}
+        }
+    },
+    "filterSearchNoResults": "No results",
     "menuBasicDart": "Dart Basic",
     "menuBasicComments": "Comments",
     "menuBasicVariables": "Variables",

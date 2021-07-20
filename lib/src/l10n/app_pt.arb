@@ -1,7 +1,6 @@
 {
     "language": "Português",
     "helloWorld": "Olá Mundo!",
-    "hello": "Olá {username}",
     "bottomNavigationBarBasic": "Básico",
     "bottomNavigationBarAdvanced": "Avançado",
     "bottomNavigationBarWidget": "Widgets",
@@ -14,6 +13,9 @@
     "tabBarTitleCode": "Código",
     "utilCopyCodeMessage": "Código copiado",
     "utilCopyCodeClose": "Fechar",
+    "filterSearchLabel": "Pesquisar {filter}",
+    "filterSearchHint": "{filter}",
+    "filterSearchNoResults": "Nenhum resultado",
     "menuBasicDart": "Dart Básico",
     "menuBasicComments": "Comentários",
     "menuBasicVariables": "Variáveis",
