@@ -74,5 +74,6 @@
     "menuWidgetBasicSnackBar": "SnackBar",
     "menuWidgetBasicDialog": "Dialog",
     "menuWidgetBasicListView": "ListView",
-    "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator"
+    "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
+    "menuWidgetAdvancedDraggable": "Drag and Drop"
 }
