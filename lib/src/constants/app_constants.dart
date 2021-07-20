@@ -57,4 +57,5 @@ class AppConstants {
   static final txtSnippetWidgetListView = 'widget_list_view';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
+  static final txtSnippetWidgetGlobalKey = 'widget_global_key';
 }

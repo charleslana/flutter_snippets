@@ -18,6 +18,7 @@ import 'package:flutter_snippets/src/snippets/snippet_elevated_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_future_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_gesture_detector.dart';
+import 'package:flutter_snippets/src/snippets/snippet_global_key.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon_background.dart';
 import 'package:flutter_snippets/src/snippets/snippet_image.dart';
@@ -589,6 +590,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAdvancedDraggable,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetDraggable(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAdvancedGlobalKey,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetGlobalKey,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAdvancedGlobalKey,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetGlobalKey(),
                           ),
                         ),
                       ),
