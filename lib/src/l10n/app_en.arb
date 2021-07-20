@@ -97,5 +97,6 @@
     "menuWidgetBasicListView": "ListView",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
-    "menuWidgetAdvancedGlobalKey": "GlobalKey"
+    "menuWidgetAdvancedGlobalKey": "GlobalKey",
+    "menuWidgetAdvancedDrawer": "Drawer"
 }
