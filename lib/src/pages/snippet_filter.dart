@@ -109,7 +109,15 @@ class _SnippetFilterState extends State<SnippetFilter> {
                             return Padding(
                               padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                               child: TextButton(
-                                onPressed: item.onPressed,
+                                onPressed: () {
+                                  FocusManager.instance.primaryFocus?.unfocus();
+                                  item.onPressed();
+                                  setState(() {
+                                    _editingController.clear();
+                                    _items.clear();
+                                    _items.addAll(_duplicateItems);
+                                  });
+                                },
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                                   child: Text(
