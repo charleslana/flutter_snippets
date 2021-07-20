@@ -183,7 +183,21 @@ class SnippetAdvanced extends StatelessWidget {
                   AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
                     data: AppConstants.txtSnippetOperatorSpread,
-                    title: AppLocalizations.of(context)!.menuAdvancedOperatorSpread,
+                    title: AppLocalizations.of(context)!
+                        .menuAdvancedOperatorSpread,
+                    bottomNavigationBarIndex: 1,
+                  ),
+                ),
+              ),
+              AppMenu(
+                text: AppLocalizations.of(context)!.menuAdvancedCascadeOperator,
+                icon: Icons.clear_all,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetCascadeOperator,
+                    title: AppLocalizations.of(context)!
+                        .menuAdvancedCascadeOperator,
                     bottomNavigationBarIndex: 1,
                   ),
                 ),

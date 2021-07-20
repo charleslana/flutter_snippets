@@ -20,4 +20,16 @@ class AppUtils {
       },
     );
   }
+
+  String removeDiacritics(String string) {
+    var withDiacritics =
+        'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+    var withoutDiacritics =
+        'AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
+
+    for (int i = 0; i < withDiacritics.length; i++) {
+      string = string.replaceAll(withDiacritics[i], withoutDiacritics[i]);
+    }
+    return string;
+  }
 }

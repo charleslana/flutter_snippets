@@ -57,6 +57,7 @@
     "menuAdvancedList": "List",
     "menuAdvancedMap": "Map",
     "menuAdvancedOperatorSpread": "Operator Spread",
+    "menuAdvancedCascadeOperator": "Cascade Operator",
     "menuWidget": "Widgets",
     "menuWidgetCreate": "Creation Widgets",
     "menuWidgetCreateStateless": "Widget Stateless",

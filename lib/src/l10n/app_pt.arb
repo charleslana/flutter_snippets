@@ -39,6 +39,7 @@
     "menuAdvancedList": "Lista",
     "menuAdvancedMap": "Mapeamento",
     "menuAdvancedOperatorSpread": "Operador Spread",
+    "menuAdvancedCascadeOperator": "Operador Cascata",
     "menuWidget": "Widgets",
     "menuWidgetCreate": "Widgets de Criação",
     "menuWidgetCreateStateless": "Widget Sem estado",

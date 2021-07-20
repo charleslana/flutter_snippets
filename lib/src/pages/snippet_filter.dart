@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
+import 'package:flutter_snippets/src/utils/app_utils.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -28,7 +29,9 @@ class _SnippetFilterState extends State<SnippetFilter> {
       List<SnippetFilterListModel> dummyListData = [];
 
       dummySearchList.forEach((item) {
-        if (item.text.toLowerCase().contains(query.toLowerCase())) {
+        if (AppUtils()
+            .removeDiacritics(item.text.toLowerCase())
+            .contains(AppUtils().removeDiacritics(query).toLowerCase())) {
           dummyListData.add(item);
         }
       });

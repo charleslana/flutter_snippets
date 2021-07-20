@@ -19,6 +19,7 @@ class AppConstants {
   static final txtSnippetList = 'list';
   static final txtSnippetMap = 'map';
   static final txtSnippetOperatorSpread = 'operator_spread';
+  static final txtSnippetCascadeOperator = 'cascade_operator';
   static final txtSnippetWidgetStateless = 'widget_stateless';
   static final txtSnippetWidgetStateful = 'widget_stateful';
   static final txtSnippetWidgetSafeArea = 'widget_safe_area';

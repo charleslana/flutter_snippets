@@ -1,0 +1,26 @@
+class Cascade {
+  void print1() {
+    print('flutter: print 1');
+  }
+
+  void print2() {
+    print('flutter: print 2');
+  }
+
+  void print3() {
+    print('flutter: print 3');
+  }
+}
+
+void main() {
+  final cascade = Cascade();
+
+  void cascadeOperator() {
+    cascade
+      ..print1()
+      ..print2()
+      ..print3();
+  }
+
+  cascadeOperator();
+}
