@@ -59,4 +59,5 @@ class AppConstants {
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
   static final txtSnippetWidgetDrawer = 'widget_drawer';
+  static final txtSnippetWidgetDropdown = 'widget_dropdown';
 }

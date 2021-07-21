@@ -80,5 +80,6 @@
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
-    "menuWidgetAdvancedDrawer": "Drawer"
+    "menuWidgetAdvancedDrawer": "Drawer",
+    "menuWidgetAdvancedDropdown": "Dropdown"
 }
