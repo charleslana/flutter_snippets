@@ -12,7 +12,6 @@ class SnippetCard extends StatelessWidget {
           child: Column(
             children: [
               Card(
-                color: Colors.grey[100],
                 child: Container(
                   padding: EdgeInsets.all(10),
                   child: Column(
