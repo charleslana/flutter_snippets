@@ -99,5 +99,6 @@
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
     "menuWidgetAdvancedDrawer": "Drawer",
-    "menuWidgetAdvancedDropdown": "Dropdown"
+    "menuWidgetAdvancedDropdown": "Dropdown",
+    "menuWidgetAdvancedDismissible": "Dismissible"
 }
