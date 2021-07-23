@@ -54,6 +54,9 @@ class MyThemes {
     iconTheme: IconThemeData(
       color: Colors.deepPurple,
     ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: Colors.deepPurple,
+    ),
   );
 
   static final lighTheme = ThemeData(
@@ -81,6 +84,9 @@ class MyThemes {
     primaryColor: Colors.white,
     iconTheme: IconThemeData(
       color: Colors.black,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: Colors.blue,
     ),
   );
 }

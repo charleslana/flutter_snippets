@@ -32,4 +32,49 @@ class AppUtils {
     }
     return string;
   }
+
+  void alert(String? message, BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          insetPadding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.08),
+          title: Center(
+            child: Icon(
+              Icons.lightbulb,
+              size: 40,
+            ),
+          ),
+          content: message == null
+              ? Text(AppLocalizations.of(context)!.utilAlertNoInformation)
+              : SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 16,
+                        width: MediaQuery.of(context).size.width,
+                      ),
+                      Text(message),
+                    ],
+                  ),
+                ),
+          actions: [
+            TextButton(
+              child: Text('Ok'),
+              onPressed: () => Navigator.pop(context, true),
+            ),
+          ],
+        );
+      },
+    ).then((value) {
+      if (value == null) {
+        return;
+      }
+      if (value) {
+      } else {}
+    });
+  }
 }

@@ -13,6 +13,7 @@
     "tabBarTitleCode": "Código",
     "utilCopyCodeMessage": "Código copiado",
     "utilCopyCodeClose": "Fechar",
+    "utilAlertNoInformation": "Nenhuma informação disponível",
     "filterSearchLabel": "Pesquisar {filter}",
     "filterSearchHint": "{filter}",
     "filterSearchNoResults": "Nenhum resultado",
@@ -77,10 +78,12 @@
     "menuWidgetBasicSnackBar": "SnackBar",
     "menuWidgetBasicDialog": "Dialog",
     "menuWidgetBasicListView": "ListView",
+    "menuWidgetBasicRotatedBox": "Caixa Girada",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
     "menuWidgetAdvancedDrawer": "Drawer",
     "menuWidgetAdvancedDropdown": "Dropdown",
-    "menuWidgetAdvancedDismissible": "Dismissible"
+    "menuWidgetAdvancedDismissible": "Dismissible",
+    "tipRotatedBox": "O widget RotatedBox é usado para girar seu filho por um número inteiro de quartos de volta. Ele é usado para orientar seus widgets filhos na orientação horizontal ou vertical. Além disso, é muito leve e pode ser usado para projetar várias interfaces do usuário, pois dá flexibilidade ao usuário em relação ao design do aplicativo."
 }

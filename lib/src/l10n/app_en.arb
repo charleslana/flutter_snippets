@@ -19,6 +19,7 @@
     "tabBarTitleCode": "Code",
     "utilCopyCodeMessage": "Code copied",
     "utilCopyCodeClose": "Close",
+    "utilAlertNoInformation": "No information available",
     "filterSearchLabel": "Search {filter}",
     "@filterSearchLabel": {
         "type": "text",
@@ -95,10 +96,12 @@
     "menuWidgetBasicSnackBar": "SnackBar",
     "menuWidgetBasicDialog": "Dialog",
     "menuWidgetBasicListView": "ListView",
+    "menuWidgetBasicRotatedBox": "RotatedBox",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
     "menuWidgetAdvancedDrawer": "Drawer",
     "menuWidgetAdvancedDropdown": "Dropdown",
-    "menuWidgetAdvancedDismissible": "Dismissible"
+    "menuWidgetAdvancedDismissible": "Dismissible",
+    "tipRotatedBox": "The RotatedBox widget is used to rotate its child by a integral number of quarter turns. It is used to orient it’s child widgets into either horizontal or vertical orientation. Furthermore, it is very lightweight and can be used for designing various UI as it gives flexibility to the user over the Design of the app."
 }

@@ -4,6 +4,7 @@ import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/components/app_tab_bar_body.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/services/txt_service.dart';
+import 'package:flutter_snippets/src/utils/app_utils.dart';
 
 class SnippetShow extends StatefulWidget {
   const SnippetShow({Key? key}) : super(key: key);
@@ -67,6 +68,12 @@ class _SnippetShowState extends State<SnippetShow>
               ),
               bottomNavigationBar: AppBottomNavigationBar(
                 index: _snippet!.bottomNavigationBarIndex,
+              ),
+              floatingActionButtonLocation:
+                  FloatingActionButtonLocation.centerDocked,
+              floatingActionButton: FloatingActionButton(
+                child: Icon(Icons.lightbulb),
+                onPressed: () => AppUtils().alert(_snippet!.tip, context),
               ),
             ),
     );
