@@ -10,12 +10,12 @@ class L10n {
   static String getFlag(String code) {
     switch (code) {
       case 'en':
-        return '🇺🇸';
+        return 'icon_united_states';
       case 'es':
-        return '🇪🇸';
+        return 'icon_spain';
       case 'pt':
       default:
-        return '🇧🇷';
+        return 'icon_brazil';
     }
   }
 }

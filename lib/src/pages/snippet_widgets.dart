@@ -673,6 +673,18 @@ class SnippetWidgets extends StatelessWidget {
                   ),
                 ),
               ),
+              AppMenu(
+                text: AppLocalizations.of(context)!.menuWidgetApps,
+                icon: Icons.grid_view,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetFilter,
+                  arguments: SnippetFilterModel(
+                    title: AppLocalizations.of(context)!.menuWidgetApps,
+                    snippets: [],
+                    bottomNavigationBarIndex: 2,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

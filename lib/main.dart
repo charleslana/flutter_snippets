@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_snippets/src/l10n/l10n.dart';
+import 'package:flutter_snippets/src/pages/app_logo.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
@@ -67,8 +68,9 @@ class MyAppMaterial extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      initialRoute: AppRoutes.snippetBasic,
+      initialRoute: AppRoutes.appLogo,
       routes: {
+        AppRoutes.appLogo: (_) => AppLogo(),
         AppRoutes.snippetBasic: (_) => SnippetBasic(),
         AppRoutes.snippetAdvanced: (_) => SnippetAdvanced(),
         AppRoutes.snippetWidgets: (_) => SnippetWidgets(),

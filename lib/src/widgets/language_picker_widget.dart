@@ -19,9 +19,12 @@ class LanguagePickerWidget extends StatelessWidget {
 
             return DropdownMenuItem(
               child: Center(
-                child: Text(
-                  flag,
-                  style: TextStyle(fontSize: 32),
+                child: Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Image.asset(
+                    'assets/images/${flag}.png',
+                    scale: 0.2,
+                  ),
                 ),
               ),
               value: locale,

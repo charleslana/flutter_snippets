@@ -65,6 +65,7 @@
     "menuWidgetCreateStateful": "Widget Stateful",
     "menuWidgetBasic": "Widgets Basic",
     "menuWidgetAdvanced": "Widgets Advanced",
+    "menuWidgetApps": "Apps",
     "menuWidgetBasicSafeArea": "SafeArea",
     "menuWidgetBasicCircularProgressIndicator": "CircularProgressIndicator",
     "menuWidgetBasicContainer": "Container",
