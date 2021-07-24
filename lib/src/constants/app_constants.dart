@@ -62,4 +62,5 @@ class AppConstants {
   static final txtSnippetWidgetDropdown = 'widget_dropdown';
   static final txtSnippetWidgetDismissible = 'widget_dismissible';
   static final txtSnippetWidgetRotatedBox = 'widget_rotated_box';
+  static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
 }
