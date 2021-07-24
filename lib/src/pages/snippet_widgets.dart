@@ -33,6 +33,7 @@ import 'package:flutter_snippets/src/snippets/snippet_navigator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_navigator_with_arguments.dart';
 import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_page_view.dart';
+import 'package:flutter_snippets/src/snippets/snippet_popup_menu_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_refresh_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rich_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rotated_box.dart';
@@ -756,6 +757,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAdvancedSendDataToScreen,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetSendDataToScreen(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAdvancedPopupMenuButton,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetPopupMenuButton,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAdvancedPopupMenuButton,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetPopupMenuButton(),
                           ),
                         ),
                       ),

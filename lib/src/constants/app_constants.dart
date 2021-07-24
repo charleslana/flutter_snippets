@@ -69,5 +69,6 @@ class AppConstants {
   static final txtSnippetWidgetNavigatorWithArguments =
       'widget_navigator_with_arguments';
   static final txtSnippetWidgetSendDataToScreen = 'widget_send_data_to_screen';
+  static final txtSnippetWidgetPopupMenuButton = 'widget_popup_menu_button';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
 }
