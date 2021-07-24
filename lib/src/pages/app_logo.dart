@@ -53,7 +53,7 @@ class _AppLogoState extends State<AppLogo> {
                 ),
                 Flexible(
                   child: Text(
-                    'SDK Version: 2.2.3',
+                    'Flutter Version: 2.2.3',
                     style: TextStyle(
                       fontSize: 15,
                       color: Color(0xffc4efed),

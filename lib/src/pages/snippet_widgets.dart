@@ -47,6 +47,7 @@ import 'package:flutter_snippets/src/snippets/snippet_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_snippets/src/snippets/snippet_stopwatch.dart';
 import 'package:flutter_snippets/src/snippets/snippet_table.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_button.dart';
@@ -786,7 +787,22 @@ class SnippetWidgets extends StatelessWidget {
                   AppRoutes.snippetFilter,
                   arguments: SnippetFilterModel(
                     title: AppLocalizations.of(context)!.menuWidgetApps,
-                    snippets: [],
+                    snippets: [
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAppStopwatch,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetStopwtach,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAppStopwatch,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetStopwatch(),
+                          ),
+                        ),
+                      ),
+                    ],
                     bottomNavigationBarIndex: 2,
                   ),
                 ),
