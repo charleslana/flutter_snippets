@@ -5,6 +5,7 @@ import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_animated_container.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
@@ -45,6 +46,21 @@ class SnippetAnimations extends StatelessWidget {
                         .menuAnimationAnimationIcon,
                     bottomNavigationBarIndex: 3,
                     widget: SnippetAnimationIcon(),
+                  ),
+                ),
+              ),
+              AppMenu(
+                text: AppLocalizations.of(context)!
+                    .menuAnimationAnimatedContainer,
+                icon: Icons.takeout_dining,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetAnimatedContainer,
+                    title: AppLocalizations.of(context)!
+                        .menuAnimationAnimatedContainer,
+                    bottomNavigationBarIndex: 3,
+                    widget: SnippetAnimatedContainer(),
                   ),
                 ),
               ),
