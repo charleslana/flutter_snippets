@@ -65,5 +65,6 @@ class AppConstants {
   static final txtSnippetWidgetGridView = 'widget_grid_view';
   static final txtSnippetWidgetSilverAppBar = 'widget_silver_app_bar';
   static final txtSnippetWidgetSilverGrid = 'widget_silver_grid';
+  static final txtSnippetWidgetNavigator = 'widget_navigator';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
 }

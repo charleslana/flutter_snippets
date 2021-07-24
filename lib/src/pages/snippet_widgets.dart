@@ -29,6 +29,7 @@ import 'package:flutter_snippets/src/snippets/snippet_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_media_query.dart';
+import 'package:flutter_snippets/src/snippets/snippet_navigator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_page_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_refresh_indicator.dart';
@@ -710,6 +711,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAdvancedSilverGrid,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetSilverGrid(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAdvancedNavigator,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetNavigator,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAdvancedNavigator,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetNavigator(),
                           ),
                         ),
                       ),
