@@ -57,13 +57,6 @@ class MyThemes {
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Colors.deepPurple,
     ),
-    fontFamily: 'ShareTech',
-    snackBarTheme: SnackBarThemeData(
-      contentTextStyle: TextStyle(
-        fontFamily: 'ShareTech',
-        color: Colors.black,
-      ),
-    ),
   );
 
   static final lighTheme = ThemeData(
@@ -94,13 +87,6 @@ class MyThemes {
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Colors.blue,
-    ),
-    fontFamily: 'ShareTech',
-    snackBarTheme: SnackBarThemeData(
-      contentTextStyle: TextStyle(
-        fontFamily: 'ShareTech',
-        color: Colors.white,
-      ),
     ),
   );
 }
