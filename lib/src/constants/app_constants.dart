@@ -75,4 +75,5 @@ class AppConstants {
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
   static final txtSnippetWidgetAnimatedContainer = 'widget_animated_container';
+  static final txtSnippetWidgetAnimatedCrossFade = 'widget_animated_cross_fade';
 }

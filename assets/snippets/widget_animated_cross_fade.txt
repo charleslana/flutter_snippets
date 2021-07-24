@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  bool _crossFadeStateShowFirst = true;
+
+  void _crossFade() {
+    setState(() {
+      _crossFadeStateShowFirst = _crossFadeStateShowFirst ? false : true;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('AnimatedCrossFade'),
+        automaticallyImplyLeading: false,
+      ),
+      body: Stack(
+        alignment: Alignment.center,
+        children: [
+          AnimatedCrossFade(
+            duration: Duration(milliseconds: 500),
+            sizeCurve: Curves.bounceOut,
+            crossFadeState: _crossFadeStateShowFirst
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            firstChild: Container(
+              color: Colors.amber,
+              height: 100.0,
+              width: 100.0,
+            ),
+            secondChild: Container(
+              color: Colors.lime,
+              height: 200.0,
+              width: 200.0,
+            ),
+          ),
+          Positioned.fill(
+            child: TextButton(
+              child: Text('Toque para\nAnimar a Cor e o Tamanho'),
+              onPressed: () => _crossFade(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

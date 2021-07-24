@@ -6,6 +6,7 @@ import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_container.dart';
+import 'package:flutter_snippets/src/snippets/snippet_animated_cross_fade.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
@@ -61,6 +62,21 @@ class SnippetAnimations extends StatelessWidget {
                         .menuAnimationAnimatedContainer,
                     bottomNavigationBarIndex: 3,
                     widget: SnippetAnimatedContainer(),
+                  ),
+                ),
+              ),
+              AppMenu(
+                text: AppLocalizations.of(context)!
+                    .menuAnimationAnimatedCrossFade,
+                icon: Icons.highlight_alt,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetAnimatedCrossFade,
+                    title: AppLocalizations.of(context)!
+                        .menuAnimationAnimatedCrossFade,
+                    bottomNavigationBarIndex: 3,
+                    widget: SnippetAnimatedCrossFade(),
                   ),
                 ),
               ),
