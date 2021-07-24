@@ -32,12 +32,12 @@ class _AppLogoState extends State<AppLogo> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10.0),
-      decoration: BoxDecoration(
-        gradient: logoGradient,
-      ),
-      child: SafeArea(
+    return SafeArea(
+      child: Container(
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+          gradient: logoGradient,
+        ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Center(
