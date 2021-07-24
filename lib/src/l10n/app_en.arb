@@ -105,6 +105,7 @@
     "menuWidgetAdvancedDropdown": "Dropdown",
     "menuWidgetAdvancedDismissible": "Dismissible",
     "menuWidgetAdvancedGridView": "GridView",
+    "menuWidgetAdvancedSilverAppBar": "SilverAppBar",
     "menuAnimation": "Animations",
     "menuAnimationAnimationIcon": "Animation Icon",
     "tipRotatedBox": "The RotatedBox widget is used to rotate its child by a integral number of quarter turns. It is used to orient it’s child widgets into either horizontal or vertical orientation. Furthermore, it is very lightweight and can be used for designing various UI as it gives flexibility to the user over the Design of the app."
