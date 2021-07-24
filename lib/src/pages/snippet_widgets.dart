@@ -50,6 +50,7 @@ import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stopwatch.dart';
 import 'package:flutter_snippets/src/snippets/snippet_table.dart';
+import 'package:flutter_snippets/src/snippets/snippet_tabs.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_default_style.dart';
@@ -773,6 +774,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAdvancedPopupMenuButton,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetPopupMenuButton(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAdvancedTabs,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetTabs,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAdvancedTabs,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetTabs(),
                           ),
                         ),
                       ),
