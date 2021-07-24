@@ -11,6 +11,7 @@ import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
 import 'package:flutter_snippets/src/snippets/snippet_card.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_column.dart';
+import 'package:flutter_snippets/src/snippets/snippet_countdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dialog.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dismissible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_divider.dart';
@@ -799,6 +800,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAppStopwatch,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetStopwatch(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAppCountdown,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetCountdown,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAppCountdown,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetCountdown(),
                           ),
                         ),
                       ),
