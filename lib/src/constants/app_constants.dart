@@ -85,4 +85,5 @@ class AppConstants {
   static final txtSnippetWidgetMatrix = 'widget_matrix';
   static final txtSnippetWidgetDraggableScrollableSheet =
       'widget_draggable_scrollable_sheet';
+  static final txtSnippetWidgetAnimatedImage = 'widget_animated_image';
 }
