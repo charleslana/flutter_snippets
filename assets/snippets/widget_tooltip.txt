@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  final GlobalKey _toolTipKey = GlobalKey();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: GestureDetector(
+          onTap: () {
+            final dynamic tooltip = _toolTipKey.currentState;
+            tooltip.ensureTooltipVisible();
+          },
+          child: Tooltip(
+            key: _toolTipKey,
+            message: 'button is disabled',
+            child: Radio(
+              groupValue: null,
+              onChanged: null,
+              value: null,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

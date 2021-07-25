@@ -18,6 +18,7 @@ import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicato
 import 'package:flutter_snippets/src/snippets/snippet_clip_oval.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rect.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rrect.dart';
+import 'package:flutter_snippets/src/snippets/snippet_colors.dart';
 import 'package:flutter_snippets/src/snippets/snippet_column.dart';
 import 'package:flutter_snippets/src/snippets/snippet_constrained_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_countdown.dart';
@@ -76,6 +77,7 @@ import 'package:flutter_snippets/src/snippets/snippet_text_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_default_style.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_overflow.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_style.dart';
+import 'package:flutter_snippets/src/snippets/snippet_tooltip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_vertical_divider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_visibility.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
@@ -892,6 +894,32 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetIgnorePointer,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetIgnorePointer(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!.menuWidgetTooltip,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetTooltip,
+                            title:
+                                AppLocalizations.of(context)!.menuWidgetTooltip,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetTooltip(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!.menuWidgetColors,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetColors,
+                            title:
+                                AppLocalizations.of(context)!.menuWidgetColors,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetColors(),
                           ),
                         ),
                       ),

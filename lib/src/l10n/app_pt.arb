@@ -102,6 +102,8 @@
     "menuWidgetPadding": "Padding",
     "menuWidgetAbsorbPointer": "AbsorbPointer",
     "menuWidgetIgnorePointer": "IgnorePointer",
+    "menuWidgetTooltip": "Tooltip",
+    "menuWidgetColors": "Cores",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

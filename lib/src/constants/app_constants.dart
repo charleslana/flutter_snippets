@@ -79,6 +79,8 @@ class AppConstants {
   static final txtSnippetWidgetPadding = 'widget_padding';
   static final txtSnippetWidgetAbsorbPointer = 'widget_absorb_pointer';
   static final txtSnippetWidgetIgnorePointer = 'widget_ignore_pointer';
+  static final txtSnippetWidgetTooltip = 'widget_tooltip';
+  static final txtSnippetWidgetColors = 'widget_colors';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
