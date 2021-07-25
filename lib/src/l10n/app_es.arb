@@ -85,6 +85,7 @@
     "menuWidgetBasicClipOval": "ClipOval",
     "menuWidgetBasicFlexible": "Flexible",
     "menuWidgetBasicExpanded": "Expanded",
+    "menuWidgetBasicCircleAvatar": "CircleAvatar",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
