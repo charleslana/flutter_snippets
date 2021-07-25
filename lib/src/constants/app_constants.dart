@@ -77,4 +77,6 @@ class AppConstants {
   static final txtSnippetWidgetAnimatedContainer = 'widget_animated_container';
   static final txtSnippetWidgetAnimatedCrossFade = 'widget_animated_cross_fade';
   static final txtSnippetWidgetAnimatedOpacity = 'widget_animated_opacity';
+  static final txtSnippetWidgetAnimatedDefaultTextStyle =
+      'widget_animated_default_text_style';
 }
