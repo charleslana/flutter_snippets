@@ -87,6 +87,7 @@
     "menuWidgetBasicExpanded": "Expanded",
     "menuWidgetBasicCircleAvatar": "CircleAvatar",
     "menuWidgetBasicFittedBox": "FittedBox",
+    "menuWidgetBasicVisibility": "Visibilidade",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
