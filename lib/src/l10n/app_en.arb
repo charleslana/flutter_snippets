@@ -104,6 +104,7 @@
     "menuWidgetBasicFlexible": "Flexible",
     "menuWidgetBasicExpanded": "Expanded",
     "menuWidgetBasicCircleAvatar": "CircleAvatar",
+    "menuWidgetBasicFittedBox": "FittedBox",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

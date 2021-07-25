@@ -62,6 +62,7 @@ class AppConstants {
   static final txtSnippetWidgetFlexible = 'widget_flexible';
   static final txtSnippetWidgetExpanded = 'widget_expanded';
   static final txtSnippetWidgetCircleAvatar = 'widget_circle_avatar';
+  static final txtSnippetWidgetFittedBox = 'widget_fitted_box';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

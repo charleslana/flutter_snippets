@@ -25,6 +25,7 @@ import 'package:flutter_snippets/src/snippets/snippet_dropdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expanded.dart';
+import 'package:flutter_snippets/src/snippets/snippet_fitted_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flexible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_future_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_gesture_detector.dart';
@@ -668,6 +669,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicCircleAvatar,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetCircleAvatar(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicFittedBox,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetFittedBox,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicFittedBox,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetFittedBox(),
                           ),
                         ),
                       ),
