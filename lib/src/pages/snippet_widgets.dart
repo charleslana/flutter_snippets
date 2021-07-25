@@ -13,6 +13,7 @@ import 'package:flutter_snippets/src/snippets/snippet_aspect_ratio.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
 import 'package:flutter_snippets/src/snippets/snippet_box_decoration.dart';
 import 'package:flutter_snippets/src/snippets/snippet_card.dart';
+import 'package:flutter_snippets/src/snippets/snippet_checkbox.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circle_avatar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_oval.dart';
@@ -971,6 +972,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicFloatingActionButton,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetFloatingActionButton(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicCheckbox,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetCheckbox,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicCheckbox,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetCheckbox(),
                           ),
                         ),
                       ),

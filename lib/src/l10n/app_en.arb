@@ -125,6 +125,7 @@
     "menuWidgetBasicFlutterLogo": "FlutterLogo",
     "menuWidgetBasicSizedBox": "SizedBox",
     "menuWidgetBasicFloatingActionButton": "FloatingActionButton",
+    "menuWidgetBasicCheckbox": "Checkbox",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  bool _value = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Card(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: SizedBox(
+              width: 430,
+              height: 700,
+              child: Column(
+                children: [
+                  Text(
+                    'Checkbox',
+                    style: TextStyle(
+                      color: Colors.greenAccent[400],
+                      fontSize: 30,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Hello World accept! $_value',
+                        style: TextStyle(fontSize: 17.0),
+                      ),
+                      SizedBox(width: 10),
+                      Checkbox(
+                        value: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value!;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
