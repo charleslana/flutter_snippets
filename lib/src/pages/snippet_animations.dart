@@ -12,6 +12,7 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_custom_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rotating_circle.dart';
+import 'package:flutter_snippets/src/snippets/snippet_transform.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetAnimations extends StatelessWidget {
@@ -139,6 +140,19 @@ class SnippetAnimations extends StatelessWidget {
                         .menuAnimationRotatingCircle,
                     bottomNavigationBarIndex: 3,
                     widget: SnippetRotatingCircle(),
+                  ),
+                ),
+              ),
+              AppMenu(
+                text: AppLocalizations.of(context)!.menuAnimationTransform,
+                icon: Icons.transform,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetTransform,
+                    title: AppLocalizations.of(context)!.menuAnimationTransform,
+                    bottomNavigationBarIndex: 3,
+                    widget: SnippetTransform(),
                   ),
                 ),
               ),
