@@ -110,6 +110,7 @@
     "menuWidgetBasicCheckbox": "Checkbox",
     "menuWidgetBasicEndDrawer": "EndDrawer",
     "menuWidgetBasicContainerTransform": "ContainerTransform",
+    "menuWidgetBasicBanner": "Banner",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
