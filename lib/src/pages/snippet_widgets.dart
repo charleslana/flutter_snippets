@@ -7,6 +7,7 @@ import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/pages/snippet_container.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_align.dart';
 import 'package:flutter_snippets/src/snippets/snippet_aspect_ratio.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
 import 'package:flutter_snippets/src/snippets/snippet_box_decoration.dart';
@@ -46,6 +47,7 @@ import 'package:flutter_snippets/src/snippets/snippet_navigator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_navigator_with_arguments.dart';
 import 'package:flutter_snippets/src/snippets/snippet_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
+import 'package:flutter_snippets/src/snippets/snippet_padding.dart';
 import 'package:flutter_snippets/src/snippets/snippet_page_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_placeholder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_popup_menu_button.dart';
@@ -834,6 +836,32 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetConstrainedBox,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetConstrainedBox(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!.menuWidgetAlign,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetAlign,
+                            title:
+                                AppLocalizations.of(context)!.menuWidgetAlign,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetAlign(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!.menuWidgetPadding,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetPadding,
+                            title:
+                                AppLocalizations.of(context)!.menuWidgetPadding,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetPadding(),
                           ),
                         ),
                       ),

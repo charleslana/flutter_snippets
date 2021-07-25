@@ -98,6 +98,8 @@
     "menuWidgetListWheelScrollView": "ListWheelScrollView",
     "menuWidgetOpacity": "Opacidad",
     "menuWidgetConstrainedBox": "ConstrainedBox",
+    "menuWidgetAlign": "Alinear",
+    "menuWidgetPadding": "Padding",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
