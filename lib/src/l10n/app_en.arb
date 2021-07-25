@@ -127,6 +127,7 @@
     "menuWidgetBasicFloatingActionButton": "FloatingActionButton",
     "menuWidgetBasicCheckbox": "Checkbox",
     "menuWidgetBasicEndDrawer": "EndDrawer",
+    "menuWidgetBasicContainerTransform": "ContainerTransform",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
