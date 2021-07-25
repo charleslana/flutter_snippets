@@ -17,6 +17,7 @@ import 'package:flutter_snippets/src/snippets/snippet_clip_oval.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rect.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rrect.dart';
 import 'package:flutter_snippets/src/snippets/snippet_column.dart';
+import 'package:flutter_snippets/src/snippets/snippet_constrained_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_countdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dialog.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dismissible.dart';
@@ -819,6 +820,20 @@ class SnippetWidgets extends StatelessWidget {
                                 AppLocalizations.of(context)!.menuWidgetOpacity,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetOpacity(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetConstrainedBox,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetConstrainedBox,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetConstrainedBox,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetConstrainedBox(),
                           ),
                         ),
                       ),

@@ -74,6 +74,7 @@ class AppConstants {
   static final txtSnippetWidgetListWheelScrollView =
       'widget_list_wheel_scroll_view';
   static final txtSnippetWidgetOpacity = 'widget_opacity';
+  static final txtSnippetWidgetConstrainedBox = 'widget_constrained_box';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
