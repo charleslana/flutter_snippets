@@ -120,6 +120,7 @@ class AppConstants {
   static final txtSnippetWidgetLayoutBuilder = 'widget_layout_builder';
   static final txtSnippetWidgetBottomNavigationBar =
       'widget_bottom_navigation_bar';
+  static final txtSnippetWidgetExpansionPanel = 'widget_expansion_panel';
   static final txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';

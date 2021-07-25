@@ -136,6 +136,7 @@
     "menuWidgetAdvancedMouseRegion": "MouseRegion",
     "menuWidgetAdvancedLayoutBuilder": "LayoutBuilder",
     "menuWidgetAdvancedBottomNavigationBar": "BottomNavigationBar",
+    "menuWidgetAdvancedExpansionPanel": "ExpansionPanel",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",
