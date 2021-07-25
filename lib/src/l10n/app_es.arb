@@ -112,6 +112,7 @@
     "menuWidgetBasicContainerTransform": "ContainerTransform",
     "menuWidgetBasicBanner": "Banner",
     "menuWidgetBasicBorderRadius": "BorderRadius",
+    "menuWidgetBasicSingleChildScrollView": "SingleChildScrollView",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
