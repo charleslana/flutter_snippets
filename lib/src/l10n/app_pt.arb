@@ -96,6 +96,7 @@
     "menuWidgetBasicPlaceholder": "Placeholder",
     "menuWidgetBasicSpacer": "Spacer",
     "menuWidgetListWheelScrollView": "ListWheelScrollView",
+    "menuWidgetOpacity": "Opacidade",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
