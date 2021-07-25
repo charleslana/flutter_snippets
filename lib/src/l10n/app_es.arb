@@ -133,6 +133,7 @@
     "menuWidgetAdvancedListViewWithSearch": "ListViewWithSearch",
     "menuWidgetAdvancedChip": "Chip",
     "menuWidgetAdvancedImageLoadingBuilder": "ImageLoadingBuilder",
+    "menuWidgetAdvancedMouseRegion": "MouseRegion",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",

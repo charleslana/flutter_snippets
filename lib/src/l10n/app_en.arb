@@ -151,6 +151,7 @@
     "menuWidgetAdvancedListViewWithSearch": "ListViewWithSearch",
     "menuWidgetAdvancedChip": "Chip",
     "menuWidgetAdvancedImageLoadingBuilder": "ImageLoadingBuilder",
+    "menuWidgetAdvancedMouseRegion": "MouseRegion",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",
