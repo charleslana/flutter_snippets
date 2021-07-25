@@ -81,6 +81,7 @@ class AppConstants {
   static final txtSnippetWidgetIgnorePointer = 'widget_ignore_pointer';
   static final txtSnippetWidgetTooltip = 'widget_tooltip';
   static final txtSnippetWidgetColors = 'widget_colors';
+  static final txtSnippetWidgetFlutterLogo = 'widget_flutter_logo';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
