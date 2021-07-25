@@ -90,6 +90,7 @@ class AppConstants {
   static final txtSnippetWidgetContainerTransform =
       'widget_container_transform';
   static final txtSnippetWidgetBanner = 'widget_banner';
+  static final txtSnippetWidgetBorderRadius = 'widget_border_radius';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

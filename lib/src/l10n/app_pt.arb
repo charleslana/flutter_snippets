@@ -111,6 +111,7 @@
     "menuWidgetBasicEndDrawer": "EndDrawer",
     "menuWidgetBasicContainerTransform": "ContainerTransform",
     "menuWidgetBasicBanner": "Banner",
+    "menuWidgetBasicBorderRadius": "BorderRadius",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
