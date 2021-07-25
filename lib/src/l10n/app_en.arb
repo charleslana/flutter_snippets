@@ -106,6 +106,7 @@
     "menuWidgetBasicCircleAvatar": "CircleAvatar",
     "menuWidgetBasicFittedBox": "FittedBox",
     "menuWidgetBasicVisibility": "Visibility",
+    "menuWidgetBasicBoxDecoration": "BoxDecoration",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
