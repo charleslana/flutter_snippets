@@ -83,4 +83,6 @@ class AppConstants {
   static final txtSnippetWidgetRotatingCircle = 'widget_rotating_circle';
   static final txtSnippetWidgetTransform = 'widget_transform';
   static final txtSnippetWidgetMatrix = 'widget_matrix';
+  static final txtSnippetWidgetDraggableScrollableSheet =
+      'widget_draggable_scrollable_sheet';
 }
