@@ -119,6 +119,7 @@
     "menuWidgetAlign": "Align",
     "menuWidgetPadding": "Padding",
     "menuWidgetAbsorbPointer": "AbsorbPointer",
+    "menuWidgetIgnorePointer": "IgnorePointer",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
