@@ -202,6 +202,18 @@ class SnippetAdvanced extends StatelessWidget {
                   ),
                 ),
               ),
+              AppMenu(
+                text: AppLocalizations.of(context)!.menuAdvancedPubspec,
+                icon: Icons.public,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetPubspec,
+                    title: AppLocalizations.of(context)!.menuAdvancedPubspec,
+                    bottomNavigationBarIndex: 1,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
