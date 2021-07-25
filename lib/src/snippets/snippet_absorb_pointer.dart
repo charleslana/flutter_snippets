@@ -1,47 +1,46 @@
 import 'package:flutter/material.dart';
 
-class SnippetStateful extends StatefulWidget {
-  const SnippetStateful({Key? key}) : super(key: key);
+class SnippetAbsorbPointer extends StatefulWidget {
+  const SnippetAbsorbPointer({Key? key}) : super(key: key);
 
   @override
-  _SnippetStatefulState createState() => _SnippetStatefulState();
+  _SnippetAbsorbPointerState createState() => _SnippetAbsorbPointerState();
 }
 
-class _SnippetStatefulState extends State<SnippetStateful> {
-  int _count = 0;
+class _SnippetAbsorbPointerState extends State<SnippetAbsorbPointer> {
+  int _counter = 0;
 
-  void _increment() {
+  void _incrementCounter() {
     setState(() {
-      _count++;
+      _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Stateful'),
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '$_count',
+              '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
             SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-              child: Text(
-                'Adicionar +1',
-                style: TextStyle(
-                  fontSize: 18,
+            AbsorbPointer(
+              absorbing: true,
+              child: ElevatedButton(
+                child: Text(
+                  'Adicionar +1 / Não clicável',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
                 ),
+                onPressed: _incrementCounter,
               ),
-              onPressed: _increment,
             ),
             SizedBox(
               height: 10,
@@ -55,7 +54,7 @@ class _SnippetStatefulState extends State<SnippetStateful> {
               ),
               onPressed: () {
                 setState(() {
-                  _count = 0;
+                  _counter = 0;
                 });
               },
             ),

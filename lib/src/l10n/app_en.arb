@@ -118,6 +118,7 @@
     "menuWidgetConstrainedBox": "ConstrainedBox",
     "menuWidgetAlign": "Align",
     "menuWidgetPadding": "Padding",
+    "menuWidgetAbsorbPointer": "AbsorbPointer",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

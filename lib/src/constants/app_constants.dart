@@ -77,6 +77,7 @@ class AppConstants {
   static final txtSnippetWidgetConstrainedBox = 'widget_constrained_box';
   static final txtSnippetWidgetAlign = 'widget_align';
   static final txtSnippetWidgetPadding = 'widget_padding';
+  static final txtSnippetWidgetAbsorbPointer = 'widget_absorb_pointer';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

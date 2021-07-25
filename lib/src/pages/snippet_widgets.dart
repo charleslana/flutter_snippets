@@ -7,6 +7,7 @@ import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/pages/snippet_container.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/snippets/snippet_absorb_pointer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_align.dart';
 import 'package:flutter_snippets/src/snippets/snippet_aspect_ratio.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
@@ -862,6 +863,20 @@ class SnippetWidgets extends StatelessWidget {
                                 AppLocalizations.of(context)!.menuWidgetPadding,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetPadding(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAbsorbPointer,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetAbsorbPointer,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAbsorbPointer,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetAbsorbPointer(),
                           ),
                         ),
                       ),
