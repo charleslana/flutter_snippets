@@ -134,6 +134,7 @@
     "menuWidgetAdvancedChip": "Chip",
     "menuWidgetAdvancedImageLoadingBuilder": "ImageLoadingBuilder",
     "menuWidgetAdvancedMouseRegion": "MouseRegion",
+    "menuWidgetAdvancedLayoutBuilder": "LayoutBuilder",
     "menuWidgetAppStopwatch": "Cronômetro",
     "menuWidgetAppCountdown": "Contagem regressiva",
     "menuAnimation": "Animações",

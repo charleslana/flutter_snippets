@@ -117,6 +117,7 @@ class AppConstants {
   static final txtSnippetWidgetImageLoadingBuilder =
       'widget_image_loading_builder';
   static final txtSnippetWidgetMouseRegion = 'widget_mouse_region';
+  static final txtSnippetWidgetLayoutBuilder = 'widget_layout_builder';
   static final txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
