@@ -92,6 +92,7 @@
     "menuWidgetBasicBoxDecoration": "BoxDecoration",
     "menuWidgetBasicSelectableText": "SelectableText",
     "menuWidgetBasicInteractiveViewer": "InteractiveViewer",
+    "menuWidgetBasicAspectRatio": "AspectRatio",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
