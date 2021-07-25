@@ -150,6 +150,7 @@
     "menuWidgetAdvancedSlider": "Slider",
     "menuWidgetAdvancedListViewWithSearch": "ListViewWithSearch",
     "menuWidgetAdvancedChip": "Chip",
+    "menuWidgetAdvancedImageLoadingBuilder": "ImageLoadingBuilder",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",

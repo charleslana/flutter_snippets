@@ -132,6 +132,7 @@
     "menuWidgetAdvancedSlider": "Slider",
     "menuWidgetAdvancedListViewWithSearch": "ListViewWithSearch",
     "menuWidgetAdvancedChip": "Chip",
+    "menuWidgetAdvancedImageLoadingBuilder": "ImageLoadingBuilder",
     "menuWidgetAppStopwatch": "Cronômetro",
     "menuWidgetAppCountdown": "Contagem regressiva",
     "menuAnimation": "Animações",
