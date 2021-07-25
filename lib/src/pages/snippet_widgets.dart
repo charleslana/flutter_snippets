@@ -10,7 +10,9 @@ import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
 import 'package:flutter_snippets/src/snippets/snippet_card.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
+import 'package:flutter_snippets/src/snippets/snippet_clip_oval.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rect.dart';
+import 'package:flutter_snippets/src/snippets/snippet_clip_rrect.dart';
 import 'package:flutter_snippets/src/snippets/snippet_column.dart';
 import 'package:flutter_snippets/src/snippets/snippet_countdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dialog.dart';
@@ -593,6 +595,34 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicClipRect,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetClipRect(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicClipRRect,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetClipRRect,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicClipRRect,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetClipRRect(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicClipOval,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetClipOval,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicClipOval,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetClipOval(),
                           ),
                         ),
                       ),

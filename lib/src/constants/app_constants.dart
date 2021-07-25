@@ -57,6 +57,8 @@ class AppConstants {
   static final txtSnippetWidgetListView = 'widget_list_view';
   static final txtSnippetWidgetRotatedBox = 'widget_rotated_box';
   static final txtSnippetWidgetClipRect = 'widget_clip_rect';
+  static final txtSnippetWidgetClipRRect = 'widget_clip_rrect';
+  static final txtSnippetWidgetClipOval = 'widget_clip_oval';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

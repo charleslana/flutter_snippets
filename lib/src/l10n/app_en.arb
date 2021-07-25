@@ -99,6 +99,8 @@
     "menuWidgetBasicListView": "ListView",
     "menuWidgetBasicRotatedBox": "RotatedBox",
     "menuWidgetBasicClipRect": "ClipRect",
+    "menuWidgetBasicClipRRect": "ClipRRect",
+    "menuWidgetBasicClipOval": "ClipOval",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
