@@ -79,4 +79,5 @@ class AppConstants {
   static final txtSnippetWidgetAnimatedOpacity = 'widget_animated_opacity';
   static final txtSnippetWidgetAnimatedDefaultTextStyle =
       'widget_animated_default_text_style';
+  static final txtSnippetWidgetCustomPaint = 'widget_custom_paint';
 }

@@ -10,6 +10,7 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_cross_fade.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_default_text_style.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
+import 'package:flutter_snippets/src/snippets/snippet_custom_paint.dart';
 import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class SnippetAnimations extends StatelessWidget {
@@ -109,6 +110,20 @@ class SnippetAnimations extends StatelessWidget {
                         .menuAnimationAnimatedDefaultTextStyle,
                     bottomNavigationBarIndex: 3,
                     widget: SnippetAnimatedDefaultTextStyle(),
+                  ),
+                ),
+              ),
+              AppMenu(
+                text: AppLocalizations.of(context)!.menuAnimationCustomPaint,
+                icon: Icons.brush,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetCustomPaint,
+                    title:
+                        AppLocalizations.of(context)!.menuAnimationCustomPaint,
+                    bottomNavigationBarIndex: 3,
+                    widget: SnippetCustomPaint(),
                   ),
                 ),
               ),
