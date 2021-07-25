@@ -90,6 +90,7 @@
     "menuWidgetBasicFittedBox": "FittedBox",
     "menuWidgetBasicVisibility": "Visibilidade",
     "menuWidgetBasicBoxDecoration": "BoxDecoration",
+    "menuWidgetBasicSelectableText": "SelectableText",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
