@@ -55,13 +55,14 @@ class AppConstants {
   static final txtSnippetWidgetSnackBar = 'widget_snack_bar';
   static final txtSnippetWidgetDialog = 'widget_dialog';
   static final txtSnippetWidgetListView = 'widget_list_view';
+  static final txtSnippetWidgetRotatedBox = 'widget_rotated_box';
+  static final txtSnippetWidgetClipRect = 'widget_clip_rect';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
   static final txtSnippetWidgetDrawer = 'widget_drawer';
   static final txtSnippetWidgetDropdown = 'widget_dropdown';
   static final txtSnippetWidgetDismissible = 'widget_dismissible';
-  static final txtSnippetWidgetRotatedBox = 'widget_rotated_box';
   static final txtSnippetWidgetGridView = 'widget_grid_view';
   static final txtSnippetWidgetSilverAppBar = 'widget_silver_app_bar';
   static final txtSnippetWidgetSilverGrid = 'widget_silver_grid';

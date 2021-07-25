@@ -80,6 +80,7 @@
     "menuWidgetBasicDialog": "Dialog",
     "menuWidgetBasicListView": "ListView",
     "menuWidgetBasicRotatedBox": "Caja Girada",
+    "menuWidgetBasicClipRect": "ClipRect",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
