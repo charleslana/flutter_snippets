@@ -52,12 +52,25 @@ class _AppLogoState extends State<AppLogo> {
                   ),
                 ),
                 Flexible(
-                  child: Text(
-                    'Flutter Version: 2.2.3',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Color(0xffc4efed),
-                    ),
+                  flex: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'V:1.0.0',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Color(0xffc4efed),
+                        ),
+                      ),
+                      Text(
+                        'F:2.2.3',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Color(0xffc4efed),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
