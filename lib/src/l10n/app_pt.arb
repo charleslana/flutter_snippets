@@ -93,6 +93,7 @@
     "menuWidgetBasicSelectableText": "SelectableText",
     "menuWidgetBasicInteractiveViewer": "InteractiveViewer",
     "menuWidgetBasicAspectRatio": "AspectRatio",
+    "menuWidgetBasicPlaceholder": "Placeholder",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

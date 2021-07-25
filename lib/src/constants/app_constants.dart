@@ -69,6 +69,7 @@ class AppConstants {
   static final txtSnippetWidgetSelectableText = 'widget_selectable_text';
   static final txtSnippetWidgetInteractiveViewer = 'widget_interactive_viewer';
   static final txtSnippetWidgetAspectRatio = 'widget_aspect_ratio';
+  static final txtSnippetWidgetPlaceholder = 'widget_placeholder';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
