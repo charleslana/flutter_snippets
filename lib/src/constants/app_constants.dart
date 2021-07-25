@@ -109,6 +109,7 @@ class AppConstants {
   static final txtSnippetWidgetSendDataToScreen = 'widget_send_data_to_screen';
   static final txtSnippetWidgetPopupMenuButton = 'widget_popup_menu_button';
   static final txtSnippetWidgetTabs = 'widget_tabs';
+  static final txtSnippetWidgetClipPath = 'widget_clip_path';
   static final txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';

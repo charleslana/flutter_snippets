@@ -20,6 +20,7 @@ import 'package:flutter_snippets/src/snippets/snippet_checkbox.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circle_avatar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_oval.dart';
+import 'package:flutter_snippets/src/snippets/snippet_clip_path.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rect.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rrect.dart';
 import 'package:flutter_snippets/src/snippets/snippet_colors.dart';
@@ -1288,6 +1289,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAdvancedTabs,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetTabs(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAdvancedClipPath,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetClipPath,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAdvancedClipPath,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetClipPath(),
                           ),
                         ),
                       ),

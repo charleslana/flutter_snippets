@@ -146,6 +146,7 @@
     "menuWidgetAdvancedSendDataToScreen": "Send Data to Screen",
     "menuWidgetAdvancedPopupMenuButton": "PopupMenuButton",
     "menuWidgetAdvancedTabs": "Tabs",
+    "menuWidgetAdvancedClipPath": "ClipPath",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",
