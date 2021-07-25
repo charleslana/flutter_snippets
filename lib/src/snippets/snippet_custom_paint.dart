@@ -33,8 +33,8 @@ class _SnippetCustomPaintState extends State<SnippetCustomPaint>
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: AnimatedBuilder(
+    return Scaffold(
+      body: AnimatedBuilder(
         animation: _controller,
         builder: (context, child) {
           return Transform.rotate(

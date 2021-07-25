@@ -80,4 +80,5 @@ class AppConstants {
   static final txtSnippetWidgetAnimatedDefaultTextStyle =
       'widget_animated_default_text_style';
   static final txtSnippetWidgetCustomPaint = 'widget_custom_paint';
+  static final txtSnippetWidgetRotatingCircle = 'widget_rotating_circle';
 }

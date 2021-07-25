@@ -103,5 +103,6 @@
     "menuAnimationAnimatedOpacity": "AnimatedOpacity",
     "menuAnimationAnimatedDefaultTextStyle": "AnimatedDefaultTextStyle",
     "menuAnimationCustomPaint": "CustomPaint",
+    "menuAnimationRotatingCircle": "RotatingCircle",
     "tipRotatedBox": "El widget RotatedBox se utiliza para rotar a su hijo en un número entero de cuartos de vuelta. Se utiliza para orientar los widgets secundarios en orientación horizontal o vertical. Además, es muy liviano y se puede usar para diseñar varias UI, ya que brinda flexibilidad al usuario sobre el diseño de la aplicación."
 }
