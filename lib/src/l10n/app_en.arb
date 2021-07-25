@@ -155,6 +155,7 @@
     "menuWidgetAdvancedLayoutBuilder": "LayoutBuilder",
     "menuWidgetAdvancedBottomNavigationBar": "BottomNavigationBar",
     "menuWidgetAdvancedExpansionPanel": "ExpansionPanel",
+    "menuWidgetAdvancedPaint": "Paint",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",
