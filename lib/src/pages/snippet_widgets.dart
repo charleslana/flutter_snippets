@@ -23,6 +23,7 @@ import 'package:flutter_snippets/src/snippets/snippet_drawer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dropdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart';
+import 'package:flutter_snippets/src/snippets/snippet_flexible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_future_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_gesture_detector.dart';
 import 'package:flutter_snippets/src/snippets/snippet_global_key.dart';
@@ -623,6 +624,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicClipOval,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetClipOval(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicFlexible,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetFlexible,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicFlexible,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetFlexible(),
                           ),
                         ),
                       ),

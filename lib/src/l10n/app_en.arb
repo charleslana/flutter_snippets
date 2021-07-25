@@ -101,6 +101,7 @@
     "menuWidgetBasicClipRect": "ClipRect",
     "menuWidgetBasicClipRRect": "ClipRRect",
     "menuWidgetBasicClipOval": "ClipOval",
+    "menuWidgetBasicFlexible": "Flexible",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
