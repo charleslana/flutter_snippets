@@ -123,6 +123,7 @@
     "menuWidgetBasicTooltip": "Tooltip",
     "menuWidgetBasicColors": "Colors",
     "menuWidgetBasicFlutterLogo": "FlutterLogo",
+    "menuWidgetBasicSizedBox": "SizedBox",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
