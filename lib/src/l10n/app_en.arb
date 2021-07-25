@@ -147,6 +147,7 @@
     "menuWidgetAdvancedPopupMenuButton": "PopupMenuButton",
     "menuWidgetAdvancedTabs": "Tabs",
     "menuWidgetAdvancedClipPath": "ClipPath",
+    "menuWidgetAdvancedSlider": "Slider",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",
