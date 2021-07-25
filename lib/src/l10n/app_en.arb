@@ -131,6 +131,7 @@
     "menuWidgetBasicBanner": "Banner",
     "menuWidgetBasicBorderRadius": "BorderRadius",
     "menuWidgetBasicSingleChildScrollView": "SingleChildScrollView",
+    "menuWidgetBasicBoxShadow": "BoxShadow",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
