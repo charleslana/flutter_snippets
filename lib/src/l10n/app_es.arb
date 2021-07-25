@@ -130,6 +130,7 @@
     "menuWidgetAdvancedTabs": "Pestañas",
     "menuWidgetAdvancedClipPath": "ClipPath",
     "menuWidgetAdvancedSlider": "Slider",
+    "menuWidgetAdvancedListViewWithSearch": "ListViewWithSearch",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",

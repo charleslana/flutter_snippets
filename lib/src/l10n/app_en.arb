@@ -148,6 +148,7 @@
     "menuWidgetAdvancedTabs": "Tabs",
     "menuWidgetAdvancedClipPath": "ClipPath",
     "menuWidgetAdvancedSlider": "Slider",
+    "menuWidgetAdvancedListViewWithSearch": "ListViewWithSearch",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",

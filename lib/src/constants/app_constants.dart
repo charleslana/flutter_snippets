@@ -111,6 +111,8 @@ class AppConstants {
   static final txtSnippetWidgetTabs = 'widget_tabs';
   static final txtSnippetWidgetClipPath = 'widget_clip_path';
   static final txtSnippetWidgetSlider = 'widget_slider';
+  static final txtSnippetWidgetListViewWithSearch =
+      'widget_list_view_with_search';
   static final txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
