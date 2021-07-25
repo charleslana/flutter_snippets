@@ -33,6 +33,7 @@ import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart'
 import 'package:flutter_snippets/src/snippets/snippet_expanded.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fitted_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flexible.dart';
+import 'package:flutter_snippets/src/snippets/snippet_floating_action_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flutter_logo.dart';
 import 'package:flutter_snippets/src/snippets/snippet_future_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_gesture_detector.dart';
@@ -955,6 +956,21 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicSizedBox,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetSizedBox(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicFloatingActionButton,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants
+                                .txtSnippetWidgetFloatingActionButton,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicFloatingActionButton,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetFloatingActionButton(),
                           ),
                         ),
                       ),

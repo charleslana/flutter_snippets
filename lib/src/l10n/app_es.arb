@@ -106,6 +106,7 @@
     "menuWidgetBasicColors": "Colores",
     "menuWidgetBasicFlutterLogo": "FlutterLogo",
     "menuWidgetBasicSizedBox": "SizedBox",
+    "menuWidgetBasicFloatingActionButton": "FloatingActionButton",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
