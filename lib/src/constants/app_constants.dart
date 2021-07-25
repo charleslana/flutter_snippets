@@ -86,6 +86,7 @@ class AppConstants {
   static final txtSnippetWidgetFloatingActionButton =
       'widget_floating_action_button';
   static final txtSnippetWidgetCheckbox = 'widget_checkbox';
+  static final txtSnippetWidgetEndDrawer = 'widget_end_drawer';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
