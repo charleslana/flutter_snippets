@@ -40,41 +40,45 @@ class _AppLogoState extends State<AppLogo> {
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Flexible(
-                  flex: 3,
-                  child: Image.asset(
-                    'assets/images/logo_flutter_snippets.png',
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                Flexible(
-                  flex: 1,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'V:1.0.0',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Color(0xffc4efed),
-                        ),
+          body: Stack(
+            children: [
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      flex: 1,
+                      child: Image.asset(
+                        'assets/images/logo_flutter_snippets.png',
+                        fit: BoxFit.contain,
                       ),
-                      Text(
-                        'F:2.2.3',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Color(0xffc4efed),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'V:1.0.0',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color(0xffc4efed),
+                      ),
+                    ),
+                    Text(
+                      'F:2.2.3',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color(0xffc4efed),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),

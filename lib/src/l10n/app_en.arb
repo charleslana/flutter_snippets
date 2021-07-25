@@ -113,6 +113,7 @@
     "menuWidgetBasicAspectRatio": "AspectRatio",
     "menuWidgetBasicPlaceholder": "Placeholder",
     "menuWidgetBasicSpacer": "Spacer",
+    "menuWidgetListWheelScrollView": "ListWheelScrollView",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
