@@ -109,6 +109,7 @@
     "menuWidgetBasicVisibility": "Visibility",
     "menuWidgetBasicBoxDecoration": "BoxDecoration",
     "menuWidgetBasicSelectableText": "SelectableText",
+    "menuWidgetBasicInteractiveViewer": "InteractiveViewer",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

@@ -36,6 +36,7 @@ import 'package:flutter_snippets/src/snippets/snippet_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon_background.dart';
 import 'package:flutter_snippets/src/snippets/snippet_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
+import 'package:flutter_snippets/src/snippets/snippet_interactive_viewer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_media_query.dart';
 import 'package:flutter_snippets/src/snippets/snippet_navigator.dart';
@@ -728,6 +729,21 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicSelectableText,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetSelectableText(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicInteractiveViewer,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data:
+                                AppConstants.txtSnippetWidgetInteractiveViewer,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicInteractiveViewer,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetInteractiveViewer(),
                           ),
                         ),
                       ),
