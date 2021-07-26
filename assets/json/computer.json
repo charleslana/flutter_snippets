@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Computer A",
+            "part": ["DRAM", "MOUSE", "KEYBOARD"]
+        },
+        {
+            "id": 2,
+            "name": "Computer B",
+            "part": []
+        },
+        {
+            "id": 3,
+            "name": "Computer C",
+            "part": ["HD"]
+        }
+    ]
+}

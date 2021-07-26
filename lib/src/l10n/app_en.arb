@@ -156,6 +156,7 @@
     "menuWidgetAdvancedBottomNavigationBar": "BottomNavigationBar",
     "menuWidgetAdvancedExpansionPanel": "ExpansionPanel",
     "menuWidgetAdvancedPaint": "Paint",
+    "menuWidgetAdvancedLoadJson": "LoadJson",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",
