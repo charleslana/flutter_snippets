@@ -160,6 +160,7 @@
     "menuWidgetAdvancedLoadJson": "LoadJson",
     "menuWidgetAdvancedClipboard": "Clipboard",
     "menuWidgetAdvancedPageRouteBuilder": "PageRouteBuilder",
+    "menuWidgetAdvancedLoadTxt": "LoadTxt",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",

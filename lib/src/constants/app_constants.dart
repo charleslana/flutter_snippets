@@ -126,6 +126,7 @@ class AppConstants {
   static final txtSnippetWidgetLoadJson = 'widget_load_json';
   static final txtSnippetWidgetClipboard = 'widget_clipboard';
   static final txtSnippetWidgetPageRouteBuilder = 'widget_page_route_builder';
+  static final txtSnippetWidgetLoadTxt = 'widget_load_txt';
   static final txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';

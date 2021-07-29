@@ -24,14 +24,28 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import 'package:flutter/material.dart';
 
-class SnippetLoadJson extends StatefulWidget {
-  const SnippetLoadJson({Key? key}) : super(key: key);
-
-  @override
-  _SnippetLoadJsonState createState() => _SnippetLoadJsonState();
+void main() {
+  runApp(MyApp());
 }
 
-class _SnippetLoadJsonState extends State<SnippetLoadJson> {
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   bool _isLoading = true;
   List<Data>? _data;
 

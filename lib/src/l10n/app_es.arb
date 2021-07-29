@@ -142,6 +142,7 @@
     "menuWidgetAdvancedLoadJson": "LoadJson",
     "menuWidgetAdvancedClipboard": "Clipboard",
     "menuWidgetAdvancedPageRouteBuilder": "PageRouteBuilder",
+    "menuWidgetAdvancedLoadTxt": "LoadTxt",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",
