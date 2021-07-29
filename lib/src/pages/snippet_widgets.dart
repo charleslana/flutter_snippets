@@ -25,6 +25,7 @@ import 'package:flutter_snippets/src/snippets/snippet_clip_oval.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_path.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rect.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_rrect.dart';
+import 'package:flutter_snippets/src/snippets/snippet_clipboard.dart';
 import 'package:flutter_snippets/src/snippets/snippet_colors.dart';
 import 'package:flutter_snippets/src/snippets/snippet_column.dart';
 import 'package:flutter_snippets/src/snippets/snippet_constrained_box.dart';
@@ -1456,6 +1457,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAdvancedLoadJson,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetLoadJson(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAdvancedClipboard,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetClipboard,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAdvancedClipboard,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetClipboard(),
                           ),
                         ),
                       ),

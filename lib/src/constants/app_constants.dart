@@ -123,6 +123,7 @@ class AppConstants {
   static final txtSnippetWidgetExpansionPanel = 'widget_expansion_panel';
   static final txtSnippetWidgetPaint = 'widget_paint';
   static final txtSnippetWidgetLoadJson = 'widget_load_json';
+  static final txtSnippetWidgetClipboard = 'widget_clipboard';
   static final txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';

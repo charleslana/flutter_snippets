@@ -139,6 +139,7 @@
     "menuWidgetAdvancedExpansionPanel": "ExpansionPanel",
     "menuWidgetAdvancedPaint": "Paint",
     "menuWidgetAdvancedLoadJson": "LoadJson",
+    "menuWidgetAdvancedClipboard": "Clipboard",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",

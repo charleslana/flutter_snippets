@@ -106,33 +106,38 @@ class _SnippetFilterState extends State<SnippetFilter> {
               _items.isEmpty
                   ? Text(AppLocalizations.of(context)!.filterSearchNoResults)
                   : Expanded(
-                      child: SingleChildScrollView(
-                        child: Wrap(
-                          children: _items.map((item) {
-                            return Padding(
-                              padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                              child: TextButton(
-                                onPressed: () {
-                                  FocusManager.instance.primaryFocus?.unfocus();
-                                  item.onPressed();
-                                  setState(() {
-                                    _editingController.clear();
-                                    if (_items.length !=
-                                        _duplicateItems.length) {
-                                      _items.clear();
-                                      _items.addAll(_duplicateItems);
-                                    }
-                                  });
-                                },
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                                  child: Text(
-                                    item.text,
+                      child: Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
+                        child: SingleChildScrollView(
+                          child: Wrap(
+                            children: _items.map((item) {
+                              return Padding(
+                                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                                child: TextButton(
+                                  onPressed: () {
+                                    FocusManager.instance.primaryFocus
+                                        ?.unfocus();
+                                    item.onPressed();
+                                    setState(() {
+                                      _editingController.clear();
+                                      if (_items.length !=
+                                          _duplicateItems.length) {
+                                        _items.clear();
+                                        _items.addAll(_duplicateItems);
+                                      }
+                                    });
+                                  },
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.fromLTRB(30, 10, 30, 10),
+                                    child: Text(
+                                      item.text,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            );
-                          }).toList(),
+                              );
+                            }).toList(),
+                          ),
                         ),
                       ),
                     ),
