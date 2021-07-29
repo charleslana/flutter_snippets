@@ -114,6 +114,7 @@
     "menuWidgetBasicBorderRadius": "BorderRadius",
     "menuWidgetBasicSingleChildScrollView": "SingleChildScrollView",
     "menuWidgetBasicBoxShadow": "BoxShadow",
+    "menuWidgetBasicShaderMask": "ShaderMask",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

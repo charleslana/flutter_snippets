@@ -94,6 +94,7 @@ class AppConstants {
   static final txtSnippetWidgetSingleChildScrollView =
       'widget_single_child_scroll_view';
   static final txtSnippetWidgetBoxShadow = 'widget_box_shadow';
+  static final txtSnippetWidgetShaderMask = 'widget_shader_mask';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
