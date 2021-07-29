@@ -72,6 +72,7 @@ class _SnippetShowState extends State<SnippetShow>
               floatingActionButtonLocation:
                   FloatingActionButtonLocation.centerDocked,
               floatingActionButton: FloatingActionButton(
+                heroTag: 'show',
                 child: Icon(Icons.lightbulb),
                 onPressed: () => AppUtils().alert(_snippet!.tip, context),
               ),

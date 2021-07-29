@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/pages/snippet_basic.dart';
+import 'package:flutter_snippets/src/routes/app_routes.dart';
 
 class AppLogo extends StatefulWidget {
   const AppLogo({Key? key}) : super(key: key);
@@ -25,8 +26,7 @@ class _AppLogoState extends State<AppLogo> {
     super.initState();
     Timer(
       Duration(seconds: 3),
-      () => Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (BuildContext context) => SnippetBasic())),
+      () => Navigator.pushReplacementNamed(context, AppRoutes.snippetBasic),
     );
   }
 

@@ -11,6 +11,7 @@ import 'package:flutter_snippets/src/pages/snippet_basic.dart';
 import 'package:flutter_snippets/src/pages/snippet_filter.dart';
 import 'package:flutter_snippets/src/pages/snippet_show.dart';
 import 'package:flutter_snippets/src/pages/snippet_widgets.dart';
+import 'package:flutter_snippets/src/widgets/app_route_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -69,14 +70,43 @@ class MyAppMaterial extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       initialRoute: AppRoutes.appLogo,
-      routes: {
-        AppRoutes.appLogo: (_) => AppLogo(),
-        AppRoutes.snippetBasic: (_) => SnippetBasic(),
-        AppRoutes.snippetAdvanced: (_) => SnippetAdvanced(),
-        AppRoutes.snippetWidgets: (_) => SnippetWidgets(),
-        AppRoutes.snippetAnimations: (_) => SnippetAnimations(),
-        AppRoutes.snippetShow: (_) => SnippetShow(),
-        AppRoutes.snippetFilter: (_) => SnippetFilter(),
+      onGenerateRoute: (settings) {
+        if (settings.name == AppRoutes.appLogo) {
+          return AppRoutePage(widget: AppLogo(), routeName: AppRoutes.appLogo);
+        }
+        if (settings.name == AppRoutes.snippetBasic) {
+          return AppRoutePage(
+              widget: SnippetBasic(), routeName: AppRoutes.snippetBasic);
+        }
+        if (settings.name == AppRoutes.snippetAdvanced) {
+          return AppRoutePage(
+              widget: SnippetAdvanced(), routeName: AppRoutes.snippetAdvanced);
+        }
+        if (settings.name == AppRoutes.snippetWidgets) {
+          return AppRoutePage(
+              widget: SnippetWidgets(), routeName: AppRoutes.snippetWidgets);
+        }
+        if (settings.name == AppRoutes.snippetAnimations) {
+          return AppRoutePage(
+              widget: SnippetAnimations(),
+              routeName: AppRoutes.snippetAnimations);
+        }
+        if (settings.name == AppRoutes.snippetShow) {
+          return AppRoutePage(
+            widget: SnippetShow(),
+            routeName: AppRoutes.snippetShow,
+            arguments: settings.arguments,
+          );
+        }
+        if (settings.name == AppRoutes.snippetFilter) {
+          return AppRoutePage(
+            widget: SnippetFilter(),
+            routeName: AppRoutes.snippetFilter,
+            arguments: settings.arguments,
+          );
+        }
+        return AppRoutePage(
+            widget: SnippetBasic(), routeName: AppRoutes.snippetBasic);
       },
     );
   }

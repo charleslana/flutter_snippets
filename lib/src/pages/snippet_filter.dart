@@ -117,8 +117,11 @@ class _SnippetFilterState extends State<SnippetFilter> {
                                   item.onPressed();
                                   setState(() {
                                     _editingController.clear();
-                                    _items.clear();
-                                    _items.addAll(_duplicateItems);
+                                    if (_items.length !=
+                                        _duplicateItems.length) {
+                                      _items.clear();
+                                      _items.addAll(_duplicateItems);
+                                    }
                                   });
                                 },
                                 child: Padding(
