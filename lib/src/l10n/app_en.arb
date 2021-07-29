@@ -158,6 +158,7 @@
     "menuWidgetAdvancedPaint": "Paint",
     "menuWidgetAdvancedLoadJson": "LoadJson",
     "menuWidgetAdvancedClipboard": "Clipboard",
+    "menuWidgetAdvancedPageRouteBuilder": "PageRouteBuilder",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",
