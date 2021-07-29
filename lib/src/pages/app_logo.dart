@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/pages/snippet_basic.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 
 class AppLogo extends StatefulWidget {

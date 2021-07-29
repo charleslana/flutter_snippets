@@ -13,7 +13,7 @@ class AppBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final currentRoute = ModalRoute.of(context)!.settings.name;
 
-    void _navigateToScreens(int index) {
+    void navigateToScreens(int index) {
       switch (index) {
         case 0:
           currentRoute != AppRoutes.snippetBasic
@@ -46,7 +46,7 @@ class AppBottomNavigationBar extends StatelessWidget {
 
     return BottomNavigationBar(
       currentIndex: index,
-      onTap: (int index) => _navigateToScreens(index),
+      onTap: (int index) => navigateToScreens(index),
       type: BottomNavigationBarType.fixed,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
