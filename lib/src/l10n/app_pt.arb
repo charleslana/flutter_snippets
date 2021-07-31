@@ -115,6 +115,7 @@
     "menuWidgetBasicSingleChildScrollView": "SingleChildScrollView",
     "menuWidgetBasicBoxShadow": "BoxShadow",
     "menuWidgetBasicShaderMask": "ShaderMask",
+    "menuWidgetBasicColorFiltered": "ColorFiltered",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
