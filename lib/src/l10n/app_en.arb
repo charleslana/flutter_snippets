@@ -138,6 +138,7 @@
     "menuWidgetBasicImageFiltered": "ImageFiltered",
     "menuWidgetBasicPositioned": "Positioned",
     "menuWidgetBasicLinearProgressIndicator": "LinearProgressIndicator",
+    "menuWidgetBasicRawString": "RawString",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
