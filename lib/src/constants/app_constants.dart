@@ -154,4 +154,5 @@ class AppConstants {
   static final txtSnippetWidgetHero = 'widget_hero';
   static final txtSnippetWidgetFadeInImage = 'widget_fade_in_image';
   static final txtSnippetWidgetFadeTransition = 'widget_fade_transition';
+  static final txtSnippetWidgetAnimatedSwitcher = 'widget_animated_switcher';
 }

@@ -10,6 +10,7 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_cross_fade.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_default_text_style.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
+import 'package:flutter_snippets/src/snippets/snippet_animated_switcher.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_custom_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_draggable_scrollable_sheet.dart';
@@ -242,6 +243,21 @@ class SnippetAnimations extends StatelessWidget {
                         .menuAnimationFadeTransition,
                     bottomNavigationBarIndex: 3,
                     widget: SnippetFadeTransition(),
+                  ),
+                ),
+              ),
+              AppMenu(
+                text:
+                    AppLocalizations.of(context)!.menuAnimationAnimatedSwitcher,
+                icon: Icons.filter_9_plus,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetAnimatedSwitcher,
+                    title: AppLocalizations.of(context)!
+                        .menuAnimationAnimatedSwitcher,
+                    bottomNavigationBarIndex: 3,
+                    widget: SnippetAnimatedSwitcher(),
                   ),
                 ),
               ),
