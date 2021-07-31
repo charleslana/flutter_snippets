@@ -32,6 +32,7 @@ import 'package:flutter_snippets/src/snippets/snippet_column.dart';
 import 'package:flutter_snippets/src/snippets/snippet_constrained_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_container_transform.dart';
 import 'package:flutter_snippets/src/snippets/snippet_countdown.dart';
+import 'package:flutter_snippets/src/snippets/snippet_data_table.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dialog.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dismissible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_divider.dart';
@@ -1123,6 +1124,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicColorFiltered,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetColorFiltered(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicDataTable,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetDataTable,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicDataTable,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetDataTable(),
                           ),
                         ),
                       ),

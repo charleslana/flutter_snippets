@@ -96,6 +96,7 @@ class AppConstants {
   static final txtSnippetWidgetBoxShadow = 'widget_box_shadow';
   static final txtSnippetWidgetShaderMask = 'widget_shader_mask';
   static final txtSnippetWidgetColorFiltered = 'widget_color_filtered';
+  static final txtSnippetWidgetDataTable = 'widget_data_table';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

@@ -134,6 +134,7 @@
     "menuWidgetBasicBoxShadow": "BoxShadow",
     "menuWidgetBasicShaderMask": "ShaderMask",
     "menuWidgetBasicColorFiltered": "ColorFiltered",
+    "menuWidgetBasicDataTable": "DataTable",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
