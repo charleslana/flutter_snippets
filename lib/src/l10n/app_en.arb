@@ -140,6 +140,7 @@
     "menuWidgetBasicLinearProgressIndicator": "LinearProgressIndicator",
     "menuWidgetBasicRawString": "RawString",
     "menuWidgetBasicLimitedBox": "LimitedBox",
+    "menuWidgetBasicCheckboxListTile": "CheckboxListTile",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
