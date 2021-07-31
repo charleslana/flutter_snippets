@@ -136,6 +136,7 @@
     "menuWidgetBasicColorFiltered": "ColorFiltered",
     "menuWidgetBasicDataTable": "DataTable",
     "menuWidgetBasicImageFiltered": "ImageFiltered",
+    "menuWidgetBasicPositioned": "Positioned",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

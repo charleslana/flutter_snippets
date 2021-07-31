@@ -98,6 +98,7 @@ class AppConstants {
   static final txtSnippetWidgetColorFiltered = 'widget_color_filtered';
   static final txtSnippetWidgetDataTable = 'widget_data_table';
   static final txtSnippetWidgetImageFiltered = 'widget_image_filtered';
+  static final txtSnippetWidgetPositioned = 'widget_positioned';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
