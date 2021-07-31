@@ -102,6 +102,7 @@ class AppConstants {
   static final txtSnippetWidgetLinearProgressIndicator =
       'widget_linear_progress_indicator';
   static final txtSnippetWidgetRawString = 'widget_raw_string';
+  static final txtSnippetWidgetLimitedBox = 'widget_limited_box';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

@@ -139,6 +139,7 @@
     "menuWidgetBasicPositioned": "Positioned",
     "menuWidgetBasicLinearProgressIndicator": "LinearProgressIndicator",
     "menuWidgetBasicRawString": "RawString",
+    "menuWidgetBasicLimitedBox": "LimitedBox",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
