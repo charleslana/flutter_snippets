@@ -117,6 +117,7 @@
     "menuWidgetBasicShaderMask": "ShaderMask",
     "menuWidgetBasicColorFiltered": "ColorFiltered",
     "menuWidgetBasicDataTable": "DataTable",
+    "menuWidgetBasicImageFiltered": "ImageFiltered",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
