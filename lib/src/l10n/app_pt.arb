@@ -119,6 +119,7 @@
     "menuWidgetBasicDataTable": "DataTable",
     "menuWidgetBasicImageFiltered": "ImageFiltered",
     "menuWidgetBasicPositioned": "Positioned",
+    "menuWidgetBasicLinearProgressIndicator": "LinearProgressIndicator",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

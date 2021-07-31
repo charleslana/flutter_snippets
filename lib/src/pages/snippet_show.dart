@@ -53,8 +53,8 @@ class _SnippetShowState extends State<SnippetShow>
   Widget build(BuildContext context) {
     return SafeArea(
       child: _isLoading
-          ? Center(
-              child: CircularProgressIndicator(),
+          ? Scaffold(
+              body: LinearProgressIndicator(),
             )
           : Scaffold(
               appBar: AppBarWithTab(

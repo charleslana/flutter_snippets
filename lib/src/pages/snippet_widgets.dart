@@ -62,6 +62,7 @@ import 'package:flutter_snippets/src/snippets/snippet_indexed_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
 import 'package:flutter_snippets/src/snippets/snippet_interactive_viewer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_layout_builder.dart';
+import 'package:flutter_snippets/src/snippets/snippet_linear_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view_with_search.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_wheel_scroll_view.dart';
@@ -1168,6 +1169,21 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicPositioned,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetPositioned(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicLinearProgressIndicator,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants
+                                .txtSnippetWidgetLinearProgressIndicator,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicLinearProgressIndicator,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetLinearProgressIndicator(),
                           ),
                         ),
                       ),
