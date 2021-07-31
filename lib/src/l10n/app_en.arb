@@ -161,6 +161,7 @@
     "menuWidgetAdvancedClipboard": "Clipboard",
     "menuWidgetAdvancedPageRouteBuilder": "PageRouteBuilder",
     "menuWidgetAdvancedLoadTxt": "LoadTxt",
+    "menuWidgetAdvancedIndexedStack": "IndexedStack",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",

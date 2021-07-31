@@ -143,6 +143,7 @@
     "menuWidgetAdvancedClipboard": "Clipboard",
     "menuWidgetAdvancedPageRouteBuilder": "PageRouteBuilder",
     "menuWidgetAdvancedLoadTxt": "LoadTxt",
+    "menuWidgetAdvancedIndexedStack": "IndexedStack",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",
