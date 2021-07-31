@@ -141,6 +141,7 @@
     "menuWidgetBasicRawString": "RawString",
     "menuWidgetBasicLimitedBox": "LimitedBox",
     "menuWidgetBasicCheckboxListTile": "CheckboxListTile",
+    "menuWidgetBasicSwitchListTile": "SwitchListTile",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

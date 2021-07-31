@@ -104,6 +104,7 @@ import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stopwatch.dart';
+import 'package:flutter_snippets/src/snippets/snippet_switch_list_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_table.dart';
 import 'package:flutter_snippets/src/snippets/snippet_tabs.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text.dart';
@@ -1229,6 +1230,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicCheckboxListTile,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetCheckboxListTile(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicSwitchListTile,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetSwitchListTile,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicSwitchListTile,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetSwitchListTile(),
                           ),
                         ),
                       ),
