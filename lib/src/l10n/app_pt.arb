@@ -162,5 +162,6 @@
     "menuAnimationAnimatedImage": "Imagem Animada",
     "menuAnimationHero": "Hero",
     "menuAnimationFadeInImage": "FadeInImage",
+    "menuAnimationFadeTransition": "FadeTransition",
     "tipRotatedBox": "O widget RotatedBox é usado para girar seu filho por um número inteiro de quartos de volta. Ele é usado para orientar seus widgets filhos na orientação horizontal ou vertical. Além disso, é muito leve e pode ser usado para projetar várias interfaces do usuário, pois dá flexibilidade ao usuário em relação ao design do aplicativo."
 }
