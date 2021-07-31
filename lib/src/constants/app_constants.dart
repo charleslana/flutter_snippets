@@ -146,4 +146,5 @@ class AppConstants {
       'widget_draggable_scrollable_sheet';
   static final txtSnippetWidgetAnimatedImage = 'widget_animated_image';
   static final txtSnippetWidgetHero = 'widget_hero';
+  static final txtSnippetWidgetFadeInImage = 'widget_fade_in_image';
 }

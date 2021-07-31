@@ -13,6 +13,7 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_custom_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_draggable_scrollable_sheet.dart';
+import 'package:flutter_snippets/src/snippets/snippet_fade_in_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_hero.dart';
 import 'package:flutter_snippets/src/snippets/snippet_matrix.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rotating_circle.dart';
@@ -212,6 +213,20 @@ class SnippetAnimations extends StatelessWidget {
                     title: AppLocalizations.of(context)!.menuAnimationHero,
                     bottomNavigationBarIndex: 3,
                     widget: SnippetHero(),
+                  ),
+                ),
+              ),
+              AppMenu(
+                text: AppLocalizations.of(context)!.menuAnimationFadeInImage,
+                icon: Icons.filter_none,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetFadeInImage,
+                    title:
+                        AppLocalizations.of(context)!.menuAnimationFadeInImage,
+                    bottomNavigationBarIndex: 3,
+                    widget: SnippetFadeInImage(),
                   ),
                 ),
               ),
