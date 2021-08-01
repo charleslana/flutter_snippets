@@ -65,6 +65,17 @@ class MyThemes {
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Colors.deepPurple,
     ),
+    checkboxTheme: CheckboxThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.deepPurple;
+          }
+          ;
+          return Colors.white;
+        },
+      ),
+    ),
   );
 
   static final lighTheme = ThemeData(
@@ -103,6 +114,17 @@ class MyThemes {
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Colors.blue,
+    ),
+    checkboxTheme: CheckboxThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.blue;
+          }
+          ;
+          return Colors.black;
+        },
+      ),
     ),
   );
 }

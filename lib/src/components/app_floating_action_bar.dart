@@ -33,7 +33,6 @@ class _AppFloatinActionBarState extends State<AppFloatinActionBar>
         heroTag: 'floatNews',
         onPressed: () => Navigator.of(context).pushNamed(AppRoutes.appNews),
         tooltip: 'News',
-        backgroundColor: Colors.blue,
         child: Icon(Icons.article),
       ),
     );
@@ -63,7 +62,6 @@ class _AppFloatinActionBarState extends State<AppFloatinActionBar>
           });
     _animateIcon = Tween<double>(begin: 0.0, end: 1.0).animate(_controller);
     _buttonColor = ColorTween(
-      begin: Colors.blue,
       end: Colors.red,
     ).animate(CurvedAnimation(
       parent: _controller,
