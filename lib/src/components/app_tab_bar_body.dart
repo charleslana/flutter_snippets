@@ -56,10 +56,10 @@ class AppTabBarBody extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: CircleAvatar(
-                      backgroundColor:
-                          Theme.of(context).scaffoldBackgroundColor,
+                      backgroundColor: Colors.white,
                       radius: 20,
                       child: IconButton(
+                        color: Colors.black,
                         icon: Icon(
                           Icons.content_copy,
                         ),
