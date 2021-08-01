@@ -50,6 +50,7 @@ import 'package:flutter_snippets/src/snippets/snippet_fitted_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flexible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_floating_action_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flutter_logo.dart';
+import 'package:flutter_snippets/src/snippets/snippet_fractionally_sized_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_future_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_gesture_detector.dart';
 import 'package:flutter_snippets/src/snippets/snippet_global_key.dart';
@@ -1260,6 +1261,21 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicExpansionPanelList,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetExpansionPanelList(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicFractionallySizedBox,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants
+                                .txtSnippetWidgetFractionallySizedBox,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicFractionallySizedBox,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetFractionallySizedBox(),
                           ),
                         ),
                       ),

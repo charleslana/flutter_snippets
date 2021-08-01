@@ -107,6 +107,8 @@ class AppConstants {
   static final txtSnippetWidgetSwitchListTile = 'widget_switch_list_tile';
   static final txtSnippetWidgetExpansionPanelList =
       'widget_expansion_panel_list';
+  static final txtSnippetWidgetFractionallySizedBox =
+      'widget_fractionally_sized_box';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

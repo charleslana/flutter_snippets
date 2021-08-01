@@ -125,6 +125,7 @@
     "menuWidgetBasicCheckboxListTile": "CheckboxListTile",
     "menuWidgetBasicSwitchListTile": "SwitchListTile",
     "menuWidgetBasicExpansionPanelList": "ExpansionPanelList",
+    "menuWidgetBasicFractionallySizedBox": "FractionallySizedBox",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
