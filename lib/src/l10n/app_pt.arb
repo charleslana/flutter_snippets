@@ -127,6 +127,7 @@
     "menuWidgetBasicExpansionPanelList": "ExpansionPanelList",
     "menuWidgetBasicFractionallySizedBox": "FractionallySizedBox",
     "menuWidgetBasicScrollbar": "Scrollbar",
+    "menuWidgetBasicOverflowBox": "OverflowBox",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

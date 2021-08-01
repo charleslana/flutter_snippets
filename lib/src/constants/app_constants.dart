@@ -110,6 +110,7 @@ class AppConstants {
   static final txtSnippetWidgetFractionallySizedBox =
       'widget_fractionally_sized_box';
   static final txtSnippetWidgetScrollbar = 'widget_scrollbar';
+  static final txtSnippetWidgetOverflowBox = 'widget_overflow_box';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';
