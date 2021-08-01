@@ -124,6 +124,7 @@
     "menuWidgetBasicLimitedBox": "LimitedBox",
     "menuWidgetBasicCheckboxListTile": "CheckboxListTile",
     "menuWidgetBasicSwitchListTile": "SwitchListTile",
+    "menuWidgetBasicExpansionPanelList": "ExpansionPanelList",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",

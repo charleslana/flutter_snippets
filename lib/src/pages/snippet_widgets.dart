@@ -45,6 +45,7 @@ import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart'
 import 'package:flutter_snippets/src/snippets/snippet_end_drawer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expanded.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expansion_panel.dart';
+import 'package:flutter_snippets/src/snippets/snippet_expansion_panel_list.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fitted_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flexible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_floating_action_button.dart';
@@ -1244,6 +1245,21 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicSwitchListTile,
                             bottomNavigationBarIndex: 2,
                             widget: SnippetSwitchListTile(),
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicExpansionPanelList,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data:
+                                AppConstants.txtSnippetWidgetExpansionPanelList,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicExpansionPanelList,
+                            bottomNavigationBarIndex: 2,
+                            widget: SnippetExpansionPanelList(),
                           ),
                         ),
                       ),

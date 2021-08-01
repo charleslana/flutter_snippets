@@ -9,7 +9,7 @@ class SnippetAlign extends StatelessWidget {
       body: Container(
         height: 200,
         width: 200,
-        color: Colors.blue[50],
+        color: Colors.blue[200],
         child: Align(
           alignment: Alignment.bottomRight,
           child: Text(
@@ -17,6 +17,7 @@ class SnippetAlign extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
+              color: Colors.black,
             ),
           ),
         ),
