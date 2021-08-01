@@ -47,7 +47,15 @@ class MyThemes {
       ),
     ),
     switchTheme: SwitchThemeData(
-      thumbColor: MaterialStateProperty.all(Colors.white),
+      thumbColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.deepPurple;
+          }
+          ;
+          return Colors.white.withAlpha(700);
+        },
+      ),
       trackColor: MaterialStateProperty.all(Colors.white.withAlpha(400)),
     ),
     primaryColor: Colors.black,
@@ -78,7 +86,15 @@ class MyThemes {
       ),
     ),
     switchTheme: SwitchThemeData(
-      thumbColor: MaterialStateProperty.all(Colors.black),
+      thumbColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.blue;
+          }
+          ;
+          return Colors.black.withAlpha(700);
+        },
+      ),
       trackColor: MaterialStateProperty.all(Colors.black.withAlpha(400)),
     ),
     primaryColor: Colors.white,
