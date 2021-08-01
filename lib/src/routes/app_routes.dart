@@ -6,4 +6,5 @@ class AppRoutes {
   static final snippetAnimations = '/snippet-animations';
   static final snippetShow = '/snippet-show';
   static final snippetFilter = '/snippet-filter';
+  static final appNews = '/app-news';
 }

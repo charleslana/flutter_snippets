@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_snippets/src/components/app_floating_action_bar.dart';
 import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
@@ -35,232 +36,247 @@ class SnippetAnimations extends StatelessWidget {
         ),
         body: Padding(
           padding: EdgeInsets.all(10.0),
-          child: ListView(
+          child: Stack(
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0),
-                child: Text(
-                  AppLocalizations.of(context)!.menuAnimation,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16.0,
-                    color: Theme.of(context).iconTheme.color,
+              ListView(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10.0),
+                    child: Text(
+                      AppLocalizations.of(context)!.menuAnimation,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.0,
+                        color: Theme.of(context).iconTheme.color,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationAnimationIcon,
-                icon: Icons.play_arrow,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetAnimationIcon,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationAnimationIcon,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetAnimationIcon(),
+                    icon: Icons.play_arrow,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetAnimationIcon,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationAnimationIcon,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetAnimationIcon(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!
-                    .menuAnimationAnimatedContainer,
-                icon: Icons.takeout_dining,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetAnimatedContainer,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationAnimatedContainer,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetAnimatedContainer(),
+                    icon: Icons.takeout_dining,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetAnimatedContainer,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationAnimatedContainer,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetAnimatedContainer(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!
-                    .menuAnimationAnimatedCrossFade,
-                icon: Icons.highlight_alt,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetAnimatedCrossFade,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationAnimatedCrossFade,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetAnimatedCrossFade(),
+                    icon: Icons.highlight_alt,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetAnimatedCrossFade,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationAnimatedCrossFade,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetAnimatedCrossFade(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text:
-                    AppLocalizations.of(context)!.menuAnimationAnimatedOpacity,
-                icon: Icons.opacity,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetAnimatedOpacity,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationAnimatedOpacity,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetAnimatedOpacity(),
+                    icon: Icons.opacity,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetAnimatedOpacity,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationAnimatedOpacity,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetAnimatedOpacity(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!
-                    .menuAnimationAnimatedDefaultTextStyle,
-                icon: Icons.format_size,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetAnimatedDefaultTextStyle,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationAnimatedDefaultTextStyle,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetAnimatedDefaultTextStyle(),
+                    icon: Icons.format_size,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants
+                            .txtSnippetWidgetAnimatedDefaultTextStyle,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationAnimatedDefaultTextStyle,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetAnimatedDefaultTextStyle(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationCustomPaint,
-                icon: Icons.brush,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetCustomPaint,
-                    title:
+                  AppMenu(
+                    text:
                         AppLocalizations.of(context)!.menuAnimationCustomPaint,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetCustomPaint(),
+                    icon: Icons.brush,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetCustomPaint,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationCustomPaint,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetCustomPaint(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationRotatingCircle,
-                icon: Icons.circle,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetRotatingCircle,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationRotatingCircle,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetRotatingCircle(),
+                    icon: Icons.circle,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetRotatingCircle,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationRotatingCircle,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetRotatingCircle(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationTransform,
-                icon: Icons.transform,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetTransform,
-                    title: AppLocalizations.of(context)!.menuAnimationTransform,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetTransform(),
+                  AppMenu(
+                    text: AppLocalizations.of(context)!.menuAnimationTransform,
+                    icon: Icons.transform,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetTransform,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationTransform,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetTransform(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationMatrix,
-                icon: Icons.view_in_ar,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetMatrix,
-                    title: AppLocalizations.of(context)!.menuAnimationMatrix,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetMatrix(),
+                  AppMenu(
+                    text: AppLocalizations.of(context)!.menuAnimationMatrix,
+                    icon: Icons.view_in_ar,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetMatrix,
+                        title:
+                            AppLocalizations.of(context)!.menuAnimationMatrix,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetMatrix(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!
-                    .menuAnimationDraggableScrollableSheet,
-                icon: Icons.drag_handle,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetDraggableScrollableSheet,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationDraggableScrollableSheet,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetDraggableScrollableSheet(),
+                    icon: Icons.drag_handle,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants
+                            .txtSnippetWidgetDraggableScrollableSheet,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationDraggableScrollableSheet,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetDraggableScrollableSheet(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationAnimatedImage,
-                icon: Icons.auto_awesome_motion,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetAnimatedImage,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationAnimatedImage,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetAnimatedImage(),
+                    icon: Icons.auto_awesome_motion,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetAnimatedImage,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationAnimatedImage,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetAnimatedImage(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationHero,
-                icon: Icons.published_with_changes,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetHero,
-                    title: AppLocalizations.of(context)!.menuAnimationHero,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetHero(),
+                  AppMenu(
+                    text: AppLocalizations.of(context)!.menuAnimationHero,
+                    icon: Icons.published_with_changes,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetHero,
+                        title: AppLocalizations.of(context)!.menuAnimationHero,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetHero(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationFadeInImage,
-                icon: Icons.filter_none,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetFadeInImage,
-                    title:
+                  AppMenu(
+                    text:
                         AppLocalizations.of(context)!.menuAnimationFadeInImage,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetFadeInImage(),
+                    icon: Icons.filter_none,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetFadeInImage,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationFadeInImage,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetFadeInImage(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuAnimationFadeTransition,
-                icon: Icons.motion_photos_on,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetFadeTransition,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationFadeTransition,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetFadeTransition(),
+                    icon: Icons.motion_photos_on,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetFadeTransition,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationFadeTransition,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetFadeTransition(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text:
-                    AppLocalizations.of(context)!.menuAnimationAnimatedSwitcher,
-                icon: Icons.filter_9_plus,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetShow,
-                  arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetAnimatedSwitcher,
-                    title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!
                         .menuAnimationAnimatedSwitcher,
-                    bottomNavigationBarIndex: 3,
-                    widget: SnippetAnimatedSwitcher(),
+                    icon: Icons.filter_9_plus,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetShow,
+                      arguments: SnippetShowModel(
+                        data: AppConstants.txtSnippetWidgetAnimatedSwitcher,
+                        title: AppLocalizations.of(context)!
+                            .menuAnimationAnimatedSwitcher,
+                        bottomNavigationBarIndex: 3,
+                        widget: SnippetAnimatedSwitcher(),
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
+              AppFloatinActionBar(),
             ],
           ),
         ),

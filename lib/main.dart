@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_snippets/src/l10n/l10n.dart';
 import 'package:flutter_snippets/src/pages/app_logo.dart';
+import 'package:flutter_snippets/src/pages/app_news.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
@@ -105,8 +106,16 @@ class MyAppMaterial extends StatelessWidget {
             arguments: settings.arguments,
           );
         }
+        if (settings.name == AppRoutes.appNews) {
+          return AppRoutePage(
+            widget: AppNews(),
+            routeName: AppRoutes.appNews,
+          );
+        }
         return AppRoutePage(
-            widget: SnippetBasic(), routeName: AppRoutes.snippetBasic);
+          widget: SnippetBasic(),
+          routeName: AppRoutes.snippetBasic,
+        );
       },
     );
   }

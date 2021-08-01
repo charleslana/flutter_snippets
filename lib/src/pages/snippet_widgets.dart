@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
+import 'package:flutter_snippets/src/components/app_floating_action_bar.dart';
 import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
@@ -134,1650 +135,1682 @@ class SnippetWidgets extends StatelessWidget {
         ),
         body: Padding(
           padding: EdgeInsets.all(10.0),
-          child: ListView(
+          child: Stack(
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0),
-                child: Text(
-                  AppLocalizations.of(context)!.menuWidget,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16.0,
-                    color: Theme.of(context).iconTheme.color,
+              ListView(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10.0),
+                    child: Text(
+                      AppLocalizations.of(context)!.menuWidget,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.0,
+                        color: Theme.of(context).iconTheme.color,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuWidgetCreate,
-                icon: Icons.add,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetFilter,
-                  arguments: SnippetFilterModel(
-                    title: AppLocalizations.of(context)!.menuWidgetCreate,
-                    snippets: [
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetCreateStateless,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetStateless,
-                            title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!.menuWidgetCreate,
+                    icon: Icons.add,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetFilter,
+                      arguments: SnippetFilterModel(
+                        title: AppLocalizations.of(context)!.menuWidgetCreate,
+                        snippets: [
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetCreateStateless,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetStateless(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetStateless,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetCreateStateless,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetStateless(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetCreateStateful,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetStateful,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetCreateStateful,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetStateful(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetStateful,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetCreateStateful,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetStateful(),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
+                        bottomNavigationBarIndex: 2,
                       ),
-                    ],
-                    bottomNavigationBarIndex: 2,
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuWidgetBasic,
-                icon: Icons.flip_to_front,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetFilter,
-                  arguments: SnippetFilterModel(
-                    title: AppLocalizations.of(context)!.menuWidgetBasic,
-                    snippets: [
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicSafeArea,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSafeArea,
-                            title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!.menuWidgetBasic,
+                    icon: Icons.flip_to_front,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetFilter,
+                      arguments: SnippetFilterModel(
+                        title: AppLocalizations.of(context)!.menuWidgetBasic,
+                        snippets: [
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicSafeArea,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSafeArea(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetSafeArea,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicSafeArea,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSafeArea(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicCircularProgressIndicator,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetCircularProgressIndicator,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicCircularProgressIndicator,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetCircularProgressIndicator(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetCircularProgressIndicator,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicCircularProgressIndicator,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetCircularProgressIndicator(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicContainer,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetContainer,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicContainer,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetContainer(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetContainer,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicContainer,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetContainer(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!.menuWidgetBasicText,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetText,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicText,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetText(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetText,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicText,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetText(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicTextOverflow,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetTextOverflow,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextOverflow,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetTextOverflow(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetTextOverflow,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicTextOverflow,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetTextOverflow(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicTextStyle,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetTextStyle,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextStyle,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetTextStyle(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetTextStyle,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicTextStyle,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetTextStyle(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicTextDefaultStyle,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetTextDefaultStyle,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextDefaultStyle,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetTextDefaultStyle(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetTextDefaultStyle,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicTextDefaultStyle,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetTextDefaultStyle(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicRichText,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetRichText,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicRichText,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetRichText(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetRichText,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicRichText,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetRichText(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicColumn,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetColumn,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicColumn,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetColumn(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetColumn,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicColumn,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetColumn(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!.menuWidgetBasicRow,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetRow,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicRow,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetRow(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetRow,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicRow,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetRow(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicDivider,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetDivider,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicDivider,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetDivider(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetDivider,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicDivider,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetDivider(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicVerticalDivider,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetVerticalDivider,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicVerticalDivider,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetVerticalDivider(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetVerticalDivider,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicVerticalDivider,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetVerticalDivider(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicTextButton,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetTextButton,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextButton,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetTextButton(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetTextButton,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicTextButton,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetTextButton(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicElevatedButton,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetElevatedButton,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicElevatedButton,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetElevatedButton(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetElevatedButton,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicElevatedButton,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetElevatedButton(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicElevatedButtonIcon,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data:
-                                AppConstants.txtSnippetWidgetElevatedButtonIcon,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicElevatedButtonIcon,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetElevatedButtonIcon(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetElevatedButtonIcon,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicElevatedButtonIcon,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetElevatedButtonIcon(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicOutlinedButton,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetOutlinedButton,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicOutlinedButton,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetOutlinedButton(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetOutlinedButton,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicOutlinedButton,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetOutlinedButton(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!.menuWidgetBasicIcon,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetIcon,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicIcon,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetIcon(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetIcon,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicIcon,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetIcon(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicIconBackground,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetIconBackground,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicIconBackground,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetIconBackground(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetIconBackground,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicIconBackground,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetIconBackground(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicImage,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetImage,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicImage,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetImage(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetImage,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicImage,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetImage(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicBottomSheet,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetBottomSheet,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicBottomSheet,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetBottomSheet(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetBottomSheet,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicBottomSheet,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetBottomSheet(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicMediaQuery,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetMediaQuery,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicMediaQuery,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetMediaQuery(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetMediaQuery,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicMediaQuery,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetMediaQuery(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicGestureDetector,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetGestureDetector,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicGestureDetector,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetGestureDetector(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetGestureDetector,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicGestureDetector,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetGestureDetector(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicInkWell,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetInkWell,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicInkWell,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetInkWell(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetInkWell,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicInkWell,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetInkWell(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!.menuWidgetBasicCard,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetCard,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicCard,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetCard(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetCard,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicCard,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetCard(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicFutureBuilder,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetFutureBuilder,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicFutureBuilder,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetFutureBuilder(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetFutureBuilder,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicFutureBuilder,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetFutureBuilder(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicStack,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetStack,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicStack,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetStack(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetStack,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicStack,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetStack(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicPageView,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetPageView,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicPageView,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetPageView(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetPageView,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicPageView,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetPageView(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicTable,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetTable,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicTable,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetTable(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetTable,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicTable,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetTable(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicSnackBar,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSnackBar,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicSnackBar,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSnackBar(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetSnackBar,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicSnackBar,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSnackBar(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicDialog,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetDialog,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicDialog,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetDialog(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetDialog,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicDialog,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetDialog(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicListView,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetListView,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicListView,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetListView(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetListView,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicListView,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetListView(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicRotatedBox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetRotatedBox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicRotatedBox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetRotatedBox(),
-                            tip: AppLocalizations.of(context)!.tipRotatedBox,
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetRotatedBox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicRotatedBox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetRotatedBox(),
+                                tip:
+                                    AppLocalizations.of(context)!.tipRotatedBox,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicClipRect,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetClipRect,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicClipRect,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetClipRect(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetClipRect,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicClipRect,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetClipRect(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicClipRRect,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetClipRRect,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicClipRRect,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetClipRRect(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetClipRRect,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicClipRRect,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetClipRRect(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicClipOval,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetClipOval,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicClipOval,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetClipOval(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetClipOval,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicClipOval,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetClipOval(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicFlexible,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetFlexible,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicFlexible,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetFlexible(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetFlexible,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicFlexible,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetFlexible(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicExpanded,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetExpanded,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicExpanded,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetExpanded(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetExpanded,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicExpanded,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetExpanded(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicCircleAvatar,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetCircleAvatar,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicCircleAvatar,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetCircleAvatar(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetCircleAvatar,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicCircleAvatar,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetCircleAvatar(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicFittedBox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetFittedBox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicFittedBox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetFittedBox(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetFittedBox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicFittedBox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetFittedBox(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicVisibility,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetVisibility,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicVisibility,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetVisibility(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetVisibility,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicVisibility,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetVisibility(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicBoxDecoration,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetBoxDecoration,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicBoxDecoration,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetBoxDecoration(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetBoxDecoration,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicBoxDecoration,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetBoxDecoration(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicSelectableText,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSelectableText,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicSelectableText,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSelectableText(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetSelectableText,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicSelectableText,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSelectableText(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicInteractiveViewer,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data:
-                                AppConstants.txtSnippetWidgetInteractiveViewer,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicInteractiveViewer,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetInteractiveViewer(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetInteractiveViewer,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicInteractiveViewer,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetInteractiveViewer(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicAspectRatio,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetAspectRatio,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicAspectRatio,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetAspectRatio(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetAspectRatio,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicAspectRatio,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetAspectRatio(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicPlaceholder,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetPlaceholder,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicPlaceholder,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetPlaceholder(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetPlaceholder,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicPlaceholder,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetPlaceholder(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicSpacer,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSpacer,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicSpacer,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSpacer(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetSpacer,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicSpacer,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSpacer(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicListWheelScrollView,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetListWheelScrollView,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicListWheelScrollView,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetListWheelScrollView(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetListWheelScrollView,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicListWheelScrollView,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetListWheelScrollView(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicOpacity,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetOpacity,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicOpacity,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetOpacity(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetOpacity,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicOpacity,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetOpacity(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicConstrainedBox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetConstrainedBox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicConstrainedBox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetConstrainedBox(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetConstrainedBox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicConstrainedBox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetConstrainedBox(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicAlign,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetAlign,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicAlign,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetAlign(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetAlign,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicAlign,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetAlign(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicPadding,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetPadding,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicPadding,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetPadding(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetPadding,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicPadding,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetPadding(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicAbsorbPointer,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetAbsorbPointer,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicAbsorbPointer,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetAbsorbPointer(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetAbsorbPointer,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicAbsorbPointer,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetAbsorbPointer(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicIgnorePointer,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetIgnorePointer,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicIgnorePointer,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetIgnorePointer(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetIgnorePointer,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicIgnorePointer,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetIgnorePointer(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicTooltip,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetTooltip,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicTooltip,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetTooltip(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetTooltip,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicTooltip,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetTooltip(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicColors,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetColors,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicColors,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetColors(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetColors,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicColors,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetColors(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicFlutterLogo,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetFlutterLogo,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicFlutterLogo,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetFlutterLogo(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetFlutterLogo,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicFlutterLogo,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetFlutterLogo(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicSizedBox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSizedBox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicSizedBox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSizedBox(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetSizedBox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicSizedBox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSizedBox(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicFloatingActionButton,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetFloatingActionButton,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicFloatingActionButton,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetFloatingActionButton(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetFloatingActionButton,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicFloatingActionButton,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetFloatingActionButton(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicCheckbox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetCheckbox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicCheckbox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetCheckbox(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetCheckbox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicCheckbox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetCheckbox(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicEndDrawer,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetEndDrawer,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicEndDrawer,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetEndDrawer(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetEndDrawer,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicEndDrawer,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetEndDrawer(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicContainerTransform,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data:
-                                AppConstants.txtSnippetWidgetContainerTransform,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicContainerTransform,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetContainerTransform(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetContainerTransform,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicContainerTransform,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetContainerTransform(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text:
-                            AppLocalizations.of(context)!.menuWidgetBasicBanner,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetBanner,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicBanner,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetBanner(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetBanner,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicBanner,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetBanner(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicBorderRadius,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetBorderRadius,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicBorderRadius,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetBorderRadius(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetBorderRadius,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicBorderRadius,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetBorderRadius(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicSingleChildScrollView,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetSingleChildScrollView,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicSingleChildScrollView,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSingleChildScrollView(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetSingleChildScrollView,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicSingleChildScrollView,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSingleChildScrollView(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicBoxShadow,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetBoxShadow,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicBoxShadow,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetBoxShadow(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetBoxShadow,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicBoxShadow,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetBoxShadow(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicShaderMask,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetShaderMask,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicShaderMask,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetShaderMask(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetShaderMask,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicShaderMask,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetShaderMask(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicColorFiltered,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetColorFiltered,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicColorFiltered,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetColorFiltered(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetColorFiltered,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicColorFiltered,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetColorFiltered(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicDataTable,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetDataTable,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicDataTable,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetDataTable(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetDataTable,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicDataTable,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetDataTable(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicImageFiltered,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetImageFiltered,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicImageFiltered,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetImageFiltered(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetImageFiltered,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicImageFiltered,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetImageFiltered(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicPositioned,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetPositioned,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicPositioned,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetPositioned(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetPositioned,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicPositioned,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetPositioned(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicLinearProgressIndicator,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetLinearProgressIndicator,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicLinearProgressIndicator,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetLinearProgressIndicator(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetLinearProgressIndicator,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicLinearProgressIndicator,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetLinearProgressIndicator(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicRawString,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetRawString,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicRawString,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetRawString(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetRawString,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicRawString,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetRawString(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicLimitedBox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetLimitedBox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicLimitedBox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetLimitedBox(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetLimitedBox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicLimitedBox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetLimitedBox(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicCheckboxListTile,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetCheckboxListTile,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicCheckboxListTile,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetCheckboxListTile(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetCheckboxListTile,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicCheckboxListTile,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetCheckboxListTile(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicSwitchListTile,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSwitchListTile,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicSwitchListTile,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSwitchListTile(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetSwitchListTile,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicSwitchListTile,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSwitchListTile(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicExpansionPanelList,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data:
-                                AppConstants.txtSnippetWidgetExpansionPanelList,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicExpansionPanelList,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetExpansionPanelList(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetExpansionPanelList,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicExpansionPanelList,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetExpansionPanelList(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicFractionallySizedBox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetFractionallySizedBox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicFractionallySizedBox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetFractionallySizedBox(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetFractionallySizedBox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicFractionallySizedBox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetFractionallySizedBox(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicScrollbar,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetScrollbar,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicScrollbar,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetScrollbar(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetScrollbar,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicScrollbar,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetScrollbar(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetBasicOverflowBox,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetOverflowBox,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetBasicOverflowBox,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetOverflowBox(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetOverflowBox,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetBasicOverflowBox,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetOverflowBox(),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
+                        bottomNavigationBarIndex: 2,
                       ),
-                    ],
-                    bottomNavigationBarIndex: 2,
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuWidgetAdvanced,
-                icon: Icons.swap_vert,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetFilter,
-                  arguments: SnippetFilterModel(
-                    title: AppLocalizations.of(context)!.menuWidgetAdvanced,
-                    snippets: [
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedRefreshIndicator,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetRefreshIndicator,
-                            title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!.menuWidgetAdvanced,
+                    icon: Icons.swap_vert,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetFilter,
+                      arguments: SnippetFilterModel(
+                        title: AppLocalizations.of(context)!.menuWidgetAdvanced,
+                        snippets: [
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedRefreshIndicator,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetRefreshIndicator(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetRefreshIndicator,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedRefreshIndicator,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetRefreshIndicator(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedDraggable,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetDraggable,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDraggable,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetDraggable(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetDraggable,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedDraggable,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetDraggable(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedGlobalKey,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetGlobalKey,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedGlobalKey,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetGlobalKey(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetGlobalKey,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedGlobalKey,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetGlobalKey(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedDrawer,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetDrawer,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDrawer,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetDrawer(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetDrawer,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedDrawer,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetDrawer(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedDropdown,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetDropdown,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDropdown,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetDropdown(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetDropdown,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedDropdown,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetDropdown(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedDismissible,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetDismissible,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDismissible,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetDismissible(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetDismissible,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedDismissible,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetDismissible(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedGridView,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetGridView,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedGridView,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetGridView(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetGridView,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedGridView,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetGridView(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedSilverAppBar,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSilverAppBar,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSilverAppBar,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSilverAppBar(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetSilverAppBar,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedSilverAppBar,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSilverAppBar(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedSilverGrid,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSilverGrid,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSilverGrid,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSilverGrid(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetSilverGrid,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedSilverGrid,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSilverGrid(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedNavigator,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetNavigator,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedNavigator,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetNavigator(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetNavigator,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedNavigator,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetNavigator(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedNavigatorWithArguments,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetNavigatorWithArguments,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedNavigatorWithArguments,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetNavigatorWithArguments(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetNavigatorWithArguments,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedNavigatorWithArguments,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetNavigatorWithArguments(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedSendDataToScreen,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSendDataToScreen,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSendDataToScreen,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSendDataToScreen(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetSendDataToScreen,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedSendDataToScreen,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSendDataToScreen(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedPopupMenuButton,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetPopupMenuButton,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedPopupMenuButton,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetPopupMenuButton(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetPopupMenuButton,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedPopupMenuButton,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetPopupMenuButton(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedTabs,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetTabs,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedTabs,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetTabs(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetTabs,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedTabs,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetTabs(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedClipPath,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetClipPath,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedClipPath,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetClipPath(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetClipPath,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedClipPath,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetClipPath(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedSlider,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetSlider,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSlider,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetSlider(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetSlider,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedSlider,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetSlider(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedListViewWithSearch,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data:
-                                AppConstants.txtSnippetWidgetListViewWithSearch,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedListViewWithSearch,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetListViewWithSearch(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetListViewWithSearch,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedListViewWithSearch,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetListViewWithSearch(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedChip,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetChip,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedChip,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetChip(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetChip,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedChip,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetChip(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedImageLoadingBuilder,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetImageLoadingBuilder,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedImageLoadingBuilder,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetImageLoadingBuilder(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetImageLoadingBuilder,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedImageLoadingBuilder,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetImageLoadingBuilder(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedMouseRegion,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetMouseRegion,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedMouseRegion,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetMouseRegion(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetMouseRegion,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedMouseRegion,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetMouseRegion(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedLayoutBuilder,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetLayoutBuilder,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedLayoutBuilder,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetLayoutBuilder(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetLayoutBuilder,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedLayoutBuilder,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetLayoutBuilder(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedBottomNavigationBar,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants
-                                .txtSnippetWidgetBottomNavigationBar,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedBottomNavigationBar,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetBottomNavigationBar(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetBottomNavigationBar,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedBottomNavigationBar,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetBottomNavigationBar(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedExpansionPanel,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetExpansionPanel,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedExpansionPanel,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetExpansionPanel(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data:
+                                    AppConstants.txtSnippetWidgetExpansionPanel,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedExpansionPanel,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetExpansionPanel(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedPaint,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetPaint,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedPaint,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetPaint(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetPaint,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedPaint,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetPaint(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedLoadJson,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetLoadJson,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedLoadJson,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetLoadJson(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetLoadJson,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedLoadJson,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetLoadJson(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedClipboard,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetClipboard,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedClipboard,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetClipboard(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetClipboard,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedClipboard,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetClipboard(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedPageRouteBuilder,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetPageRouteBuilder,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedPageRouteBuilder,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetPageRouteBuilder(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants
+                                    .txtSnippetWidgetPageRouteBuilder,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedPageRouteBuilder,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetPageRouteBuilder(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedLoadTxt,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetLoadTxt,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedLoadTxt,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetLoadTxt(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetLoadTxt,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedLoadTxt,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetLoadTxt(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAdvancedIndexedStack,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetIndexedStack,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedIndexedStack,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetIndexedStack(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetIndexedStack,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAdvancedIndexedStack,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetIndexedStack(),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
+                        bottomNavigationBarIndex: 2,
                       ),
-                    ],
-                    bottomNavigationBarIndex: 2,
+                    ),
                   ),
-                ),
-              ),
-              AppMenu(
-                text: AppLocalizations.of(context)!.menuWidgetApps,
-                icon: Icons.grid_view,
-                onPressed: () => Navigator.of(context).pushNamed(
-                  AppRoutes.snippetFilter,
-                  arguments: SnippetFilterModel(
-                    title: AppLocalizations.of(context)!.menuWidgetApps,
-                    snippets: [
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAppStopwatch,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetStopwtach,
-                            title: AppLocalizations.of(context)!
+                  AppMenu(
+                    text: AppLocalizations.of(context)!.menuWidgetApps,
+                    icon: Icons.grid_view,
+                    onPressed: () => Navigator.of(context).pushNamed(
+                      AppRoutes.snippetFilter,
+                      arguments: SnippetFilterModel(
+                        title: AppLocalizations.of(context)!.menuWidgetApps,
+                        snippets: [
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAppStopwatch,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetStopwatch(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetStopwtach,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAppStopwatch,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetStopwatch(),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SnippetFilterListModel(
-                        text: AppLocalizations.of(context)!
-                            .menuWidgetAppCountdown,
-                        onPressed: () => Navigator.of(context).pushNamed(
-                          AppRoutes.snippetShow,
-                          arguments: SnippetShowModel(
-                            data: AppConstants.txtSnippetWidgetCountdown,
-                            title: AppLocalizations.of(context)!
+                          SnippetFilterListModel(
+                            text: AppLocalizations.of(context)!
                                 .menuWidgetAppCountdown,
-                            bottomNavigationBarIndex: 2,
-                            widget: SnippetCountdown(),
+                            onPressed: () => Navigator.of(context).pushNamed(
+                              AppRoutes.snippetShow,
+                              arguments: SnippetShowModel(
+                                data: AppConstants.txtSnippetWidgetCountdown,
+                                title: AppLocalizations.of(context)!
+                                    .menuWidgetAppCountdown,
+                                bottomNavigationBarIndex: 2,
+                                widget: SnippetCountdown(),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
+                        bottomNavigationBarIndex: 2,
                       ),
-                    ],
-                    bottomNavigationBarIndex: 2,
+                    ),
                   ),
-                ),
+                ],
               ),
+              AppFloatinActionBar(),
             ],
           ),
         ),
