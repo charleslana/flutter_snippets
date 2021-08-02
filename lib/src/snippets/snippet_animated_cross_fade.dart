@@ -46,6 +46,9 @@ class _SnippetAnimatedCrossFadeState extends State<SnippetAnimatedCrossFade> {
           ),
           Positioned.fill(
             child: TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.transparent),
+              ),
               child: Text('Toque para\nAnimar a Cor e o Tamanho'),
               onPressed: () => _crossFade(),
             ),
