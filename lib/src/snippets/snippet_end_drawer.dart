@@ -21,7 +21,7 @@ class SnippetEndDrawer extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'endDrawer',
+          'EndDrawer',
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,

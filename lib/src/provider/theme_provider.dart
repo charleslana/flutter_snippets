@@ -30,7 +30,9 @@ class ThemeProvider extends ChangeNotifier {
 class MyThemes {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: Colors.grey.shade900,
-    colorScheme: ColorScheme.dark(),
+    colorScheme: ColorScheme.dark().copyWith(
+      primary: Colors.deepPurple,
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: Colors.purple.shade200,
     ),
@@ -85,26 +87,17 @@ class MyThemes {
         ),
       ),
     ),
-    primarySwatch: MaterialColor(
-      0xff000000,
-      const <int, Color>{
-        50: Colors.transparent,
-        100: Colors.transparent,
-        200: Colors.transparent,
-        300: Colors.transparent,
-        400: Colors.transparent,
-        500: Colors.transparent,
-        600: Colors.transparent,
-        700: Colors.transparent,
-        800: Colors.transparent,
-        900: Colors.transparent,
-      },
+    snackBarTheme: SnackBarThemeData(
+      actionTextColor: Colors.black,
     ),
+    accentColor: Colors.black.withOpacity(0.4),
   );
 
   static final lighTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
-    colorScheme: ColorScheme.light(),
+    colorScheme: ColorScheme.light().copyWith(
+      primary: Colors.blue,
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: Colors.blue,
     ),
@@ -159,20 +152,9 @@ class MyThemes {
         ),
       ),
     ),
-    primarySwatch: MaterialColor(
-      0xff000000,
-      const <int, Color>{
-        50: Colors.transparent,
-        100: Colors.transparent,
-        200: Colors.transparent,
-        300: Colors.transparent,
-        400: Colors.transparent,
-        500: Colors.transparent,
-        600: Colors.transparent,
-        700: Colors.transparent,
-        800: Colors.transparent,
-        900: Colors.transparent,
-      },
+    snackBarTheme: SnackBarThemeData(
+      actionTextColor: Colors.white,
     ),
+    accentColor: Colors.black.withOpacity(0.4),
   );
 }
