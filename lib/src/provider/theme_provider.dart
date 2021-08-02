@@ -90,7 +90,6 @@ class MyThemes {
     snackBarTheme: SnackBarThemeData(
       actionTextColor: Colors.black,
     ),
-    accentColor: Colors.black.withOpacity(0.4),
   );
 
   static final lighTheme = ThemeData(
@@ -155,6 +154,5 @@ class MyThemes {
     snackBarTheme: SnackBarThemeData(
       actionTextColor: Colors.white,
     ),
-    accentColor: Colors.black.withOpacity(0.4),
   );
 }
