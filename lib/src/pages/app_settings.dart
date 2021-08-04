@@ -4,6 +4,7 @@ import 'package:flutter_snippets/src/l10n/l10n.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppSettings extends StatefulWidget {
   const AppSettings({Key? key}) : super(key: key);
@@ -71,31 +72,35 @@ class _AppSettingsState extends State<AppSettings> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppCustomBar(title: 'Settings'),
+        appBar: AppCustomBar(title: AppLocalizations.of(context)!.appSettings),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CheckboxListTile(
-                title: Text('System defined default theme'),
+                title: Text(AppLocalizations.of(context)!
+                    .appSettingsDefaultThemeSystem),
                 value: _isDefaultTheme,
                 onChanged: (_) => _selectDefaultTheme(),
               ),
               SwitchListTile(
-                title: Text('Dark Mode'),
+                title: Text(AppLocalizations.of(context)!.appSettingsDarkMode),
                 value: _isDarkTheme,
                 onChanged: (bool? value) => _changeDarkTheme(value),
               ),
               SizedBox(
                 height: 30,
               ),
-              Text('Choose language',
-                  style: Theme.of(context).textTheme.headline6),
+              Text(
+                AppLocalizations.of(context)!.appSettingsChooseLanguage,
+                style: Theme.of(context).textTheme.headline6,
+              ),
               SizedBox(
                 height: 30,
               ),
               CheckboxListTile(
-                title: Text('System defined default language'),
+                title: Text(AppLocalizations.of(context)!
+                    .appSettingsDefaultLanguageSystem),
                 value: _isDefaultLanguage,
                 onChanged: (_) => _selectDefaultLanguage(),
               ),
@@ -103,21 +108,24 @@ class _AppSettingsState extends State<AppSettings> {
                 value: 1,
                 groupValue: _language,
                 onChanged: (int? value) => _changeLanguage(value, L10n.all[0]),
-                title: Text('Portuguese'),
+                title: Text(AppLocalizations.of(context)!
+                    .appSettingsLanguagePortuguese),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
               RadioListTile(
                 value: 2,
                 groupValue: _language,
                 onChanged: (int? value) => _changeLanguage(value, L10n.all[1]),
-                title: Text('English'),
+                title: Text(
+                    AppLocalizations.of(context)!.appSettingsLanguageEnglish),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
               RadioListTile(
                 value: 3,
                 groupValue: _language,
                 onChanged: (int? value) => _changeLanguage(value, L10n.all[2]),
-                title: Text('Spanish'),
+                title: Text(
+                    AppLocalizations.of(context)!.appSettingsLanguageSpanish),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
             ],

@@ -7,6 +7,14 @@
     "@helloWorld": {
         "description": "A programmer greeting"
     },
+    "appSettings": "Settings",
+    "appSettingsDefaultThemeSystem": "System defined default theme",
+    "appSettingsDarkMode": "Dark mode",
+    "appSettingsChooseLanguage": "Choose language",
+    "appSettingsDefaultLanguageSystem": "System defined default language",
+    "appSettingsLanguagePortuguese": "Portuguese",
+    "appSettingsLanguageEnglish": "English",
+    "appSettingsLanguageSpanish": "Spanish",
     "appInfoTitle": "Info",
     "tabBarTitleExample": "Example",
     "tabBarTitleCode": "Code",
