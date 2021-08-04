@@ -1,8 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_snippets/src/routes/app_routes.dart';
 
 class AppUtils {
+  void navigateToScreen(int index, BuildContext context, currentRoute) {
+    switch (index) {
+      case 0:
+        currentRoute != AppRoutes.snippetDart
+            ? Navigator.of(context).pushReplacementNamed(AppRoutes.snippetDart)
+            : null;
+        break;
+      case 1:
+        currentRoute != AppRoutes.snippetWidgets
+            ? Navigator.of(context)
+                .pushReplacementNamed(AppRoutes.snippetWidgets)
+            : null;
+        break;
+      case 2:
+        currentRoute != AppRoutes.appInfo
+            ? Navigator.of(context).pushNamed(AppRoutes.appInfo)
+            : null;
+        break;
+      default:
+        Navigator.of(context).pushReplacementNamed(AppRoutes.snippetDart);
+    }
+  }
+
   void copyCode(String data, BuildContext context) {
     final copy = ClipboardData(text: data);
     Clipboard.setData(copy).then(

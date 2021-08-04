@@ -31,7 +31,7 @@ class _AppFloatinActionBarState extends State<AppFloatinActionBar>
     return Container(
       child: FloatingActionButton(
         heroTag: 'floatNews',
-        onPressed: () => Navigator.of(context).pushNamed(AppRoutes.appNews),
+        onPressed: () => Navigator.of(context).pushNamed(AppRoutes.appInfo),
         tooltip: 'News',
         child: Icon(Icons.article),
       ),

@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/routes/app_routes.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_snippets/src/utils/app_utils.dart';
 
 class AppBottomNavigationBar extends StatelessWidget {
-  final int index;
   const AppBottomNavigationBar({
-    required this.index,
     Key? key,
   }) : super(key: key);
 
@@ -13,59 +10,40 @@ class AppBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final currentRoute = ModalRoute.of(context)!.settings.name;
 
-    void navigateToScreens(int index) {
-      switch (index) {
-        case 0:
-          currentRoute != AppRoutes.snippetBasic
-              ? Navigator.of(context)
-                  .pushReplacementNamed(AppRoutes.snippetBasic)
-              : null;
-          break;
-        case 1:
-          currentRoute != AppRoutes.snippetAdvanced
-              ? Navigator.of(context)
-                  .pushReplacementNamed(AppRoutes.snippetAdvanced)
-              : null;
-          break;
-        case 2:
-          currentRoute != AppRoutes.snippetWidgets
-              ? Navigator.of(context)
-                  .pushReplacementNamed(AppRoutes.snippetWidgets)
-              : null;
-          break;
-        case 3:
-          currentRoute != AppRoutes.snippetAnimations
-              ? Navigator.of(context)
-                  .pushReplacementNamed(AppRoutes.snippetAnimations)
-              : null;
-          break;
-        default:
-          Navigator.of(context).pushReplacementNamed(AppRoutes.snippetBasic);
-      }
-    }
-
-    return BottomNavigationBar(
-      currentIndex: index,
-      onTap: (int index) => navigateToScreens(index),
-      type: BottomNavigationBarType.fixed,
-      items: <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.description),
-          label: AppLocalizations.of(context)!.bottomNavigationBarBasic,
+    return BottomAppBar(
+      color: Colors.indigo,
+      notchMargin: 6.0,
+      shape: AutomaticNotchedShape(
+        RoundedRectangleBorder(),
+        StadiumBorder(
+          side: BorderSide(),
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.school),
-          label: AppLocalizations.of(context)!.bottomNavigationBarAdvanced,
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              icon: Icon(
+                Icons.code,
+                color: Colors.white,
+              ),
+              onPressed: () =>
+                  AppUtils().navigateToScreen(0, context, currentRoute),
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.info_outline,
+                color: Colors.white,
+              ),
+              onPressed: () =>
+                  AppUtils().navigateToScreen(2, context, currentRoute),
+            ),
+          ],
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.widgets),
-          label: AppLocalizations.of(context)!.bottomNavigationBarWidget,
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.animation),
-          label: AppLocalizations.of(context)!.bottomNavigationBarAnimations,
-        ),
-      ],
+      ),
     );
   }
 }

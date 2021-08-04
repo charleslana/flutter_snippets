@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
@@ -80,7 +79,6 @@ class _SnippetFilterState extends State<SnippetFilter> {
         child: Scaffold(
           appBar: AppBar(
             title: Text(_filter.title),
-            actions: ListIconsAppBarWidget().listWidgets,
           ),
           body: Column(
             children: [
@@ -142,9 +140,6 @@ class _SnippetFilterState extends State<SnippetFilter> {
                       ),
                     ),
             ],
-          ),
-          bottomNavigationBar: AppBottomNavigationBar(
-            index: _filter.bottomNavigationBarIndex,
           ),
         ),
       ),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_snippets/src/l10n/l10n.dart';
 import 'package:flutter_snippets/src/pages/app_logo.dart';
-import 'package:flutter_snippets/src/pages/app_news.dart';
+import 'package:flutter_snippets/src/pages/app_info.dart';
+import 'package:flutter_snippets/src/pages/app_settings.dart';
+import 'package:flutter_snippets/src/pages/snippet_dart.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
@@ -75,6 +77,14 @@ class MyAppMaterial extends StatelessWidget {
         if (settings.name == AppRoutes.appLogo) {
           return AppRoutePage(widget: AppLogo(), routeName: AppRoutes.appLogo);
         }
+        if (settings.name == AppRoutes.snippetDart) {
+          return AppRoutePage(
+              widget: SnippetDart(), routeName: AppRoutes.snippetDart);
+        }
+        if (settings.name == AppRoutes.appSettings) {
+          return AppRoutePage(
+              widget: AppSettings(), routeName: AppRoutes.appSettings);
+        }
         if (settings.name == AppRoutes.snippetBasic) {
           return AppRoutePage(
               widget: SnippetBasic(), routeName: AppRoutes.snippetBasic);
@@ -106,16 +116,14 @@ class MyAppMaterial extends StatelessWidget {
             arguments: settings.arguments,
           );
         }
-        if (settings.name == AppRoutes.appNews) {
+        if (settings.name == AppRoutes.appInfo) {
           return AppRoutePage(
-            widget: AppNews(),
-            routeName: AppRoutes.appNews,
+            widget: AppInfo(),
+            routeName: AppRoutes.appInfo,
           );
         }
         return AppRoutePage(
-          widget: SnippetBasic(),
-          routeName: AppRoutes.snippetBasic,
-        );
+            widget: SnippetBasic(), routeName: AppRoutes.snippetBasic);
       },
     );
   }

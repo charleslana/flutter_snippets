@@ -25,7 +25,7 @@ class _AppLogoState extends State<AppLogo> {
     super.initState();
     Timer(
       Duration(seconds: 3),
-      () => Navigator.pushReplacementNamed(context, AppRoutes.snippetBasic),
+      () => Navigator.pushReplacementNamed(context, AppRoutes.snippetWidgets),
     );
   }
 

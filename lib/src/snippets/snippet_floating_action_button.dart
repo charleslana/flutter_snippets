@@ -9,7 +9,7 @@ class SnippetFloatingActionButton extends StatelessWidget {
       body: Center(
         child: Text('Hello World!'),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         heroTag: 'btn1',
         child: Icon(Icons.add),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
+import 'package:flutter_snippets/src/components/app_bottom_navigation_bar0.dart';
 import 'package:flutter_snippets/src/components/app_floating_action_bar.dart';
 import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
@@ -160,7 +160,7 @@ class SnippetBasic extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: AppBottomNavigationBar(
+        bottomNavigationBar: AppBottomNavigationBar0(
           index: 0,
         ),
       ),

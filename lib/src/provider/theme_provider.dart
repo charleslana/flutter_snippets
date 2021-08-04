@@ -31,20 +31,20 @@ class MyThemes {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: Colors.grey.shade900,
     colorScheme: ColorScheme.dark().copyWith(
-      primary: Colors.deepPurple,
+      primary: Colors.indigo,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: Colors.purple.shade200,
+      selectedItemColor: Colors.indigo.shade200,
     ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.indigo,
         primary: Colors.black,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.indigo,
         primary: Colors.black,
       ),
     ),
@@ -52,7 +52,7 @@ class MyThemes {
       thumbColor: MaterialStateProperty.resolveWith<Color>(
         (Set<MaterialState> states) {
           if (states.contains(MaterialState.selected)) {
-            return Colors.deepPurple;
+            return Colors.indigo;
           }
           ;
           return Colors.white.withAlpha(700);
@@ -62,16 +62,27 @@ class MyThemes {
     ),
     primaryColor: Colors.black,
     iconTheme: IconThemeData(
-      color: Colors.deepPurple,
+      color: Colors.indigo,
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: Colors.indigo,
     ),
     checkboxTheme: CheckboxThemeData(
       fillColor: MaterialStateProperty.resolveWith<Color>(
         (Set<MaterialState> states) {
           if (states.contains(MaterialState.selected)) {
-            return Colors.deepPurple;
+            return Colors.indigo;
+          }
+          ;
+          return Colors.white;
+        },
+      ),
+    ),
+    radioTheme: RadioThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.indigo;
           }
           ;
           return Colors.white;
@@ -82,7 +93,7 @@ class MyThemes {
       indicator: ShapeDecoration(
         shape: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.deepPurple,
+            color: Colors.indigo,
           ),
         ),
       ),
@@ -95,20 +106,20 @@ class MyThemes {
   static final lighTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
     colorScheme: ColorScheme.light().copyWith(
-      primary: Colors.blue,
+      primary: Colors.indigo,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: Colors.blue,
+      selectedItemColor: Colors.indigo,
     ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
-        backgroundColor: Colors.blue[400],
+        backgroundColor: Colors.indigo,
         primary: Colors.white,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-        backgroundColor: Colors.blue[400],
+        backgroundColor: Colors.indigo,
         primary: Colors.white,
       ),
     ),
@@ -116,26 +127,37 @@ class MyThemes {
       thumbColor: MaterialStateProperty.resolveWith<Color>(
         (Set<MaterialState> states) {
           if (states.contains(MaterialState.selected)) {
-            return Colors.blue;
+            return Colors.indigo;
           }
           ;
-          return Colors.black.withAlpha(700);
+          return Colors.white;
         },
       ),
       trackColor: MaterialStateProperty.all(Colors.black.withAlpha(400)),
     ),
-    primaryColor: Colors.white,
+    primaryColor: Colors.indigo,
     iconTheme: IconThemeData(
       color: Colors.black,
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.indigo,
     ),
     checkboxTheme: CheckboxThemeData(
       fillColor: MaterialStateProperty.resolveWith<Color>(
         (Set<MaterialState> states) {
           if (states.contains(MaterialState.selected)) {
-            return Colors.blue;
+            return Colors.indigo;
+          }
+          ;
+          return Colors.black;
+        },
+      ),
+    ),
+    radioTheme: RadioThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.indigo;
           }
           ;
           return Colors.black;

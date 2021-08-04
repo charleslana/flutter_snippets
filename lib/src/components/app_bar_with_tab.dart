@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 
 class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
-  final String text;
+  final String title;
   final TabController tabController;
 
   const AppBarWithTab({
     Key? key,
-    required this.text,
+    required this.title,
     required this.tabController,
   }) : super(key: key);
 
@@ -18,8 +17,7 @@ class AppBarWithTab extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(text),
-      actions: ListIconsAppBarWidget().listWidgets,
+      title: Text(title),
       bottom: TabBar(
         controller: tabController,
         tabs: [

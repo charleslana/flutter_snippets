@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/components/app_bar_with_tab.dart';
-import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/components/app_tab_bar_body.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/services/txt_service.dart';
@@ -58,7 +57,7 @@ class _SnippetShowState extends State<SnippetShow>
             )
           : Scaffold(
               appBar: AppBarWithTab(
-                text: _snippet!.title,
+                title: _snippet!.title,
                 tabController: _tabController,
               ),
               body: AppTabBarBody(
@@ -66,14 +65,11 @@ class _SnippetShowState extends State<SnippetShow>
                 data: _data!,
                 tabController: _tabController,
               ),
-              bottomNavigationBar: AppBottomNavigationBar(
-                index: _snippet!.bottomNavigationBarIndex,
-              ),
               floatingActionButtonLocation:
-                  FloatingActionButtonLocation.centerDocked,
+                  FloatingActionButtonLocation.endFloat,
               floatingActionButton: FloatingActionButton(
                 heroTag: 'show',
-                child: Icon(Icons.lightbulb),
+                child: Icon(Icons.lightbulb, color: Colors.white),
                 onPressed: () => AppUtils().alert(_snippet!.tip, context),
               ),
             ),

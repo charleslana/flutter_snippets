@@ -7,15 +7,16 @@ class L10n {
     const Locale('es'),
   ];
 
-  static String getFlag(String code) {
+  static int getFlag(String code) {
     switch (code) {
-      case 'en':
-        return 'icon_united_states';
-      case 'es':
-        return 'icon_spain';
       case 'pt':
+        return 1;
+      case 'en':
+        return 2;
+      case 'es':
+        return 3;
       default:
-        return 'icon_brazil';
+        return 0;
     }
   }
 }
