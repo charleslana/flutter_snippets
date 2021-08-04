@@ -48,7 +48,12 @@ class _SnippetExpansionPanelState extends State<SnippetExpansionPanel> {
                         ),
                       ),
                       onPressed: () => null,
-                      child: Text('All'),
+                      child: Text(
+                        'All',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: null,

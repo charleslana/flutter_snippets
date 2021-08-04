@@ -14,6 +14,8 @@ class AppCustomBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentRoute = ModalRoute.of(context)!.settings.name;
+
     return AppBar(
       title: Text(title),
       backgroundColor: Colors.indigo,
@@ -22,8 +24,9 @@ class AppCustomBar extends StatelessWidget with PreferredSizeWidget {
           icon: Icon(
             Icons.settings,
           ),
-          onPressed: () =>
-              Navigator.of(context).pushNamed(AppRoutes.appSettings),
+          onPressed: () => currentRoute != AppRoutes.appSettings
+              ? Navigator.of(context).pushNamed(AppRoutes.appSettings)
+              : null,
         ),
       ],
     );

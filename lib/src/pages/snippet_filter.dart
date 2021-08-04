@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
-import 'package:flutter_snippets/src/widgets/list_icons_app_bar_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SnippetFilter extends StatefulWidget {
