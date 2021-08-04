@@ -8,7 +8,7 @@ class AppUtils {
     switch (index) {
       case 0:
         currentRoute != AppRoutes.snippetDart
-            ? Navigator.of(context).pushReplacementNamed(AppRoutes.snippetDart)
+            ? Navigator.of(context).pushNamed(AppRoutes.snippetDart)
             : null;
         break;
       case 1:

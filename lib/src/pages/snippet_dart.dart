@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/components/app_custom_bar.dart';
-import 'package:flutter_snippets/src/components/app_floating_action_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
@@ -18,9 +16,6 @@ class SnippetDart extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppCustomBar(title: 'Dart'),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: AppFloatingActionButton(),
-        bottomNavigationBar: AppBottomNavigationBar(),
         body: Padding(
           padding: EdgeInsets.all(10.0),
           child: Stack(
@@ -46,7 +41,6 @@ class SnippetDart extends StatelessWidget {
                       arguments: SnippetShowModel(
                         data: AppConstants.txtSnippetComments,
                         title: AppLocalizations.of(context)!.menuBasicComments,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -58,7 +52,6 @@ class SnippetDart extends StatelessWidget {
                       arguments: SnippetShowModel(
                         data: AppConstants.txtSnippetVariables,
                         title: AppLocalizations.of(context)!.menuBasicVariables,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -71,7 +64,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetNomenclatures,
                         title: AppLocalizations.of(context)!
                             .menuBasicNomenclatures,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -83,7 +75,6 @@ class SnippetDart extends StatelessWidget {
                       arguments: SnippetShowModel(
                         data: AppConstants.txtSnippetTypes,
                         title: AppLocalizations.of(context)!.menuBasicTypes,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -96,7 +87,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetMathOperations,
                         title: AppLocalizations.of(context)!
                             .menuBasicMathOperations,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -110,7 +100,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetConcatenationStrings,
                         title: AppLocalizations.of(context)!
                             .menuBasicConcatenationStrings,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -123,7 +112,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetNullSafety,
                         title:
                             AppLocalizations.of(context)!.menuBasicNullSafety,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -136,7 +124,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetFluxControl,
                         title:
                             AppLocalizations.of(context)!.menuBasicFluxControl,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -150,7 +137,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetFunctionsParameters,
                         title: AppLocalizations.of(context)!
                             .menuBasicFunctionsParameters,
-                        bottomNavigationBarIndex: 0,
                       ),
                     ),
                   ),
@@ -183,7 +169,6 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClass,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterClasses,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
@@ -196,7 +181,6 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClassPrivatePublic,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterPrivatePublic,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
@@ -209,7 +193,6 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClassGetterSetter,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterGetterSetter,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
@@ -222,7 +205,6 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClassConstructor,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterConstructor,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
@@ -235,7 +217,6 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClassExtends,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterExtends,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
@@ -248,7 +229,6 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClassAbstract,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterAbstract,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
@@ -261,7 +241,6 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClassImplements,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterImplements,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
@@ -274,12 +253,10 @@ class SnippetDart extends StatelessWidget {
                                 data: AppConstants.txtSnippetClassPolymorphism,
                                 title: AppLocalizations.of(context)!
                                     .menuAdvancedFilterPolymorphism,
-                                bottomNavigationBarIndex: 1,
                               ),
                             ),
                           ),
                         ],
-                        bottomNavigationBarIndex: 1,
                       ),
                     ),
                   ),
@@ -291,7 +268,6 @@ class SnippetDart extends StatelessWidget {
                       arguments: SnippetShowModel(
                         data: AppConstants.txtSnippetList,
                         title: AppLocalizations.of(context)!.menuAdvancedList,
-                        bottomNavigationBarIndex: 1,
                       ),
                     ),
                   ),
@@ -303,7 +279,6 @@ class SnippetDart extends StatelessWidget {
                       arguments: SnippetShowModel(
                         data: AppConstants.txtSnippetMap,
                         title: AppLocalizations.of(context)!.menuAdvancedMap,
-                        bottomNavigationBarIndex: 1,
                       ),
                     ),
                   ),
@@ -317,7 +292,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetOperatorSpread,
                         title: AppLocalizations.of(context)!
                             .menuAdvancedOperatorSpread,
-                        bottomNavigationBarIndex: 1,
                       ),
                     ),
                   ),
@@ -331,7 +305,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetCascadeOperator,
                         title: AppLocalizations.of(context)!
                             .menuAdvancedCascadeOperator,
-                        bottomNavigationBarIndex: 1,
                       ),
                     ),
                   ),
@@ -344,7 +317,6 @@ class SnippetDart extends StatelessWidget {
                         data: AppConstants.txtSnippetPubspec,
                         title:
                             AppLocalizations.of(context)!.menuAdvancedPubspec,
-                        bottomNavigationBarIndex: 1,
                       ),
                     ),
                   ),

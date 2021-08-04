@@ -5,15 +5,12 @@ import 'package:flutter_snippets/src/pages/app_logo.dart';
 import 'package:flutter_snippets/src/pages/app_info.dart';
 import 'package:flutter_snippets/src/pages/app_settings.dart';
 import 'package:flutter_snippets/src/pages/snippet_dart.dart';
+import 'package:flutter_snippets/src/pages/snippet_widgets.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
-import 'package:flutter_snippets/src/pages/snippet_advanced.dart';
-import 'package:flutter_snippets/src/pages/snippet_animations.dart';
-import 'package:flutter_snippets/src/pages/snippet_basic.dart';
 import 'package:flutter_snippets/src/pages/snippet_filter.dart';
 import 'package:flutter_snippets/src/pages/snippet_show.dart';
-import 'package:flutter_snippets/src/pages/snippet_widgets.dart';
 import 'package:flutter_snippets/src/widgets/app_route_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -77,31 +74,22 @@ class MyAppMaterial extends StatelessWidget {
         if (settings.name == AppRoutes.appLogo) {
           return AppRoutePage(widget: AppLogo(), routeName: AppRoutes.appLogo);
         }
-        if (settings.name == AppRoutes.snippetDart) {
-          return AppRoutePage(
-              widget: SnippetDart(), routeName: AppRoutes.snippetDart);
-        }
-        if (settings.name == AppRoutes.appSettings) {
-          return AppRoutePage(
-              widget: AppSettings(), routeName: AppRoutes.appSettings);
-        }
-        if (settings.name == AppRoutes.snippetBasic) {
-          return AppRoutePage(
-              widget: SnippetBasic(), routeName: AppRoutes.snippetBasic);
-        }
-        if (settings.name == AppRoutes.snippetAdvanced) {
-          return AppRoutePage(
-              widget: SnippetAdvanced(), routeName: AppRoutes.snippetAdvanced);
-        }
+
         if (settings.name == AppRoutes.snippetWidgets) {
           return AppRoutePage(
               widget: SnippetWidgets(), routeName: AppRoutes.snippetWidgets);
         }
-        if (settings.name == AppRoutes.snippetAnimations) {
+
+        if (settings.name == AppRoutes.snippetDart) {
           return AppRoutePage(
-              widget: SnippetAnimations(),
-              routeName: AppRoutes.snippetAnimations);
+              widget: SnippetDart(), routeName: AppRoutes.snippetDart);
         }
+
+        if (settings.name == AppRoutes.appSettings) {
+          return AppRoutePage(
+              widget: AppSettings(), routeName: AppRoutes.appSettings);
+        }
+
         if (settings.name == AppRoutes.snippetShow) {
           return AppRoutePage(
             widget: SnippetShow(),
@@ -109,6 +97,7 @@ class MyAppMaterial extends StatelessWidget {
             arguments: settings.arguments,
           );
         }
+
         if (settings.name == AppRoutes.snippetFilter) {
           return AppRoutePage(
             widget: SnippetFilter(),
@@ -116,14 +105,13 @@ class MyAppMaterial extends StatelessWidget {
             arguments: settings.arguments,
           );
         }
+
         if (settings.name == AppRoutes.appInfo) {
-          return AppRoutePage(
-            widget: AppInfo(),
-            routeName: AppRoutes.appInfo,
-          );
+          return AppRoutePage(widget: AppInfo(), routeName: AppRoutes.appInfo);
         }
+
         return AppRoutePage(
-            widget: SnippetBasic(), routeName: AppRoutes.snippetBasic);
+            widget: SnippetWidgets(), routeName: AppRoutes.snippetWidgets);
       },
     );
   }

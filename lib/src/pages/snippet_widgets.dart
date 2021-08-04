@@ -169,7 +169,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetStateless,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetCreateStateless,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetStateless(),
                           ),
                         ),
@@ -183,13 +182,11 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetStateful,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetCreateStateful,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetStateful(),
                           ),
                         ),
                       ),
                     ],
-                    bottomNavigationBarIndex: 2,
                   ),
                 ),
               ),
@@ -210,7 +207,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSafeArea,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicSafeArea,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSafeArea(),
                             tip: AppLocalizations.of(context)!.tipSafeArea,
                           ),
@@ -226,7 +222,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetCircularProgressIndicator,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicCircularProgressIndicator,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetCircularProgressIndicator(),
                           ),
                         ),
@@ -240,7 +235,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetContainer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicContainer,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetContainer(),
                             tip: AppLocalizations.of(context)!.tipContainer,
                           ),
@@ -254,7 +248,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetText,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicText,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetText(),
                             tip: AppLocalizations.of(context)!.tipText,
                           ),
@@ -269,7 +262,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTextOverflow,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextOverflow,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetTextOverflow(),
                           ),
                         ),
@@ -283,7 +275,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTextStyle,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextStyle,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetTextStyle(),
                           ),
                         ),
@@ -297,7 +288,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTextDefaultStyle,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextDefaultStyle,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetTextDefaultStyle(),
                           ),
                         ),
@@ -311,7 +301,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetRichText,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicRichText,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetRichText(),
                             tip: AppLocalizations.of(context)!.tipRichText,
                           ),
@@ -326,7 +315,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetColumn,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicColumn,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetColumn(),
                             tip: AppLocalizations.of(context)!.tipColumn,
                           ),
@@ -340,7 +328,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetRow,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicRow,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetRow(),
                             tip: AppLocalizations.of(context)!.tipRow,
                           ),
@@ -355,7 +342,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDivider,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicDivider,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetDivider(),
                             tip: AppLocalizations.of(context)!.tipDivider,
                           ),
@@ -370,7 +356,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetVerticalDivider,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicVerticalDivider,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetVerticalDivider(),
                             tip: AppLocalizations.of(context)!
                                 .tipVerticalDivider,
@@ -386,7 +371,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTextButton,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicTextButton,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetTextButton(),
                             tip: AppLocalizations.of(context)!.tipButton,
                           ),
@@ -401,7 +385,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetElevatedButton,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicElevatedButton,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetElevatedButton(),
                           ),
                         ),
@@ -416,7 +399,6 @@ class SnippetWidgets extends StatelessWidget {
                                 AppConstants.txtSnippetWidgetElevatedButtonIcon,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicElevatedButtonIcon,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetElevatedButtonIcon(),
                           ),
                         ),
@@ -430,7 +412,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetOutlinedButton,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicOutlinedButton,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetOutlinedButton(),
                           ),
                         ),
@@ -443,7 +424,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetIcon,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicIcon,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetIcon(),
                             tip: AppLocalizations.of(context)!.tipIcon,
                           ),
@@ -458,7 +438,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetIconBackground,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicIconBackground,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetIconBackground(),
                           ),
                         ),
@@ -472,7 +451,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetImage,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicImage,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetImage(),
                             tip: AppLocalizations.of(context)!.tipImage,
                           ),
@@ -487,7 +465,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetBottomSheet,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicBottomSheet,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetBottomSheet(),
                             tip: AppLocalizations.of(context)!.tipBottomSheet,
                           ),
@@ -502,7 +479,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetMediaQuery,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicMediaQuery,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetMediaQuery(),
                             tip: AppLocalizations.of(context)!.tipMediaQuery,
                           ),
@@ -517,7 +493,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetGestureDetector,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicGestureDetector,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetGestureDetector(),
                             tip: AppLocalizations.of(context)!
                                 .tipGestureDetector,
@@ -533,7 +508,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetInkWell,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicInkWell,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetInkWell(),
                             tip: AppLocalizations.of(context)!.tipInkWell,
                           ),
@@ -547,7 +521,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetCard,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicCard,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetCard(),
                             tip: AppLocalizations.of(context)!.tipCard,
                           ),
@@ -562,7 +535,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetFutureBuilder,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicFutureBuilder,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetFutureBuilder(),
                             tip: AppLocalizations.of(context)!.tipFutureBuilder,
                           ),
@@ -577,7 +549,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetStack,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicStack,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetStack(),
                             tip: AppLocalizations.of(context)!.tipStack,
                           ),
@@ -592,7 +563,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPageView,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicPageView,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetPageView(),
                             tip: AppLocalizations.of(context)!.tipPageView,
                           ),
@@ -607,7 +577,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTable,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicTable,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetTable(),
                             tip: AppLocalizations.of(context)!.tipTable,
                           ),
@@ -622,7 +591,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSnackBar,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicSnackBar,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSnackBar(),
                             tip: AppLocalizations.of(context)!.tipSnackBar,
                           ),
@@ -637,7 +605,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDialog,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicDialog,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetDialog(),
                             tip: AppLocalizations.of(context)!.tipDialog,
                           ),
@@ -652,7 +619,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetListView,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicListView,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetListView(),
                             tip: AppLocalizations.of(context)!.tipListView,
                           ),
@@ -667,7 +633,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetRotatedBox,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicRotatedBox,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetRotatedBox(),
                             tip: AppLocalizations.of(context)!.tipRotatedBox,
                           ),
@@ -682,7 +647,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetClipRect,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicClipRect,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetClipRect(),
                             tip: AppLocalizations.of(context)!.tipClipRect,
                           ),
@@ -697,7 +661,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetClipRRect,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicClipRRect,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetClipRRect(),
                             tip: AppLocalizations.of(context)!.tipClipRRect,
                           ),
@@ -712,7 +675,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetClipOval,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicClipOval,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetClipOval(),
                             tip: AppLocalizations.of(context)!.tipClipOval,
                           ),
@@ -727,7 +689,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetFlexible,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicFlexible,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetFlexible(),
                             tip: AppLocalizations.of(context)!.tipFlexible,
                           ),
@@ -742,7 +703,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetExpanded,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicExpanded,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetExpanded(),
                             tip: AppLocalizations.of(context)!.tipExpanded,
                           ),
@@ -757,7 +717,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetCircleAvatar,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicCircleAvatar,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetCircleAvatar(),
                             tip: AppLocalizations.of(context)!.tipCircleAvatar,
                           ),
@@ -772,7 +731,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetFittedBox,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicFittedBox,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetFittedBox(),
                             tip: AppLocalizations.of(context)!.tipFittedBox,
                           ),
@@ -787,7 +745,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetVisibility,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicVisibility,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetVisibility(),
                             tip: AppLocalizations.of(context)!.tipVisibility,
                           ),
@@ -802,7 +759,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetBoxDecoration,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicBoxDecoration,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetBoxDecoration(),
                             tip: AppLocalizations.of(context)!.tipBoxDecoration,
                           ),
@@ -817,7 +773,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSelectableText,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicSelectableText,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSelectableText(),
                             tip:
                                 AppLocalizations.of(context)!.tipSelectableText,
@@ -834,7 +789,6 @@ class SnippetWidgets extends StatelessWidget {
                                 AppConstants.txtSnippetWidgetInteractiveViewer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicInteractiveViewer,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetInteractiveViewer(),
                             tip: AppLocalizations.of(context)!
                                 .tipInteractiveViewer,
@@ -850,7 +804,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetAspectRatio,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicAspectRatio,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetAspectRatio(),
                             tip: AppLocalizations.of(context)!.tipAspectRatio,
                           ),
@@ -865,7 +818,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPlaceholder,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicPlaceholder,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetPlaceholder(),
                             tip: AppLocalizations.of(context)!.tipPlaceholder,
                           ),
@@ -880,7 +832,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSpacer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicSpacer,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSpacer(),
                             tip: AppLocalizations.of(context)!.tipSpacer,
                           ),
@@ -896,7 +847,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetListWheelScrollView,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicListWheelScrollView,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetListWheelScrollView(),
                             tip: AppLocalizations.of(context)!
                                 .tipListWheelScrollView,
@@ -912,7 +862,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetOpacity,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicOpacity,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetOpacity(),
                             tip: AppLocalizations.of(context)!.tipOpacity,
                           ),
@@ -927,7 +876,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetConstrainedBox,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicConstrainedBox,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetConstrainedBox(),
                             tip:
                                 AppLocalizations.of(context)!.tipConstrainedBox,
@@ -943,7 +891,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetAlign,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicAlign,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetAlign(),
                             tip: AppLocalizations.of(context)!.tipAlign,
                           ),
@@ -958,7 +905,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPadding,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicPadding,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetPadding(),
                             tip: AppLocalizations.of(context)!.tipPadding,
                           ),
@@ -973,7 +919,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetAbsorbPointer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicAbsorbPointer,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetAbsorbPointer(),
                             tip: AppLocalizations.of(context)!.tipAbsorbPointer,
                           ),
@@ -988,7 +933,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetIgnorePointer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicIgnorePointer,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetIgnorePointer(),
                             tip: AppLocalizations.of(context)!.tipIgnorePointer,
                           ),
@@ -1003,7 +947,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTooltip,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicTooltip,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetTooltip(),
                             tip: AppLocalizations.of(context)!.tipTooltip,
                           ),
@@ -1018,7 +961,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetColors,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicColors,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetColors(),
                           ),
                         ),
@@ -1032,7 +974,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetFlutterLogo,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicFlutterLogo,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetFlutterLogo(),
                             tip: AppLocalizations.of(context)!.tipFlutterLogo,
                           ),
@@ -1047,7 +988,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSizedBox,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicSizedBox,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSizedBox(),
                             tip: AppLocalizations.of(context)!.tipSizedBox,
                           ),
@@ -1063,7 +1003,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetFloatingActionButton,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicFloatingActionButton,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetFloatingActionButton(),
                             tip: AppLocalizations.of(context)!
                                 .tipFloatingActionButton,
@@ -1079,7 +1018,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetCheckbox,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicCheckbox,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetCheckbox(),
                             tip: AppLocalizations.of(context)!.tipCheckbox,
                           ),
@@ -1094,7 +1032,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetEndDrawer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicEndDrawer,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetEndDrawer(),
                             tip: AppLocalizations.of(context)!.tipEndDrawer,
                           ),
@@ -1110,7 +1047,6 @@ class SnippetWidgets extends StatelessWidget {
                                 AppConstants.txtSnippetWidgetContainerTransform,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicContainerTransform,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetContainerTransform(),
                           ),
                         ),
@@ -1124,7 +1060,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetBanner,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicBanner,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetBanner(),
                             tip: AppLocalizations.of(context)!.tipBanner,
                           ),
@@ -1139,7 +1074,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetBorderRadius,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicBorderRadius,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetBorderRadius(),
                             tip: AppLocalizations.of(context)!.tipBorderRadius,
                           ),
@@ -1155,7 +1089,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetSingleChildScrollView,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicSingleChildScrollView,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSingleChildScrollView(),
                             tip: AppLocalizations.of(context)!
                                 .tipSingleChildScrollView,
@@ -1171,7 +1104,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetBoxShadow,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicBoxShadow,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetBoxShadow(),
                             tip: AppLocalizations.of(context)!.tipBoxShadow,
                           ),
@@ -1186,7 +1118,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetShaderMask,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicShaderMask,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetShaderMask(),
                             tip: AppLocalizations.of(context)!.tipShaderMask,
                           ),
@@ -1201,7 +1132,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetColorFiltered,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicColorFiltered,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetColorFiltered(),
                             tip: AppLocalizations.of(context)!.tipColorFiltered,
                           ),
@@ -1216,7 +1146,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDataTable,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicDataTable,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetDataTable(),
                             tip: AppLocalizations.of(context)!.tipDataTable,
                           ),
@@ -1231,7 +1160,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetImageFiltered,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicImageFiltered,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetImageFiltered(),
                             tip: AppLocalizations.of(context)!.tipImageFiltered,
                           ),
@@ -1246,7 +1174,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPositioned,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicPositioned,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetPositioned(),
                             tip: AppLocalizations.of(context)!.tipPositioned,
                           ),
@@ -1262,7 +1189,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetLinearProgressIndicator,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicLinearProgressIndicator,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetLinearProgressIndicator(),
                             tip: AppLocalizations.of(context)!
                                 .tipLinearProgressIndicator,
@@ -1278,7 +1204,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetRawString,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicRawString,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetRawString(),
                           ),
                         ),
@@ -1292,7 +1217,6 @@ class SnippetWidgets extends StatelessWidget {
                               data: AppConstants.txtSnippetWidgetLimitedBox,
                               title: AppLocalizations.of(context)!
                                   .menuWidgetBasicLimitedBox,
-                              bottomNavigationBarIndex: 2,
                               widget: SnippetLimitedBox(),
                               tip: AppLocalizations.of(context)!.tipLimitedBox),
                         ),
@@ -1306,7 +1230,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetCheckboxListTile,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicCheckboxListTile,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetCheckboxListTile(),
                             tip: AppLocalizations.of(context)!
                                 .tipCheckboxListTile,
@@ -1322,7 +1245,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSwitchListTile,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicSwitchListTile,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSwitchListTile(),
                             tip:
                                 AppLocalizations.of(context)!.tipSwitchListTile,
@@ -1339,7 +1261,6 @@ class SnippetWidgets extends StatelessWidget {
                                 AppConstants.txtSnippetWidgetExpansionPanelList,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicExpansionPanelList,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetExpansionPanelList(),
                             tip: AppLocalizations.of(context)!
                                 .tipExpansionPanelList,
@@ -1356,7 +1277,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetFractionallySizedBox,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicFractionallySizedBox,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetFractionallySizedBox(),
                             tip: AppLocalizations.of(context)!
                                 .tipFractionallySizedBox,
@@ -1372,7 +1292,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetScrollbar,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicScrollbar,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetScrollbar(),
                             tip: AppLocalizations.of(context)!.tipScrollbar,
                           ),
@@ -1387,14 +1306,12 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetOverflowBox,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicOverflowBox,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetOverflowBox(),
                             tip: AppLocalizations.of(context)!.tipOverflowBox,
                           ),
                         ),
                       ),
                     ],
-                    bottomNavigationBarIndex: 2,
                   ),
                 ),
               ),
@@ -1415,7 +1332,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetRefreshIndicator,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedRefreshIndicator,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetRefreshIndicator(),
                             tip: AppLocalizations.of(context)!
                                 .tipRefreshIndicator,
@@ -1431,7 +1347,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDraggable,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDraggable,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetDraggable(),
                             tip: AppLocalizations.of(context)!.tipDraggable,
                           ),
@@ -1446,7 +1361,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetGlobalKey,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedGlobalKey,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetGlobalKey(),
                             tip: AppLocalizations.of(context)!.tipGlobalKey,
                           ),
@@ -1461,7 +1375,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDrawer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDrawer,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetDrawer(),
                             tip: AppLocalizations.of(context)!.tipDrawer,
                           ),
@@ -1476,7 +1389,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDropdown,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDropdown,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetDropdown(),
                             tip: AppLocalizations.of(context)!.tipDropdown,
                           ),
@@ -1491,7 +1403,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDismissible,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDismissible,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetDismissible(),
                             tip: AppLocalizations.of(context)!.tipDismissible,
                           ),
@@ -1506,7 +1417,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetGridView,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedGridView,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetGridView(),
                             tip: AppLocalizations.of(context)!.tipGridView,
                           ),
@@ -1521,7 +1431,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSilverAppBar,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSilverAppBar,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSilverAppBar(),
                             tip: AppLocalizations.of(context)!.tipSilverAppBar,
                           ),
@@ -1536,7 +1445,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSilverGrid,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSilverGrid,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSilverGrid(),
                             tip: AppLocalizations.of(context)!.tipSilverGrid,
                           ),
@@ -1551,7 +1459,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetNavigator,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedNavigator,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetNavigator(),
                             tip: AppLocalizations.of(context)!.tipNavigator,
                           ),
@@ -1567,7 +1474,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetNavigatorWithArguments,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedNavigatorWithArguments,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetNavigatorWithArguments(),
                           ),
                         ),
@@ -1581,7 +1487,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSendDataToScreen,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSendDataToScreen,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSendDataToScreen(),
                             tip: AppLocalizations.of(context)!.tipSendData,
                           ),
@@ -1596,7 +1501,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPopupMenuButton,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedPopupMenuButton,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetPopupMenuButton(),
                             tip: AppLocalizations.of(context)!
                                 .tipPopupMenuButton,
@@ -1612,7 +1516,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTabs,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedTabs,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetTabs(),
                             tip: AppLocalizations.of(context)!.tipTabs,
                           ),
@@ -1627,7 +1530,6 @@ class SnippetWidgets extends StatelessWidget {
                               data: AppConstants.txtSnippetWidgetClipPath,
                               title: AppLocalizations.of(context)!
                                   .menuWidgetAdvancedClipPath,
-                              bottomNavigationBarIndex: 2,
                               widget: SnippetClipPath(),
                               tip: AppLocalizations.of(context)!.tipClipPath),
                         ),
@@ -1641,7 +1543,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSlider,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSlider,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetSlider(),
                             tip: AppLocalizations.of(context)!.tipSlider,
                           ),
@@ -1657,7 +1558,6 @@ class SnippetWidgets extends StatelessWidget {
                                 AppConstants.txtSnippetWidgetListViewWithSearch,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedListViewWithSearch,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetListViewWithSearch(),
                           ),
                         ),
@@ -1671,7 +1571,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetChip,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedChip,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetChip(),
                             tip: AppLocalizations.of(context)!.tipChip,
                           ),
@@ -1687,7 +1586,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetImageLoadingBuilder,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedImageLoadingBuilder,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetImageLoadingBuilder(),
                             tip: AppLocalizations.of(context)!
                                 .tipImageLoadingBuilder,
@@ -1703,7 +1601,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetMouseRegion,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedMouseRegion,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetMouseRegion(),
                             tip: AppLocalizations.of(context)!.tipMouseRegion,
                           ),
@@ -1718,7 +1615,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetLayoutBuilder,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedLayoutBuilder,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetLayoutBuilder(),
                             tip: AppLocalizations.of(context)!.tipLayoutBuilder,
                           ),
@@ -1734,7 +1630,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetBottomNavigationBar,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedBottomNavigationBar,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetBottomNavigationBar(),
                             tip: AppLocalizations.of(context)!
                                 .tipBottomNavigationBar,
@@ -1750,7 +1645,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetExpansionPanel,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedExpansionPanel,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetExpansionPanel(),
                             tip:
                                 AppLocalizations.of(context)!.tipExpansionPanel,
@@ -1766,7 +1660,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPaint,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedPaint,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetPaint(),
                             tip: AppLocalizations.of(context)!.tipPaint,
                           ),
@@ -1781,7 +1674,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetLoadJson,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedLoadJson,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetLoadJson(),
                           ),
                         ),
@@ -1795,7 +1687,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetClipboard,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedClipboard,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetClipboard(),
                             tip: AppLocalizations.of(context)!.tipClipboard,
                           ),
@@ -1810,7 +1701,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPageRouteBuilder,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedPageRouteBuilder,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetPageRouteBuilder(),
                             tip: AppLocalizations.of(context)!
                                 .tipPageRouteBuilder,
@@ -1826,7 +1716,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetLoadTxt,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedLoadTxt,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetLoadTxt(),
                           ),
                         ),
@@ -1840,14 +1729,12 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetIndexedStack,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedIndexedStack,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetIndexedStack(),
                             tip: AppLocalizations.of(context)!.tipIndexedStack,
                           ),
                         ),
                       ),
                     ],
-                    bottomNavigationBarIndex: 2,
                   ),
                 ),
               ),
@@ -1868,7 +1755,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetStopwtach,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAppStopwatch,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetStopwatch(),
                           ),
                         ),
@@ -1882,23 +1768,21 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetCountdown,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAppCountdown,
-                            bottomNavigationBarIndex: 2,
                             widget: SnippetCountdown(),
                           ),
                         ),
                       ),
                     ],
-                    bottomNavigationBarIndex: 2,
                   ),
                 ),
               ),
               AppMenu(
-                text: 'Animações',
+                text: AppLocalizations.of(context)!.menuAnimation,
                 icon: Icons.play_arrow,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.snippetFilter,
                   arguments: SnippetFilterModel(
-                    title: 'Animações',
+                    title: AppLocalizations.of(context)!.menuAnimation,
                     snippets: [
                       SnippetFilterListModel(
                         text: AppLocalizations.of(context)!
@@ -1909,7 +1793,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetAnimationIcon,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationAnimationIcon,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetAnimationIcon(),
                           ),
                         ),
@@ -1924,7 +1807,6 @@ class SnippetWidgets extends StatelessWidget {
                                 AppConstants.txtSnippetWidgetAnimatedContainer,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationAnimatedContainer,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetAnimatedContainer(),
                             tip: AppLocalizations.of(context)!
                                 .tipAnimatedContainer,
@@ -1940,7 +1822,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetAnimatedOpacity,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationAnimatedOpacity,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetAnimatedOpacity(),
                             tip: AppLocalizations.of(context)!
                                 .tipAnimatedOpacity,
@@ -1957,7 +1838,6 @@ class SnippetWidgets extends StatelessWidget {
                                 AppConstants.txtSnippetWidgetAnimatedCrossFade,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationAnimatedCrossFade,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetAnimatedCrossFade(),
                             tip: AppLocalizations.of(context)!
                                 .tipAnimatedCrossFade,
@@ -1974,7 +1854,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetAnimatedDefaultTextStyle,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationAnimatedDefaultTextStyle,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetAnimatedDefaultTextStyle(),
                             tip: AppLocalizations.of(context)!
                                 .tipAnimatedDefaultTextStyle,
@@ -1990,7 +1869,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetCustomPaint,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationCustomPaint,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetCustomPaint(),
                             tip: AppLocalizations.of(context)!.tipCustomPaint,
                           ),
@@ -2005,7 +1883,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetRotatingCircle,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationRotatingCircle,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetRotatingCircle(),
                           ),
                         ),
@@ -2019,7 +1896,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTransform,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationTransform,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetTransform(),
                             tip: AppLocalizations.of(context)!.tipTransform,
                           ),
@@ -2033,7 +1909,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetMatrix,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationMatrix,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetMatrix(),
                           ),
                         ),
@@ -2048,7 +1923,6 @@ class SnippetWidgets extends StatelessWidget {
                                 .txtSnippetWidgetDraggableScrollableSheet,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationDraggableScrollableSheet,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetDraggableScrollableSheet(),
                             tip: AppLocalizations.of(context)!
                                 .tipDraggableScrollableSheet,
@@ -2064,7 +1938,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetAnimatedImage,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationAnimatedImage,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetAnimatedImage(),
                           ),
                         ),
@@ -2077,7 +1950,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetHero,
                             title:
                                 AppLocalizations.of(context)!.menuAnimationHero,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetHero(),
                           ),
                         ),
@@ -2091,7 +1963,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetFadeInImage,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationFadeInImage,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetFadeInImage(),
                             tip: AppLocalizations.of(context)!.tipFadeInImage,
                           ),
@@ -2106,7 +1977,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetFadeTransition,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationFadeTransition,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetFadeTransition(),
                             tip:
                                 AppLocalizations.of(context)!.tipFadeTransition,
@@ -2122,7 +1992,6 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetAnimatedSwitcher,
                             title: AppLocalizations.of(context)!
                                 .menuAnimationAnimatedSwitcher,
-                            bottomNavigationBarIndex: 3,
                             widget: SnippetAnimatedSwitcher(),
                             tip: AppLocalizations.of(context)!
                                 .tipAnimatedSwitcher,
@@ -2130,7 +1999,6 @@ class SnippetWidgets extends StatelessWidget {
                         ),
                       ),
                     ],
-                    bottomNavigationBarIndex: 2,
                   ),
                 ),
               ),

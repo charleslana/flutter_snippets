@@ -7,14 +7,6 @@
     "@helloWorld": {
         "description": "A programmer greeting"
     },
-    "bottomNavigationBarBasic": "Basic",
-    "bottomNavigationBarAdvanced": "Advanced",
-    "bottomNavigationBarWidget": "Widgets",
-    "bottomNavigationBarAnimations": "Animations",
-    "appBarTitleBasic": "Snippets Basic",
-    "appBarTitleAdvanced": "Snippets Advanced",
-    "appBarTitleWidget": "Snippets Widgets",
-    "appBarTitleAnimations": "Snippets Animations",
     "appInfoTitle": "Info",
     "tabBarTitleExample": "Example",
     "tabBarTitleCode": "Code",
@@ -61,7 +53,6 @@
     "menuAdvancedOperatorSpread": "Operator Spread",
     "menuAdvancedCascadeOperator": "Cascade Operator",
     "menuAdvancedPubspec": "Pubspec",
-    "menuWidget": "Widgets",
     "menuWidgetCreate": "Creation Widgets",
     "menuWidgetCreateStateless": "Widget Stateless",
     "menuWidgetCreateStateful": "Widget Stateful",
