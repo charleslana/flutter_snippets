@@ -101,6 +101,7 @@ import 'package:flutter_snippets/src/snippets/snippet_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_placeholder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_popup_menu_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_positioned.dart';
+import 'package:flutter_snippets/src/snippets/snippet_radio_list_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_raw_string.dart';
 import 'package:flutter_snippets/src/snippets/snippet_refresh_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rich_text.dart';
@@ -1308,6 +1309,20 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetBasicOverflowBox,
                             widget: SnippetOverflowBox(),
                             tip: AppLocalizations.of(context)!.tipOverflowBox,
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetBasicRadioListTile,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetRadioListTile,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetBasicRadioListTile,
+                            widget: SnippetRadioListTile(),
+                            tip: AppLocalizations.of(context)!.tipRadioListTile,
                           ),
                         ),
                       ),

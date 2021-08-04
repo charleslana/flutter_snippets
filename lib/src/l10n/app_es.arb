@@ -128,6 +128,7 @@
     "menuWidgetBasicFractionallySizedBox": "FractionallySizedBox",
     "menuWidgetBasicScrollbar": "Scrollbar",
     "menuWidgetBasicOverflowBox": "OverflowBox",
+    "menuWidgetBasicRadioListTile": "RadioListTile",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
@@ -277,5 +278,6 @@
     "tipExpansionPanelList": "Una lista de paneles de expansión de material que presenta sus elementos secundarios y anima las expansiones.",
     "tipFractionallySizedBox": "Un widget que dimensiona su hijo a una fracción del espacio total disponible.",
     "tipScrollbar": "Las barras de desplazamiento son interactivas y también usarán PrimaryScrollController si no se configura un controlador. Los pulgares de la barra de desplazamiento se pueden arrastrar a lo largo del eje principal de ScrollView para cambiar ScrollPosition. Al tocar a lo largo de la pista sin el pulgar, se activará una página ScrollIncrementType.page basada en la posición relativa del pulgar.",
-    "tipOverflowBox": "Un widget que impone diferentes restricciones a su hijo que las que recibe de su padre, posiblemente permitiendo que el hijo desborde al padre."
+    "tipOverflowBox": "Un widget que impone diferentes restricciones a su hijo que las que recibe de su padre, posiblemente permitiendo que el hijo desborde al padre.",
+    "tipRadioListTile": "ListTile con radio. En otras palabras, un botón de radio con una etiqueta. Todo el mosaico de la lista es interactivo: al tocar en cualquier lugar del mosaico, se selecciona el botón de opción."
 }
