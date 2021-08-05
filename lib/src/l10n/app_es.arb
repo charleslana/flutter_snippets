@@ -10,6 +10,7 @@
     "appSettingsLanguageEnglish": "Inglés",
     "appSettingsLanguageSpanish": "Español",
     "appInfoTitle": "Información",
+    "appNewsTitle": "Noticias",
     "tabBarTitleExample": "Ejemplo",
     "tabBarTitleCode": "Código",
     "utilCopyCodeMessage": "Código copiado",
@@ -159,6 +160,7 @@
     "menuWidgetAdvancedPageRouteBuilder": "PageRouteBuilder",
     "menuWidgetAdvancedLoadTxt": "LoadTxt",
     "menuWidgetAdvancedIndexedStack": "IndexedStack",
+    "menuWidgetAdvancedScrollController": "ScrollController",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",
@@ -281,5 +283,6 @@
     "tipScrollbar": "Las barras de desplazamiento son interactivas y también usarán PrimaryScrollController si no se configura un controlador. Los pulgares de la barra de desplazamiento se pueden arrastrar a lo largo del eje principal de ScrollView para cambiar ScrollPosition. Al tocar a lo largo de la pista sin el pulgar, se activará una página ScrollIncrementType.page basada en la posición relativa del pulgar.",
     "tipOverflowBox": "Un widget que impone diferentes restricciones a su hijo que las que recibe de su padre, posiblemente permitiendo que el hijo desborde al padre.",
     "tipRadioListTile": "ListTile con radio. En otras palabras, un botón de radio con una etiqueta. Todo el mosaico de la lista es interactivo: al tocar en cualquier lugar del mosaico, se selecciona el botón de opción.",
-    "tipTextField": "TextField y TextFormField son los dos widgets más comunes para obtener información del usuario. Se pueden utilizar para crear formularios, páginas de inicio de sesión, etc."
+    "tipTextField": "TextField y TextFormField son los dos widgets más comunes para obtener información del usuario. Se pueden utilizar para crear formularios, páginas de inicio de sesión, etc.",
+    "tipScrollController": "Controla un widget desplazable. Los controladores de desplazamiento se almacenan normalmente como variables miembro en los objetos State y se reutilizan en cada State.build. Se puede usar un solo controlador de desplazamiento para controlar múltiples widgets desplazables, pero algunas operaciones, como leer el desplazamiento de desplazamiento, requieren que el controlador se use con un único widget desplazable."
 }

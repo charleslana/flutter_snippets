@@ -10,6 +10,7 @@
     "appSettingsLanguageEnglish": "Inglês",
     "appSettingsLanguageSpanish": "Espanhol",
     "appInfoTitle": "Informações",
+    "appNewsTitle": "Notícias",
     "tabBarTitleExample": "Exemplo",
     "tabBarTitleCode": "Código",
     "utilCopyCodeMessage": "Código copiado",
@@ -159,6 +160,7 @@
     "menuWidgetAdvancedPageRouteBuilder": "PageRouteBuilder",
     "menuWidgetAdvancedLoadTxt": "LoadTxt",
     "menuWidgetAdvancedIndexedStack": "IndexedStack",
+    "menuWidgetAdvancedScrollController": "ScrollController",
     "menuWidgetAppStopwatch": "Cronômetro",
     "menuWidgetAppCountdown": "Contagem regressiva",
     "menuAnimation": "Animações",
@@ -281,5 +283,6 @@
     "tipScrollbar": "As barras de rolagem são interativas e também usarão o PrimaryScrollController se um controlador não estiver definido. Os polegares da barra de rolagem podem ser arrastados ao longo do eixo principal de ScrollView para alterar a ScrollPosition. Tocar ao longo da trilha exclusiva do polegar acionará um ScrollIncrementType.page com base na posição relativa ao polegar.",
     "tipOverflowBox": "Um widget que impõe restrições diferentes em seu filho do que obtém de seu pai, possivelmente permitindo que o filho transborde o pai.",
     "tipRadioListTile": "Um ListTile com um rádio. Em outras palavras, um botão de opção com um rótulo. Todo o bloco da lista é interativo: tocar em qualquer lugar do bloco seleciona o botão de rádio.",
-    "tipTextField": "TextField e TextFormField são os dois widgets mais comuns para obter a entrada do usuário. Eles podem ser usados na criação de formulários, páginas de login, etc."
+    "tipTextField": "TextField e TextFormField são os dois widgets mais comuns para obter a entrada do usuário. Eles podem ser usados na criação de formulários, páginas de login, etc.",
+    "tipScrollController": "Controla um widget de rolagem. Os controladores de rolagem são normalmente armazenados como variáveis de membro em objetos de estado e são reutilizados em cada State.build. Um único controlador de rolagem pode ser usado para controlar vários widgets roláveis, mas algumas operações, como ler o deslocamento de rolagem, exigem que o controlador seja usado com um único widget rolável."
 }

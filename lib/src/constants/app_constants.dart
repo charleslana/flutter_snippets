@@ -146,6 +146,7 @@ class AppConstants {
   static final txtSnippetWidgetPageRouteBuilder = 'widget_page_route_builder';
   static final txtSnippetWidgetLoadTxt = 'widget_load_txt';
   static final txtSnippetWidgetIndexedStack = 'widget_indexed_stack';
+  static final txtSnippetWidgetScrollController = 'widget_scroll_controller';
   static final txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static final txtSnippetWidgetCountdown = 'widget_countdown';
   static final txtSnippetWidgetAnimationIcon = 'widget_animation_icon';

@@ -109,6 +109,7 @@ import 'package:flutter_snippets/src/snippets/snippet_rotated_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_rotating_circle.dart';
 import 'package:flutter_snippets/src/snippets/snippet_row.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
+import 'package:flutter_snippets/src/snippets/snippet_scroll_controller.dart';
 import 'package:flutter_snippets/src/snippets/snippet_scrollbar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_selectable_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_send_data_to_screen.dart';
@@ -1761,6 +1762,21 @@ class SnippetWidgets extends StatelessWidget {
                                 .menuWidgetAdvancedIndexedStack,
                             widget: SnippetIndexedStack(),
                             tip: AppLocalizations.of(context)!.tipIndexedStack,
+                          ),
+                        ),
+                      ),
+                      SnippetFilterListModel(
+                        text: AppLocalizations.of(context)!
+                            .menuWidgetAdvancedScrollController,
+                        onPressed: () => Navigator.of(context).pushNamed(
+                          AppRoutes.snippetShow,
+                          arguments: SnippetShowModel(
+                            data: AppConstants.txtSnippetWidgetScrollController,
+                            title: AppLocalizations.of(context)!
+                                .menuWidgetAdvancedScrollController,
+                            widget: SnippetScrollController(),
+                            tip: AppLocalizations.of(context)!
+                                .tipScrollController,
                           ),
                         ),
                       ),
