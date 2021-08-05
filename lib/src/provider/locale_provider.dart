@@ -20,8 +20,12 @@ class LocaleProvider extends ChangeNotifier {
   LocaleProvider({required dynamic languageCode}) {
     if (languageCode == null) {
       _defaultSystemLanguage = true;
+      final languague = _defaultLanguage == 'pt'
+          ? Locale('pt', 'BR')
+          : Locale(_defaultLanguage);
+      final contain = L10n.all.where((locale) => locale == languague);
 
-      if (!L10n.all.contains(_defaultLanguage)) {
+      if (contain.isNotEmpty) {
         _locale = _defaultLanguage == 'pt'
             ? Locale('pt', 'BR')
             : Locale(_defaultLanguage);
@@ -37,10 +41,6 @@ class LocaleProvider extends ChangeNotifier {
   void setLocale(Locale locale) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
 
-    if (!L10n.all.contains(locale)) {
-      return;
-    }
-
     preferences.setString('languageCode', locale.toString());
     _locale = locale;
     notifyListeners();
@@ -49,7 +49,13 @@ class LocaleProvider extends ChangeNotifier {
   Future<void> removeLocale() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     await preferences.remove('languageCode');
-    if (!L10n.all.contains(_defaultLanguage)) {
+
+    final languague = _defaultLanguage == 'pt'
+        ? Locale('pt', 'BR')
+        : Locale(_defaultLanguage);
+    final contain = L10n.all.where((locale) => locale == languague);
+
+    if (contain.isNotEmpty) {
       _locale = _defaultLanguage == 'pt'
           ? Locale('pt', 'BR')
           : Locale(_defaultLanguage);
