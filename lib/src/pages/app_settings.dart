@@ -20,35 +20,43 @@ class _AppSettingsState extends State<AppSettings> {
   bool _isDefaultLanguage = true;
 
   void _selectDefaultTheme() {
+    final provider = Provider.of<ThemeProvider>(context, listen: false);
+    provider.removeTheme();
+
     setState(() {
-      _isDefaultTheme = true;
-      _isDarkTheme = false;
+      _isDefaultTheme = provider.defaultThemeSystem = true;
+      _isDarkTheme = _isDarkTheme;
     });
   }
 
   void _changeDarkTheme(bool? value) {
-    setState(() {
-      _isDefaultTheme = false;
-      _isDarkTheme = value!;
-    });
     final provider = Provider.of<ThemeProvider>(context, listen: false);
     provider.toggleTheme(value!);
+
+    setState(() {
+      _isDefaultTheme = provider.defaultThemeSystem = false;
+      _isDarkTheme = value;
+    });
   }
 
   void _selectDefaultLanguage() {
+    final provider = Provider.of<LocaleProvider>(context, listen: false);
+    provider.removeLocale();
+
     setState(() {
-      _isDefaultLanguage = true;
+      _isDefaultLanguage = provider.defaultSystemLanguage = true;
       _language = 0;
     });
   }
 
   void _changeLanguage(int? value, Locale locale) {
-    setState(() {
-      _isDefaultLanguage = false;
-      _language = value;
-    });
     final provider = Provider.of<LocaleProvider>(context, listen: false);
     provider.setLocale(locale);
+
+    setState(() {
+      _isDefaultLanguage = provider.defaultSystemLanguage = false;
+      _language = value;
+    });
   }
 
   @override
@@ -59,11 +67,9 @@ class _AppSettingsState extends State<AppSettings> {
 
     setState(() {
       _isDarkTheme = themeProvider.isDarkMode;
-      _isDefaultTheme = !themeProvider.isDarkMode;
+      _isDefaultTheme = themeProvider.defaultThemeSystem;
       _language = flag;
-      if (flag > 0) {
-        _isDefaultLanguage = false;
-      }
+      _isDefaultLanguage = localeProvider.defaultSystemLanguage;
     });
     super.didChangeDependencies();
   }

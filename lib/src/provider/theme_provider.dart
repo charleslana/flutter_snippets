@@ -3,25 +3,49 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.system;
+  final _brightness = MediaQueryData.fromWindow(WidgetsBinding.instance!.window)
+      .platformBrightness;
+  bool _defaultTheme = false;
 
   ThemeProvider({required dynamic isOn}) {
-    themeMode = isOn == null
-        ? ThemeMode.system
-        : isOn == true
-            ? ThemeMode.dark
-            : ThemeMode.light;
+    if (isOn == null) {
+      _defaultTheme = true;
+
+      if (_brightness == Brightness.light) {
+        themeMode = ThemeMode.light;
+      } else {
+        themeMode = ThemeMode.dark;
+      }
+    } else {
+      isOn == true ? themeMode = ThemeMode.dark : themeMode = ThemeMode.light;
+    }
   }
 
   bool get isDarkMode => themeMode == ThemeMode.dark;
 
+  bool get defaultThemeSystem => _defaultTheme;
+
+  void set defaultThemeSystem(bool value) => _defaultTheme = value;
+
   Future<void> toggleTheme(bool isOn) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
+    SharedPreferences preferences = await SharedPreferences.getInstance();
     if (isOn) {
       themeMode = ThemeMode.dark;
-      prefs.setBool('isDarkMode', true);
+      preferences.setBool('isDarkMode', true);
     } else {
       themeMode = ThemeMode.light;
-      prefs.setBool('isDarkMode', false);
+      preferences.setBool('isDarkMode', false);
+    }
+    notifyListeners();
+  }
+
+  Future<void> removeTheme() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.remove('isDarkMode');
+    if (_brightness == Brightness.light) {
+      themeMode = ThemeMode.light;
+    } else {
+      themeMode = ThemeMode.dark;
     }
     notifyListeners();
   }

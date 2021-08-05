@@ -18,15 +18,15 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  runApp(MyApp(prefs: prefs));
+  SharedPreferences preferences = await SharedPreferences.getInstance();
+  runApp(MyApp(preferences: preferences));
 }
 
 class MyApp extends StatelessWidget {
-  final SharedPreferences? prefs;
+  final SharedPreferences? preferences;
   const MyApp({
     Key? key,
-    this.prefs,
+    this.preferences,
   }) : super(key: key);
 
   @override
@@ -35,11 +35,11 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) =>
-              ThemeProvider(isOn: prefs!.getBool('isDarkMode')),
+              ThemeProvider(isOn: preferences!.getBool('isDarkMode')),
         ),
         ChangeNotifierProvider(
-          create: (context) =>
-              LocaleProvider(languageCode: prefs!.getString('languageCode')),
+          create: (context) => LocaleProvider(
+              languageCode: preferences!.getString('languageCode')),
         ),
       ],
       child: MyAppMaterial(),
