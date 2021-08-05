@@ -147,6 +147,7 @@
     "menuWidgetBasicScrollbar": "Scrollbar",
     "menuWidgetBasicOverflowBox": "OverflowBox",
     "menuWidgetBasicRadioListTile": "RadioListTile",
+    "menuWidgetBasicTextField": "TextField",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
@@ -297,5 +298,6 @@
     "tipFractionallySizedBox": "A widget that sizes its child to a fraction of the total available space.",
     "tipScrollbar": "Scrollbars are interactive and will also use the PrimaryScrollController if a controller is not set. Scrollbar thumbs can be dragged along the main axis of the ScrollView to change the ScrollPosition. Tapping along the track exclusive of the thumb will trigger a ScrollIncrementType.page based on the relative position to the thumb.",
     "tipOverflowBox": "A widget that imposes different constraints on its child than it gets from its parent, possibly allowing the child to overflow the parent.",
-    "tipRadioListTile": "A ListTile with a Radio. In other words, a radio button with a label. The entire list tile is interactive: tapping anywhere in the tile selects the radio button."
+    "tipRadioListTile": "A ListTile with a Radio. In other words, a radio button with a label. The entire list tile is interactive: tapping anywhere in the tile selects the radio button.",
+    "tipTextField": "TextField and TextFormField are the two most common widgets to get input from the user. They can be used in making forms, login pages, etc."
 }

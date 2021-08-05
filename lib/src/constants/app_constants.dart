@@ -112,6 +112,7 @@ class AppConstants {
   static final txtSnippetWidgetScrollbar = 'widget_scrollbar';
   static final txtSnippetWidgetOverflowBox = 'widget_overflow_box';
   static final txtSnippetWidgetRadioListTile = 'widget_radio_list_tile';
+  static final txtSnippetWidgetTextField = 'widget_text_field';
   static final txtSnippetWidgetRefreshIndicator = 'widget_refresh_indicator';
   static final txtSnippetWidgetDraggable = 'widget_draggable';
   static final txtSnippetWidgetGlobalKey = 'widget_global_key';

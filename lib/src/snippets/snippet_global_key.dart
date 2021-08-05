@@ -79,6 +79,7 @@ class _SnippetGlobalKeyState extends State<SnippetGlobalKey> {
           ),
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         foregroundColor: Colors.black,

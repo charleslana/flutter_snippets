@@ -129,6 +129,7 @@
     "menuWidgetBasicScrollbar": "Scrollbar",
     "menuWidgetBasicOverflowBox": "OverflowBox",
     "menuWidgetBasicRadioListTile": "RadioListTile",
+    "menuWidgetBasicTextField": "TextField",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
@@ -279,5 +280,6 @@
     "tipFractionallySizedBox": "Um widget que dimensiona seu filho para uma fração do espaço total disponível.",
     "tipScrollbar": "As barras de rolagem são interativas e também usarão o PrimaryScrollController se um controlador não estiver definido. Os polegares da barra de rolagem podem ser arrastados ao longo do eixo principal de ScrollView para alterar a ScrollPosition. Tocar ao longo da trilha exclusiva do polegar acionará um ScrollIncrementType.page com base na posição relativa ao polegar.",
     "tipOverflowBox": "Um widget que impõe restrições diferentes em seu filho do que obtém de seu pai, possivelmente permitindo que o filho transborde o pai.",
-    "tipRadioListTile": "Um ListTile com um rádio. Em outras palavras, um botão de opção com um rótulo. Todo o bloco da lista é interativo: tocar em qualquer lugar do bloco seleciona o botão de rádio."
+    "tipRadioListTile": "Um ListTile com um rádio. Em outras palavras, um botão de opção com um rótulo. Todo o bloco da lista é interativo: tocar em qualquer lugar do bloco seleciona o botão de rádio.",
+    "tipTextField": "TextField e TextFormField são os dois widgets mais comuns para obter a entrada do usuário. Eles podem ser usados na criação de formulários, páginas de login, etc."
 }
