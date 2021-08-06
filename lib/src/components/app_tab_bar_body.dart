@@ -25,6 +25,9 @@ class AppTabBarBody extends StatelessWidget {
               : Card(
                   elevation: 0,
                   child: SingleChildScrollView(
+                    physics: BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics(),
+                    ),
                     child: Text(
                       data,
                       style: TextStyle(
@@ -43,6 +46,9 @@ class AppTabBarBody extends StatelessWidget {
               children: [
                 Expanded(
                   child: SingleChildScrollView(
+                    physics: BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics(),
+                    ),
                     child: Text(
                       data,
                       style: TextStyle(
