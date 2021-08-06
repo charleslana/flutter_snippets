@@ -125,6 +125,8 @@ class MyThemes {
     snackBarTheme: SnackBarThemeData(
       actionTextColor: Colors.black,
     ),
+    primaryColorLight: Colors.black,
+    primaryColorDark: Colors.black,
   );
 
   static final lighTheme = ThemeData(
@@ -200,5 +202,7 @@ class MyThemes {
     snackBarTheme: SnackBarThemeData(
       actionTextColor: Colors.white,
     ),
+    primaryColorLight: Colors.indigo,
+    primaryColorDark: Colors.indigo,
   );
 }
