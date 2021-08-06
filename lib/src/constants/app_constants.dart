@@ -166,4 +166,8 @@ class AppConstants {
   static final txtSnippetWidgetFadeInImage = 'widget_fade_in_image';
   static final txtSnippetWidgetFadeTransition = 'widget_fade_transition';
   static final txtSnippetWidgetAnimatedSwitcher = 'widget_animated_switcher';
+  static final urlLinkedin = 'https://www.linkedin.com/in/charleslana/';
+  static final urlGithub = 'https://github.com/charleslana';
+  static final urlGooglePlay =
+      'https://play.google.com/store/apps/developer?id=Charles+Lana';
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/components/app_custom_bar.dart';
+import 'package:flutter_snippets/src/constants/app_constants.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppInfo extends StatefulWidget {
   const AppInfo({Key? key}) : super(key: key);
@@ -23,6 +26,14 @@ class _AppInfoState extends State<AppInfo> {
     setState(() {
       isLoading = true;
     });
+  }
+
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -51,56 +62,27 @@ class _AppInfoState extends State<AppInfo> {
                         Padding(
                           padding: EdgeInsets.all(5),
                           child: InkWell(
-                            onTap: () {},
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  child: Icon(Icons.person),
-                                ),
-                                Text('@username'),
-                              ],
+                            onTap: () => _launchURL(AppConstants.urlLinkedin),
+                            child: CircleAvatar(
+                              child: FaIcon(FontAwesomeIcons.linkedin),
                             ),
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.all(5),
                           child: InkWell(
-                            onTap: () {},
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  child: Icon(Icons.person),
-                                ),
-                                Text('@username'),
-                              ],
+                            onTap: () => _launchURL(AppConstants.urlGithub),
+                            child: CircleAvatar(
+                              child: FaIcon(FontAwesomeIcons.github),
                             ),
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.all(5),
                           child: InkWell(
-                            onTap: () {},
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  child: Icon(Icons.person),
-                                ),
-                                Text('@username'),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(5),
-                          child: InkWell(
-                            onTap: () {},
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  child: Icon(Icons.person),
-                                ),
-                                Text('@username'),
-                              ],
+                            onTap: () => _launchURL(AppConstants.urlGooglePlay),
+                            child: CircleAvatar(
+                              child: FaIcon(FontAwesomeIcons.googlePlay),
                             ),
                           ),
                         ),
