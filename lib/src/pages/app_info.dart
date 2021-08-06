@@ -16,7 +16,7 @@ class _AppInfoState extends State<AppInfo> {
   bool isLoading = true;
 
   Future<void> _getFutureData() async =>
-      await Future.delayed(Duration(seconds: 3), () {
+      await Future.delayed(Duration(seconds: 1), () {
         setState(() {
           isLoading = false;
         });

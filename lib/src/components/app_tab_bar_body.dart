@@ -16,6 +16,9 @@ class AppTabBarBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TabBarView(
+      physics: BouncingScrollPhysics(
+        parent: AlwaysScrollableScrollPhysics(),
+      ),
       controller: tabController,
       children: [
         Padding(
