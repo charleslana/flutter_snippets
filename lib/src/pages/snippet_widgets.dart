@@ -154,6 +154,9 @@ class SnippetWidgets extends StatelessWidget {
         body: Padding(
           padding: EdgeInsets.all(10.0),
           child: ListView(
+            physics: BouncingScrollPhysics(
+              parent: AlwaysScrollableScrollPhysics(),
+            ),
             children: [
               AppMenu(
                 text: AppLocalizations.of(context)!.menuWidgetCreate,

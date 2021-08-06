@@ -26,6 +26,7 @@ class _AppInfoState extends State<AppInfo> {
     setState(() {
       isLoading = true;
     });
+    _getFutureData();
   }
 
   void _launchURL(String url) async {

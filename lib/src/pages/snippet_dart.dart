@@ -21,6 +21,9 @@ class SnippetDart extends StatelessWidget {
           child: Stack(
             children: [
               ListView(
+                physics: BouncingScrollPhysics(
+                  parent: AlwaysScrollableScrollPhysics(),
+                ),
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 10.0),

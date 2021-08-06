@@ -106,6 +106,9 @@ class _SnippetFilterState extends State<SnippetFilter> {
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 10.0),
                         child: SingleChildScrollView(
+                          physics: BouncingScrollPhysics(
+                            parent: AlwaysScrollableScrollPhysics(),
+                          ),
                           child: Wrap(
                             children: _items.map((item) {
                               return Padding(
