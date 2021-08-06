@@ -26,6 +26,7 @@ class _SnippetMatrixState extends State<SnippetMatrix> {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         heroTag: 'btn1',
         onPressed: null,
