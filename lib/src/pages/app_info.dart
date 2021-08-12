@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_snippets/src/api/firebase_api.dart';
 import 'package:flutter_snippets/src/components/app_custom_bar.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
+import 'package:flutter_snippets/src/models/news.dart';
+import 'package:flutter_snippets/src/provider/news_provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AppInfo extends StatefulWidget {
@@ -13,20 +17,8 @@ class AppInfo extends StatefulWidget {
 }
 
 class _AppInfoState extends State<AppInfo> {
-  bool isLoading = true;
-
-  Future<void> _getFutureData() async =>
-      await Future.delayed(Duration(seconds: 1), () {
-        setState(() {
-          isLoading = false;
-        });
-      });
-
   Future<void> _onRefresh() async {
-    setState(() {
-      isLoading = true;
-    });
-    _getFutureData();
+    FirebaseApi.readNews();
   }
 
   void _launchURL(String url) async {
@@ -37,11 +29,12 @@ class _AppInfoState extends State<AppInfo> {
     }
   }
 
-  @override
-  void initState() {
-    super.initState();
-    _getFutureData();
-  }
+  Widget buildText(String text) => Center(
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 24, color: Colors.white),
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -99,28 +92,57 @@ class _AppInfoState extends State<AppInfo> {
                   style: Theme.of(context).textTheme.headline5,
                 ),
               ),
-              isLoading
-                  ? LinearProgressIndicator()
-                  : Expanded(
-                      child: RefreshIndicator(
-                        onRefresh: _onRefresh,
-                        child: ListView.builder(
-                          physics: BouncingScrollPhysics(
-                            parent: AlwaysScrollableScrollPhysics(),
-                          ),
-                          itemCount: 6,
-                          itemBuilder: (context, i) {
-                            return Card(
-                              child: ListTile(
-                                leading: Icon(Icons.article),
-                                title: Text('$lorenIpsum ' '$i'),
-                                subtitle: Text('05/08/2021'),
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                    ),
+              StreamBuilder<List<News>>(
+                stream: FirebaseApi.readNews(),
+                builder: (context, snapshot) {
+                  switch (snapshot.connectionState) {
+                    case ConnectionState.waiting:
+                      return Center(child: LinearProgressIndicator());
+                    default:
+                      if (snapshot.hasError) {
+                        return buildText('Something Went Wrong Try later');
+                      } else {
+                        final news = snapshot.data;
+
+                        final provider = Provider.of<NewsProvider>(context);
+                        provider.setNews(news);
+
+                        final _news = provider.news;
+
+                        return _news.isEmpty
+                            ? Center(
+                                child: Text(
+                                  'No News.',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              )
+                            : Expanded(
+                                child: RefreshIndicator(
+                                  onRefresh: _onRefresh,
+                                  child: ListView.builder(
+                                    physics: BouncingScrollPhysics(
+                                      parent: AlwaysScrollableScrollPhysics(),
+                                    ),
+                                    itemCount: _news.length,
+                                    itemBuilder: (context, index) {
+                                      final news = _news[index];
+
+                                      return Card(
+                                        child: ListTile(
+                                          leading: Icon(Icons.article),
+                                          title: Text(news.description),
+                                          subtitle: Text(news.createdTime!
+                                              .toIso8601String()),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              );
+                      }
+                  }
+                },
+              ),
             ],
           ),
         ),
@@ -128,13 +150,3 @@ class _AppInfoState extends State<AppInfo> {
     );
   }
 }
-
-final lorenIpsum = """
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-It has survived not only five centuries, but also the leap into electronic typesetting,
-remaining essentially unchanged. It was popularised in the 1960s with the release of
-Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-software like Aldus PageMaker including versions of Lorem Ipsum.
-""";

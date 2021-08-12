@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_snippets/src/l10n/l10n.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_snippets/src/pages/app_settings.dart';
 import 'package:flutter_snippets/src/pages/snippet_dart.dart';
 import 'package:flutter_snippets/src/pages/snippet_widgets.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
+import 'package:flutter_snippets/src/provider/news_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/pages/snippet_filter.dart';
@@ -19,6 +21,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences preferences = await SharedPreferences.getInstance();
+  await Firebase.initializeApp();
   runApp(MyApp(preferences: preferences));
 }
 
@@ -41,6 +44,7 @@ class MyApp extends StatelessWidget {
           create: (context) => LocaleProvider(
               languageCode: preferences!.getString('languageCode')),
         ),
+        ChangeNotifierProvider(create: (context) => NewsProvider()),
       ],
       child: MyAppMaterial(),
     );
