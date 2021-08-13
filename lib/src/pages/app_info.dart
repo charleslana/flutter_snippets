@@ -5,7 +5,9 @@ import 'package:flutter_snippets/src/components/app_custom_bar.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/news.dart';
 import 'package:flutter_snippets/src/provider/news_provider.dart';
+import 'package:flutter_snippets/src/utils/app_utils.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -17,24 +19,14 @@ class AppInfo extends StatefulWidget {
 }
 
 class _AppInfoState extends State<AppInfo> {
-  Future<void> _onRefresh() async {
-    FirebaseApi.readNews();
-  }
-
-  void _launchURL(String url) async {
+  dynamic _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      throw 'Could not launch $url';
+      AppUtils.toast(
+          '${AppLocalizations.of(context)!.appInfoLaunchError} $url', context);
     }
   }
-
-  Widget buildText(String text) => Center(
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 24, color: Colors.white),
-        ),
-      );
 
   @override
   Widget build(BuildContext context) {
@@ -100,43 +92,47 @@ class _AppInfoState extends State<AppInfo> {
                       return Center(child: LinearProgressIndicator());
                     default:
                       if (snapshot.hasError) {
-                        return buildText('Something Went Wrong Try later');
+                        return Center(
+                          child: Text(
+                            AppLocalizations.of(context)!.appNewsError,
+                            style: TextStyle(fontSize: 24),
+                          ),
+                        );
                       } else {
-                        final news = snapshot.data;
-
                         final provider = Provider.of<NewsProvider>(context);
-                        provider.setNews(news);
+                        provider.setNews(snapshot.data);
 
-                        final _news = provider.news;
+                        final data = provider.news;
 
-                        return _news.isEmpty
+                        return data.isEmpty
                             ? Center(
                                 child: Text(
-                                  'No News.',
+                                  AppLocalizations.of(context)!.appNewsNoNews,
                                   style: TextStyle(fontSize: 20),
                                 ),
                               )
                             : Expanded(
-                                child: RefreshIndicator(
-                                  onRefresh: _onRefresh,
-                                  child: ListView.builder(
-                                    physics: BouncingScrollPhysics(
-                                      parent: AlwaysScrollableScrollPhysics(),
-                                    ),
-                                    itemCount: _news.length,
-                                    itemBuilder: (context, index) {
-                                      final news = _news[index];
-
-                                      return Card(
-                                        child: ListTile(
-                                          leading: Icon(Icons.article),
-                                          title: Text(news.description),
-                                          subtitle: Text(news.createdTime!
-                                              .toIso8601String()),
-                                        ),
-                                      );
-                                    },
+                                child: ListView.builder(
+                                  physics: BouncingScrollPhysics(
+                                    parent: AlwaysScrollableScrollPhysics(),
                                   ),
+                                  itemCount: data.length,
+                                  itemBuilder: (context, index) {
+                                    final news = data[index];
+                                    DateFormat _dateFormat = DateFormat(
+                                        AppLocalizations.of(context)!
+                                            .appNewsDateFormat);
+                                    String formattedDate =
+                                        _dateFormat.format(news.createdTime!);
+
+                                    return Card(
+                                      child: ListTile(
+                                        leading: Icon(Icons.article),
+                                        title: Text(news.description),
+                                        subtitle: Text(formattedDate),
+                                      ),
+                                    );
+                                  },
                                 ),
                               );
                       }

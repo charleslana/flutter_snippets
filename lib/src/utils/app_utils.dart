@@ -33,18 +33,7 @@ class AppUtils {
   void copyCode(String data, BuildContext context) {
     final copy = ClipboardData(text: data);
     Clipboard.setData(copy).then(
-      (_) => {
-        ScaffoldMessenger.of(context).hideCurrentSnackBar(),
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(AppLocalizations.of(context)!.utilCopyCodeMessage),
-            action: SnackBarAction(
-              label: AppLocalizations.of(context)!.utilCopyCodeClose,
-              onPressed: () {},
-            ),
-          ),
-        ),
-      },
+      (_) => toast(AppLocalizations.of(context)!.utilCopyCodeMessage, context),
     );
   }
 
@@ -103,6 +92,19 @@ class AppUtils {
       if (value) {
       } else {}
     });
+  }
+
+  static void toast(String message, BuildContext context) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        action: SnackBarAction(
+          label: AppLocalizations.of(context)!.utilToastClose,
+          onPressed: () {},
+        ),
+      ),
+    );
   }
 
   static DateTime toDateTime(Timestamp? value) {
