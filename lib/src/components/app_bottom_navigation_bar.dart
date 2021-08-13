@@ -31,7 +31,7 @@ class AppBottomNavigationBar extends StatelessWidget {
                 color: Colors.white,
               ),
               onPressed: () =>
-                  AppUtils().navigateToScreen(0, context, currentRoute),
+                  AppUtils.navigateToScreen(0, context, currentRoute),
             ),
             IconButton(
               icon: Icon(
@@ -39,7 +39,7 @@ class AppBottomNavigationBar extends StatelessWidget {
                 color: Colors.white,
               ),
               onPressed: () =>
-                  AppUtils().navigateToScreen(2, context, currentRoute),
+                  AppUtils.navigateToScreen(2, context, currentRoute),
             ),
           ],
         ),

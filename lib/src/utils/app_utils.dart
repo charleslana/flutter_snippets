@@ -7,7 +7,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 
 class AppUtils {
-  void navigateToScreen(int index, BuildContext context, currentRoute) {
+  static void navigateToScreen(int index, BuildContext context, currentRoute) {
     switch (index) {
       case 0:
         currentRoute != AppRoutes.snippetDart
@@ -30,14 +30,27 @@ class AppUtils {
     }
   }
 
-  void copyCode(String data, BuildContext context) {
+  static void toast(String message, BuildContext context) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        action: SnackBarAction(
+          label: AppLocalizations.of(context)!.utilToastClose,
+          onPressed: () {},
+        ),
+      ),
+    );
+  }
+
+  static void copyCode(String data, BuildContext context) {
     final copy = ClipboardData(text: data);
     Clipboard.setData(copy).then(
       (_) => toast(AppLocalizations.of(context)!.utilCopyCodeMessage, context),
     );
   }
 
-  String removeDiacritics(String string) {
+  static String removeDiacritics(String string) {
     var withDiacritics =
         'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
     var withoutDiacritics =
@@ -49,7 +62,7 @@ class AppUtils {
     return string;
   }
 
-  void alert(String? message, BuildContext context) {
+  static void alert(String? message, BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -92,19 +105,6 @@ class AppUtils {
       if (value) {
       } else {}
     });
-  }
-
-  static void toast(String message, BuildContext context) {
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        action: SnackBarAction(
-          label: AppLocalizations.of(context)!.utilToastClose,
-          onPressed: () {},
-        ),
-      ),
-    );
   }
 
   static DateTime toDateTime(Timestamp? value) {

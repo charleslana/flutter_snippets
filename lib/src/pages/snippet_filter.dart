@@ -27,9 +27,8 @@ class _SnippetFilterState extends State<SnippetFilter> {
       List<SnippetFilterListModel> dummyListData = [];
 
       dummySearchList.forEach((item) {
-        if (AppUtils()
-            .removeDiacritics(item.text.toLowerCase())
-            .contains(AppUtils().removeDiacritics(query).toLowerCase())) {
+        if (AppUtils.removeDiacritics(item.text.toLowerCase())
+            .contains(AppUtils.removeDiacritics(query).toLowerCase())) {
           dummyListData.add(item);
         }
       });

@@ -72,7 +72,7 @@ class AppTabBarBody extends StatelessWidget {
                         icon: Icon(
                           Icons.content_copy,
                         ),
-                        onPressed: () => AppUtils().copyCode(data, context),
+                        onPressed: () => AppUtils.copyCode(data, context),
                       ),
                     ),
                   ),
