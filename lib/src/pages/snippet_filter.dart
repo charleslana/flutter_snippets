@@ -12,45 +12,50 @@ class SnippetFilter extends StatefulWidget {
 }
 
 class _SnippetFilterState extends State<SnippetFilter> {
-  TextEditingController _editingController = TextEditingController();
+  final TextEditingController _editingController = TextEditingController();
   late final SnippetFilterModel _filter =
       ModalRoute.of(context)!.settings.arguments as SnippetFilterModel;
   List<SnippetFilterListModel> _duplicateItems = [];
   List<SnippetFilterListModel> _items = [];
 
   void _filterSearchResults(String query) {
-    List<SnippetFilterListModel> dummySearchList = [];
-
-    dummySearchList.addAll(_duplicateItems);
+    final List<SnippetFilterListModel> dummySearchList = [..._duplicateItems];
 
     if (query.trim().isNotEmpty) {
-      List<SnippetFilterListModel> dummyListData = [];
+      final List<SnippetFilterListModel> dummyListData = [];
 
-      dummySearchList.forEach((item) {
+      for (final item in dummySearchList) {
         if (AppUtils.removeDiacritics(item.text.toLowerCase())
             .contains(AppUtils.removeDiacritics(query).toLowerCase())) {
           dummyListData.add(item);
         }
-      });
+      }
+
       setState(() {
-        _items.clear();
-        _items.addAll(dummyListData);
+        _items
+          ..clear()
+          ..addAll(dummyListData);
       });
     } else {
       setState(() {
-        _items.clear();
-        _items.addAll(_duplicateItems);
+        _items
+          ..clear()
+          ..addAll(_duplicateItems);
       });
     }
+  }
+
+  Future<void> init() async {
+    await Future<void>.delayed(Duration.zero).then((_) {
+      _items = List<SnippetFilterListModel>.generate(
+          _filter.snippets.length, (index) => _filter.snippets[index]);
+    });
   }
 
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration.zero).then((_) {
-      _items = List<SnippetFilterListModel>.generate(
-          _filter.snippets.length, (index) => _filter.snippets[index]);
-    });
+    init();
   }
 
   @override
@@ -81,65 +86,63 @@ class _SnippetFilterState extends State<SnippetFilter> {
           body: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8),
                 child: TextField(
-                  onChanged: (value) {
-                    _filterSearchResults(value);
-                  },
+                  onChanged: _filterSearchResults,
                   controller: _editingController,
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!
                         .filterSearchLabel(_filter.title),
                     hintText: AppLocalizations.of(context)!
                         .filterSearchHint(_filter.title),
-                    prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                    prefixIcon: const Icon(Icons.search),
+                    border: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(25)),
                     ),
                   ),
                 ),
               ),
-              _items.isEmpty
-                  ? Text(AppLocalizations.of(context)!.filterSearchNoResults)
-                  : Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.only(bottom: 10.0),
-                        child: SingleChildScrollView(
-                          physics: BouncingScrollPhysics(
-                            parent: AlwaysScrollableScrollPhysics(),
-                          ),
-                          child: Wrap(
-                            children: _items.map((item) {
-                              return Padding(
-                                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                                child: TextButton(
-                                  onPressed: () {
-                                    FocusManager.instance.primaryFocus
-                                        ?.unfocus();
-                                    item.onPressed();
-                                    setState(() {
-                                      _editingController.clear();
-                                      if (_items.length !=
-                                          _duplicateItems.length) {
-                                        _items.clear();
-                                        _items.addAll(_duplicateItems);
-                                      }
-                                    });
-                                  },
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.fromLTRB(30, 10, 30, 10),
-                                    child: Text(
-                                      item.text,
-                                    ),
-                                  ),
+              if (_items.isEmpty)
+                Text(AppLocalizations.of(context)!.filterSearchNoResults)
+              else
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(
+                        parent: AlwaysScrollableScrollPhysics(),
+                      ),
+                      child: Wrap(
+                        children: _items.map((item) {
+                          return Padding(
+                            padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                            child: TextButton(
+                              onPressed: () {
+                                FocusManager.instance.primaryFocus?.unfocus();
+                                item.onPressed();
+                                setState(() {
+                                  _editingController.clear();
+                                  if (_items.length != _duplicateItems.length) {
+                                    _items
+                                      ..clear()
+                                      ..addAll(_duplicateItems);
+                                  }
+                                });
+                              },
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                                child: Text(
+                                  item.text,
                                 ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
+                              ),
+                            ),
+                          );
+                        }).toList(),
                       ),
                     ),
+                  ),
+                ),
             ],
           ),
         ),

@@ -5,12 +5,6 @@ class NewsField {
 }
 
 class NewsModel {
-  String? id;
-  String title;
-  String description;
-  bool? isDisabled;
-  DateTime? createdTime;
-
   NewsModel({
     this.id,
     required this.title,
@@ -26,4 +20,10 @@ class NewsModel {
         isDisabled: json['isDisabled'],
         createdTime: AppUtils.toDateTime(json['createdTime']),
       );
+
+  String? id;
+  String title;
+  String description;
+  bool? isDisabled;
+  DateTime? createdTime;
 }
