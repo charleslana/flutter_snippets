@@ -20,17 +20,18 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences preferences = await SharedPreferences.getInstance();
+  final SharedPreferences preferences = await SharedPreferences.getInstance();
   await Firebase.initializeApp();
   runApp(MyApp(preferences: preferences));
 }
 
 class MyApp extends StatelessWidget {
-  final SharedPreferences? preferences;
   const MyApp({
-    Key? key,
     this.preferences,
+    Key? key,
   }) : super(key: key);
+
+  final SharedPreferences? preferences;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(create: (context) => NewsProvider()),
       ],
-      child: MyAppMaterial(),
+      child: const MyAppMaterial(),
     );
   }
 }
@@ -67,7 +68,7 @@ class MyAppMaterial extends StatelessWidget {
       darkTheme: MyThemes.darkTheme,
       locale: localeProvider.locale,
       supportedLocales: L10n.all,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -76,27 +77,29 @@ class MyAppMaterial extends StatelessWidget {
       initialRoute: AppRoutes.appLogo,
       onGenerateRoute: (settings) {
         if (settings.name == AppRoutes.appLogo) {
-          return AppRoutePage(widget: AppLogo(), routeName: AppRoutes.appLogo);
+          return AppRoutePage(
+              widget: const AppLogo(), routeName: AppRoutes.appLogo);
         }
 
         if (settings.name == AppRoutes.snippetWidgets) {
           return AppRoutePage(
-              widget: SnippetWidgets(), routeName: AppRoutes.snippetWidgets);
+              widget: const SnippetWidgets(),
+              routeName: AppRoutes.snippetWidgets);
         }
 
         if (settings.name == AppRoutes.snippetDart) {
           return AppRoutePage(
-              widget: SnippetDart(), routeName: AppRoutes.snippetDart);
+              widget: const SnippetDart(), routeName: AppRoutes.snippetDart);
         }
 
         if (settings.name == AppRoutes.appSettings) {
           return AppRoutePage(
-              widget: AppSettings(), routeName: AppRoutes.appSettings);
+              widget: const AppSettings(), routeName: AppRoutes.appSettings);
         }
 
         if (settings.name == AppRoutes.snippetShow) {
           return AppRoutePage(
-            widget: SnippetShow(),
+            widget: const SnippetShow(),
             routeName: AppRoutes.snippetShow,
             arguments: settings.arguments,
           );
@@ -104,18 +107,20 @@ class MyAppMaterial extends StatelessWidget {
 
         if (settings.name == AppRoutes.snippetFilter) {
           return AppRoutePage(
-            widget: SnippetFilter(),
+            widget: const SnippetFilter(),
             routeName: AppRoutes.snippetFilter,
             arguments: settings.arguments,
           );
         }
 
         if (settings.name == AppRoutes.appInfo) {
-          return AppRoutePage(widget: AppInfo(), routeName: AppRoutes.appInfo);
+          return AppRoutePage(
+              widget: const AppInfo(), routeName: AppRoutes.appInfo);
         }
 
         return AppRoutePage(
-            widget: SnippetWidgets(), routeName: AppRoutes.snippetWidgets);
+            widget: const SnippetWidgets(),
+            routeName: AppRoutes.snippetWidgets);
       },
     );
   }

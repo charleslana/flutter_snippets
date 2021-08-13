@@ -34,40 +34,40 @@ class _AppInfoState extends State<AppInfo> {
       child: Scaffold(
         appBar: AppCustomBar(title: AppLocalizations.of(context)!.appInfoTitle),
         body: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Card(
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Wrap(
                       crossAxisAlignment: WrapCrossAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           child: InkWell(
                             onTap: () => _launchURL(AppConstants.urlLinkedin),
-                            child: CircleAvatar(
+                            child: const CircleAvatar(
                               child: FaIcon(FontAwesomeIcons.linkedin),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           child: InkWell(
                             onTap: () => _launchURL(AppConstants.urlGithub),
-                            child: CircleAvatar(
+                            child: const CircleAvatar(
                               child: FaIcon(FontAwesomeIcons.github),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           child: InkWell(
                             onTap: () => _launchURL(AppConstants.urlGooglePlay),
-                            child: CircleAvatar(
+                            child: const CircleAvatar(
                               child: FaIcon(FontAwesomeIcons.googlePlay),
                             ),
                           ),
@@ -77,7 +77,7 @@ class _AppInfoState extends State<AppInfo> {
                   ),
                 ),
               ),
-              Divider(),
+              const Divider(),
               Center(
                 child: Text(
                   AppLocalizations.of(context)!.appNewsTitle,
@@ -89,45 +89,51 @@ class _AppInfoState extends State<AppInfo> {
                 builder: (context, snapshot) {
                   switch (snapshot.connectionState) {
                     case ConnectionState.waiting:
-                      return Center(child: LinearProgressIndicator());
+                      return const Center(child: LinearProgressIndicator());
                     default:
                       if (snapshot.hasError) {
                         return Center(
-                          child: Text(
-                            AppLocalizations.of(context)!.appNewsError,
-                            style: TextStyle(fontSize: 24),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Text(
+                              AppLocalizations.of(context)!.appNewsError,
+                              style: const TextStyle(fontSize: 24),
+                            ),
                           ),
                         );
                       } else {
-                        final provider = Provider.of<NewsProvider>(context);
-                        provider.setNews(snapshot.data);
+                        final provider = Provider.of<NewsProvider>(context)
+                          ..setNews(snapshot.data);
 
                         final data = provider.news;
 
                         return data.isEmpty
-                            ? Center(
-                                child: Text(
-                                  AppLocalizations.of(context)!.appNewsNoNews,
-                                  style: TextStyle(fontSize: 20),
+                            ? Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Center(
+                                  child: Text(
+                                    AppLocalizations.of(context)!.appNewsNoNews,
+                                    style: const TextStyle(fontSize: 20),
+                                  ),
                                 ),
                               )
                             : Expanded(
                                 child: ListView.builder(
-                                  physics: BouncingScrollPhysics(
+                                  physics: const BouncingScrollPhysics(
                                     parent: AlwaysScrollableScrollPhysics(),
                                   ),
                                   itemCount: data.length,
                                   itemBuilder: (context, index) {
                                     final news = data[index];
-                                    DateFormat _dateFormat = DateFormat(
+                                    final DateFormat _dateFormat = DateFormat(
                                         AppLocalizations.of(context)!
                                             .appNewsDateFormat);
-                                    String formattedDate =
+                                    final String formattedDate =
                                         _dateFormat.format(news.createdTime!);
 
                                     return Card(
                                       child: ListTile(
-                                        leading: Icon(Icons.article),
+                                        leading: const Icon(Icons.article),
                                         title: Text(news.description),
                                         subtitle: Text(formattedDate),
                                       ),
