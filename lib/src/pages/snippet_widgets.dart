@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/components/app_bottom_navigation_bar.dart';
-import 'package:flutter_snippets/src/components/app_custom_bar.dart';
-import 'package:flutter_snippets/src/components/app_floating_action_button.dart';
-import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
@@ -139,6 +135,10 @@ import 'package:flutter_snippets/src/snippets/snippet_tooltip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_transform.dart';
 import 'package:flutter_snippets/src/snippets/snippet_vertical_divider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_visibility.dart';
+import 'package:flutter_snippets/src/widgets/app_bottom_navigation_bar.dart';
+import 'package:flutter_snippets/src/widgets/app_custom_bar.dart';
+import 'package:flutter_snippets/src/widgets/app_floating_action_button.dart';
+import 'package:flutter_snippets/src/widgets/app_menu.dart';
 
 class SnippetWidgets extends StatelessWidget {
   const SnippetWidgets({Key? key}) : super(key: key);

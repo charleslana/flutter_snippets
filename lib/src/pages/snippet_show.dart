@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/components/app_bar_with_tab.dart';
-import 'package:flutter_snippets/src/components/app_tab_bar_body.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/services/txt_service.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
+import 'package:flutter_snippets/src/widgets/app_bar_with_tab.dart';
+import 'package:flutter_snippets/src/widgets/app_tab_bar_body.dart';
 
 class SnippetShow extends StatefulWidget {
   const SnippetShow({Key? key}) : super(key: key);

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/api/firebase_api.dart';
-import 'package:flutter_snippets/src/components/app_custom_bar.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/news.dart';
 import 'package:flutter_snippets/src/provider/news_provider.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
+import 'package:flutter_snippets/src/widgets/app_custom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';

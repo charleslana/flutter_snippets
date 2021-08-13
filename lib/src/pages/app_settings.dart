@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/components/app_custom_bar.dart';
 import 'package:flutter_snippets/src/l10n/l10n.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
+import 'package:flutter_snippets/src/widgets/app_custom_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

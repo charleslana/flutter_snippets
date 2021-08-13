@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/components/app_custom_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_snippets/src/components/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/widgets/app_custom_bar.dart';
+import 'package:flutter_snippets/src/widgets/app_menu.dart';
 
 class SnippetDart extends StatelessWidget {
   const SnippetDart({Key? key}) : super(key: key);
