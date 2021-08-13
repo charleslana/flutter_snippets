@@ -4,14 +4,14 @@ class NewsField {
   static const createdTime = 'createdTime';
 }
 
-class News {
+class NewsModel {
   String? id;
   String title;
   String description;
   bool? isDisabled;
   DateTime? createdTime;
 
-  News({
+  NewsModel({
     this.id,
     required this.title,
     required this.description,
@@ -19,7 +19,7 @@ class News {
     this.createdTime,
   });
 
-  static News fromJson(Map<String, dynamic> json) => News(
+  static NewsModel fromJson(Map<String, dynamic> json) => NewsModel(
         id: json['id'],
         title: json['title'],
         description: json['description'],
