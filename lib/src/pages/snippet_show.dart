@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
-import 'package:flutter_snippets/src/services/txt_service.dart';
+import 'package:flutter_snippets/src/services/text_service.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
 import 'package:flutter_snippets/src/widgets/app_bar_with_tab.dart';
 import 'package:flutter_snippets/src/widgets/app_tab_bar_body.dart';
@@ -20,7 +20,7 @@ class _SnippetShowState extends State<SnippetShow>
   late TabController _tabController;
 
   Future<void> _loadData() async {
-    final loadedData = await TxtService().loadData(_snippet!.data);
+    final loadedData = await TextService().loadData(_snippet!.data);
     setState(() {
       _data = loadedData;
       _isLoading = false;
