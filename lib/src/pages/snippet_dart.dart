@@ -15,23 +15,23 @@ class SnippetDart extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppCustomBar(title: 'Dart'),
+        appBar: const AppCustomBar(title: 'Dart'),
         body: Padding(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10),
           child: Stack(
             children: [
               ListView(
-                physics: BouncingScrollPhysics(
+                physics: const BouncingScrollPhysics(
                   parent: AlwaysScrollableScrollPhysics(),
                 ),
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10.0),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Text(
                       AppLocalizations.of(context)!.menuBasicDart,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
+                        fontSize: 16,
                         color: Theme.of(context).iconTheme.color,
                       ),
                     ),
@@ -144,12 +144,12 @@ class SnippetDart extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10.0),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Text(
                       AppLocalizations.of(context)!.menuAdvancedDart,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
+                        fontSize: 16,
                         color: Theme.of(context).iconTheme.color,
                       ),
                     ),

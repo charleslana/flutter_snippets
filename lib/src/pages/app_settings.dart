@@ -20,8 +20,8 @@ class _AppSettingsState extends State<AppSettings> {
   bool _isDefaultLanguage = true;
 
   void _selectDefaultTheme() {
-    final provider = Provider.of<ThemeProvider>(context, listen: false);
-    provider.removeTheme();
+    final provider = Provider.of<ThemeProvider>(context, listen: false)
+      ..removeTheme();
 
     setState(() {
       _isDefaultTheme = provider.defaultThemeSystem = true;
@@ -30,8 +30,8 @@ class _AppSettingsState extends State<AppSettings> {
   }
 
   void _changeDarkTheme(bool? value) {
-    final provider = Provider.of<ThemeProvider>(context, listen: false);
-    provider.toggleTheme(value!);
+    final provider = Provider.of<ThemeProvider>(context, listen: false)
+      ..toggleTheme(value!);
 
     setState(() {
       _isDefaultTheme = provider.defaultThemeSystem = false;
@@ -40,8 +40,8 @@ class _AppSettingsState extends State<AppSettings> {
   }
 
   void _selectDefaultLanguage() {
-    final provider = Provider.of<LocaleProvider>(context, listen: false);
-    provider.removeLocale();
+    final provider = Provider.of<LocaleProvider>(context, listen: false)
+      ..removeLocale();
 
     setState(() {
       _isDefaultLanguage = provider.defaultSystemLanguage = true;
@@ -50,8 +50,8 @@ class _AppSettingsState extends State<AppSettings> {
   }
 
   void _changeLanguage(int? value, Locale locale) {
-    final provider = Provider.of<LocaleProvider>(context, listen: false);
-    provider.setLocale(locale);
+    final provider = Provider.of<LocaleProvider>(context, listen: false)
+      ..setLocale(locale);
 
     setState(() {
       _isDefaultLanguage = provider.defaultSystemLanguage = false;
@@ -80,7 +80,7 @@ class _AppSettingsState extends State<AppSettings> {
       child: Scaffold(
         appBar: AppCustomBar(title: AppLocalizations.of(context)!.appSettings),
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(
+          physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics(),
           ),
           child: Column(
@@ -95,16 +95,16 @@ class _AppSettingsState extends State<AppSettings> {
               SwitchListTile(
                 title: Text(AppLocalizations.of(context)!.appSettingsDarkMode),
                 value: _isDarkTheme,
-                onChanged: (bool? value) => _changeDarkTheme(value),
+                onChanged: _changeDarkTheme,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Text(
                 AppLocalizations.of(context)!.appSettingsChooseLanguage,
                 style: Theme.of(context).textTheme.headline6,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               CheckboxListTile(

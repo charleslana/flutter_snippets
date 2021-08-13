@@ -11,7 +11,7 @@ class AppLogo extends StatefulWidget {
 }
 
 class _AppLogoState extends State<AppLogo> {
-  final logoGradient = LinearGradient(
+  final logoGradient = const LinearGradient(
     colors: [
       Color.fromRGBO(54, 57, 75, 1),
       Color.fromRGBO(205, 130, 222, 1),
@@ -24,7 +24,7 @@ class _AppLogoState extends State<AppLogo> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       () => Navigator.pushReplacementNamed(context, AppRoutes.snippetWidgets),
     );
   }
@@ -33,7 +33,7 @@ class _AppLogoState extends State<AppLogo> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           gradient: logoGradient,
         ),
@@ -46,7 +46,6 @@ class _AppLogoState extends State<AppLogo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Flexible(
-                      flex: 1,
                       child: Image.asset(
                         'assets/images/logo_flutter_snippets.png',
                         fit: BoxFit.contain,
@@ -59,7 +58,7 @@ class _AppLogoState extends State<AppLogo> {
                 alignment: Alignment.bottomCenter,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       'V:1.0.0',
                       style: TextStyle(

@@ -52,7 +52,7 @@ class _SnippetShowState extends State<SnippetShow>
   Widget build(BuildContext context) {
     return SafeArea(
       child: _isLoading
-          ? Scaffold(
+          ? const Scaffold(
               body: LinearProgressIndicator(),
             )
           : Scaffold(
@@ -69,8 +69,11 @@ class _SnippetShowState extends State<SnippetShow>
                   FloatingActionButtonLocation.endFloat,
               floatingActionButton: FloatingActionButton(
                 heroTag: 'show',
-                child: Icon(Icons.lightbulb, color: Colors.white),
                 onPressed: () => AppUtils.alert(_snippet!.tip, context),
+                child: const Icon(
+                  Icons.lightbulb,
+                  color: Colors.white,
+                ),
               ),
             ),
     );
