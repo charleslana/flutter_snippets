@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeProvider extends ChangeNotifier {
-  ThemeMode themeMode = ThemeMode.system;
-  final _brightness = MediaQueryData.fromWindow(WidgetsBinding.instance!.window)
-      .platformBrightness;
-  bool _defaultTheme = false;
-
   ThemeProvider({required dynamic isOn}) {
     if (isOn == null) {
-      _defaultTheme = true;
+      defaultTheme = true;
 
       if (_brightness == Brightness.light) {
         themeMode = ThemeMode.light;
@@ -21,27 +16,29 @@ class ThemeProvider extends ChangeNotifier {
     }
   }
 
+  ThemeMode themeMode = ThemeMode.system;
+  final _brightness = MediaQueryData.fromWindow(WidgetsBinding.instance!.window)
+      .platformBrightness;
+  bool defaultTheme = false;
+  final String _keyDarkMode = 'isDarkMode';
+
   bool get isDarkMode => themeMode == ThemeMode.dark;
 
-  bool get defaultThemeSystem => _defaultTheme;
-
-  void set defaultThemeSystem(bool value) => _defaultTheme = value;
-
-  Future<void> toggleTheme(bool isOn) async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
+  Future<void> toggleTheme({required bool isOn}) async {
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
     if (isOn) {
       themeMode = ThemeMode.dark;
-      preferences.setBool('isDarkMode', true);
+      await preferences.setBool(_keyDarkMode, true);
     } else {
       themeMode = ThemeMode.light;
-      preferences.setBool('isDarkMode', false);
+      await preferences.setBool(_keyDarkMode, false);
     }
     notifyListeners();
   }
 
   Future<void> removeTheme() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    await preferences.remove('isDarkMode');
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.remove(_keyDarkMode);
     if (_brightness == Brightness.light) {
       themeMode = ThemeMode.light;
     } else {
@@ -51,158 +48,146 @@ class ThemeProvider extends ChangeNotifier {
   }
 }
 
-class MyThemes {
-  static final darkTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.grey.shade900,
-    colorScheme: ColorScheme.dark().copyWith(
-      primary: Colors.indigo,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: Colors.indigo.shade200,
-    ),
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        backgroundColor: Colors.indigo,
-        primary: Colors.black,
-      ),
-    ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: TextButton.styleFrom(
-        backgroundColor: Colors.indigo,
-        primary: Colors.black,
-      ),
-    ),
-    switchTheme: SwitchThemeData(
-      thumbColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.selected)) {
-            return Colors.indigo;
-          }
-          ;
-          return Colors.white.withAlpha(700);
-        },
-      ),
-      trackColor: MaterialStateProperty.all(Colors.white.withAlpha(400)),
-    ),
-    primaryColor: Colors.black,
-    iconTheme: IconThemeData(
-      color: Colors.indigo,
-    ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
+final darkTheme = ThemeData(
+  scaffoldBackgroundColor: Colors.grey.shade900,
+  colorScheme: const ColorScheme.dark().copyWith(
+    primary: Colors.indigo,
+  ),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    selectedItemColor: Colors.indigo.shade200,
+  ),
+  textButtonTheme: TextButtonThemeData(
+    style: TextButton.styleFrom(
       backgroundColor: Colors.indigo,
+      primary: Colors.black,
     ),
-    checkboxTheme: CheckboxThemeData(
-      fillColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.selected)) {
-            return Colors.indigo;
-          }
-          ;
-          return Colors.white;
-        },
-      ),
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: TextButton.styleFrom(
+      backgroundColor: Colors.indigo,
+      primary: Colors.black,
     ),
-    radioTheme: RadioThemeData(
-      fillColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.selected)) {
-            return Colors.indigo;
-          }
-          ;
-          return Colors.white;
-        },
-      ),
+  ),
+  switchTheme: SwitchThemeData(
+    thumbColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.indigo;
+        }
+        return Colors.white.withAlpha(700);
+      },
     ),
-    tabBarTheme: TabBarTheme(
-      indicator: ShapeDecoration(
-        shape: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.indigo,
-          ),
+    trackColor: MaterialStateProperty.all(Colors.white.withAlpha(400)),
+  ),
+  primaryColor: Colors.black,
+  iconTheme: const IconThemeData(
+    color: Colors.indigo,
+  ),
+  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    backgroundColor: Colors.indigo,
+  ),
+  checkboxTheme: CheckboxThemeData(
+    fillColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.indigo;
+        }
+        return Colors.white;
+      },
+    ),
+  ),
+  radioTheme: RadioThemeData(
+    fillColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.indigo;
+        }
+        return Colors.white;
+      },
+    ),
+  ),
+  tabBarTheme: const TabBarTheme(
+    indicator: ShapeDecoration(
+      shape: UnderlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.indigo,
         ),
       ),
     ),
-    snackBarTheme: SnackBarThemeData(
-      actionTextColor: Colors.black,
-    ),
-    primaryColorLight: Colors.black,
-    primaryColorDark: Colors.black,
-  );
+  ),
+  snackBarTheme: const SnackBarThemeData(
+    actionTextColor: Colors.black,
+  ),
+  primaryColorLight: Colors.black,
+  primaryColorDark: Colors.black,
+);
 
-  static final lighTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
-    colorScheme: ColorScheme.light().copyWith(
-      primary: Colors.indigo,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: Colors.indigo,
-    ),
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        backgroundColor: Colors.indigo,
-        primary: Colors.white,
-      ),
-    ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: TextButton.styleFrom(
-        backgroundColor: Colors.indigo,
-        primary: Colors.white,
-      ),
-    ),
-    switchTheme: SwitchThemeData(
-      thumbColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.selected)) {
-            return Colors.indigo;
-          }
-          ;
-          return Colors.white;
-        },
-      ),
-      trackColor: MaterialStateProperty.all(Colors.black.withAlpha(400)),
-    ),
-    primaryColor: Colors.indigo,
-    iconTheme: IconThemeData(
-      color: Colors.black,
-    ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
+final lighTheme = ThemeData(
+  scaffoldBackgroundColor: Colors.white,
+  colorScheme: const ColorScheme.light().copyWith(
+    primary: Colors.indigo,
+  ),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    selectedItemColor: Colors.indigo,
+  ),
+  textButtonTheme: TextButtonThemeData(
+    style: TextButton.styleFrom(
       backgroundColor: Colors.indigo,
+      primary: Colors.white,
     ),
-    checkboxTheme: CheckboxThemeData(
-      fillColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.selected)) {
-            return Colors.indigo;
-          }
-          ;
-          return Colors.black;
-        },
-      ),
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: TextButton.styleFrom(
+      backgroundColor: Colors.indigo,
+      primary: Colors.white,
     ),
-    radioTheme: RadioThemeData(
-      fillColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.selected)) {
-            return Colors.indigo;
-          }
-          ;
-          return Colors.black;
-        },
-      ),
+  ),
+  switchTheme: SwitchThemeData(
+    thumbColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.indigo;
+        }
+        return Colors.white;
+      },
     ),
-    tabBarTheme: TabBarTheme(
-      indicator: ShapeDecoration(
-        shape: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-          ),
-        ),
-      ),
+    trackColor: MaterialStateProperty.all(Colors.black.withAlpha(400)),
+  ),
+  primaryColor: Colors.indigo,
+  iconTheme: const IconThemeData(
+    color: Colors.black,
+  ),
+  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    backgroundColor: Colors.indigo,
+  ),
+  checkboxTheme: CheckboxThemeData(
+    fillColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.indigo;
+        }
+        return Colors.black;
+      },
     ),
-    snackBarTheme: SnackBarThemeData(
-      actionTextColor: Colors.white,
+  ),
+  radioTheme: RadioThemeData(
+    fillColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.indigo;
+        }
+        return Colors.black;
+      },
     ),
-    primaryColorLight: Colors.indigo,
-    primaryColorDark: Colors.indigo,
-  );
-}
+  ),
+  tabBarTheme: const TabBarTheme(
+    indicator: ShapeDecoration(
+      shape: UnderlineInputBorder(),
+    ),
+  ),
+  snackBarTheme: const SnackBarThemeData(
+    actionTextColor: Colors.white,
+  ),
+  primaryColorLight: Colors.indigo,
+  primaryColorDark: Colors.indigo,
+);

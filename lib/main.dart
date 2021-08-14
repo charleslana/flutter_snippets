@@ -64,8 +64,8 @@ class MyAppMaterial extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Snippets',
       themeMode: themeProvider.themeMode,
-      theme: MyThemes.lighTheme,
-      darkTheme: MyThemes.darkTheme,
+      theme: lighTheme,
+      darkTheme: darkTheme,
       locale: localeProvider.locale,
       supportedLocales: L10n.all,
       localizationsDelegates: const [

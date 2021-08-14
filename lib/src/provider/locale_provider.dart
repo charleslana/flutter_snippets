@@ -5,62 +5,55 @@ import 'package:flutter_snippets/src/l10n/l10n.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocaleProvider extends ChangeNotifier {
-  Locale _locale = Locale('pt', 'BR');
-  final _defaultLanguage = ui.window.locale.languageCode;
-  bool _defaultSystemLanguage = false;
-
-  Locale get locale => _locale;
-
-  void set locale(Locale value) => _locale = value;
-
-  bool get defaultSystemLanguage => _defaultSystemLanguage;
-
-  void set defaultSystemLanguage(bool value) => _defaultSystemLanguage = value;
-
   LocaleProvider({required dynamic languageCode}) {
     if (languageCode == null) {
-      _defaultSystemLanguage = true;
-      final languague = _defaultLanguage == 'pt'
-          ? Locale('pt', 'BR')
-          : Locale(_defaultLanguage);
+      defaultLanguage = true;
+      final languague = _defaultSystemLanguage == 'pt'
+          ? const Locale('pt', 'BR')
+          : Locale(_defaultSystemLanguage);
       final contain = L10n.all.where((locale) => locale == languague);
 
       if (contain.isNotEmpty) {
-        _locale = _defaultLanguage == 'pt'
-            ? Locale('pt', 'BR')
-            : Locale(_defaultLanguage);
+        locale = _defaultSystemLanguage == 'pt'
+            ? const Locale('pt', 'BR')
+            : Locale(_defaultSystemLanguage);
       } else {
-        _locale = Locale('en');
+        locale = const Locale('en');
       }
     } else {
-      _locale =
-          languageCode == 'pt_BR' ? Locale('pt', 'BR') : Locale(languageCode);
+      locale = languageCode == 'pt_BR'
+          ? const Locale('pt', 'BR')
+          : Locale(languageCode);
     }
   }
 
-  void setLocale(Locale locale) async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
+  Locale locale = const Locale('pt', 'BR');
+  final _defaultSystemLanguage = ui.window.locale.languageCode;
+  bool defaultLanguage = false;
 
-    preferences.setString('languageCode', locale.toString());
-    _locale = locale;
+  Future<void> setLocale(Locale flag) async {
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+
+    await preferences.setString('languageCode', flag.toString());
+    locale = flag;
     notifyListeners();
   }
 
   Future<void> removeLocale() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
     await preferences.remove('languageCode');
 
-    final languague = _defaultLanguage == 'pt'
-        ? Locale('pt', 'BR')
-        : Locale(_defaultLanguage);
+    final languague = _defaultSystemLanguage == 'pt'
+        ? const Locale('pt', 'BR')
+        : Locale(_defaultSystemLanguage);
     final contain = L10n.all.where((locale) => locale == languague);
 
     if (contain.isNotEmpty) {
-      _locale = _defaultLanguage == 'pt'
-          ? Locale('pt', 'BR')
-          : Locale(_defaultLanguage);
+      locale = _defaultSystemLanguage == 'pt'
+          ? const Locale('pt', 'BR')
+          : Locale(_defaultSystemLanguage);
     } else {
-      _locale = Locale('en');
+      locale = const Locale('en');
     }
     notifyListeners();
   }

@@ -67,7 +67,7 @@ class _AppLogoState extends State<AppLogo> {
                       ),
                     ),
                     Text(
-                      'F:2.2.3',
+                      'F:2.2.3\nL:1.5.3',
                       style: TextStyle(
                         fontSize: 12,
                         color: Color(0xffc4efed),
