@@ -12,34 +12,33 @@ class AppBottomNavigationBar extends StatelessWidget {
 
     return BottomAppBar(
       color: Colors.indigo,
-      notchMargin: 6.0,
-      shape: AutomaticNotchedShape(
+      notchMargin: 6,
+      shape: const AutomaticNotchedShape(
         RoundedRectangleBorder(),
         StadiumBorder(
           side: BorderSide(),
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Row(
-          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.code,
                 color: Colors.white,
               ),
               onPressed: () =>
-                  AppUtils.navigateToScreen(0, context, currentRoute),
+                  AppUtils.navigateToScreen(context, 0, currentRoute),
             ),
             IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.info_outline,
                 color: Colors.white,
               ),
               onPressed: () =>
-                  AppUtils.navigateToScreen(2, context, currentRoute),
+                  AppUtils.navigateToScreen(context, 2, currentRoute),
             ),
           ],
         ),

@@ -1,9 +1,9 @@
 class AppRoutes {
-  static final appLogo = '/';
-  static final snippetDart = '/snippet-dart';
-  static final appSettings = '/app-settings';
-  static final snippetWidgets = '/snippet-widgets';
-  static final snippetShow = '/snippet-show';
-  static final snippetFilter = '/snippet-filter';
-  static final appInfo = '/app-info';
+  static const appLogo = '/';
+  static const snippetDart = '/snippet-dart';
+  static const appSettings = '/app-settings';
+  static const snippetWidgets = '/snippet-widgets';
+  static const snippetShow = '/snippet-show';
+  static const snippetFilter = '/snippet-filter';
+  static const appInfo = '/app-info';
 }

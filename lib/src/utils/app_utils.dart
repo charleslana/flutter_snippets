@@ -7,30 +7,30 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 
 class AppUtils {
-  static void navigateToScreen(int index, BuildContext context, currentRoute) {
+  static void navigateToScreen(
+      BuildContext context, int index, String? currentRoute) {
     switch (index) {
       case 0:
-        currentRoute != AppRoutes.snippetDart
-            ? Navigator.of(context).pushNamed(AppRoutes.snippetDart)
-            : null;
+        if (currentRoute != AppRoutes.snippetDart) {
+          Navigator.of(context).pushNamed(AppRoutes.snippetDart);
+        }
         break;
       case 1:
-        currentRoute != AppRoutes.snippetWidgets
-            ? Navigator.of(context)
-                .pushReplacementNamed(AppRoutes.snippetWidgets)
-            : null;
+        if (currentRoute != AppRoutes.snippetWidgets) {
+          Navigator.of(context).pushReplacementNamed(AppRoutes.snippetWidgets);
+        }
         break;
       case 2:
-        currentRoute != AppRoutes.appInfo
-            ? Navigator.of(context).pushNamed(AppRoutes.appInfo)
-            : null;
+        if (currentRoute != AppRoutes.appInfo) {
+          Navigator.of(context).pushNamed(AppRoutes.appInfo);
+        }
         break;
       default:
-        Navigator.of(context).pushReplacementNamed(AppRoutes.snippetDart);
+        Navigator.of(context).pushReplacementNamed(AppRoutes.snippetWidgets);
     }
   }
 
-  static void toast(String message, BuildContext context) {
+  static void toast(BuildContext context, String message) {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -43,17 +43,17 @@ class AppUtils {
     );
   }
 
-  static void copyCode(String data, BuildContext context) {
+  static void copyCode(BuildContext context, String data) {
     final copy = ClipboardData(text: data);
     Clipboard.setData(copy).then(
-      (_) => toast(AppLocalizations.of(context)!.utilCopyCodeMessage, context),
+      (_) => toast(context, AppLocalizations.of(context)!.utilCopyCodeMessage),
     );
   }
 
   static String removeDiacritics(String string) {
-    var withDiacritics =
+    const withDiacritics =
         'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
-    var withoutDiacritics =
+    const withoutDiacritics =
         'AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
 
     for (int i = 0; i < withDiacritics.length; i++) {
@@ -62,16 +62,16 @@ class AppUtils {
     return string;
   }
 
-  static void alert(String? message, BuildContext context) {
+  static void alert(BuildContext context, String? message) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
           insetPadding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.08),
-          title: Center(
+          title: const Center(
             child: Icon(
-              Icons.lightbulb,
+              Icons.help_outline,
               size: 40,
             ),
           ),
@@ -79,7 +79,6 @@ class AppUtils {
               ? Text(AppLocalizations.of(context)!.utilAlertNoInformation)
               : SingleChildScrollView(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
@@ -92,8 +91,8 @@ class AppUtils {
                 ),
           actions: [
             TextButton(
-              child: Text('Ok'),
               onPressed: () => Navigator.pop(context, true),
+              child: const Text('Ok'),
             ),
           ],
         );
@@ -114,7 +113,7 @@ class AppUtils {
     return value.toDate();
   }
 
-  static StreamTransformer transformer<T>(
+  static StreamTransformer<dynamic, dynamic> transformer<T>(
           T Function(Map<String, dynamic> json) fromJson) =>
       StreamTransformer<QuerySnapshot<Map<String, dynamic>>,
           List<T>>.fromHandlers(

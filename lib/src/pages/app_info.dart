@@ -24,7 +24,7 @@ class _AppInfoState extends State<AppInfo> {
       await launch(url);
     } else {
       AppUtils.toast(
-          '${AppLocalizations.of(context)!.appInfoLaunchError} $url', context);
+          context, '${AppLocalizations.of(context)!.appInfoLaunchError} $url');
     }
   }
 

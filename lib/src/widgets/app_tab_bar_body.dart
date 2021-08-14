@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
 
 class AppTabBarBody extends StatelessWidget {
-  final Widget? widget;
-  final String data;
-  final TabController tabController;
-
   const AppTabBarBody({
     Key? key,
     this.widget,
@@ -13,35 +9,38 @@ class AppTabBarBody extends StatelessWidget {
     required this.tabController,
   }) : super(key: key);
 
+  final Widget? widget;
+  final String data;
+  final TabController tabController;
+
   @override
   Widget build(BuildContext context) {
     return TabBarView(
-      physics: BouncingScrollPhysics(
+      physics: const BouncingScrollPhysics(
         parent: AlwaysScrollableScrollPhysics(),
       ),
       controller: tabController,
       children: [
         Padding(
-          padding: EdgeInsets.all(10.0),
-          child: widget != null
-              ? widget
-              : Card(
-                  elevation: 0,
-                  child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(
-                      parent: AlwaysScrollableScrollPhysics(),
-                    ),
-                    child: Text(
-                      data,
-                      style: TextStyle(
-                        fontSize: 16.0,
-                      ),
+          padding: const EdgeInsets.all(10),
+          child: widget ??
+              Card(
+                elevation: 0,
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics(),
+                  ),
+                  child: Text(
+                    data,
+                    style: const TextStyle(
+                      fontSize: 16,
                     ),
                   ),
                 ),
+              ),
         ),
         Padding(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10),
           child: Card(
             elevation: 0,
             child: Row(
@@ -49,19 +48,19 @@ class AppTabBarBody extends StatelessWidget {
               children: [
                 Expanded(
                   child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(
+                    physics: const BouncingScrollPhysics(
                       parent: AlwaysScrollableScrollPhysics(),
                     ),
                     child: Text(
                       data,
-                      style: TextStyle(
-                        fontSize: 16.0,
+                      style: const TextStyle(
+                        fontSize: 16,
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Align(
                     alignment: Alignment.topRight,
                     child: CircleAvatar(
@@ -69,10 +68,10 @@ class AppTabBarBody extends StatelessWidget {
                       radius: 20,
                       child: IconButton(
                         color: Colors.black,
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.content_copy,
                         ),
-                        onPressed: () => AppUtils.copyCode(data, context),
+                        onPressed: () => AppUtils.copyCode(context, data),
                       ),
                     ),
                   ),

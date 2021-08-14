@@ -12,12 +12,12 @@ class AppFloatingActionButton extends StatelessWidget {
 
     return FloatingActionButton.extended(
       backgroundColor: Colors.purple,
-      onPressed: () => AppUtils.navigateToScreen(1, context, currentRoute),
-      icon: Icon(
+      onPressed: () => AppUtils.navigateToScreen(context, 1, currentRoute),
+      icon: const Icon(
         Icons.widgets,
         color: Colors.white,
       ),
-      label: Text(
+      label: const Text(
         'Widgets',
         style: TextStyle(
           color: Colors.white,
