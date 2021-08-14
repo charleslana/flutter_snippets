@@ -1,22 +1,14 @@
-// operador spread (...)
-// list
-
 void main() {
-  List<int> list1 = [1, 2, 3];
+  final List<int> list1 = [1, 2, 3];
 
-  List<int> list2 = [...list1];
-  List<int> list3 = [0, ...list2];
+  final List<int> list2 = [...list1];
+  final List<int> list3 = [0, ...list2];
 
-  print('list2 = ' + list2.toString());
-  print('list3 = ' + list3.toString());
-}
+  print('list2 = $list2');
+  print('list3 = $list3');
 
-// operador spread (...)
-// Map<K,V> key and value
-
-void main() {
-  Map<int, String> map1 = {1: 'Flutter1', 2: 'Flutter2'};
-  Map<int, String> map2 = {3: 'Flutter3', 4: 'Flutter4'};
-  Map<int, String> resultado = {...map1, ...map2};
-  print(resultado);
+  final Map<int, String> map1 = {1: 'Flutter1', 2: 'Flutter2'};
+  final Map<int, String> map2 = {3: 'Flutter3', 4: 'Flutter4'};
+  final Map<int, String> result = {...map1, ...map2};
+  print(result);
 }

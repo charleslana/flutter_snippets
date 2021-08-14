@@ -65,7 +65,7 @@
     "menuAdvancedMap": "Map",
     "menuAdvancedOperatorSpread": "Operator Spread",
     "menuAdvancedCascadeOperator": "Cascade Operator",
-    "menuAdvancedPubspec": "Pubspec",
+    "menuAdvancedPubSpec": "PubSpec",
     "menuWidgetCreate": "Creation Widgets",
     "menuWidgetCreateStateless": "Widget Stateless",
     "menuWidgetCreateStateful": "Widget Stateful",

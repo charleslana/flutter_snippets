@@ -1,50 +1,44 @@
-// construtor
-// com o uso de propriedas privadas
-// o underscore é o caractere de privado
-
 class Calculate1 {
-  late double _height;
-  late double _weight;
-
-  // construtor
-
   Calculate1(this._height, this._weight);
-}
 
-void main() {
-  final bmi = Calculate1(1.70, 60);
-  print(bmi);
-}
+  final double _height;
+  final double _weight;
 
-// construtor com propriedade nomeada
-// neste caso não é permitido propriedade privada
+  void total() {
+    print(_height);
+    print(_weight);
+  }
+}
 
 class Calculate2 {
-  late double height;
-  late double weight;
-
   Calculate2({required this.height, required this.weight});
-}
 
-void main() {
-  final bmi = Calculate2(height: 1.70, weight: 60);
-  print(bmi);
-}
+  double height;
+  double weight;
 
-// para usar propriedade privada no construtor
-// é necessário declarar dentro do escopo do construtor
+  void total() {
+    print(height);
+    print(weight);
+  }
+}
 
 class Calculate3 {
-  late double _height;
-  late double _weight;
-
   Calculate3({required double height, required double weight}) {
     _height = height;
     _weight = weight;
   }
+
+  late double _height;
+  late double _weight;
+
+  void total() {
+    print(_height);
+    print(_weight);
+  }
 }
 
 void main() {
-  final bmi = Calculate3(height: 1.70, weight: 60);
-  print(bmi);
+  Calculate1(1.70, 60).total();
+  Calculate2(height: 1.70, weight: 60).total();
+  Calculate3(height: 1.70, weight: 60).total();
 }

@@ -312,14 +312,14 @@ class SnippetDart extends StatelessWidget {
                     ),
                   ),
                   AppMenu(
-                    text: AppLocalizations.of(context)!.menuAdvancedPubspec,
+                    text: AppLocalizations.of(context)!.menuAdvancedPubSpec,
                     icon: Icons.public,
                     onPressed: () => Navigator.of(context).pushNamed(
                       AppRoutes.snippetShow,
                       arguments: SnippetShowModel(
-                        data: AppConstants.txtSnippetPubspec,
+                        data: AppConstants.txtSnippetPubSpec,
                         title:
-                            AppLocalizations.of(context)!.menuAdvancedPubspec,
+                            AppLocalizations.of(context)!.menuAdvancedPubSpec,
                       ),
                     ),
                   ),

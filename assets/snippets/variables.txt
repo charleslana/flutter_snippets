@@ -1,66 +1,27 @@
-// variável
-// pode ser alterada no escopo
-// declarando com "var" não pode tipar
-
-void main() {
-    var example1 = 'Primeiro';
-    example1 = 'Primeiro alterado';
-    print(example1); 
-}
-
-// variável com tipagem
-
-void main() {
-    int example2 = 2;
-    print(example2); 
-}
-
-// constantes
-// pode tipar
-
-void main() {
-    const String example3 = 'Terceiro';
-    // não pode ser declarado novamente em sua inicialização
-    // example3 = 'Terceiro alterado';
-    print(example3); 
-}
-
-// final
-// pode tipar
-
-void main() {
-    final String example4 = 'Quarto';
-    // não pode ser declarado novamente em sua inicialização
-    // example4 = 'Quarto alterado';
-    print(example4); 
-}
-
-// static em classes
-
-class Example5 {
-  static const String example5 = 'Quinto';
+class Example {
+  static const example4 = 'Example4';
 }
 
 void main() {
-  final _example5 = Example5.example5;
-  print(_example5);
-}
+  var example1 = 'Example1';
+  print(example1);
 
-// late
-// pode tipar
-// é inicializada lentamente, até que a variável seja declarada
+  example1 = 'Example1 updated';
+  print(example1);
 
-void main() {
-  late bool example6;
-  example6 = true;
-  print(example6);
-}
+  const int example2 = 2;
+  print(example2);
 
-// void
+  final List<String> example3 = ['List1', 'List2'];
+  print(example3);
 
-void main() {
-  // variável void
-  void text = 'Text';
-  
-  // print(text); // não há retorno
+  const _example4 = Example.example4;
+  print(_example4);
+
+  late bool example5;
+  example5 = true;
+  print(example5);
+
+  void example6() => print('Example6');
+  example6();
 }

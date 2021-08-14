@@ -1,86 +1,37 @@
-// estender classe
-
 class Animal {
   String name = 'Animal';
 
-  void eat() {
-    print('Animais comem');
-  }
+  void eat() => print('Animals eat');
 }
 
 class Bird extends Animal {
-  @override
-  String name = 'Pássaro';
+  String newName = 'Bird';
 
-  void fly() {
-    print('Pássaros voam');
-  }
+  void fly() => print('Birds fly');
 }
-
-void main() {
-  var animal = Animal();
-  print(animal.name);
-  animal.eat();
-
-  var bird = Bird();
-  print(bird.name);
-  bird.eat();
-  bird.fly();
-}
-
-// estender várias classes
-// neste caso a uma limitação da classe estendida
-// a classe estendida não deve estender de outra
 
 class Vehicle {
-  void move() {
-    print('move');
-  }
+  void move() => print('Move');
 }
 
-class FlyObject {
-  void fly() {
-    print('voa');
-  }
+mixin FlyObject {
+  void fly() => print('Fly');
 }
 
 class Airplane extends Vehicle with FlyObject {
-  void fly() => print('voa');
+  @override
+  void fly() => print('Fly airplane');
 }
 
-class Animal {
-  void eat() {
-    print('come');
-  }
-}
-
-class Bird extends Animal with FlyObject {
-  void fly() {
-    print('voa');
-  }
-}
-
-void main() {
-  var airplane = Airplane();
-  airplane.move();
-  airplane.fly();
-
-  var bird = Bird();
-  bird.eat();
-  bird.fly();
-}
-
-// classe estendida com o with
-
-class Parent1 {
+mixin Parent1 {
   void function1() => print('function 1');
 }
 
-class Parent2 {
+mixin Parent2 {
   void function2() => print('function 2');
 }
 
-class Parent3 {
+mixin Parent3 {
   void function3() => print('function 3');
 }
 
@@ -89,9 +40,23 @@ class Child with Parent1, Parent2, Parent3 {
 }
 
 void main() {
-  var child = Child();
-  child.function1();
-  child.function2();
-  child.function3();
-  child.function4();
+  final animal = Animal();
+  print(animal.name);
+  animal.eat();
+
+  final bird = Bird();
+  print(bird.name);
+  bird
+    ..eat()
+    ..fly();
+
+  Airplane()
+    ..move()
+    ..fly();
+
+  Child()
+    ..function1()
+    ..function2()
+    ..function3()
+    ..function4();
 }

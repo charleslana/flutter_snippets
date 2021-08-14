@@ -1,23 +1,16 @@
-// nomenclaturas
+void main() {
+  const String PascalCase = 'PascalCase';
+  print(PascalCase);
 
-// para classe utiliza-se o PascalCase
+  const String myCamelCase = 'myCamelCase';
+  print(myCamelCase);
 
-class MyClass {}
+  const String my_snake_case = 'my_snake_case';
+  print(my_snake_case);
 
-// para variáveis, constantes, propriedades de classes utiliza-se o camelCase
+  const String MY_SNAKE_CASE_CAPS = 'MY_SNAKE_CASE_CAPS';
+  print(MY_SNAKE_CASE_CAPS);
 
-void myCamelCase = null;
-
-final static myCamelCase = null;
-
-// para nomes de arquivos do dart utiliza-se snake_case
-
-my_snake_case.dart
-
-// snake_case com caixa alta (não recomendado)
-
-const MY_SNAKE_CASE = null;
-
-// para rotas de navegação utiliza-se o kebab-case
-
-final String myRoute = 'my-route';
+  const String myKebabCase = 'my-kebab-case';
+  print(myKebabCase);
+}

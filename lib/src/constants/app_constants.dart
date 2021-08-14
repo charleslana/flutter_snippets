@@ -20,7 +20,7 @@ class AppConstants {
   static const txtSnippetMap = 'map';
   static const txtSnippetOperatorSpread = 'operator_spread';
   static const txtSnippetCascadeOperator = 'cascade_operator';
-  static const txtSnippetPubspec = 'pubspec';
+  static const txtSnippetPubSpec = 'pubspec';
   static const txtSnippetWidgetStateless = 'widget_stateless';
   static const txtSnippetWidgetStateful = 'widget_stateful';
   static const txtSnippetWidgetSafeArea = 'widget_safe_area';

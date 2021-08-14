@@ -1,20 +1,10 @@
-// pubspec.yaml
-
-// adicionar as packages
-
 dependencies:
-  // exemplo
-
   flutter_launcher_icons: ^0.9.0
-
-// adicione o caminho das imagens
 
 flutter:
   assets:
     - assets/images/
     - assets/images/icons/
-      
-  // adicione suas fontes
       
   fonts:
     - family: Schyler
@@ -23,12 +13,9 @@ flutter:
         - asset: fonts/Schyler-Italic.ttf
           style: italic
             
-// gerar ícone para a aplicação, necessário a dependência listada acima
-            
 flutter_icons:
   android: true
   ios: true
   image_path: assets/images/icons/icon.png
 
-// executar no terminal
 flutter pub run flutter_launcher_icons:main

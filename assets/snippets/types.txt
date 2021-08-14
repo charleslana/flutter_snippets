@@ -1,13 +1,19 @@
 void main() {
-  int number = 1; // número inteiro
+  const int number = 1;
+  print(number);
 
-  double numberDecimal = 1.0; // número decimal
+  const double numberDecimal = 1.2;
+  print(numberDecimal);
 
-  num numberBoth = 1; // número inteiro ou decimal
+  const num numberBoth = 1;
+  print(numberBoth);
 
-  String string = 'Hello'; // texto
+  const String string = 'Hello';
+  print(string);
 
-  bool isActive = true; // valor lógico
+  const bool isActive = true;
+  print(isActive);
 
-  dynamic mutable = '0string'; // valor mutável , indiferente
+  const dynamic mutable = '$number $string $isActive';
+  print(mutable);
 }

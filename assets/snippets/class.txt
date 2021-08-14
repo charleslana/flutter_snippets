@@ -1,17 +1,14 @@
-// classe
-
 class People {
   late int id;
   late String name;
 
   void hello() {
-    print('Olá, meu nome é $name');
+    print('Hello, my name is $name');
   }
 }
 
 void main() {
-  final people = People();
-
-  people.name = 'Flutter';
-  people.hello();
+  People()
+    ..name = 'Flutter'
+    ..hello();
 }

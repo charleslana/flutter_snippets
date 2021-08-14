@@ -1,12 +1,8 @@
 void main() {
-  // linha comentada
-  
-  var main = 1;
-  
-  /*  linha comentada
-   *  outra linha comentada
-   *  fim do comentário
-   */
-  
-  print(main);
+  // comment
+
+  /*
+  * comment
+  * comment2
+  */
 }

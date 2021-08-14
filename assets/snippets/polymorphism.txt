@@ -1,11 +1,7 @@
-// polimorfismo ou sobrescrever
-
 class Vehicle {
-  String name = 'Veículo';
+  String name = 'Vehicle';
 
-  void move() {
-    print('$name move');
-  }
+  void move() => print('$name move');
 
   void addFuel(int fuel) {}
 }
@@ -13,30 +9,26 @@ class Vehicle {
 class Airplane extends Vehicle {
   late int _fuel;
 
-  // sobrescrita
+  String newName = 'Airplane';
 
   @override
-  String name = 'Airbus A380';
+  void addFuel(int fuel) => _fuel = fuel;
 
-  // sobrescrita
-  
   @override
-  void addFuel(int fuel) {
-    _fuel = fuel;
-  }
+  void move() => print('$newName move');
 
-  void fly() {
-    print('$name voa com $_fuel litro(s)');
-  }
+  void fly() => print('$newName fly with $_fuel liters');
 }
 
 void main() {
-  var vehicle = Vehicle();
+  final vehicle = Vehicle();
   print(vehicle.name);
   vehicle.move();
 
-  var airPlane = Airplane();
-  print(airPlane.name);
-  airPlane.addFuel(15);
-  airPlane.fly();
+  final airPlane = Airplane();
+  print(airPlane.newName);
+  airPlane
+    ..addFuel(15)
+    ..move()
+    ..fly();
 }

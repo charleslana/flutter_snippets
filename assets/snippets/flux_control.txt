@@ -1,8 +1,5 @@
-// controle de fluxo
-// if else
-
 void main() {
-  final bool condition = false;
+  const condition = false;
 
   if (condition) {
     print(true);
@@ -10,25 +7,21 @@ void main() {
     print(false);
   }
 
-  // switch case
-
-  final String command = 'APPROVED';
+  const String command = 'command1';
 
   switch (command) {
-    case 'PENDING':
-      print(command);
+    case 'command1':
+      print('command1');
       break;
-    case 'APPROVED':
-      print(command);
+    case 'command2':
+      print('command2');
       break;
-    case 'DENIED':
-      print(command);
+    case 'command3':
+      print('command3');
       break;
     default:
       print(command);
   }
-
-  // while
 
   late bool isDone = true;
 
@@ -42,15 +35,9 @@ void main() {
     isDone = true;
   } while (!isDone);
 
-  // for
-
   for (var i = 0; i < 5; i++) {
     print(i);
   }
 
-  // for each
-  final List<int> numbers = [0, 1, 2, 3, 4, 5];
-  for (var number in numbers) {
-    print(number);
-  }
+  [0, 1, 2, 3, 4, 5].forEach(print);
 }

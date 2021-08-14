@@ -1,25 +1,18 @@
-// divisão por inteiro é necessário arredondar o número
-// utiliza o caractere "~" antes da divisão
-
 void main() {
-  int x = 4 ~/ 2;
-  int y = 3 ~/ 2;
+  const int x = 4 ~/ 2;
+  const int y = 3 ~/ 2;
 
   print(x);
   print(y);
-}
 
-// demais operadores
+  const double a = 4 / 2;
+  const double b = 3 / 2;
+  const double c = 1 + 1;
+  const double d = 2 * 2;
+  const double e = 1 - 1;
+  const double f = a % 2;
 
-void main() {
-  double a = 4 / 2;
-  double b = 3 / 2;
-  double c = 1 + 1;
-  double d = 2 * 2;
-  double e = 1 - 1;
-  double f = a % 2;
-
-  var rest = a % 2 == 0 ? 'Par' : 'Impar';
+  const remains = a % 2 == 0 ? 'Even' : 'Odd';
 
   print(a);
   print(b);
@@ -27,5 +20,5 @@ void main() {
   print(d);
   print(e);
   print(f);
-  print(rest);
+  print(remains);
 }

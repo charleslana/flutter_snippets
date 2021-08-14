@@ -1,20 +1,15 @@
-// getter e setter
-
 class People {
   late String _name;
 
-  // getter
   String get name => _name;
 
-  // setter
-  void set name(String name) => _name = name;
+  set name(String name) => _name = name;
 
-  String show() => _name;
+  void show() => print(_name);
 }
 
 void main() {
-  final people = People();
-
-  people.name = 'Flutter';
-  print(people.show());
+  People()
+    ..name = 'Flutter'
+    ..show();
 }

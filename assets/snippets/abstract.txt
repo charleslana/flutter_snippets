@@ -1,13 +1,12 @@
-// classe abstrata
-// não pode ser instanciada
-// mas pode ser estendida
-
 abstract class Vehicle {
+  late int fuel;
+
   void addFuel(int fuel);
 }
 
 class Airplane extends Vehicle {
   late int _fuel;
+
   @override
   void addFuel(int fuel) {
     _fuel = fuel;
@@ -17,7 +16,7 @@ class Airplane extends Vehicle {
 }
 
 void main() {
-  var airPlane = Airplane();
-  airPlane.addFuel(20);
-  airPlane.fly();
+  Airplane()
+    ..addFuel(20)
+    ..fly();
 }

@@ -47,7 +47,7 @@
     "menuAdvancedMap": "Map",
     "menuAdvancedOperatorSpread": "Operador Spread",
     "menuAdvancedCascadeOperator": "Operador Cascada",
-    "menuAdvancedPubspec": "Pubspec",
+    "menuAdvancedPubSpec": "PubSpec",
     "menuWidgetCreate": "Widgets de Creación",
     "menuWidgetCreateStateless": "Widget Apátrida",
     "menuWidgetCreateStateful": "Widget Con el estado",
