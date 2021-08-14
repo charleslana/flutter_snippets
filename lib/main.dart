@@ -76,51 +76,49 @@ class MyAppMaterial extends StatelessWidget {
       ],
       initialRoute: AppRoutes.appLogo,
       onGenerateRoute: (settings) {
-        if (settings.name == AppRoutes.appLogo) {
-          return AppRoutePage(
-              widget: const AppLogo(), routeName: AppRoutes.appLogo);
-        }
+        final routeName = settings.name;
 
-        if (settings.name == AppRoutes.snippetWidgets) {
-          return AppRoutePage(
-              widget: const SnippetWidgets(),
-              routeName: AppRoutes.snippetWidgets);
-        }
+        switch (routeName) {
+          case AppRoutes.appLogo:
+            return AppRoutePage(
+                widget: const AppLogo(), routeName: AppRoutes.appLogo);
 
-        if (settings.name == AppRoutes.snippetDart) {
-          return AppRoutePage(
-              widget: const SnippetDart(), routeName: AppRoutes.snippetDart);
-        }
+          case AppRoutes.snippetWidgets:
+            return AppRoutePage(
+                widget: const SnippetWidgets(),
+                routeName: AppRoutes.snippetWidgets);
 
-        if (settings.name == AppRoutes.appSettings) {
-          return AppRoutePage(
-              widget: const AppSettings(), routeName: AppRoutes.appSettings);
-        }
+          case AppRoutes.snippetDart:
+            return AppRoutePage(
+                widget: const SnippetDart(), routeName: AppRoutes.snippetDart);
 
-        if (settings.name == AppRoutes.snippetShow) {
-          return AppRoutePage(
-            widget: const SnippetShow(),
-            routeName: AppRoutes.snippetShow,
-            arguments: settings.arguments,
-          );
-        }
+          case AppRoutes.appSettings:
+            return AppRoutePage(
+                widget: const AppSettings(), routeName: AppRoutes.appSettings);
 
-        if (settings.name == AppRoutes.snippetFilter) {
-          return AppRoutePage(
-            widget: const SnippetFilter(),
-            routeName: AppRoutes.snippetFilter,
-            arguments: settings.arguments,
-          );
-        }
+          case AppRoutes.snippetShow:
+            return AppRoutePage(
+              widget: const SnippetShow(),
+              routeName: AppRoutes.snippetShow,
+              arguments: settings.arguments,
+            );
 
-        if (settings.name == AppRoutes.appInfo) {
-          return AppRoutePage(
-              widget: const AppInfo(), routeName: AppRoutes.appInfo);
-        }
+          case AppRoutes.snippetFilter:
+            return AppRoutePage(
+              widget: const SnippetFilter(),
+              routeName: AppRoutes.snippetFilter,
+              arguments: settings.arguments,
+            );
 
-        return AppRoutePage(
-            widget: const SnippetWidgets(),
-            routeName: AppRoutes.snippetWidgets);
+          case AppRoutes.appInfo:
+            return AppRoutePage(
+                widget: const AppInfo(), routeName: AppRoutes.appInfo);
+
+          default:
+            return AppRoutePage(
+                widget: const SnippetWidgets(),
+                routeName: AppRoutes.snippetWidgets);
+        }
       },
     );
   }
