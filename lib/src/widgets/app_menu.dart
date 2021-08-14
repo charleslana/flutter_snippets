@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppMenu extends StatelessWidget {
-  final String text;
-  final IconData icon;
-  final VoidCallback onPressed;
-
   const AppMenu({
     Key? key,
     required this.text,
@@ -12,12 +8,20 @@ class AppMenu extends StatelessWidget {
     required this.onPressed,
   }) : super(key: key);
 
+  final String text;
+  final IconData icon;
+  final VoidCallback onPressed;
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height / 9.8;
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsets.symmetric(vertical: 5),
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          minimumSize: Size(double.maxFinite, height),
+        ),
+        onPressed: onPressed,
         child: Row(
           children: [
             Icon(
@@ -26,20 +30,16 @@ class AppMenu extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   text,
-                  style: TextStyle(fontSize: 18),
+                  style: const TextStyle(fontSize: 18),
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
             ),
           ],
         ),
-        style: ElevatedButton.styleFrom(
-          minimumSize: Size(double.maxFinite, height),
-        ),
-        onPressed: onPressed,
       ),
     );
   }

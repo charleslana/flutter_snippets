@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 
 class AppCustomBar extends StatelessWidget with PreferredSizeWidget {
-  final String title;
-
   const AppCustomBar({
     required this.title,
     Key? key,
   }) : super(key: key);
 
+  final String title;
+
   @override
-  Size get preferredSize => Size.fromHeight(56);
+  Size get preferredSize => const Size.fromHeight(56);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class AppCustomBar extends StatelessWidget with PreferredSizeWidget {
       backgroundColor: Colors.indigo,
       actions: [
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.settings,
           ),
           onPressed: () => currentRoute != AppRoutes.appSettings

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppRoutePage extends PageRouteBuilder {
-  final Widget widget;
-  final String routeName;
-  final Object? arguments;
-
+class AppRoutePage extends PageRouteBuilder<dynamic> {
   AppRoutePage({
     required this.widget,
     required this.routeName,
@@ -22,11 +18,11 @@ class AppRoutePage extends PageRouteBuilder {
               Animation<double> animation,
               Animation<double> secondaryAnimation,
               Widget child) {
-            const begin = Offset(0.0, 1.0);
+            const begin = Offset(0, 1);
             const end = Offset.zero;
             const curve = Curves.ease;
 
-            var tween =
+            final tween =
                 Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
 
             return SlideTransition(
@@ -35,4 +31,8 @@ class AppRoutePage extends PageRouteBuilder {
             );
           },
         );
+
+  final Widget widget;
+  final String routeName;
+  final Object? arguments;
 }
