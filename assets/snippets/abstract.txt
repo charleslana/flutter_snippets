@@ -8,9 +8,7 @@ class Airplane extends Vehicle {
   late int _fuel;
 
   @override
-  void addFuel(int fuel) {
-    _fuel = fuel;
-  }
+  void addFuel(int fuel) => _fuel = fuel;
 
   void fly() => print(_fuel);
 }
