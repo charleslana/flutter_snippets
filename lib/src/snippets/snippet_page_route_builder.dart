@@ -6,34 +6,32 @@ class SnippetPageRouteBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             Navigator.of(context).push(_createRoute());
           },
-          child: Text('Go!'),
+          child: const Text('Go to route'),
         ),
       ),
     );
   }
 }
 
-Route _createRoute() {
+Route<dynamic> _createRoute() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => Page2(),
+    pageBuilder: (context, animation, secondaryAnimation) =>
+        const SnippetPageRouteBuilderPage2(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       return ScaleTransition(
         scale: Tween<double>(
-          begin: 0.0,
-          end: 1.0,
+          begin: 0,
+          end: 1,
         ).animate(
           CurvedAnimation(
             parent: animation,
-            curve: Interval(
-              0.00,
+            curve: const Interval(
+              0,
               0.50,
               curve: Curves.bounceIn,
             ),
@@ -42,13 +40,13 @@ Route _createRoute() {
         child: ScaleTransition(
           scale: Tween<double>(
             begin: 1.5,
-            end: 1.0,
+            end: 1,
           ).animate(
             CurvedAnimation(
               parent: animation,
-              curve: Interval(
+              curve: const Interval(
                 0.50,
-                1.00,
+                1,
                 curve: Curves.easeIn,
               ),
             ),
@@ -60,15 +58,19 @@ Route _createRoute() {
   );
 }
 
-class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
+class SnippetPageRouteBuilderPage2 extends StatelessWidget {
+  const SnippetPageRouteBuilderPage2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Center(
-        child: Text('Page 2'),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Back'),
+        ),
       ),
     );
   }

@@ -15,14 +15,14 @@ class _SnippetSwitchListTileState extends State<SnippetSwitchListTile> {
     return Scaffold(
       body: Center(
         child: SwitchListTile(
-          title: Text('Hello World'),
+          title: const Text('Hello World'),
           value: _value,
           onChanged: (bool? value) {
             setState(() {
               _value = value!;
             });
           },
-          secondary: Icon(Icons.hourglass_empty),
+          secondary: const Icon(Icons.hourglass_empty),
         ),
       ),
     );

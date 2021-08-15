@@ -9,16 +9,17 @@ class SnippetExpansionPanelList extends StatefulWidget {
 }
 
 class _SnippetExpansionPanelListState extends State<SnippetExpansionPanelList> {
-  List<Item> _generateItems(int numberOfItems) {
-    return List<Item>.generate(numberOfItems, (int index) {
-      return Item(
-        headerValue: 'Painel $index',
+  List<SnippetExpansionPanelListItem> _generateItems(int numberOfItems) {
+    return List<SnippetExpansionPanelListItem>.generate(numberOfItems,
+        (int index) {
+      return SnippetExpansionPanelListItem(
+        headerValue: 'Panel $index',
         expandedValue: 'Item $index',
       );
     });
   }
 
-  late List<Item> _data = _generateItems(8);
+  late final List<SnippetExpansionPanelListItem> _data = _generateItems(8);
 
   Widget _buildPanel() {
     return ExpansionPanelList(
@@ -27,7 +28,7 @@ class _SnippetExpansionPanelListState extends State<SnippetExpansionPanelList> {
           _data[index].isExpanded = !isExpanded;
         });
       },
-      children: _data.map<ExpansionPanel>((Item item) {
+      children: _data.map<ExpansionPanel>((SnippetExpansionPanelListItem item) {
         return ExpansionPanel(
           headerBuilder: (BuildContext context, bool isExpanded) {
             return ListTile(
@@ -36,11 +37,13 @@ class _SnippetExpansionPanelListState extends State<SnippetExpansionPanelList> {
           },
           body: ListTile(
               title: Text(item.expandedValue),
-              subtitle: Text('Clique aqui para excluir o painel'),
-              trailing: Icon(Icons.delete),
+              subtitle: const Text('Tap to delete'),
+              trailing: const Icon(Icons.delete),
               onTap: () {
                 setState(() {
-                  _data.removeWhere((Item currentItem) => item == currentItem);
+                  _data.removeWhere(
+                      (SnippetExpansionPanelListItem currentItem) =>
+                          item == currentItem);
                 });
               }),
           isExpanded: item.isExpanded,
@@ -61,14 +64,14 @@ class _SnippetExpansionPanelListState extends State<SnippetExpansionPanelList> {
   }
 }
 
-class Item {
-  String expandedValue;
-  String headerValue;
-  bool isExpanded;
-
-  Item({
+class SnippetExpansionPanelListItem {
+  SnippetExpansionPanelListItem({
     required this.expandedValue,
     required this.headerValue,
     this.isExpanded = false,
   });
+
+  String expandedValue;
+  String headerValue;
+  bool isExpanded;
 }

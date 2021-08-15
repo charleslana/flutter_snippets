@@ -1,14 +1,14 @@
-// Button
-// OutlinedButton with radius
-// botão outlined com radius
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,25 +16,27 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: OutlinedButton(
-          child: Text('Botão com radius'),
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(18.0),
+              borderRadius: BorderRadius.circular(18),
             ),
-            side: BorderSide(width: 2, color: Colors.blue),
+            side: const BorderSide(width: 2, color: Colors.blue),
           ),
           onPressed: () {},
+          child: const Text('Radius'),
         ),
       ),
     );

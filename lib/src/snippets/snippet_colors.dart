@@ -9,7 +9,7 @@ class SnippetColors extends StatelessWidget {
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               'Hello',
               style: TextStyle(

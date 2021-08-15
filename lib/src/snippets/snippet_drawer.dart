@@ -1,51 +1,47 @@
 import 'package:flutter/material.dart';
 
 class SnippetDrawer extends StatelessWidget {
-  SnippetDrawer({Key? key}) : super(key: key);
-
-  final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
+  const SnippetDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState> key = GlobalKey();
+
     return Scaffold(
       drawerEnableOpenDragGesture: false,
-      key: _drawerKey,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text('Drawer'),
-      ),
+      key: key,
       body: Center(
         child: ElevatedButton(
-          child: Text('Abrir Drawer'),
-          onPressed: () => _drawerKey.currentState!.openDrawer(),
+          onPressed: () => key.currentState!.openDrawer(),
+          child: const Text('Open Drawer'),
         ),
       ),
       drawer: Drawer(
         child: ListView(
           children: [
-            UserAccountsDrawerHeader(
-              accountName: Text('Teste'),
-              accountEmail: Text('teste@teste'),
+            const UserAccountsDrawerHeader(
+              accountName: Text('Test'),
+              accountEmail: Text('test@test'),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.white,
                 child: Text(
                   'T',
-                  style: TextStyle(fontSize: 40.0),
+                  style: TextStyle(fontSize: 40),
                 ),
               ),
             ),
             ListTile(
-              leading: Icon(Icons.star),
-              title: Text('Texto'),
-              subtitle: Text('Texto'),
-              trailing: Icon(Icons.arrow_forward),
+              leading: const Icon(Icons.star),
+              title: const Text('Text 1'),
+              subtitle: const Text('Text 1'),
+              trailing: const Icon(Icons.arrow_forward),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text('Texto 2'),
-              subtitle: Text('Texto 2'),
-              trailing: Icon(Icons.arrow_forward),
+              leading: const Icon(Icons.account_circle),
+              title: const Text('Text 2'),
+              subtitle: const Text('Text 2'),
+              trailing: const Icon(Icons.arrow_forward),
               onTap: () {
                 Navigator.pop(context);
               },

@@ -8,8 +8,8 @@ class SnippetElevatedButton extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          child: Text('Texto com backgroundColor'),
           onPressed: () {},
+          child: const Text('backgroundColor'),
         ),
       ),
     );

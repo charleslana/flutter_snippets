@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,23 +16,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyAppMaterialState createState() => _MyAppMaterialState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  List<String> _cities = [
-    'Betim',
-    'Contagem',
-    'Belo Horizonte',
+class _MyAppMaterialState extends State<MyAppMaterial> {
+  final List<String> _cities = [
+    'City 1',
+    'City 2',
+    'City 3',
   ];
   late String _selectedItem;
 
@@ -51,10 +55,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Selecione a cidade'),
+            const Text('Select city'),
             DropdownButton<String>(
               items: _cities.map((String dropDownStringItem) {
                 return DropdownMenuItem<String>(
@@ -62,17 +65,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(dropDownStringItem),
                 );
               }).toList(),
-              onChanged: (String? novoItemSelecionado) {
-                _dropDownItemSelected(novoItemSelecionado!);
+              onChanged: (String? newItemSelected) {
+                _dropDownItemSelected(newItemSelected!);
                 setState(() {
-                  _selectedItem = novoItemSelecionado;
+                  _selectedItem = newItemSelected;
                 });
               },
               value: _selectedItem,
             ),
             Text(
-              'A cidade selecionada foi \n$_selectedItem',
-              style: TextStyle(fontSize: 20),
+              'The selected city was\n$_selectedItem',
+              style: const TextStyle(fontSize: 20),
             ),
           ],
         ),

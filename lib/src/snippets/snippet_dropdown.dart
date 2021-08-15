@@ -8,10 +8,10 @@ class SnippetDropdown extends StatefulWidget {
 }
 
 class _SnippetDropdownState extends State<SnippetDropdown> {
-  List<String> _cities = [
-    'Betim',
-    'Contagem',
-    'Belo Horizonte',
+  final List<String> _cities = [
+    'City 1',
+    'City 2',
+    'City 3',
   ];
   late String _selectedItem;
 
@@ -34,10 +34,9 @@ class _SnippetDropdownState extends State<SnippetDropdown> {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Selecione a cidade'),
+            const Text('Select city'),
             DropdownButton<String>(
               items: _cities.map((String dropDownStringItem) {
                 return DropdownMenuItem<String>(
@@ -45,17 +44,17 @@ class _SnippetDropdownState extends State<SnippetDropdown> {
                   child: Text(dropDownStringItem),
                 );
               }).toList(),
-              onChanged: (String? novoItemSelecionado) {
-                _dropDownItemSelected(novoItemSelecionado!);
+              onChanged: (String? newItemSelected) {
+                _dropDownItemSelected(newItemSelected!);
                 setState(() {
-                  _selectedItem = novoItemSelecionado;
+                  _selectedItem = newItemSelected;
                 });
               },
               value: _selectedItem,
             ),
             Text(
-              'A cidade selecionada foi \n$_selectedItem',
-              style: TextStyle(fontSize: 20),
+              'The selected city was\n$_selectedItem',
+              style: const TextStyle(fontSize: 20),
             ),
           ],
         ),

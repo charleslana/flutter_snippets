@@ -953,7 +953,7 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetTooltip,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetBasicTooltip,
-                            widget: SnippetTooltip(),
+                            widget: const SnippetTooltip(),
                             tip: AppLocalizations.of(context)!.tipTooltip,
                           ),
                         ),
@@ -1409,7 +1409,7 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetDrawer,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedDrawer,
-                            widget: SnippetDrawer(),
+                            widget: const SnippetDrawer(),
                             tip: AppLocalizations.of(context)!.tipDrawer,
                           ),
                         ),
@@ -1451,7 +1451,7 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetGridView,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedGridView,
-                            widget: SnippetGridView(),
+                            widget: const SnippetGridView(),
                             tip: AppLocalizations.of(context)!.tipGridView,
                           ),
                         ),
@@ -1521,7 +1521,7 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetSendDataToScreen,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedSendDataToScreen,
-                            widget: SnippetSendDataToScreen(),
+                            widget: const SnippetSendDataToScreen(),
                             tip: AppLocalizations.of(context)!.tipSendData,
                           ),
                         ),
@@ -1535,7 +1535,7 @@ class SnippetWidgets extends StatelessWidget {
                             data: AppConstants.txtSnippetWidgetPopupMenuButton,
                             title: AppLocalizations.of(context)!
                                 .menuWidgetAdvancedPopupMenuButton,
-                            widget: SnippetPopupMenuButton(),
+                            widget: const SnippetPopupMenuButton(),
                             tip: AppLocalizations.of(context)!
                                 .tipPopupMenuButton,
                           ),

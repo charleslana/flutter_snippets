@@ -5,11 +5,11 @@ class SnippetRotatedBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: RotatedBox(
           quarterTurns: 3,
-          child: const Text('Hello World!'),
+          child: Text('Hello World'),
         ),
       ),
     );

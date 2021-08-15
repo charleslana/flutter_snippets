@@ -7,7 +7,7 @@ class SnippetDataTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: DataTable(
-        columns: [
+        columns: const [
           DataColumn(
             label: Text(
               'ID',
@@ -27,7 +27,7 @@ class SnippetDataTable extends StatelessWidget {
             ),
           ),
         ],
-        rows: [
+        rows: const [
           DataRow(
             cells: [
               DataCell(Text('1')),

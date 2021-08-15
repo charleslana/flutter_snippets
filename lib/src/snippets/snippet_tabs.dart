@@ -9,12 +9,18 @@ class SnippetTabs extends StatefulWidget {
 
 class _SnippetTabsState extends State<SnippetTabs>
     with TickerProviderStateMixin {
-  late TabController _tabController;
+  late TabController _controller;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: 3);
+    _controller = TabController(vsync: this, length: 3);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -23,29 +29,29 @@ class _SnippetTabsState extends State<SnippetTabs>
       appBar: AppBar(
         automaticallyImplyLeading: false,
         bottom: TabBar(
-          controller: _tabController,
-          tabs: [
+          controller: _controller,
+          tabs: const [
             Tab(
-              text: 'Primeiro',
+              text: 'First',
             ),
             Tab(
-              text: 'Segundo',
+              text: 'Second',
             ),
             Tab(
-              text: 'Terceiro',
+              text: 'Third',
             ),
           ],
         ),
-        title: Text('Abas'),
+        title: const Text('Tabs'),
       ),
       body: TabBarView(
-        controller: _tabController,
+        controller: _controller,
         children: [
           Container(
             color: Colors.deepOrangeAccent,
-            child: Center(
+            child: const Center(
               child: Text(
-                'Primeira aba',
+                'First tab',
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -54,9 +60,9 @@ class _SnippetTabsState extends State<SnippetTabs>
           ),
           Container(
             color: Colors.blueGrey,
-            child: Center(
+            child: const Center(
               child: Text(
-                'Segunda aba',
+                'Second tab',
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -65,9 +71,9 @@ class _SnippetTabsState extends State<SnippetTabs>
           ),
           Container(
             color: Colors.teal,
-            child: Center(
+            child: const Center(
               child: Text(
-                'Terceira aba',
+                'Third tab',
                 style: TextStyle(
                   color: Colors.white,
                 ),

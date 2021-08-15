@@ -10,10 +10,10 @@ class SnippetStopwatch extends StatefulWidget {
 }
 
 class _SnippetStopwatchState extends State<SnippetStopwatch> {
-  Stopwatch _watch = Stopwatch();
+  final Stopwatch _watch = Stopwatch();
   late Timer _timer;
   bool _startStop = true;
-  String _elapsedTime = 'Clique no ícone';
+  String _elapsedTime = 'Tap the icon';
 
   void _startOrStop() {
     if (_startStop) {
@@ -27,7 +27,7 @@ class _SnippetStopwatchState extends State<SnippetStopwatch> {
     setState(() {
       _startStop = false;
       _watch.start();
-      _timer = Timer.periodic(Duration(milliseconds: 100), _updateTime);
+      _timer = Timer.periodic(const Duration(milliseconds: 100), _updateTime);
     });
   }
 
@@ -47,14 +47,14 @@ class _SnippetStopwatchState extends State<SnippetStopwatch> {
   }
 
   String _transformMilliSeconds(int milliseconds) {
-    int hundreds = (milliseconds / 10).truncate();
-    int seconds = (hundreds / 100).truncate();
-    int minutes = (seconds / 60).truncate();
-    int hours = (minutes / 60).truncate();
+    final int hundreds = (milliseconds / 10).truncate();
+    final int seconds = (hundreds / 100).truncate();
+    final int minutes = (seconds / 60).truncate();
+    final int hours = (minutes / 60).truncate();
 
-    String hoursStr = (hours % 60).toString().padLeft(2, '0');
-    String minutesStr = (minutes % 60).toString().padLeft(2, '0');
-    String secondsStr = (seconds % 60).toString().padLeft(2, '0');
+    final String hoursStr = (hours % 60).toString().padLeft(2, '0');
+    final String minutesStr = (minutes % 60).toString().padLeft(2, '0');
+    final String secondsStr = (seconds % 60).toString().padLeft(2, '0');
 
     return '$hoursStr:$minutesStr:$secondsStr';
   }
@@ -62,7 +62,6 @@ class _SnippetStopwatchState extends State<SnippetStopwatch> {
   void _updateTime(Timer timer) {
     if (_watch.isRunning) {
       setState(() {
-        print('startstop Inside=$_startStop');
         _elapsedTime = _transformMilliSeconds(_watch.elapsedMilliseconds);
       });
     }
@@ -78,25 +77,26 @@ class _SnippetStopwatchState extends State<SnippetStopwatch> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               _elapsedTime,
-              style: TextStyle(fontSize: 25.0),
+              style: const TextStyle(fontSize: 25),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
                   backgroundColor: Colors.teal,
-                  onPressed: () => _startOrStop(),
-                  child:
-                      _startStop ? Icon(Icons.play_arrow) : Icon(Icons.pause),
+                  onPressed: _startOrStop,
+                  child: _startStop
+                      ? const Icon(Icons.play_arrow)
+                      : const Icon(Icons.pause),
                 ),
-                SizedBox(width: 20.0),
+                const SizedBox(width: 20),
               ],
             ),
           ],

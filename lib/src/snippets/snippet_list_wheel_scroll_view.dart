@@ -6,17 +6,13 @@ class SnippetListWheelScrollView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Mova o texto'),
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: ListWheelScrollView(
             itemExtent: 200,
             diameterRatio: 1.5,
-            children: [
+            children: const [
               Text('Flutter'),
               Text('Dart'),
               Text('Development'),

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,25 +16,25 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Text('Coluna 1'),
+        children: const [
+          Text('Column 1'),
           Spacer(),
-          Text('Coluna 2'),
+          Text('Column 2'),
           Spacer(),
-          Text('Coluna 3'),
+          Text('Column 3'),
         ],
       ),
     );

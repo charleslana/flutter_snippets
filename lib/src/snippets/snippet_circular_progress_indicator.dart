@@ -13,7 +13,7 @@ class _SnippetCircularProgressIndicatorState
   bool _isLoading = false;
 
   void _toggleLoading() {
-    _isLoading = _isLoading ? false : true;
+    _isLoading = !_isLoading;
   }
 
   @override
@@ -24,21 +24,19 @@ class _SnippetCircularProgressIndicatorState
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (_isLoading)
-              CircularProgressIndicator(
+              const CircularProgressIndicator(
                 strokeWidth: 7,
               ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
-              child: Text(
+              onPressed: () {
+                setState(_toggleLoading);
+              },
+              child: const Text(
                 'True/False',
               ),
-              onPressed: () {
-                setState(() {
-                  _toggleLoading();
-                });
-              },
             ),
           ],
         ),

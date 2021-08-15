@@ -8,10 +8,10 @@ class SnippetDismissible extends StatefulWidget {
 }
 
 class _SnippetDismissibleState extends State<SnippetDismissible> {
-  final List _state = [
-    'Minas Gerais',
-    'São Paulo',
-    'Pernambuco',
+  final List<String> _state = [
+    'State 1',
+    'State 2',
+    'State 3',
   ];
 
   void _showMessage(String text) {
@@ -20,7 +20,7 @@ class _SnippetDismissibleState extends State<SnippetDismissible> {
       SnackBar(
         content: Text(text),
         action: SnackBarAction(
-          label: 'Fechar',
+          label: 'Close',
           onPressed: () => {},
         ),
       ),
@@ -38,11 +38,11 @@ class _SnippetDismissibleState extends State<SnippetDismissible> {
             setState(() {
               _state.removeAt(index);
             });
-            _showMessage('$item foi removido');
+            _showMessage('$item was removed');
           },
           background: Container(
             color: Colors.red,
-            child: Align(
+            child: const Align(
               alignment: Alignment(-0.9, 0),
               child: Icon(
                 Icons.delete,
@@ -59,13 +59,5 @@ class _SnippetDismissibleState extends State<SnippetDismissible> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Mova o item para o lado'),
-        automaticallyImplyLeading: false,
-      ),
-      body: _body(),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(body: _body());
 }

@@ -6,26 +6,25 @@ class SnippetHero extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('First Screen'),
-        automaticallyImplyLeading: false,
-      ),
       body: Padding(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: Column(
           children: [
-            Hero(
+            const Hero(
               tag: 'HeroOne',
               child: Icon(
                 Icons.image,
-                size: 50.0,
+                size: 50,
               ),
             ),
             ElevatedButton(
-              child: Text('Go to second screen'),
               onPressed: () {
-                Navigator.push(context, CustomPageRoute(SecondScreen()));
+                Navigator.push(
+                    context,
+                    SnippetHeroCustomPageRoute<dynamic>(
+                        const SnippetHeroSecondScreen()));
               },
+              child: const Text('Go to second screen'),
             ),
           ],
         ),
@@ -34,30 +33,28 @@ class SnippetHero extends StatelessWidget {
   }
 }
 
-class SecondScreen extends StatelessWidget {
+class SnippetHeroSecondScreen extends StatelessWidget {
+  const SnippetHeroSecondScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Screen'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Hero(
+            const Hero(
               tag: 'HeroOne',
               child: Icon(
                 Icons.image,
-                size: 150.0,
+                size: 150,
               ),
             ),
             ElevatedButton(
-              child: Text('Back to first screen!'),
               onPressed: () {
                 Navigator.pop(context);
               },
+              child: const Text('Back to first screen'),
             ),
           ],
         ),
@@ -66,10 +63,10 @@ class SecondScreen extends StatelessWidget {
   }
 }
 
-class CustomPageRoute<T> extends PageRoute<T> {
-  final Widget child;
+class SnippetHeroCustomPageRoute<T> extends PageRoute<T> {
+  SnippetHeroCustomPageRoute(this.child);
 
-  CustomPageRoute(this.child);
+  final Widget child;
 
   @override
   Color get barrierColor => Colors.black;
@@ -81,7 +78,7 @@ class CustomPageRoute<T> extends PageRoute<T> {
   bool get maintainState => true;
 
   @override
-  Duration get transitionDuration => Duration(seconds: 1);
+  Duration get transitionDuration => const Duration(seconds: 1);
 
   @override
   Widget buildPage(BuildContext context, Animation<double> animation,

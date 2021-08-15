@@ -8,14 +8,10 @@ class SnippetSilverGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('SilverGrid'),
-        automaticallyImplyLeading: false,
-      ),
       body: CustomScrollView(
         slivers: [
           SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,
             ),
             delegate:
@@ -23,7 +19,7 @@ class SnippetSilverGrid extends StatelessWidget {
               return Container(
                 color:
                     Colors.primaries[Random().nextInt(Colors.primaries.length)],
-                height: 150.0,
+                height: 150,
               );
             }),
           ),

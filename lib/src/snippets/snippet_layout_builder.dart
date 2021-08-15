@@ -18,8 +18,8 @@ class SnippetLayoutBuilder extends StatelessWidget {
               alignment: Alignment.center,
               height: constraints.maxHeight * 0.5,
               width: constraints.maxWidth * 0.5,
-              child: Text(
-                'LayoutBuilder Widget',
+              child: const Text(
+                'LayoutBuilder',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

@@ -25,35 +25,43 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyAppMaterialState createState() => _MyAppMaterialState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyAppMaterialState extends State<MyAppMaterial> {
   bool _isLoading = true;
   List<Data>? _data;
 
-  void _loadJson() async {
-    dynamic data = await rootBundle.loadString('assets/json/computer.json');
+  Future<void> _loadJson() async {
+    final dynamic data =
+        await rootBundle.loadString('assets/json/computer.json');
     final jsonResponse = json.decode(data);
 
-    Computer computer = Computer.fromJson(jsonResponse);
+    final Computer computer = Computer.fromJson(jsonResponse);
 
     setState(() {
       _data = computer.data;
@@ -72,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: _isLoading
-            ? CircularProgressIndicator()
+            ? const CircularProgressIndicator()
             : ListView.builder(
                 itemCount: _data!.length,
                 itemBuilder: (context, index) {
@@ -103,20 +111,20 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class Computer {
-  List<Data>? data = [];
-
   Computer({required this.data});
 
   Computer.fromJson(Map<String, dynamic> json) {
     if (json['data'] != null) {
-      json['data'].forEach((v) {
-        data!.add(Data.fromJson(v));
+      json['data'].forEach((dynamic value) {
+        data!.add(Data.fromJson(value));
       });
     }
   }
 
+  List<Data>? data = [];
+
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
     }
@@ -125,10 +133,6 @@ class Computer {
 }
 
 class Data {
-  int id;
-  String name;
-  List<String> part;
-
   Data({
     required this.id,
     required this.name,
@@ -143,11 +147,15 @@ class Data {
     );
   }
 
+  int id;
+  String name;
+  List<String> part;
+
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['part'] = this.part;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['part'] = part;
     return data;
   }
 }

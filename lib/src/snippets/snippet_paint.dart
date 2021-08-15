@@ -6,37 +6,32 @@ class SnippetPaint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Paint'),
-        automaticallyImplyLeading: false,
-      ),
       body: Align(
         alignment: Alignment.bottomCenter,
         child: CustomPaint(
-          size: Size(400, 400),
-          painter: CurvedPainter(),
+          size: const Size(400, 400),
+          painter: SnippetPaintCurvedPainter(),
         ),
       ),
     );
   }
 }
 
-class CurvedPainter extends CustomPainter {
+class SnippetPaintCurvedPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
       ..color = Colors.teal
       ..strokeWidth = 15;
 
-    final path = Path();
-
-    path.moveTo(0, size.height * 0.7);
-    path.quadraticBezierTo(size.width * 0.25, size.height * 0.7,
-        size.width * 0.5, size.height * 0.8);
-    path.quadraticBezierTo(size.width * 0.75, size.height * 0.9,
-        size.width * 1.0, size.height * 0.8);
-    path.lineTo(size.width, size.height);
-    path.lineTo(0, size.height);
+    final path = Path()
+      ..moveTo(0, size.height * 0.7)
+      ..quadraticBezierTo(size.width * 0.25, size.height * 0.7,
+          size.width * 0.5, size.height * 0.8)
+      ..quadraticBezierTo(size.width * 0.75, size.height * 0.9, size.width * 1,
+          size.height * 0.8)
+      ..lineTo(size.width, size.height)
+      ..lineTo(0, size.height);
 
     canvas.drawPath(path, paint);
   }

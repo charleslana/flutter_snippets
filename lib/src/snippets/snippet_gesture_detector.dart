@@ -8,19 +8,17 @@ class SnippetGestureDetector extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: GestureDetector(
-          onTap: () {
-            print('Caixa clicada');
-          },
+          onTap: () {},
           child: Container(
-            height: 60.0,
-            width: 120.0,
-            padding: EdgeInsets.all(10.0),
+            height: 60,
+            width: 120,
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.cyan,
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(15),
             ),
-            child: Center(
-              child: Text('Clique Aqui'),
+            child: const Center(
+              child: Text('Tap here'),
             ),
           ),
         ),

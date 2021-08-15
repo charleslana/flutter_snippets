@@ -10,7 +10,7 @@ class SnippetCircleAvatar extends StatelessWidget {
         child: CircleAvatar(
           radius: 96,
           backgroundColor: Colors.black26,
-          child: Container(
+          child: SizedBox(
             height: 192,
             child: Image.network('https://i.imgur.com/hEbcdEB.png'),
           ),

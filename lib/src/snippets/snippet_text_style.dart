@@ -5,10 +5,10 @@ class SnippetTextStyle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text(
-          'Texto com estilização',
+          'Text',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,

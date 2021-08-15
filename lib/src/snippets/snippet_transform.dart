@@ -8,11 +8,7 @@ class SnippetTransform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Transform'),
-        automaticallyImplyLeading: false,
-      ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: SingleChildScrollView(
           child: Column(
@@ -23,48 +19,48 @@ class SnippetTransform extends StatelessWidget {
                   alignment: Alignment.topRight,
                   transform: Matrix4.skewY(0.3)..rotateZ(-math.pi / 12.0),
                   child: Container(
-                    padding: EdgeInsets.all(8.0),
-                    color: Color(0xffe8581c),
-                    child: Text('Meu Texto!'),
+                    padding: const EdgeInsets.all(8),
+                    color: const Color(0xffe8581c),
+                    child: const Text('My text'),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Transform.rotate(
                 angle: math.pi / 4,
-                child: Icon(
+                child: const Icon(
                   Icons.menu,
                   size: 40,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Transform.scale(
                 scale: 1.5,
-                child: Icon(
+                child: const Icon(
                   Icons.menu,
                   size: 40,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Transform.translate(
-                offset: Offset(50, 50),
-                child: Icon(
+                offset: const Offset(50, 50),
+                child: const Icon(
                   Icons.menu,
                   size: 40,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Transform(
                 transform: Matrix4.skewX(0.3),
-                child: Icon(
+                child: const Icon(
                   Icons.menu,
                   size: 40,
                 ),

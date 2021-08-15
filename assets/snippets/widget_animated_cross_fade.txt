@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,58 +16,57 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyAppMaterialState createState() => _MyAppMaterialState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyAppMaterialState extends State<MyAppMaterial> {
   bool _crossFadeStateShowFirst = true;
 
   void _crossFade() {
     setState(() {
-      _crossFadeStateShowFirst = _crossFadeStateShowFirst ? false : true;
+      _crossFadeStateShowFirst = !_crossFadeStateShowFirst;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimatedCrossFade'),
-        automaticallyImplyLeading: false,
-      ),
       body: Stack(
         alignment: Alignment.center,
         children: [
           AnimatedCrossFade(
-            duration: Duration(milliseconds: 500),
+            duration: const Duration(milliseconds: 500),
             sizeCurve: Curves.bounceOut,
             crossFadeState: _crossFadeStateShowFirst
                 ? CrossFadeState.showFirst
                 : CrossFadeState.showSecond,
             firstChild: Container(
               color: Colors.amber,
-              height: 100.0,
-              width: 100.0,
+              height: 100,
+              width: 100,
             ),
             secondChild: Container(
               color: Colors.lime,
-              height: 200.0,
-              width: 200.0,
+              height: 200,
+              width: 200,
             ),
           ),
           Positioned.fill(
             child: TextButton(
-              child: Text('Toque para\nAnimar a Cor e o Tamanho'),
-              onPressed: () => _crossFade(),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.transparent),
+              ),
+              onPressed: _crossFade,
+              child: const Text('Tap to\nanimate color and size'),
             ),
           ),
         ],

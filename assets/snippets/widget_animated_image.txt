@@ -1,25 +1,34 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterialMain(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyAppMaterialMain extends StatelessWidget {
+  const MyAppMaterialMain({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final topPadding = MediaQuery.of(context).padding.top;
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
             Color.fromRGBO(145, 131, 222, 1),
@@ -36,8 +45,8 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: topPadding),
-              SizedBox(height: 10),
-              AnimatedImage(),
+              const SizedBox(height: 10),
+              const MyAppMaterial(),
             ],
           ),
         ),
@@ -46,28 +55,35 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class AnimatedImage extends StatefulWidget {
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   @override
-  _AnimatedImageState createState() => _AnimatedImageState();
+  _MyAppMaterialState createState() => _MyAppMaterialState();
 }
 
-class _AnimatedImageState extends State<AnimatedImage>
+class _MyAppMaterialState extends State<MyAppMaterial>
     with SingleTickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
-    vsync: this,
-    duration: const Duration(seconds: 3),
-  )..repeat(reverse: true);
+  late AnimationController _controller;
 
   late final Animation<Offset> _animation = Tween<Offset>(
     begin: Offset.zero,
-    end: Offset(0, 0.08),
+    end: const Offset(0, 0.08),
   ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
 
   @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 3),
+    )..repeat(reverse: true);
+  }
+
+  @override
   void dispose() {
-    _controller.stop();
-    _controller.dispose();
     super.dispose();
+    _controller.dispose();
   }
 
   @override

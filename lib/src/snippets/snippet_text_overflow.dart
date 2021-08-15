@@ -9,11 +9,11 @@ class SnippetTextOverflow extends StatelessWidget {
       body: Center(
         child: Container(
           color: Colors.amber,
-          child: SizedBox(
+          child: const SizedBox(
             width: 70,
             height: 70,
             child: Text(
-              'Texto com limitação',
+              'Text with limit',
               overflow: TextOverflow.ellipsis,
             ),
           ),

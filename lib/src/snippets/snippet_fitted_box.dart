@@ -11,7 +11,7 @@ class SnippetFittedBox extends StatelessWidget {
           color: Colors.blue,
           width: 200,
           height: 200,
-          child: FittedBox(
+          child: const FittedBox(
             child: Center(
               child: Text(
                 'FittedBox',

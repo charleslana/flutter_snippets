@@ -9,9 +9,9 @@ class SnippetIconBackground extends StatelessWidget {
       body: Center(
         child: CircleAvatar(
           radius: 30,
-          backgroundColor: Color(0xff94d500),
+          backgroundColor: const Color(0xff94d500),
           child: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.black,
             ),

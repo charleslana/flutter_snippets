@@ -10,7 +10,7 @@ class SnippetAlign extends StatelessWidget {
         height: 200,
         width: 200,
         color: Colors.blue[200],
-        child: Align(
+        child: const Align(
           alignment: Alignment.bottomRight,
           child: Text(
             'Hello World!',

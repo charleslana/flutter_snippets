@@ -6,39 +6,37 @@ class SnippetBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Clique no ícone'),
+      body: const Center(
+        child: Text('Tap the icon'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
             context: context,
             builder: (BuildContext context) {
-              return Container(
-                child: Wrap(
-                  children: [
-                    ListTile(
-                      leading: Icon(Icons.music_note),
-                      title: Text('Music'),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.videocam),
-                      title: Text('Movies'),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.satellite),
-                      title: Text('Image'),
-                      onTap: () {},
-                    ),
-                  ],
-                ),
+              return Wrap(
+                children: [
+                  ListTile(
+                    leading: const Icon(Icons.music_note),
+                    title: const Text('Music'),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.videocam),
+                    title: const Text('Movies'),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.satellite),
+                    title: const Text('Image'),
+                    onTap: () {},
+                  ),
+                ],
               );
             },
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

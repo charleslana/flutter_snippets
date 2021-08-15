@@ -10,7 +10,7 @@ class SnippetLimitedBox extends StatelessWidget {
         maxHeight: 20,
         child: Container(
           color: Colors.blue,
-          child: Text(
+          child: const Text(
             'Hello World!',
             style: TextStyle(fontSize: 40),
           ),

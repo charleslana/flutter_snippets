@@ -25,9 +25,9 @@ class _SnippetAnimatedSwitcherState extends State<SnippetAnimatedSwitcher> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AnimatedSwitcher(
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               transitionBuilder: (Widget child, Animation<double> animation) {
-                return ScaleTransition(child: child, scale: animation);
+                return ScaleTransition(scale: animation, child: child);
               },
               child: Text(
                 '$_count',
@@ -35,35 +35,35 @@ class _SnippetAnimatedSwitcherState extends State<SnippetAnimatedSwitcher> {
                 style: Theme.of(context).textTheme.headline4,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
-              child: Text(
-                'Adicionar +1',
+              onPressed: _incrementCounter,
+              child: const Text(
+                'Add',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
                 ),
               ),
-              onPressed: _incrementCounter,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(
-              child: Text(
+              onPressed: () {
+                setState(() {
+                  _count = 0;
+                });
+              },
+              child: const Text(
                 'Reset',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {
-                setState(() {
-                  _count = 0;
-                });
-              },
             ),
           ],
         ),

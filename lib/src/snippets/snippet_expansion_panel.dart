@@ -47,25 +47,25 @@ class _SnippetExpansionPanelState extends State<SnippetExpansionPanel> {
                           },
                         ),
                       ),
-                      onPressed: () => null,
-                      child: Text(
+                      onPressed: null,
+                      child: const Text(
                         'All',
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
                     ),
-                    ElevatedButton(
+                    const ElevatedButton(
                       onPressed: null,
                       child: Text('Basketball'),
                     ),
                     ElevatedButton(
-                      child: Text('Football'),
                       onPressed: () {},
+                      child: const Text('Football'),
                     ),
                     ElevatedButton(
-                      child: Text('Tennis'),
                       onPressed: () {},
+                      child: const Text('Tennis'),
                     ),
                   ],
                 ),

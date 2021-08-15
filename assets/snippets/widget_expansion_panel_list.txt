@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,29 +16,29 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyAppMaterialState createState() => _MyAppMaterialState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyAppMaterialState extends State<MyAppMaterial> {
   List<Item> _generateItems(int numberOfItems) {
     return List<Item>.generate(numberOfItems, (int index) {
       return Item(
-        headerValue: 'Painel $index',
+        headerValue: 'Panel $index',
         expandedValue: 'Item $index',
       );
     });
   }
 
-  late List<Item> _data = _generateItems(8);
+  late final List<Item> _data = _generateItems(8);
 
   Widget _buildPanel() {
     return ExpansionPanelList(
@@ -52,8 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           body: ListTile(
               title: Text(item.expandedValue),
-              subtitle: Text('Clique aqui para excluir o painel'),
-              trailing: Icon(Icons.delete),
+              subtitle: const Text('Tap to delete'),
+              trailing: const Icon(Icons.delete),
               onTap: () {
                 setState(() {
                   _data.removeWhere((Item currentItem) => item == currentItem);
@@ -78,13 +82,13 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class Item {
-  String expandedValue;
-  String headerValue;
-  bool isExpanded;
-
   Item({
     required this.expandedValue,
     required this.headerValue,
     this.isExpanded = false,
   });
+
+  String expandedValue;
+  String headerValue;
+  bool isExpanded;
 }

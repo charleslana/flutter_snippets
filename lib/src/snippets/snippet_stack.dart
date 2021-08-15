@@ -11,11 +11,11 @@ class SnippetStack extends StatelessWidget {
           Container(
             color: Colors.amber,
           ),
-          Positioned(
-            bottom: 15.0,
-            left: 20.0,
+          const Positioned(
+            bottom: 15,
+            left: 20,
             child: Text(
-              'Texto posicionado',
+              'Text',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
@@ -28,14 +28,14 @@ class SnippetStack extends StatelessWidget {
             height: 100,
           ),
           Column(
-            children: [
-              Text('Texto 1'),
-              Text('Texto 2'),
+            children: const [
+              Text('Text 1'),
+              Text('Text 2'),
             ],
           ),
           Container(
-            margin: EdgeInsets.only(top: 100),
-            child: Text('Texto abaixo'),
+            margin: const EdgeInsets.only(top: 100),
+            child: const Text('Text'),
           ),
         ],
       ),

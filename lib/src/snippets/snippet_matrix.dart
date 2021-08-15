@@ -12,22 +12,18 @@ class _SnippetMatrixState extends State<SnippetMatrix> {
 
   Widget _defaultApp(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Matrix 3D, mova a tela'),
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text(
-              'Duplo toque para a tela normalizar:',
+              'Double tap to normalize screen',
             ),
           ],
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: const FloatingActionButton(
         heroTag: 'btn1',
         onPressed: null,
         tooltip: 'Nothing',

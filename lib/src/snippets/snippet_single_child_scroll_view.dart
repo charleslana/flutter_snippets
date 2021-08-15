@@ -11,22 +11,22 @@ class SnippetSingleChildScrollView extends StatelessWidget {
       body: Center(
         child: Container(
           width: width,
-          margin: EdgeInsets.all(15.0),
-          padding: EdgeInsets.all(3.0),
+          margin: const EdgeInsets.all(15),
+          padding: const EdgeInsets.all(3),
           decoration: BoxDecoration(
             border: Border.all(
               color: Colors.blueAccent,
-              width: 5.0,
+              width: 5,
             ),
           ),
-          child: SingleChildScrollView(
+          child: const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Text(
-              'Mova o texto para o lado',
+              'Move text to the side',
               style: TextStyle(
                 color: Colors.green,
                 fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+                fontSize: 20,
                 letterSpacing: 3,
                 wordSpacing: 3,
               ),

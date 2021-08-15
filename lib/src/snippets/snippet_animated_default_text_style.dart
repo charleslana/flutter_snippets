@@ -11,7 +11,7 @@ class SnippetAnimatedDefaultTextStyle extends StatefulWidget {
 class _SnippetAnimatedDefaultTextStyleState
     extends State<SnippetAnimatedDefaultTextStyle> {
   MaterialColor _color = Colors.green;
-  double _fontSize = 20.0;
+  double _fontSize = 20;
 
   void _animatedTextStyle() {
     setState(() {
@@ -28,28 +28,24 @@ class _SnippetAnimatedDefaultTextStyleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimatedDefaultTextStyle'),
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AnimatedDefaultTextStyle(
-              duration: Duration(seconds: 1),
+              duration: const Duration(seconds: 1),
               style: TextStyle(
                 color: _color,
                 fontSize: _fontSize,
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.all(10),
-                child: Text('Meu Texto'),
+                child: Text('Text'),
               ),
             ),
             ElevatedButton(
-              child: Text('Clique aqui para alterar o estilo'),
-              onPressed: () => _animatedTextStyle(),
+              onPressed: _animatedTextStyle,
+              child: const Text('Tap here to change style'),
             ),
           ],
         ),

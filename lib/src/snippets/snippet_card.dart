@@ -7,13 +7,13 @@ class SnippetCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         child: Center(
           child: Column(
             children: [
               Card(
                 child: Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -22,26 +22,26 @@ class SnippetCard extends StatelessWidget {
                         height: 150,
                         width: 150,
                       ),
-                      Text(
-                        'Um Texto grande com varias linhas Um Texto grande com varias linhas',
+                      const Text(
+                        'Title',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 20),
                       ),
-                      Text(
-                        'Um Texto',
+                      const Text(
+                        'Description',
                         style: TextStyle(fontSize: 14),
                       ),
                       ButtonTheme(
                         child: ButtonBar(
                           children: [
                             TextButton(
-                              child: const Text('DETALHES'),
                               onPressed: () {},
+                              child: const Text('DETAILS'),
                             ),
                             TextButton(
-                              child: const Text('SHARE'),
                               onPressed: () {},
+                              child: const Text('SHARE'),
                             ),
                           ],
                         ),

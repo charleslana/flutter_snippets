@@ -4,24 +4,24 @@ class SnippetDialog extends StatelessWidget {
   const SnippetDialog({Key? key}) : super(key: key);
 
   void _showAlertDialog(BuildContext context) {
-    Widget _okButton = TextButton(
-      child: Text('Ok'),
+    final Widget _okButton = TextButton(
       onPressed: () => Navigator.pop(context, true),
+      child: const Text('Ok'),
     );
 
-    Widget _cancelButton = TextButton(
-      child: Text('Cancelar'),
+    final Widget _cancelButton = TextButton(
       onPressed: () => Navigator.pop(context, false),
+      child: const Text('Cancel'),
     );
 
-    Widget _disableButton = TextButton(
-      child: Text('Desabilitado'),
+    const Widget _disableButton = TextButton(
       onPressed: null,
+      child: Text('Disabled'),
     );
 
-    AlertDialog _alert = AlertDialog(
-      title: Text('Título da dialog'),
-      content: Text('Descrição da dialog'),
+    final AlertDialog _alert = AlertDialog(
+      title: const Text('Title'),
+      content: const Text('Description'),
       actions: [
         _okButton,
         _disableButton,
@@ -39,10 +39,7 @@ class SnippetDialog extends StatelessWidget {
         return;
       }
       if (value) {
-        print(value);
-      } else {
-        print(value);
-      }
+      } else {}
     });
   }
 
@@ -51,8 +48,8 @@ class SnippetDialog extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          child: Text('Exibir Dialog'),
           onPressed: () => _showAlertDialog(context),
+          child: const Text('Show dialog'),
         ),
       ),
     );

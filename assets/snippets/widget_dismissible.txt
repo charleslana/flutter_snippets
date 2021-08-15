@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,23 +16,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyAppMaterialState createState() => _MyAppMaterialState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  final List _state = [
-    'Minas Gerais',
-    'São Paulo',
-    'Pernambuco',
+class _MyAppMaterialState extends State<MyAppMaterial> {
+  final List<String> _state = [
+    'State 1',
+    'State 2',
+    'State 3',
   ];
 
   void _showMessage(String text) {
@@ -37,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       SnackBar(
         content: Text(text),
         action: SnackBarAction(
-          label: 'Fechar',
+          label: 'Close',
           onPressed: () => {},
         ),
       ),
@@ -55,11 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
             setState(() {
               _state.removeAt(index);
             });
-            _showMessage('$item foi removido');
+            _showMessage('$item was removed');
           },
           background: Container(
             color: Colors.red,
-            child: Align(
+            child: const Align(
               alignment: Alignment(-0.9, 0),
               child: Icon(
                 Icons.delete,
@@ -76,12 +80,5 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Mova o item para o lado'),
-      ),
-      body: _body(),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(body: _body());
 }

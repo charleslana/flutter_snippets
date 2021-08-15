@@ -1,44 +1,42 @@
 import 'package:flutter/material.dart';
 
 class SnippetSendDataToScreen extends StatelessWidget {
-  SnippetSendDataToScreen({Key? key}) : super(key: key);
-
-  final _todos = List.generate(
-    20,
-    (i) => Todo(
-      'Todo $i',
-      'Uma breve descrição do todo $i',
-    ),
-  );
+  const SnippetSendDataToScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final _todos = List.generate(
+      20,
+      (index) => SnippetSendDataToScreenTodo(
+        'Title $index',
+        'Description $index',
+      ),
+    );
+
     return Scaffold(
-      body: TodosScreen(
+      body: SnippetSendDataToScreenTodosScreen(
         todos: _todos,
       ),
     );
   }
 }
 
-class Todo {
+class SnippetSendDataToScreenTodo {
+  const SnippetSendDataToScreenTodo(this.title, this.description);
+
   final String title;
   final String description;
-
-  Todo(this.title, this.description);
 }
 
-class TodosScreen extends StatelessWidget {
-  final List<Todo> todos;
-  TodosScreen({Key? key, required this.todos}) : super(key: key);
+class SnippetSendDataToScreenTodosScreen extends StatelessWidget {
+  const SnippetSendDataToScreenTodosScreen({Key? key, required this.todos})
+      : super(key: key);
+
+  final List<SnippetSendDataToScreenTodo> todos;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Todos'),
-        automaticallyImplyLeading: false,
-      ),
       body: ListView.builder(
         itemCount: todos.length,
         itemBuilder: (context, index) {
@@ -47,8 +45,9 @@ class TodosScreen extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => DetailScreen(todo: todos[index]),
+                MaterialPageRoute<dynamic>(
+                  builder: (context) =>
+                      SnippetSendDataToScreenDetailScreen(todo: todos[index]),
                 ),
               );
             },
@@ -59,19 +58,32 @@ class TodosScreen extends StatelessWidget {
   }
 }
 
-class DetailScreen extends StatelessWidget {
-  final Todo todo;
-  DetailScreen({Key? key, required this.todo}) : super(key: key);
+class SnippetSendDataToScreenDetailScreen extends StatelessWidget {
+  const SnippetSendDataToScreenDetailScreen({Key? key, required this.todo})
+      : super(key: key);
+
+  final SnippetSendDataToScreenTodo todo;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(todo.title),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Text(todo.description),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(todo.title),
+              Text(todo.description),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Back'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

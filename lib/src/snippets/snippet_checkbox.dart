@@ -16,7 +16,7 @@ class _SnippetCheckboxState extends State<SnippetCheckbox> {
       body: Center(
         child: Card(
           child: Padding(
-            padding: EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(15),
             child: SizedBox(
               width: 430,
               height: 700,
@@ -29,17 +29,17 @@ class _SnippetCheckboxState extends State<SnippetCheckbox> {
                       fontSize: 30,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Text(
                         'Hello World accept! $_value',
-                        style: TextStyle(fontSize: 17.0),
+                        style: const TextStyle(fontSize: 17),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Checkbox(
                         value: _value,
                         onChanged: (value) {

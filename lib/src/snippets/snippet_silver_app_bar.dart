@@ -10,15 +10,15 @@ class SnippetSilverAppBar extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             automaticallyImplyLeading: false,
-            title: Text('SliverAppBar'),
+            title: const Text('SliverAppBar'),
             backgroundColor: Colors.green,
-            expandedHeight: 200.0,
+            expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
               background: Container(color: Colors.brown),
             ),
           ),
           SliverFixedExtentList(
-            itemExtent: 150.0,
+            itemExtent: 150,
             delegate: SliverChildListDelegate(
               [
                 Container(color: Colors.red),

@@ -8,8 +8,8 @@ class SnippetClipRRect extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(300.0),
-          child: Container(
+          borderRadius: BorderRadius.circular(300),
+          child: SizedBox(
             height: 200,
             child: Image.network('https://i.imgur.com/w6vxktt.png'),
           ),

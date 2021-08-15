@@ -9,32 +9,32 @@ class SnippetIndexedStack extends StatefulWidget {
 
 class _SnippetIndexedStackState extends State<SnippetIndexedStack>
     with TickerProviderStateMixin {
-  late TabController _tabController;
+  late TabController _controller;
   int _tabIndex = 0;
-  final List<Widget> _myTabs = [
+  final List<Widget> _myTabs = const [
     Tab(text: 'World 1'),
     Tab(text: 'World 2'),
     Tab(text: 'World 3'),
   ];
 
   void _handleTabSelection() {
-    if (!_tabController.indexIsChanging) {
+    if (!_controller.indexIsChanging) {
       setState(() {
-        _tabIndex = _tabController.index;
+        _tabIndex = _controller.index;
       });
     }
   }
 
   @override
   void initState() {
-    _tabController = TabController(length: 3, vsync: this);
-    _tabController.addListener(_handleTabSelection);
+    _controller = TabController(length: 3, vsync: this);
+    _controller.addListener(_handleTabSelection);
     super.initState();
   }
 
   @override
   void dispose() {
-    _tabController.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -44,7 +44,7 @@ class _SnippetIndexedStackState extends State<SnippetIndexedStack>
       body: Center(
         child: IndexedStack(
           index: _tabIndex,
-          children: [
+          children: const [
             Text('Hello World 1'),
             Text('Hello World 2'),
             Text('Hello World 3'),
@@ -52,7 +52,7 @@ class _SnippetIndexedStackState extends State<SnippetIndexedStack>
         ),
       ),
       bottomNavigationBar: TabBar(
-        controller: _tabController,
+        controller: _controller,
         labelColor: Colors.grey,
         isScrollable: true,
         tabs: _myTabs,

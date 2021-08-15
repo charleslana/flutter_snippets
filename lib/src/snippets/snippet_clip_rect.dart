@@ -8,12 +8,11 @@ class SnippetClipRect extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ClipRect(
-          child: Container(
+          child: SizedBox(
             height: 200,
             child: Align(
-              alignment: Alignment.center,
               widthFactor: 0.4,
-              heightFactor: 1.0,
+              heightFactor: 1,
               child: Image.network('https://i.imgur.com/w6vxktt.png'),
             ),
           ),

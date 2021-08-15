@@ -6,17 +6,14 @@ class SnippetPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Arraste a tela'),
-        automaticallyImplyLeading: false,
-      ),
       body: PageView(
+        onPageChanged: (index) {},
         children: [
           Container(
             color: Colors.orange,
-            child: Center(
+            child: const Center(
               child: Text(
-                'Primeira página',
+                'First page',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -26,9 +23,9 @@ class SnippetPageView extends StatelessWidget {
           ),
           Container(
             color: Colors.brown,
-            child: Center(
+            child: const Center(
               child: Text(
-                'Segunda página',
+                'Second page',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -37,7 +34,6 @@ class SnippetPageView extends StatelessWidget {
             ),
           ),
         ],
-        onPageChanged: (index) {},
       ),
     );
   }

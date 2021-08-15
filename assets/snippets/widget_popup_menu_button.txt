@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,30 +16,31 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final GlobalKey<PopupMenuButtonState<int>> _key = GlobalKey();
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<PopupMenuButtonState<int>> _key = GlobalKey();
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('PopupMenuButton'),
+        title: const Text('PopupMenuButton'),
+        automaticallyImplyLeading: false,
         actions: [
           PopupMenuButton<int>(
             key: _key,
-            icon: Icon(Icons.settings),
-            onSelected: (value) {
-              print(value);
-            },
+            icon: const Icon(Icons.settings),
+            onSelected: print,
             itemBuilder: (context) {
-              return <PopupMenuEntry<int>>[
-                PopupMenuItem(child: Text('0'), value: 0),
-                PopupMenuItem(child: Text('1'), value: 1),
+              return const [
+                PopupMenuItem(value: 0, child: Text('0')),
+                PopupMenuItem(value: 1, child: Text('1')),
               ];
             },
           ),
@@ -44,7 +49,7 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () => _key.currentState!.showButtonMenu(),
-          child: Text('Abrir/fechar menu'),
+          child: const Text('Open menu'),
         ),
       ),
     );

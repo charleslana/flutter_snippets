@@ -14,11 +14,12 @@ class _SnippetLoadJsonState extends State<SnippetLoadJson> {
   bool _isLoading = true;
   List<Data>? _data;
 
-  void _loadJson() async {
-    dynamic data = await rootBundle.loadString('assets/json/computer.json');
+  Future<void> _loadJson() async {
+    final dynamic data =
+        await rootBundle.loadString('assets/json/computer.json');
     final jsonResponse = json.decode(data);
 
-    Computer computer = Computer.fromJson(jsonResponse);
+    final Computer computer = Computer.fromJson(jsonResponse);
 
     setState(() {
       _data = computer.data;
@@ -37,7 +38,7 @@ class _SnippetLoadJsonState extends State<SnippetLoadJson> {
     return Scaffold(
       body: Center(
         child: _isLoading
-            ? CircularProgressIndicator()
+            ? const CircularProgressIndicator()
             : ListView.builder(
                 itemCount: _data!.length,
                 itemBuilder: (context, index) {
@@ -68,20 +69,20 @@ class _SnippetLoadJsonState extends State<SnippetLoadJson> {
 }
 
 class Computer {
-  List<Data>? data = [];
-
   Computer({required this.data});
 
   Computer.fromJson(Map<String, dynamic> json) {
     if (json['data'] != null) {
-      json['data'].forEach((v) {
-        data!.add(Data.fromJson(v));
+      json['data'].forEach((dynamic value) {
+        data!.add(Data.fromJson(value));
       });
     }
   }
 
+  List<Data>? data = [];
+
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
     }
@@ -90,10 +91,6 @@ class Computer {
 }
 
 class Data {
-  int id;
-  String name;
-  List<String> part;
-
   Data({
     required this.id,
     required this.name,
@@ -108,11 +105,15 @@ class Data {
     );
   }
 
+  int id;
+  String name;
+  List<String> part;
+
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['part'] = this.part;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['part'] = part;
     return data;
   }
 }

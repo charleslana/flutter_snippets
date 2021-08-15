@@ -8,8 +8,8 @@ class SnippetTextButton extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: TextButton(
-          child: Text('Botão com texto'),
           onPressed: () {},
+          child: const Text('Button'),
         ),
       ),
     );

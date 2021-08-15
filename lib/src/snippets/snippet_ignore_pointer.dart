@@ -27,48 +27,47 @@ class _SnippetIgnorePointerState extends State<SnippetIgnorePointer> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             IgnorePointer(
-              ignoring: true,
               child: ElevatedButton(
-                child: Text(
-                  'Adicionar +1 / Não clicável',
+                onPressed: _incrementCounter,
+                child: const Text(
+                  'Add',
                   style: TextStyle(
                     fontSize: 18,
                   ),
                 ),
-                onPressed: _incrementCounter,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
-              child: Text(
-                'Adicionar +1 Clicável',
+              onPressed: _incrementCounter,
+              child: const Text(
+                'Add',
                 style: TextStyle(
                   fontSize: 18,
                 ),
               ),
-              onPressed: _incrementCounter,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(
-              child: Text(
-                'Reset',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
               onPressed: () {
                 setState(() {
                   _counter = 0;
                 });
               },
+              child: const Text(
+                'Reset',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
             ),
           ],
         ),

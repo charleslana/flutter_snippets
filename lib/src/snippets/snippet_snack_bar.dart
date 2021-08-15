@@ -9,7 +9,7 @@ class SnippetSnackBar extends StatelessWidget {
       SnackBar(
         content: Text(text),
         action: SnackBarAction(
-          label: 'Fechar',
+          label: 'Close',
           onPressed: () => {},
         ),
       ),
@@ -21,8 +21,8 @@ class SnippetSnackBar extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          child: Text('Abrir o SnackBar'),
-          onPressed: () => _showMessage('Meu snackbar', context),
+          onPressed: () => _showMessage('My snackbar', context),
+          child: const Text('Open snackBar'),
         ),
       ),
     );

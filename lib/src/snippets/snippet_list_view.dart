@@ -6,25 +6,21 @@ class SnippetListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('List View'),
-        automaticallyImplyLeading: false,
-      ),
       body: ListView(
-        children: [
+        children: const [
           ListTile(
             leading: Icon(Icons.map),
-            title: Text('Mapa'),
+            title: Text('Map'),
             trailing: Icon(Icons.settings),
           ),
           ListTile(
             leading: Icon(Icons.photo_album),
-            title: Text('Álbum'),
+            title: Text('Album'),
             trailing: Icon(Icons.settings),
           ),
           ListTile(
             leading: Icon(Icons.phone),
-            title: Text('Fone'),
+            title: Text('Phone'),
             trailing: Icon(Icons.settings),
           ),
         ],

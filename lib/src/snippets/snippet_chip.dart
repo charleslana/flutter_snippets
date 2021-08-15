@@ -18,10 +18,6 @@ class _SnippetChipState extends State<SnippetChip> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Chip'),
-        automaticallyImplyLeading: false,
-      ),
       body: SingleChildScrollView(
         child: Wrap(
           spacing: 6,
@@ -29,7 +25,7 @@ class _SnippetChipState extends State<SnippetChip> {
             final int index = _items.indexOf(item);
 
             return Padding(
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: Chip(
                 avatar: CircleAvatar(
                   child: Text(item.substring(0, 1)),

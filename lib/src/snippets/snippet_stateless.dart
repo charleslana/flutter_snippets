@@ -5,18 +5,10 @@ class SnippetStateless extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Stateless'),
-        automaticallyImplyLeading: false,
-      ),
+    return const Scaffold(
       body: Center(
         child: Text(
           'Stateless',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-          ),
         ),
       ),
     );

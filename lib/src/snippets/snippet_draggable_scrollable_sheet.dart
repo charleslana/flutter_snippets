@@ -12,7 +12,7 @@ class _SnippetDraggableScrollableSheetState
     extends State<SnippetDraggableScrollableSheet>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  Duration _duration = Duration(milliseconds: 500);
+  final Duration _duration = const Duration(milliseconds: 500);
 
   void _showSheet() {
     showModalBottomSheet(
@@ -26,7 +26,7 @@ class _SnippetDraggableScrollableSheetState
               color: Colors.blue[500],
               child: ListView.builder(
                 controller: controller,
-                itemBuilder: (_, i) => ListTile(title: Text('Item $i')),
+                itemBuilder: (_, index) => ListTile(title: Text('Item $index')),
               ),
             );
           },
@@ -37,9 +37,7 @@ class _SnippetDraggableScrollableSheetState
 
   void toggleIcon() {
     _controller.isDismissed
-        ? _controller.forward().whenComplete(() {
-            _showSheet();
-          })
+        ? _controller.forward().whenComplete(_showSheet)
         : _controller.reverse();
   }
 
@@ -58,22 +56,17 @@ class _SnippetDraggableScrollableSheetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Ola'),
-      ),
       floatingActionButton: GestureDetector(
         child: FloatingActionButton(
           heroTag: 'bnt1',
+          elevation: 5,
+          backgroundColor: Colors.deepOrange,
+          foregroundColor: Colors.white,
+          onPressed: toggleIcon,
           child: AnimatedIcon(
             icon: AnimatedIcons.menu_close,
             progress: _controller,
           ),
-          elevation: 5,
-          backgroundColor: Colors.deepOrange,
-          foregroundColor: Colors.white,
-          onPressed: () async {
-            toggleIcon();
-          },
         ),
       ),
     );

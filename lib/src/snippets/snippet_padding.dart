@@ -7,13 +7,12 @@ class SnippetPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: Container(
-          padding: EdgeInsets.all(0.0),
           color: Colors.green,
           width: double.infinity,
           height: double.infinity,
-          child: Text('Padding'),
+          child: const Text('Padding'),
         ),
       ),
     );

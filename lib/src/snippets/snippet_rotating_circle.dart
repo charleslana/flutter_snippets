@@ -12,7 +12,7 @@ class SnippetRotatingCircle extends StatefulWidget {
 class _SnippetRotatingCircleState extends State<SnippetRotatingCircle>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation _animation;
+  late Animation<dynamic> _animation;
 
   void _animationStatusListener(AnimationStatus status) {
     if (status == AnimationStatus.completed) {
@@ -40,7 +40,7 @@ class _SnippetRotatingCircleState extends State<SnippetRotatingCircle>
     super.initState();
 
     _controller = AnimationController(
-      duration: Duration(
+      duration: const Duration(
         seconds: 2,
       ),
       vsync: this,
@@ -49,8 +49,9 @@ class _SnippetRotatingCircleState extends State<SnippetRotatingCircle>
       parent: _controller,
       curve: Curves.fastOutSlowIn,
     );
-    _controller.addStatusListener(_animationStatusListener);
-    _controller.forward();
+    _controller
+      ..addStatusListener(_animationStatusListener)
+      ..forward();
   }
 
   @override
@@ -62,22 +63,18 @@ class _SnippetRotatingCircleState extends State<SnippetRotatingCircle>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Rotating Circle'),
-        automaticallyImplyLeading: false,
-      ),
       body: Align(
-        alignment: Alignment(0, -0.1),
+        alignment: const Alignment(0, -0.1),
         child: AnimatedBuilder(
-          child: _buildCircle(30.0),
           animation: _controller,
           builder: (BuildContext context, Widget? child) {
             return Transform.rotate(
               angle: math.pi * 2 * _animation.value,
-              origin: Offset(0, 30),
+              origin: const Offset(0, 30),
               child: child,
             );
           },
+          child: _buildCircle(30),
         ),
       ),
     );

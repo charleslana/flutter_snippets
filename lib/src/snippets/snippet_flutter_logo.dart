@@ -5,14 +5,12 @@ class SnippetFlutterLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Container(
-          child: FlutterLogo(
-            size: 300,
-            textColor: Colors.blue,
-            style: FlutterLogoStyle.stacked,
-          ),
+        child: FlutterLogo(
+          size: 300,
+          textColor: Colors.blue,
+          style: FlutterLogoStyle.stacked,
         ),
       ),
     );

@@ -35,17 +35,17 @@ class _SnippetMouseRegionState extends State<SnippetMouseRegion> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             MouseRegion(
-              child: _dot(),
               cursor: SystemMouseCursors.click,
               onEnter: (_) => _toggleDot(),
               onExit: (_) => _toggleDot(),
+              child: _dot(),
             ),
             Padding(
-              padding: EdgeInsets.all(50),
+              padding: const EdgeInsets.all(50),
               child: Visibility(
                 visible: _isVisible,
-                child: Text(
-                  'Passe o ponto',
+                child: const Text(
+                  'Tap the point',
                   style: TextStyle(fontSize: 18),
                 ),
               ),

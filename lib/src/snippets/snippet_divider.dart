@@ -8,11 +8,9 @@ class SnippetDivider extends StatelessWidget {
     return Scaffold(
       body: IntrinsicHeight(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Text('Coluna 1'),
+          children: const [
+            Text('Column'),
             Divider(),
           ],
         ),

@@ -8,10 +8,10 @@ class SnippetConstrainedBox extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints(
+          constraints: const BoxConstraints(
             maxWidth: 50,
           ),
-          child: Text('Hello World! Welcome to Flutter'),
+          child: const Text('Hello World! Welcome to Flutter'),
         ),
       ),
     );

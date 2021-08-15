@@ -18,10 +18,10 @@ class _SnippetSliderState extends State<SnippetSlider> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Text(
                 _currentValue.toStringAsFixed(0),
-                style: TextStyle(fontSize: 25),
+                style: const TextStyle(fontSize: 25),
               ),
             ),
             Slider(
@@ -31,7 +31,7 @@ class _SnippetSliderState extends State<SnippetSlider> {
                   _currentValue = newValue;
                 });
               },
-              min: 0,
+              min: 1,
               max: 100,
             ),
           ],

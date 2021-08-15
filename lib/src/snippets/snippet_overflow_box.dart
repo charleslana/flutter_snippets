@@ -18,8 +18,8 @@ class SnippetOverflowBox extends StatelessWidget {
               width: 300,
               height: 50,
               child: ElevatedButton(
-                child: Text('Click'),
                 onPressed: () {},
+                child: const Text('Tap'),
               ),
             ),
           ),

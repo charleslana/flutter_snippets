@@ -8,7 +8,7 @@ class SnippetClipOval extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ClipOval(
-          child: Container(
+          child: SizedBox(
             height: 200,
             child: Image.network('https://i.imgur.com/XGPr8YC.png'),
           ),

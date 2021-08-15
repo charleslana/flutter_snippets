@@ -8,7 +8,7 @@ class SnippetTextDefaultStyle extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          'Texto com estilo padrão',
+          'Default style',
           style: DefaultTextStyle.of(context).style,
         ),
       ),

@@ -11,10 +11,10 @@ class SnippetContainerTransform extends StatelessWidget {
         width: double.infinity,
         color: Colors.purple,
         alignment: Alignment.center,
-        margin: EdgeInsets.all(20),
-        padding: EdgeInsets.all(30),
+        margin: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(30),
         transform: Matrix4.rotationZ(0.1),
-        child: Text(
+        child: const Text(
           'Hello World!',
           style: TextStyle(fontSize: 20),
         ),

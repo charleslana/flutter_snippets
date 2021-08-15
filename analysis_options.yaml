@@ -139,6 +139,7 @@ linter:
     - provide_deprecation_message
     # - public_member_api_docs # do not use for an application, only a library
     - recursive_getters
+    - sized_box_for_whitespace
     - slash_for_doc_comments
     - sort_child_properties_last
     - sort_constructors_first

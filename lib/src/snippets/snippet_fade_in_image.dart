@@ -9,7 +9,7 @@ class SnippetFadeInImage extends StatelessWidget {
       body: Center(
         child: FadeInImage.assetNetwork(
           placeholder: 'assets/images/logo_dart.png',
-          fadeOutDuration: Duration(seconds: 2),
+          fadeOutDuration: const Duration(seconds: 2),
           image: 'https://i.imgur.com/w6vxktt.png',
         ),
       ),

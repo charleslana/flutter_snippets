@@ -12,12 +12,15 @@ class SnippetShaderMask extends StatelessWidget {
           shaderCallback: (Rect bounds) {
             return RadialGradient(
               center: Alignment.topLeft,
-              radius: 1.0,
-              colors: <Color>[Colors.yellow, Colors.deepOrange.shade900],
+              radius: 1,
+              colors: [
+                Colors.yellow,
+                Colors.deepOrange.shade900,
+              ],
               tileMode: TileMode.mirror,
             ).createShader(bounds);
           },
-          child: Text('ShaderMask'),
+          child: const Text('ShaderMask'),
         ),
       ),
     );

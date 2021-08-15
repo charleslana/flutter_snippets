@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,22 +16,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final _todos = List.generate(
-    20,
-    (i) => Todo(
-      'Todo $i',
-      'Uma breve descrição do todo $i',
-    ),
-  );
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final _todos = List.generate(
+      20,
+      (index) => Todo(
+        'Title $index',
+        'Description $index',
+      ),
+    );
+
     return Scaffold(
       body: TodosScreen(
         todos: _todos,
@@ -37,22 +43,20 @@ class MyHomePage extends StatelessWidget {
 }
 
 class Todo {
+  const Todo(this.title, this.description);
+
   final String title;
   final String description;
-
-  Todo(this.title, this.description);
 }
 
 class TodosScreen extends StatelessWidget {
+  const TodosScreen({Key? key, required this.todos}) : super(key: key);
+
   final List<Todo> todos;
-  TodosScreen({Key? key, required this.todos}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Todos'),
-      ),
       body: ListView.builder(
         itemCount: todos.length,
         itemBuilder: (context, index) {
@@ -61,7 +65,7 @@ class TodosScreen extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
+                MaterialPageRoute<dynamic>(
                   builder: (context) => DetailScreen(todo: todos[index]),
                 ),
               );
@@ -74,18 +78,30 @@ class TodosScreen extends StatelessWidget {
 }
 
 class DetailScreen extends StatelessWidget {
+  const DetailScreen({Key? key, required this.todo}) : super(key: key);
+
   final Todo todo;
-  DetailScreen({Key? key, required this.todo}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(todo.title),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Text(todo.description),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(todo.title),
+              Text(todo.description),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Back'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

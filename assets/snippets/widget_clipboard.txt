@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,32 +17,26 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final _key = GlobalKey<ScaffoldState>();
-
     return Scaffold(
-      key: _key,
-      appBar: AppBar(
-        title: Text('Copiar'),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
-            child: CustomToolTip(text: 'Clique aqui para copiar o texto'),
             onTap: () {},
+            child: const CustomToolTip(text: 'Tap here to copy text'),
           ),
-          TextField(
-            decoration: InputDecoration(hintText: 'Cole aqui'),
+          const TextField(
+            decoration: InputDecoration(hintText: 'Paste here'),
           ),
         ],
       ),
@@ -47,28 +45,27 @@ class MyHomePage extends StatelessWidget {
 }
 
 class CustomToolTip extends StatelessWidget {
-  final String text;
+  const CustomToolTip({required this.text, Key? key}) : super(key: key);
 
-  CustomToolTip({required this.text});
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Tooltip(
-        preferBelow: false,
-        message: 'Copiar',
-        child: Text(text),
-      ),
       onTap: () {
-        print('clicou');
         Clipboard.setData(ClipboardData(text: text)).then((_) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Copiado para sua área de transferência!'),
+            const SnackBar(
+              content: Text('Copied'),
             ),
           );
         });
       },
+      child: Tooltip(
+        preferBelow: false,
+        message: 'Copy',
+        child: Text(text),
+      ),
     );
   }
 }

@@ -23,7 +23,7 @@ class _SnippetBottomNavigationBarState
       style: optionStyle,
     ),
     Text(
-      'Contact page',
+      'Mail page',
       style: optionStyle,
     ),
   ];
@@ -41,7 +41,7 @@ class _SnippetBottomNavigationBarState
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

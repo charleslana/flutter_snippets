@@ -1,72 +1,73 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Icon Animation',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyAppMaterialState createState() => _MyAppMaterialState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
+class _MyAppMaterialState extends State<MyAppMaterial>
     with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
+  late AnimationController _controller;
   bool isPlaying = false;
 
   void _handleOnPressed() {
     setState(() {
       isPlaying = !isPlaying;
-      isPlaying
-          ? _animationController.forward()
-          : _animationController.reverse();
+      isPlaying ? _controller.forward() : _controller.reverse();
     });
   }
 
   @override
   void initState() {
     super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 450));
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 450),
+    );
   }
 
   @override
   void dispose() {
     super.dispose();
-    _animationController.dispose();
+    _controller.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Icon Animation'),
-        centerTitle: true,
-      ),
-      body: Container(
-        child: Center(
-          child: IconButton(
-            iconSize: 150,
-            splashColor: Colors.greenAccent,
-            icon: AnimatedIcon(
-              icon: AnimatedIcons.play_pause,
-              progress: _animationController,
-              color: Colors.greenAccent,
-            ),
-            onPressed: () => _handleOnPressed(),
+      body: Center(
+        child: IconButton(
+          iconSize: 150,
+          splashColor: Colors.greenAccent,
+          icon: AnimatedIcon(
+            icon: AnimatedIcons.play_pause,
+            progress: _controller,
+            color: Colors.greenAccent,
           ),
+          onPressed: _handleOnPressed,
         ),
       ),
     );

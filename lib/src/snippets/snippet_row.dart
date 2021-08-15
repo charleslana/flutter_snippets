@@ -9,13 +9,12 @@ class SnippetRow extends StatelessWidget {
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Text('Linha 1'),
+        children: const [
+          Text('Row 1'),
           VerticalDivider(),
-          Text('Linha 2'),
+          Text('Row 2'),
           VerticalDivider(),
-          Text('Linha 3'),
+          Text('Row 3'),
         ],
       ),
     );

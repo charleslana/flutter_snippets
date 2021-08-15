@@ -8,15 +8,15 @@ class SnippetFractionallySizedBox extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          width: 200.0,
-          height: 100.0,
-          color: Color.fromARGB(255, 235, 237, 237),
+          width: 200,
+          height: 100,
+          color: const Color.fromARGB(255, 235, 237, 237),
           child: FractionallySizedBox(
             widthFactor: 0.5,
             heightFactor: 0.25,
             child: ElevatedButton(
-              child: Text('Click'),
               onPressed: () {},
+              child: const Text('Tap'),
             ),
           ),
         ),

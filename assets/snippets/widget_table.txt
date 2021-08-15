@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,22 +16,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   TableRow _createLinesTable(String listSplit) {
     return TableRow(
       children: listSplit.split(',').map((name) {
         return Container(
           alignment: Alignment.center,
+          padding: const EdgeInsets.all(8),
           child: Text(
             name,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          padding: EdgeInsets.all(8),
         );
       }).toList(),
     );
@@ -38,23 +44,19 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Table(
-          defaultColumnWidth: IntrinsicColumnWidth(),
-          border: TableBorder(
+          defaultColumnWidth: const IntrinsicColumnWidth(),
+          border: const TableBorder(
             horizontalInside: BorderSide(
               color: Colors.grey,
-              style: BorderStyle.solid,
-              width: 1,
             ),
             verticalInside: BorderSide(
               color: Colors.grey,
-              style: BorderStyle.solid,
-              width: 1,
             ),
           ),
           children: [
-            _createLinesTable('Curso, Valor, Estrelas'),
+            _createLinesTable('Course, Price, Star'),
             _createLinesTable('Flutter, 100, 5'),
-            _createLinesTable('Flutter dev, 50, 4'),
+            _createLinesTable('Dart, 50, 4'),
           ],
         ),
       ),

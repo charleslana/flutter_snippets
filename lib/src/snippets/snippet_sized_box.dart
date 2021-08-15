@@ -8,7 +8,7 @@ class SnippetSizedBox extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          children: [
+          children: const [
             SizedBox(
               height: 20,
             ),
@@ -17,7 +17,7 @@ class SnippetSizedBox extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(25),
                 child: Text(
-                  'Hello World!',
+                  'Hello World',
                   style: TextStyle(color: Colors.blue),
                 ),
               ),
@@ -30,7 +30,7 @@ class SnippetSizedBox extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(25),
                 child: Text(
-                  'Hello World!',
+                  'Hello World',
                   style: TextStyle(color: Colors.blue),
                 ),
               ),

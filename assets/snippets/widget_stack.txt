@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,12 +16,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,11 +32,11 @@ class MyHomePage extends StatelessWidget {
           Container(
             color: Colors.amber,
           ),
-          Positioned(
-            bottom: 15.0,
-            left: 20.0,
+          const Positioned(
+            bottom: 15,
+            left: 20,
             child: Text(
-              'Texto posicionado',
+              'Text',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
@@ -43,14 +49,14 @@ class MyHomePage extends StatelessWidget {
             height: 100,
           ),
           Column(
-            children: [
-              Text('Texto 1'),
-              Text('Texto 2'),
+            children: const [
+              Text('Text 1'),
+              Text('Text 2'),
             ],
           ),
           Container(
-            margin: EdgeInsets.only(top: 100),
-            child: Text('Texto abaixo'),
+            margin: const EdgeInsets.only(top: 100),
+            child: const Text('Text'),
           ),
         ],
       ),

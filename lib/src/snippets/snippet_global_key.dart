@@ -8,74 +8,75 @@ class SnippetGlobalKey extends StatefulWidget {
 }
 
 class _SnippetGlobalKeyState extends State<SnippetGlobalKey> {
-  final List<String> _textFieldsValue = [];
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
-  String _text = '';
-
-  void _showList(List<String> text) {
-    setState(() {
-      _textFieldsValue.forEach((value) {
-        _text += '$value, ';
-      });
-    });
-  }
+  final GlobalKey<FormState> _key = GlobalKey<FormState>();
+  String _first = '';
+  String _second = '';
+  String _third = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Form(
-          key: _formKey,
-          child: SingleChildScrollView(
-            reverse: true,
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Primeiro',
-                  ),
-                  validator: (value) {
-                    if (value!.trim().length == 0) {
-                      return 'Não pode ser nulo';
-                    }
-                    _textFieldsValue.add(value);
-                    return null;
-                  },
+      body: Form(
+        key: _key,
+        child: SingleChildScrollView(
+          reverse: true,
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'First',
                 ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Segundo',
-                  ),
-                  validator: (value) {
-                    if (value!.trim().length == 0) {
-                      return 'Não pode ser nulo';
-                    }
-                    _textFieldsValue.add(value);
-                    return null;
-                  },
+                validator: (value) {
+                  if (value!.trim().isEmpty) {
+                    return 'Cannot be null';
+                  }
+                  setState(() {
+                    _first = value;
+                  });
+                  return null;
+                },
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Second',
                 ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Terceiro',
-                  ),
-                  validator: (value) {
-                    if (value!.trim().length == 0) {
-                      return 'Não pode ser nulo';
-                    }
-                    _textFieldsValue.add(value);
-                    return null;
-                  },
+                validator: (value) {
+                  if (value!.trim().isEmpty) {
+                    return 'Cannot be null';
+                  }
+                  setState(() {
+                    _second = value;
+                  });
+                  return null;
+                },
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Third',
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: 10.0),
-                  child: Text(_text),
-                ),
-              ],
-            ),
+                validator: (value) {
+                  if (value!.trim().isEmpty) {
+                    return 'Cannot be null';
+                  }
+                  setState(() {
+                    _third = value;
+                  });
+                  return null;
+                },
+              ),
+              Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Column(
+                    children: [
+                      Text(_first),
+                      Text(_second),
+                      Text(_third),
+                    ],
+                  )),
+            ],
           ),
         ),
       ),
@@ -83,12 +84,8 @@ class _SnippetGlobalKeyState extends State<SnippetGlobalKey> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         foregroundColor: Colors.black,
-        child: Icon(Icons.add),
-        onPressed: () {
-          _formKey.currentState!.validate();
-          print(_textFieldsValue);
-          _showList(_textFieldsValue);
-        },
+        onPressed: () => _key.currentState!.validate(),
+        child: const Icon(Icons.add),
       ),
     );
   }

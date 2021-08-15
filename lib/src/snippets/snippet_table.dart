@@ -8,11 +8,11 @@ class SnippetTable extends StatelessWidget {
       children: listSplit.split(',').map((name) {
         return Container(
           alignment: Alignment.center,
+          padding: const EdgeInsets.all(8),
           child: Text(
             name,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
-          padding: EdgeInsets.all(8),
         );
       }).toList(),
     );
@@ -23,23 +23,19 @@ class SnippetTable extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Table(
-          defaultColumnWidth: IntrinsicColumnWidth(),
-          border: TableBorder(
+          defaultColumnWidth: const IntrinsicColumnWidth(),
+          border: const TableBorder(
             horizontalInside: BorderSide(
               color: Colors.grey,
-              style: BorderStyle.solid,
-              width: 1,
             ),
             verticalInside: BorderSide(
               color: Colors.grey,
-              style: BorderStyle.solid,
-              width: 1,
             ),
           ),
           children: [
-            _createLinesTable('Curso, Valor, Estrelas'),
+            _createLinesTable('Course, Price, Star'),
             _createLinesTable('Flutter, 100, 5'),
-            _createLinesTable('Flutter dev, 50, 4'),
+            _createLinesTable('Dart, 50, 4'),
           ],
         ),
       ),

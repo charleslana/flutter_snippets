@@ -8,7 +8,7 @@ class SnippetBanner extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(10.0),
+          margin: const EdgeInsets.all(10),
           child: ClipRect(
             child: Banner(
               message: 'Text banner',
@@ -19,10 +19,10 @@ class SnippetBanner extends StatelessWidget {
                 color: Colors.green[100],
                 height: 300,
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+                  padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
                   child: Column(
                     children: [
-                      Container(
+                      SizedBox(
                         width: double.infinity,
                         height: 100,
                         child: Image.network(
@@ -30,8 +30,8 @@ class SnippetBanner extends StatelessWidget {
                           fit: BoxFit.fitWidth,
                         ),
                       ),
-                      SizedBox(height: 10),
-                      Text(
+                      const SizedBox(height: 10),
+                      const Text(
                         'Hello World!',
                         style: TextStyle(
                           color: Colors.green,
@@ -39,10 +39,10 @@ class SnippetBanner extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      Text(
+                      const Text(
                         'Hello World!',
                         style: TextStyle(
                           color: Colors.green,
@@ -50,10 +50,10 @@ class SnippetBanner extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       ElevatedButton(
-                        child: Text('Register'),
                         onPressed: () {},
+                        child: const Text('Register'),
                       ),
                     ],
                   ),

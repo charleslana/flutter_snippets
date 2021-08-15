@@ -14,7 +14,7 @@ class _SnippetTextFieldState extends State<SnippetTextField> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: TextField(
               decoration: InputDecoration(
@@ -24,9 +24,9 @@ class _SnippetTextFieldState extends State<SnippetTextField> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
                 labelText: 'Enter your username',
               ),

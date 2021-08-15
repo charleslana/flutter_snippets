@@ -8,8 +8,8 @@ class SnippetElevatedButtonIcon extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton.icon(
-          label: Text('Botão com ícone'),
-          icon: Icon(Icons.web),
+          label: const Text('Button with icon'),
+          icon: const Icon(Icons.web),
           onPressed: () {},
         ),
       ),

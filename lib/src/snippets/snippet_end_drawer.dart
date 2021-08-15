@@ -7,26 +7,17 @@ class SnippetEndDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Clique no ícone'),
+        title: const Text('Tap the icon'),
         automaticallyImplyLeading: false,
       ),
       endDrawer: Drawer(
         child: ListView.builder(itemBuilder: (BuildContext context, int index) {
           return ListTile(
-            leading: Icon(Icons.list),
+            leading: const Icon(Icons.list),
             title: Text('Item $index'),
-            trailing: Icon(Icons.done),
+            trailing: const Icon(Icons.done),
           );
         }),
-      ),
-      body: Center(
-        child: Text(
-          'EndDrawer',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
       ),
     );
   }

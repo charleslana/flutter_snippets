@@ -8,8 +8,8 @@ class SnippetClipPath extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ClipPath(
-          clipper: TriangleClipper(),
-          child: Container(
+          clipper: SnippetClipPathTriangleClipper(),
+          child: SizedBox(
             height: 200,
             child: Image.network('https://i.imgur.com/w6vxktt.png'),
           ),
@@ -19,17 +19,17 @@ class SnippetClipPath extends StatelessWidget {
   }
 }
 
-class TriangleClipper extends CustomClipper<Path> {
+class SnippetClipPathTriangleClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    final path = Path();
-    path.moveTo(size.width / 2, 0.0);
-    path.lineTo(size.width, size.height);
-    path.lineTo(0.0, size.height);
-    path.close();
+    final path = Path()
+      ..moveTo(size.width / 2, 0)
+      ..lineTo(size.width, size.height)
+      ..lineTo(0, size.height)
+      ..close();
     return path;
   }
 
   @override
-  bool shouldReclip(TriangleClipper oldClipper) => false;
+  bool shouldReclip(SnippetClipPathTriangleClipper oldClipper) => false;
 }

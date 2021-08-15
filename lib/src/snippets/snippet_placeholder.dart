@@ -8,10 +8,10 @@ class SnippetPlaceholder extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              Flexible(
+              const Flexible(
                 child: Placeholder(
                   fallbackHeight: 200,
                   color: Colors.blue,
@@ -22,22 +22,22 @@ class SnippetPlaceholder extends StatelessWidget {
                 child: Container(
                   width: double.maxFinite,
                   height: 200,
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   child: Image.network(
                     'https://i.imgur.com/w6vxktt.png',
                     fit: BoxFit.fitWidth,
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 5),
                 ),
               ),
               Flexible(
                 child: Container(
                   width: double.maxFinite,
                   height: 200,
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   child: Image.network(
                     'https://i.imgur.com/w6vxktt.png',
                     fit: BoxFit.fitWidth,
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 5),
                 ),
               ),
             ],

@@ -8,14 +8,14 @@ class SnippetOutlinedButton extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: OutlinedButton(
-          child: Text('Botão com radius'),
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(18.0),
+              borderRadius: BorderRadius.circular(18),
             ),
-            side: BorderSide(width: 2, color: Colors.blue),
+            side: const BorderSide(width: 2, color: Colors.blue),
           ),
           onPressed: () {},
+          child: const Text('Radius'),
         ),
       ),
     );

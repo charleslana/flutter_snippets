@@ -10,21 +10,20 @@ class SnippetCountdown extends StatefulWidget {
 }
 
 class _SnippetCountdownState extends State<SnippetCountdown> {
-  final _interval = Duration(seconds: 1);
+  final _interval = const Duration(seconds: 1);
   final int _timerMaxSeconds = 10;
   int _currentSeconds = 0;
   late Timer _timer;
 
   String get _timerText {
-    int minutes = ((_timerMaxSeconds - _currentSeconds) ~/ 60);
-    int seconds = ((_timerMaxSeconds - _currentSeconds) % 60);
+    final int minutes = (_timerMaxSeconds - _currentSeconds) ~/ 60;
+    final int seconds = (_timerMaxSeconds - _currentSeconds) % 60;
     return '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}';
   }
 
   void _startTimeout() {
     _timer = Timer.periodic(_interval, (timer) {
       setState(() {
-        print(timer.tick);
         _currentSeconds = timer.tick;
         if (timer.tick >= _timerMaxSeconds) {
           timer.cancel();
@@ -52,19 +51,20 @@ class _SnippetCountdownState extends State<SnippetCountdown> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.timer),
-            SizedBox(
+            const Icon(Icons.timer),
+            const SizedBox(
               width: 5,
             ),
-            _timer.tick >= _timerMaxSeconds
-                ? Text(
-                    'Tempo finalizado',
-                    style: TextStyle(fontSize: 20),
-                  )
-                : Text(
-                    _timerText,
-                    style: TextStyle(fontSize: 20),
-                  ),
+            if (_timer.tick >= _timerMaxSeconds)
+              const Text(
+                'Ended time',
+                style: TextStyle(fontSize: 20),
+              )
+            else
+              Text(
+                _timerText,
+                style: const TextStyle(fontSize: 20),
+              ),
           ],
         ),
       ),

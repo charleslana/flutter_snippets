@@ -24,7 +24,7 @@ class _SnippetAnimationIconState extends State<SnippetAnimationIcon>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 450),
+      duration: const Duration(milliseconds: 450),
     );
   }
 
@@ -37,23 +37,16 @@ class _SnippetAnimationIconState extends State<SnippetAnimationIcon>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Icon Animation'),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-      ),
-      body: Container(
-        child: Center(
-          child: IconButton(
-            iconSize: 150,
-            splashColor: Colors.greenAccent,
-            icon: AnimatedIcon(
-              icon: AnimatedIcons.play_pause,
-              progress: _controller,
-              color: Colors.greenAccent,
-            ),
-            onPressed: () => _handleOnPressed(),
+      body: Center(
+        child: IconButton(
+          iconSize: 150,
+          splashColor: Colors.greenAccent,
+          icon: AnimatedIcon(
+            icon: AnimatedIcons.play_pause,
+            progress: _controller,
+            color: Colors.greenAccent,
           ),
+          onPressed: _handleOnPressed,
         ),
       ),
     );

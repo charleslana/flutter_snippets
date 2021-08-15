@@ -8,21 +8,19 @@ class SnippetBorderRadius extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(12),
           child: SizedBox(
             height: 250,
             child: Container(
               decoration: BoxDecoration(
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: NetworkImage('https://i.imgur.com/w6vxktt.png'),
                   fit: BoxFit.fitWidth,
                 ),
                 border: Border.all(
-                  color: Color(0xff000000),
-                  width: 4.0,
-                  style: BorderStyle.solid,
+                  width: 4,
                 ),
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(10),
                 ),
               ),

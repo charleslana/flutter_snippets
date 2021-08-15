@@ -5,33 +5,33 @@ class SnippetMediaQuery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData deviceInfo = MediaQuery.of(context);
+    final MediaQueryData deviceInfo = MediaQuery.of(context);
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Tamanho: ${deviceInfo.size}',
-              style: TextStyle(fontSize: 20.0),
+              'Size: ${deviceInfo.size}',
+              style: const TextStyle(fontSize: 20),
             ),
             Text(
-              'Orientação: ${deviceInfo.orientation}',
-              style: TextStyle(fontSize: 20.0),
+              'Orientation: ${deviceInfo.orientation}',
+              style: const TextStyle(fontSize: 20),
             ),
             Text(
-              'Hora(24 h): ${deviceInfo.alwaysUse24HourFormat}',
-              style: TextStyle(fontSize: 20.0),
+              'Time(24 h): ${deviceInfo.alwaysUse24HourFormat}',
+              style: const TextStyle(fontSize: 20),
             ),
             Text(
-              'Brilho: ${deviceInfo.platformBrightness}',
-              style: TextStyle(fontSize: 20.0),
+              'Brightness: ${deviceInfo.platformBrightness}',
+              style: const TextStyle(fontSize: 20),
             ),
             Text(
               'Padding: ${deviceInfo.padding}',
-              style: TextStyle(fontSize: 20.0),
+              style: const TextStyle(fontSize: 20),
             ),
           ],
         ),

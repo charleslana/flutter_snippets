@@ -1,13 +1,14 @@
-// RichText
-// múltiplos textos.
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,26 +16,28 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyAppMaterial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: RichText(
           text: TextSpan(
-            text: 'Olá ',
+            text: 'Hello ',
             style: Theme.of(context).textTheme.headline4,
-            children: [
+            children: const [
               TextSpan(
                 text: 'bold',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              TextSpan(text: ' Mundo!'),
+              TextSpan(text: ' World'),
             ],
           ),
         ),

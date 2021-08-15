@@ -10,9 +10,8 @@ class SnippetVerticalDivider extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Text('Linha 1'),
+          children: const [
+            Text('Row'),
             VerticalDivider(),
           ],
         ),

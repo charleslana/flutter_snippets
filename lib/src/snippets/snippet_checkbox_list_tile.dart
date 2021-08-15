@@ -16,14 +16,14 @@ class _SnippetCheckboxListTileState extends State<SnippetCheckboxListTile> {
     return Scaffold(
       body: Center(
         child: CheckboxListTile(
-          title: Text('Hello World'),
+          title: const Text('Hello World'),
           value: _value,
           onChanged: (bool? value) {
             setState(() {
               _value = value!;
             });
           },
-          secondary: Icon(Icons.hourglass_empty),
+          secondary: const Icon(Icons.hourglass_empty),
         ),
       ),
     );

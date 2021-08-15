@@ -1,61 +1,31 @@
-// import 'package:flutter/material.dart';
-
-// void main() {
-//   runApp(const MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({
-//     Key? key,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: const MyAppMaterial(),
-//     );
-//   }
-// }
-
-// class MyAppMaterial extends StatelessWidget {
-//   const MyAppMaterial({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container();
-//   }
-// }
-
-//######################################################
-
-class Example {
-  static const example4 = 'Example4';
-}
+import 'package:flutter/material.dart';
 
 void main() {
-  var example1 = 'Example1';
-  print(example1);
+  runApp(const MyApp());
+}
 
-  example1 = 'Example1 updated';
-  print(example1);
+class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
 
-  const int example2 = 2;
-  print(example2);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
+    );
+  }
+}
 
-  final List<String> example3 = ['List1', 'List2'];
-  print(example3);
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
 
-  const _example4 = Example.example4;
-  print(_example4);
-
-  late bool example5;
-  example5 = true;
-  print(example5);
-
-  void example6() => print('Example6');
-  example6();
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
 }

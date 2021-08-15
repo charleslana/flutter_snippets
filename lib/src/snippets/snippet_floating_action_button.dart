@@ -6,15 +6,12 @@ class SnippetFloatingActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Hello World!'),
-      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         heroTag: 'btn1',
-        child: Icon(Icons.add),
         backgroundColor: Colors.green,
         onPressed: () {},
+        child: const Icon(Icons.add),
       ),
     );
   }

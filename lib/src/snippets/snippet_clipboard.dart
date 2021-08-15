@@ -6,24 +6,17 @@ class SnippetClipboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _key = GlobalKey<ScaffoldState>();
-
     return Scaffold(
-      key: _key,
-      appBar: AppBar(
-        title: Text('Copiar'),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
-            child: CustomToolTip(text: 'Clique aqui para copiar o texto'),
             onTap: () {},
+            child: const SnippetClipboardCustomToolTip(
+                text: 'Tap here to copy text'),
           ),
-          TextField(
-            decoration: InputDecoration(hintText: 'Cole aqui'),
+          const TextField(
+            decoration: InputDecoration(hintText: 'Paste here'),
           ),
         ],
       ),
@@ -31,29 +24,29 @@ class SnippetClipboard extends StatelessWidget {
   }
 }
 
-class CustomToolTip extends StatelessWidget {
-  final String text;
+class SnippetClipboardCustomToolTip extends StatelessWidget {
+  const SnippetClipboardCustomToolTip({required this.text, Key? key})
+      : super(key: key);
 
-  CustomToolTip({required this.text});
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Tooltip(
-        preferBelow: false,
-        message: 'Copiar',
-        child: Text(text),
-      ),
       onTap: () {
-        print('clicou');
         Clipboard.setData(ClipboardData(text: text)).then((_) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Copiado para sua área de transferência!'),
+            const SnackBar(
+              content: Text('Copied'),
             ),
           );
         });
       },
+      child: Tooltip(
+        preferBelow: false,
+        message: 'Copy',
+        child: Text(text),
+      ),
     );
   }
 }

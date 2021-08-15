@@ -9,32 +9,28 @@ class SnippetAnimatedContainer extends StatefulWidget {
 }
 
 class _SnippetAnimatedContainerState extends State<SnippetAnimatedContainer> {
-  double _width = 100.0;
-  double _height = 100.0;
+  double _width = 100;
+  final double _height = 100;
 
   void _increaseWidth(BuildContext context) {
-    final sreenWidth = MediaQuery.of(context).size.width * 0.7;
+    final screenWidth = MediaQuery.of(context).size.width * 0.7;
 
     setState(() {
-      _width = _width >= sreenWidth ? 100.0 : _width += 50.0;
+      _width = _width >= screenWidth ? 100 : _width += 50;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimatedContainer'),
-        automaticallyImplyLeading: false,
-      ),
       body: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.elasticOut,
         width: _width,
         height: _height,
         child: ElevatedButton(
-          child: Text('Toque para\nAumentar a Largura\n$_width'),
           onPressed: () => _increaseWidth(context),
+          child: Text('Tap to\nincrease width\n$_width'),
         ),
       ),
     );

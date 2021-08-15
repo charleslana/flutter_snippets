@@ -21,13 +21,11 @@ class SnippetExpanded extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 1,
             child: Container(
               color: Colors.blueAccent,
             ),
           ),
           Expanded(
-            flex: 1,
             child: Container(
               color: Colors.greenAccent,
             ),

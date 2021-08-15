@@ -4,7 +4,7 @@ class SnippetFutureBuilder extends StatelessWidget {
   const SnippetFutureBuilder({Key? key}) : super(key: key);
 
   Future<String> getFutureData() async =>
-      await Future.delayed(Duration(seconds: 2), () => 'Dados carregado');
+      Future.delayed(const Duration(seconds: 2), () => 'Data loaded');
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,10 @@ class SnippetFutureBuilder extends StatelessWidget {
             if (snapshot.hasData) {
               return Text(
                 snapshot.data!,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               );
             } else {
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             }
           },
         ),

@@ -10,23 +10,23 @@ class SnippetCustomPaint extends StatefulWidget {
 class _SnippetCustomPaintState extends State<SnippetCustomPaint>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation _animation;
+  late Animation<dynamic> _animation;
 
   @override
   void initState() {
     super.initState();
 
     _controller = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 3000));
-    _animation = Tween(begin: 5.0, end: 3.0).animate(
+        vsync: this, duration: const Duration(milliseconds: 3000))
+      ..repeat();
+
+    _animation = Tween(begin: 5, end: 3.0).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeIn),
     );
-    _controller.repeat();
   }
 
   @override
   void dispose() {
-    _controller.stop();
     _controller.dispose();
     super.dispose();
   }
@@ -38,15 +38,16 @@ class _SnippetCustomPaintState extends State<SnippetCustomPaint>
         animation: _controller,
         builder: (context, child) {
           return Transform.rotate(
-            angle: _controller.value * 4.0 * 3.14,
+            angle: _controller.value * 4 * 3.14,
             child: Stack(
               children: [
                 Center(
-                  child: Container(
+                  child: SizedBox(
                     width: 150,
                     height: 150,
                     child: CustomPaint(
-                      painter: ArcPainter(radius: _animation.value),
+                      painter: SnippetCustomPaintArcPainter(
+                          radius: _animation.value),
                     ),
                   ),
                 ),
@@ -59,31 +60,34 @@ class _SnippetCustomPaintState extends State<SnippetCustomPaint>
   }
 }
 
-class ArcPainter extends CustomPainter {
-  final double radius;
-
-  ArcPainter({
+class SnippetCustomPaintArcPainter extends CustomPainter {
+  SnippetCustomPaintArcPainter({
     this.radius = 5,
   });
 
+  final double radius;
+
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()
+    final Paint paint = Paint()
       ..color = Colors.black
-      ..strokeWidth = 5.0
+      ..strokeWidth = 5
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke;
-    Rect rect = Rect.fromCenter(
+    final Rect rect = Rect.fromCenter(
       center: size.center(Offset.zero),
       width: size.width / radius,
       height: size.height / radius,
     );
-    canvas.drawArc(rect, 3.14 / 4, 3.14 / 2, false, paint);
-    canvas.drawArc(rect, -3.14 / 4, -3.14 / 2, false, paint);
+    canvas
+      ..drawArc(rect, 3.14 / 4, 3.14 / 2, false, paint)
+      ..drawArc(rect, -3.14 / 4, -3.14 / 2, false, paint);
   }
 
   @override
-  bool shouldRepaint(ArcPainter old) {
-    return true;
-  }
+  bool shouldRepaint(SnippetCustomPaintArcPainter oldDelegate) => false;
+
+  @override
+  bool shouldRebuildSemantics(SnippetCustomPaintArcPainter oldDelegate) =>
+      false;
 }

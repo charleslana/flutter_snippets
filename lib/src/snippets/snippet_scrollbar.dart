@@ -14,7 +14,7 @@ class SnippetScrollbar extends StatelessWidget {
           ),
           itemBuilder: (BuildContext context, int index) {
             return Center(
-              child: Text('item $index'),
+              child: Text('Item $index'),
             );
           },
         ),

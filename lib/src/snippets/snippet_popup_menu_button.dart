@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
 
 class SnippetPopupMenuButton extends StatelessWidget {
-  SnippetPopupMenuButton({Key? key}) : super(key: key);
-
-  final GlobalKey<PopupMenuButtonState<int>> _key = GlobalKey();
+  const SnippetPopupMenuButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<PopupMenuButtonState<int>> _key = GlobalKey();
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('PopupMenuButton'),
+        title: const Text('PopupMenuButton'),
         automaticallyImplyLeading: false,
         actions: [
           PopupMenuButton<int>(
             key: _key,
-            icon: Icon(Icons.settings),
-            onSelected: (value) {
-              print(value);
-            },
+            icon: const Icon(Icons.settings),
+            onSelected: print,
             itemBuilder: (context) {
-              return <PopupMenuEntry<int>>[
-                PopupMenuItem(child: Text('0'), value: 0),
-                PopupMenuItem(child: Text('1'), value: 1),
+              return const [
+                PopupMenuItem(value: 0, child: Text('0')),
+                PopupMenuItem(value: 1, child: Text('1')),
               ];
             },
           ),
@@ -30,7 +28,7 @@ class SnippetPopupMenuButton extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () => _key.currentState!.showButtonMenu(),
-          child: Text('Abrir/fechar menu'),
+          child: const Text('Open menu'),
         ),
       ),
     );

@@ -11,7 +11,7 @@ class SnippetListViewWithSearch extends StatefulWidget {
 class _SnippetListViewWithSearchState extends State<SnippetListViewWithSearch> {
   TextEditingController editingController = TextEditingController();
 
-  final _duplicateItems = List<String>.generate(50, (i) => 'Item $i');
+  final _duplicateItems = List<String>.generate(50, (index) => 'Item $index');
   final List<String> _items = [];
 
   @override
@@ -21,27 +21,29 @@ class _SnippetListViewWithSearchState extends State<SnippetListViewWithSearch> {
   }
 
   void _filterSearchResults(String query) {
-    List<String> dummySearchList = [];
-
-    dummySearchList.addAll(_duplicateItems);
+    final List<String> dummySearchList = [..._duplicateItems];
 
     if (query.isNotEmpty) {
-      List<String> dummyListData = [];
+      final List<String> dummyListData = [];
 
-      dummySearchList.forEach((item) {
+      for (final item in dummySearchList) {
         if (item.contains(query)) {
           dummyListData.add(item);
         }
-      });
+      }
+
       setState(() {
-        _items.clear();
-        _items.addAll(dummyListData);
+        _items
+          ..clear()
+          ..addAll(dummyListData);
       });
+
       return;
     } else {
       setState(() {
-        _items.clear();
-        _items.addAll(_duplicateItems);
+        _items
+          ..clear()
+          ..addAll(_duplicateItems);
       });
     }
   }
@@ -49,43 +51,35 @@ class _SnippetListViewWithSearchState extends State<SnippetListViewWithSearch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('ListView with Search'),
-        automaticallyImplyLeading: false,
-      ),
-      body: Container(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                onChanged: (value) {
-                  _filterSearchResults(value);
-                },
-                controller: editingController,
-                decoration: InputDecoration(
-                  labelText: 'Search',
-                  hintText: 'Search',
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(25.0)),
-                  ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: TextField(
+              onChanged: _filterSearchResults,
+              controller: editingController,
+              decoration: const InputDecoration(
+                labelText: 'Search',
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
               ),
             ),
-            Expanded(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: _items.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text('${_items[index]}'),
-                  );
-                },
-              ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: _items.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(_items[index]),
+                );
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

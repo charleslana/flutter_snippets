@@ -17,12 +17,12 @@ class _SnippetVisibilityState extends State<SnippetVisibility> {
         child: Column(
           children: [
             ElevatedButton(
-              child: Text('Visível/Invisível'),
               onPressed: () {
                 setState(() {
                   _isVisible = !_isVisible;
                 });
               },
+              child: const Text('Visible/Invisible'),
             ),
             Visibility(
               visible: _isVisible,

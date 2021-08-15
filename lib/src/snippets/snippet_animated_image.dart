@@ -7,7 +7,7 @@ class SnippetAnimatedImage extends StatelessWidget {
   Widget build(BuildContext context) {
     final topPadding = MediaQuery.of(context).padding.top;
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
             Color.fromRGBO(145, 131, 222, 1),
@@ -24,8 +24,8 @@ class SnippetAnimatedImage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: topPadding),
-              SizedBox(height: 10),
-              AnimatedImage(),
+              const SizedBox(height: 10),
+              const SnippetAnimatedImageAnimatedImage(),
             ],
           ),
         ),
@@ -34,28 +34,37 @@ class SnippetAnimatedImage extends StatelessWidget {
   }
 }
 
-class AnimatedImage extends StatefulWidget {
+class SnippetAnimatedImageAnimatedImage extends StatefulWidget {
+  const SnippetAnimatedImageAnimatedImage({Key? key}) : super(key: key);
+
   @override
-  _AnimatedImageState createState() => _AnimatedImageState();
+  _SnippetAnimatedImageAnimatedImageState createState() =>
+      _SnippetAnimatedImageAnimatedImageState();
 }
 
-class _AnimatedImageState extends State<AnimatedImage>
+class _SnippetAnimatedImageAnimatedImageState
+    extends State<SnippetAnimatedImageAnimatedImage>
     with SingleTickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
-    vsync: this,
-    duration: const Duration(seconds: 3),
-  )..repeat(reverse: true);
+  late AnimationController _controller;
 
   late final Animation<Offset> _animation = Tween<Offset>(
     begin: Offset.zero,
-    end: Offset(0, 0.08),
+    end: const Offset(0, 0.08),
   ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
 
   @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 3),
+    )..repeat(reverse: true);
+  }
+
+  @override
   void dispose() {
-    _controller.stop();
-    _controller.dispose();
     super.dispose();
+    _controller.dispose();
   }
 
   @override

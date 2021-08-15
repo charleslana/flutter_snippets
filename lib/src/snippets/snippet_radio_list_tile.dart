@@ -22,9 +22,9 @@ class _SnippetRadioListTileState extends State<SnippetRadioListTile> {
               _value = value;
             });
           },
-          title: Text('Radio'),
-          subtitle: Text('Sub text'),
-          secondary: Icon(Icons.sd_storage),
+          title: const Text('Title'),
+          subtitle: const Text('Sub title'),
+          secondary: const Icon(Icons.sd_storage),
           toggleable: true,
           controlAffinity: ListTileControlAffinity.leading,
         ),

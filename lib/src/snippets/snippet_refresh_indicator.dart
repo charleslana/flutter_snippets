@@ -20,20 +20,16 @@ class _SnippetRefreshIndicatorState extends State<SnippetRefreshIndicator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Mova os itens para baixo'),
-        automaticallyImplyLeading: false,
-      ),
       body: RefreshIndicator(
         onRefresh: _onRefresh,
         child: ListView(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics(),
           ),
-          children: _listData.map((i) {
+          children: _listData.map((index) {
             return ListTile(
-              title: Text('Item $i'),
+              title: Text('Item $index'),
             );
           }).toList(),
         ),

@@ -8,7 +8,7 @@ class SnippetColorFiltered extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ColorFiltered(
-          colorFilter: ColorFilter.mode(
+          colorFilter: const ColorFilter.mode(
             Colors.green,
             BlendMode.modulate,
           ),

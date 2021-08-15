@@ -21,24 +21,20 @@ class _SnippetLoadTxtState extends State<SnippetLoadTxt> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Carregar Txt'),
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               _data,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(
-              child: Text('Clique aqui para carregar o texto'),
-              onPressed: () => _loadData(),
+              onPressed: _loadData,
+              child: const Text('Click here to load text'),
             ),
           ],
         ),

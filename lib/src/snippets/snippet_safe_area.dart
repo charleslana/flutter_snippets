@@ -8,29 +8,29 @@ class SnippetSafeArea extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Stack(
-          children: [
+          children: const [
             Align(
               alignment: Alignment.topLeft,
               child: Text(
-                'SafeArea a esquerda',
+                'SafeArea',
               ),
             ),
             Align(
               alignment: Alignment.topRight,
               child: Text(
-                'SafeArea a direita',
+                'SafeArea',
               ),
             ),
             Align(
               alignment: Alignment.bottomLeft,
               child: Text(
-                'SafeArea a esquerda',
+                'SafeArea',
               ),
             ),
             Align(
               alignment: Alignment.bottomRight,
               child: Text(
-                'SafeArea a direita',
+                'SafeArea',
               ),
             ),
           ],

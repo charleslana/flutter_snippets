@@ -19,10 +19,6 @@ class _SnippetStatefulState extends State<SnippetStateful> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Stateful'),
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -31,33 +27,33 @@ class _SnippetStatefulState extends State<SnippetStateful> {
               '$_count',
               style: Theme.of(context).textTheme.headline4,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
-              child: Text(
-                'Adicionar +1',
+              onPressed: _increment,
+              child: const Text(
+                'Add',
                 style: TextStyle(
                   fontSize: 18,
                 ),
               ),
-              onPressed: _increment,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(
-              child: Text(
-                'Reset',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
               onPressed: () {
                 setState(() {
                   _count = 0;
                 });
               },
+              child: const Text(
+                'Reset',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
             ),
           ],
         ),

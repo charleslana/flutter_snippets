@@ -8,31 +8,27 @@ class SnippetAnimatedOpacity extends StatefulWidget {
 }
 
 class _SnippetAnimatedOpacityState extends State<SnippetAnimatedOpacity> {
-  double _opacity = 1.0;
+  double _opacity = 1;
 
   void _animatedOpacity() {
     setState(() {
-      _opacity = _opacity == 1.0 ? 0.3 : 1.0;
+      _opacity = _opacity == 1 ? 0.3 : 1;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimatedOpacity'),
-        automaticallyImplyLeading: false,
-      ),
       body: AnimatedOpacity(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         opacity: _opacity,
         child: Center(
           child: ElevatedButton(
-            child: Padding(
+            onPressed: _animatedOpacity,
+            child: const Padding(
               padding: EdgeInsets.all(20),
-              child: Text('Toque\npara\nAnimar'),
+              child: Text('Tap\nto\nanimate'),
             ),
-            onPressed: () => _animatedOpacity(),
           ),
         ),
       ),

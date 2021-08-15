@@ -13,35 +13,31 @@ class _SnippetAnimatedCrossFadeState extends State<SnippetAnimatedCrossFade> {
 
   void _crossFade() {
     setState(() {
-      _crossFadeStateShowFirst = _crossFadeStateShowFirst ? false : true;
+      _crossFadeStateShowFirst = !_crossFadeStateShowFirst;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimatedCrossFade'),
-        automaticallyImplyLeading: false,
-      ),
       body: Stack(
         alignment: Alignment.center,
         children: [
           AnimatedCrossFade(
-            duration: Duration(milliseconds: 500),
+            duration: const Duration(milliseconds: 500),
             sizeCurve: Curves.bounceOut,
             crossFadeState: _crossFadeStateShowFirst
                 ? CrossFadeState.showFirst
                 : CrossFadeState.showSecond,
             firstChild: Container(
               color: Colors.amber,
-              height: 100.0,
-              width: 100.0,
+              height: 100,
+              width: 100,
             ),
             secondChild: Container(
               color: Colors.lime,
-              height: 200.0,
-              width: 200.0,
+              height: 200,
+              width: 200,
             ),
           ),
           Positioned.fill(
@@ -49,8 +45,8 @@ class _SnippetAnimatedCrossFadeState extends State<SnippetAnimatedCrossFade> {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.transparent),
               ),
-              child: Text('Toque para\nAnimar a Cor e o Tamanho'),
-              onPressed: () => _crossFade(),
+              onPressed: _crossFade,
+              child: const Text('Tap to\nanimate color and size'),
             ),
           ),
         ],

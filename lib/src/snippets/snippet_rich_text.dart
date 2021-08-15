@@ -9,14 +9,14 @@ class SnippetRichText extends StatelessWidget {
       body: Center(
         child: RichText(
           text: TextSpan(
-            text: 'Olá ',
+            text: 'Hello ',
             style: Theme.of(context).textTheme.headline4,
-            children: [
+            children: const [
               TextSpan(
                 text: 'bold',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              TextSpan(text: ' Mundo!'),
+              TextSpan(text: ' World'),
             ],
           ),
         ),

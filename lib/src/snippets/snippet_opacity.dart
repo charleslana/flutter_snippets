@@ -11,6 +11,7 @@ class SnippetOpacity extends StatelessWidget {
           Container(
             width: double.maxFinite,
             height: 200,
+            padding: const EdgeInsets.symmetric(vertical: 5),
             child: Opacity(
               opacity: 0.3,
               child: Image.network(
@@ -18,11 +19,9 @@ class SnippetOpacity extends StatelessWidget {
                 fit: BoxFit.fitWidth,
               ),
             ),
-            padding: EdgeInsets.symmetric(vertical: 5),
           ),
-          Positioned.fill(
+          const Positioned.fill(
             child: Align(
-              alignment: Alignment.center,
               child: Text(
                 'Flutter',
                 style: TextStyle(

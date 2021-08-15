@@ -7,15 +7,13 @@ class SnippetColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Text('Coluna 1'),
+        children: const [
+          Text('Column 1'),
           Divider(),
-          Text('Coluna 2'),
+          Text('Column 2'),
           Divider(),
-          Text('Coluna 3'),
+          Text('Column 3'),
         ],
       ),
     );

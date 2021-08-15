@@ -24,7 +24,7 @@ class _SnippetDraggableState extends State<SnippetDraggable> {
       SnackBar(
         content: Text(text),
         action: SnackBarAction(
-          label: 'Fechar',
+          label: 'Close',
           onPressed: () => {},
         ),
       ),
@@ -34,54 +34,49 @@ class _SnippetDraggableState extends State<SnippetDraggable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Mova o quadrado numeral'),
-        automaticallyImplyLeading: false,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Draggable(
               data: _random,
-              child: Container(
-                width: 100.0,
-                height: 100.0,
-                child: Center(
-                  child: Text(
-                    _random.toString(),
-                    style: TextStyle(color: Colors.white, fontSize: 26.0),
-                  ),
-                ),
-                color: Colors.pink,
-              ),
               feedback: Container(
-                width: 100.0,
-                height: 100.0,
+                width: 100,
+                height: 100,
+                color: Colors.pink,
                 child: Center(
                   child: Text(
                     _random.toString(),
-                    style: TextStyle(color: Colors.white, fontSize: 26.0),
+                    style: const TextStyle(color: Colors.white, fontSize: 26),
                   ),
                 ),
+              ),
+              child: Container(
+                width: 100,
+                height: 100,
                 color: Colors.pink,
+                child: Center(
+                  child: Text(
+                    _random.toString(),
+                    style: const TextStyle(color: Colors.white, fontSize: 26),
+                  ),
+                ),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 100.0,
-                  height: 100.0,
+                  width: 100,
+                  height: 100,
                   color: Colors.green,
                   child: DragTarget(
                     builder: (BuildContext context, List<dynamic> candidateData,
                         rejectedData) {
-                      print(candidateData);
-                      return Center(
+                      return const Center(
                           child: Text(
-                        'Par',
-                        style: TextStyle(color: Colors.white, fontSize: 26.0),
+                        'Even',
+                        style: TextStyle(color: Colors.white, fontSize: 26),
                       ));
                     },
                     onWillAccept: (data) {
@@ -89,25 +84,25 @@ class _SnippetDraggableState extends State<SnippetDraggable> {
                     },
                     onAccept: (int data) {
                       if (data % 2 == 0) {
-                        _showMessage('Correto!');
+                        _showMessage('Correct');
                         _newRandom();
                       } else {
-                        _showMessage('Errado!');
+                        _showMessage('***Wrong***');
                       }
                     },
                   ),
                 ),
                 Container(
-                  width: 100.0,
-                  height: 100.0,
+                  width: 100,
+                  height: 100,
                   color: Colors.deepPurple,
                   child: DragTarget(
                     builder: (BuildContext context, List<dynamic> candidateData,
                         rejectedData) {
-                      return Center(
+                      return const Center(
                           child: Text(
-                        'Ímpar',
-                        style: TextStyle(color: Colors.white, fontSize: 26.0),
+                        'Odd',
+                        style: TextStyle(color: Colors.white, fontSize: 26),
                       ));
                     },
                     onWillAccept: (data) {
@@ -115,10 +110,10 @@ class _SnippetDraggableState extends State<SnippetDraggable> {
                     },
                     onAccept: (int data) {
                       if (data % 2 != 0) {
-                        _showMessage('Correto!');
+                        _showMessage('Correct');
                         _newRandom();
                       } else {
-                        _showMessage('Errado!');
+                        _showMessage('***Wrong***');
                       }
                     },
                   ),
