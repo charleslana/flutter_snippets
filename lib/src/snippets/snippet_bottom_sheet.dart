@@ -9,6 +9,7 @@ class SnippetBottomSheet extends StatelessWidget {
       body: const Center(
         child: Text('Tap the icon'),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(

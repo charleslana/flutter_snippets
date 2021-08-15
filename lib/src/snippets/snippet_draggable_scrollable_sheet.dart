@@ -56,6 +56,7 @@ class _SnippetDraggableScrollableSheetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: GestureDetector(
         child: FloatingActionButton(
           heroTag: 'bnt1',
