@@ -1,16 +1,9 @@
 {
-    "language": "English",
-    "@language": {
-        "description": "The current language"
-    },
-    "helloWorld": "Hello World!",
-    "@helloWorld": {
-        "description": "A programmer greeting"
-    },
     "appSettings": "Settings",
+    "appSettingsTheme": "Theme",
     "appSettingsDefaultThemeSystem": "System defined default theme",
     "appSettingsDarkMode": "Dark mode",
-    "appSettingsChooseLanguage": "Choose language",
+    "appSettingsLanguage": "Language",
     "appSettingsDefaultLanguageSystem": "System defined default language",
     "appSettingsLanguagePortuguese": "Portuguese",
     "appSettingsLanguageEnglish": "English",

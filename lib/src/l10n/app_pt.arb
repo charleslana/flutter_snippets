@@ -1,10 +1,9 @@
 {
-    "language": "Português",
-    "helloWorld": "Olá Mundo!",
     "appSettings": "Configurações",
+    "appSettingsTheme": "Tema",
     "appSettingsDefaultThemeSystem": "Tema padrão definido pelo sistema",
     "appSettingsDarkMode": "Modo escuro",
-    "appSettingsChooseLanguage": "Escolha o seu idioma",
+    "appSettingsLanguage": "Idioma",
     "appSettingsDefaultLanguageSystem": "Idioma padrão definido pelo sistema",
     "appSettingsLanguagePortuguese": "Português",
     "appSettingsLanguageEnglish": "Inglês",
