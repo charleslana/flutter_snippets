@@ -9,7 +9,7 @@ class SnippetExpansionPanel extends StatefulWidget {
 
 class _SnippetExpansionPanelState extends State<SnippetExpansionPanel> {
   bool active = false;
-  String exTitle = 'Sport Categories';
+  String title = 'Open';
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +19,17 @@ class _SnippetExpansionPanelState extends State<SnippetExpansionPanel> {
           ExpansionPanelList(
             expansionCallback: (panelIndex, isExpanded) {
               active = !active;
-              if (exTitle == 'Sport Categories') {
-                exTitle = 'Contract';
+              if (title == 'Open') {
+                title = 'Expansion';
               } else {
-                exTitle = 'Sport Categories';
+                title = 'Open';
               }
               setState(() {});
             },
             children: <ExpansionPanel>[
               ExpansionPanel(
                 headerBuilder: (context, isExpanded) {
-                  return Text(exTitle);
+                  return Text(title);
                 },
                 body: Wrap(
                   alignment: WrapAlignment.spaceBetween,
@@ -49,7 +49,7 @@ class _SnippetExpansionPanelState extends State<SnippetExpansionPanel> {
                       ),
                       onPressed: null,
                       child: const Text(
-                        'All',
+                        'Text 1',
                         style: TextStyle(
                           color: Colors.white,
                         ),
@@ -57,15 +57,15 @@ class _SnippetExpansionPanelState extends State<SnippetExpansionPanel> {
                     ),
                     const ElevatedButton(
                       onPressed: null,
-                      child: Text('Basketball'),
+                      child: Text('Text 2'),
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: const Text('Football'),
+                      child: const Text('Text 3'),
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: const Text('Tennis'),
+                      child: const Text('Text 4'),
                     ),
                   ],
                 ),
