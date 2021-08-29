@@ -25,6 +25,11 @@ class AppUtils {
           Navigator.of(context).pushNamed(AppRoutes.appInfo);
         }
         break;
+      case 3:
+        if (currentRoute != AppRoutes.appSettings) {
+          Navigator.of(context).pushNamed(AppRoutes.appSettings);
+        }
+        break;
       default:
         Navigator.of(context).pushReplacementNamed(AppRoutes.snippetWidgets);
     }

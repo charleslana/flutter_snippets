@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/utils/app_utils.dart';
 
 class AppFloatingActionButton extends StatelessWidget {
   const AppFloatingActionButton({
@@ -8,11 +7,9 @@ class AppFloatingActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentRoute = ModalRoute.of(context)!.settings.name;
-
     return FloatingActionButton.extended(
       backgroundColor: Colors.purple,
-      onPressed: () => AppUtils.navigateToScreen(context, 1, currentRoute),
+      onPressed: null,
       icon: const Icon(
         Icons.widgets,
         color: Colors.white,

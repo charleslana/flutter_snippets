@@ -156,13 +156,13 @@ final darkTheme = ThemeData(
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(
       backgroundColor: Colors.indigo,
-      primary: Colors.black,
+      primary: Colors.white,
     ),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: TextButton.styleFrom(
       backgroundColor: Colors.indigo,
-      primary: Colors.black,
+      primary: Colors.white,
     ),
   ),
   switchTheme: SwitchThemeData(

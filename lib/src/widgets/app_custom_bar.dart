@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:flutter_snippets/src/utils/app_utils.dart';
 
 class AppCustomBar extends StatelessWidget implements PreferredSizeWidget {
   const AppCustomBar({
@@ -24,9 +24,7 @@ class AppCustomBar extends StatelessWidget implements PreferredSizeWidget {
           icon: const Icon(
             Icons.settings,
           ),
-          onPressed: () => currentRoute != AppRoutes.appSettings
-              ? Navigator.of(context).pushNamed(AppRoutes.appSettings)
-              : null,
+          onPressed: () => AppUtils.navigateToScreen(context, 3, currentRoute),
         ),
       ],
     );

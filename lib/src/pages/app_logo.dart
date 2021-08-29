@@ -60,14 +60,14 @@ class _AppLogoState extends State<AppLogo> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text(
-                      'V:1.0.0',
+                      'V:1.1.0',
                       style: TextStyle(
                         fontSize: 12,
                         color: Color(0xffc4efed),
                       ),
                     ),
                     Text(
-                      'F:2.2.3\nL:1.5.3',
+                      'F:2.2.3\nL:1.6.0',
                       style: TextStyle(
                         fontSize: 12,
                         color: Color(0xffc4efed),

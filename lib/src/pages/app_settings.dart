@@ -131,7 +131,7 @@ class _AppSettingsState extends State<AppSettings> {
                 onChanged: (value) =>
                     _changeLanguage(value, L10n.supportedLocales[0]),
                 title: Text(AppLocalizations.of(context)!
-                    .appSettingsLanguagePortuguese),
+                    .appSettingsLanguageEnglish),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
               RadioListTile(
@@ -140,7 +140,7 @@ class _AppSettingsState extends State<AppSettings> {
                 onChanged: (value) =>
                     _changeLanguage(value, L10n.supportedLocales[1]),
                 title: Text(
-                    AppLocalizations.of(context)!.appSettingsLanguageEnglish),
+                    AppLocalizations.of(context)!.appSettingsLanguageSpanish),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
               RadioListTile(
@@ -149,7 +149,7 @@ class _AppSettingsState extends State<AppSettings> {
                 onChanged: (value) =>
                     _changeLanguage(value, L10n.supportedLocales[2]),
                 title: Text(
-                    AppLocalizations.of(context)!.appSettingsLanguageSpanish),
+                    AppLocalizations.of(context)!.appSettingsLanguagePortuguese),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
             ],
