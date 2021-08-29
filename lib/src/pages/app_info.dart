@@ -133,7 +133,7 @@ class _AppInfoState extends State<AppInfo> {
                                     return Card(
                                       child: ListTile(
                                         leading: const Icon(Icons.article),
-                                        title: Text(news.description),
+                                        title: Text(news.description!),
                                         subtitle: Text(formattedDate),
                                       ),
                                     );

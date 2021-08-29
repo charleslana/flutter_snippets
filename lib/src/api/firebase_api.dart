@@ -10,6 +10,7 @@ class FirebaseApi {
       .orderBy(NewsField.createdTime, descending: true)
       .limit(5)
       .snapshots()
-      .transform(AppUtils.transformer(NewsModel.fromJson) as StreamTransformer<
-          QuerySnapshot<Map<String, dynamic>>, List<NewsModel>>);
+      .transform(AppUtils.transformer(NewsModel().fromJson)
+          as StreamTransformer<QuerySnapshot<Map<String, dynamic>>,
+              List<NewsModel>>);
 }
