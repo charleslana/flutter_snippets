@@ -54,24 +54,24 @@ class _SnippetFilterState extends State<SnippetFilter> {
 
   @override
   void initState() {
-    super.initState();
     init();
+    super.initState();
   }
 
   @override
   void didChangeDependencies() {
-    super.didChangeDependencies();
     if (_items.isEmpty) {
       _items = List<SnippetFilterListModel>.generate(
           _filter.snippets.length, (index) => _filter.snippets[index]);
       _duplicateItems = _items;
     }
+    super.didChangeDependencies();
   }
 
   @override
   void dispose() {
-    super.dispose();
     _editingController.dispose();
+    super.dispose();
   }
 
   @override

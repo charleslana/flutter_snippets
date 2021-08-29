@@ -5,7 +5,7 @@ class SnippetSingleChildScrollView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width * 0.5;
+    final double width = MediaQuery.of(context).size.width * 0.5;
 
     return Scaffold(
       body: Center(

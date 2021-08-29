@@ -13,8 +13,8 @@ class _SnippetTabsState extends State<SnippetTabs>
 
   @override
   void initState() {
-    super.initState();
     _controller = TabController(vsync: this, length: 3);
+    super.initState();
   }
 
   @override

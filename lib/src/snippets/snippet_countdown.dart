@@ -40,8 +40,8 @@ class _SnippetCountdownState extends State<SnippetCountdown> {
 
   @override
   void dispose() {
-    super.dispose();
     _timer.cancel();
+    super.dispose();
   }
 
   @override

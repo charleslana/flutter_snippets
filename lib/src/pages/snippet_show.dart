@@ -29,14 +29,14 @@ class _SnippetShowState extends State<SnippetShow>
 
   @override
   void initState() {
-    super.initState();
     _tabController = TabController(vsync: this, length: 2);
+    super.initState();
   }
 
   @override
   void dispose() {
-    super.dispose();
     _tabController.dispose();
+    super.dispose();
   }
 
   @override

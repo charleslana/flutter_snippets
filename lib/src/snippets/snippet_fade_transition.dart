@@ -17,11 +17,11 @@ class _SnippetFadeTransitionState extends State<SnippetFadeTransition>
 
   @override
   void initState() {
-    super.initState();
     _controller = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
     )..repeat(reverse: true);
+    super.initState();
   }
 
   @override

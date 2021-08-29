@@ -29,8 +29,8 @@ class _SnippetLoadJsonState extends State<SnippetLoadJson> {
 
   @override
   void initState() {
-    super.initState();
     _loadJson();
+    super.initState();
   }
 
   @override

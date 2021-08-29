@@ -14,8 +14,6 @@ class _SnippetCustomPaintState extends State<SnippetCustomPaint>
 
   @override
   void initState() {
-    super.initState();
-
     _controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 3000))
       ..repeat();
@@ -23,6 +21,7 @@ class _SnippetCustomPaintState extends State<SnippetCustomPaint>
     _animation = Tween(begin: 5, end: 3.0).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeIn),
     );
+    super.initState();
   }
 
   @override

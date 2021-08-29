@@ -23,10 +23,10 @@ class _SnippetDropdownState extends State<SnippetDropdown> {
 
   @override
   void initState() {
-    super.initState();
     setState(() {
       _selectedItem = _cities[2];
     });
+    super.initState();
   }
 
   @override

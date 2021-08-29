@@ -37,8 +37,6 @@ class _SnippetRotatingCircleState extends State<SnippetRotatingCircle>
 
   @override
   void initState() {
-    super.initState();
-
     _controller = AnimationController(
       duration: const Duration(
         seconds: 2,
@@ -52,6 +50,7 @@ class _SnippetRotatingCircleState extends State<SnippetRotatingCircle>
     _controller
       ..addStatusListener(_animationStatusListener)
       ..forward();
+    super.initState();
   }
 
   @override

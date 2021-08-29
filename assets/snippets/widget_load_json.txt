@@ -71,8 +71,8 @@ class _MyAppMaterialState extends State<MyAppMaterial> {
 
   @override
   void initState() {
-    super.initState();
     _loadJson();
+    super.initState();    
   }
 
   @override

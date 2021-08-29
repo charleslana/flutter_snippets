@@ -43,14 +43,14 @@ class _SnippetDraggableScrollableSheetState
 
   @override
   void initState() {
-    super.initState();
     _controller = AnimationController(vsync: this, duration: _duration);
+    super.initState();    
   }
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();    
   }
 
   @override

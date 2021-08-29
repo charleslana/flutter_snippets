@@ -21,17 +21,17 @@ class _SnippetAnimationIconState extends State<SnippetAnimationIcon>
 
   @override
   void initState() {
-    super.initState();
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 450),
     );
+    super.initState();
   }
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override

@@ -13,7 +13,7 @@ class _SnippetScrollControllerState extends State<SnippetScrollController> {
   List<String> items = List.generate(100, (index) => 'Init $index');
 
   void _scrollListener() {
-    final height = MediaQuery.of(context).size.height * 0.50;
+    final double height = MediaQuery.of(context).size.height * 0.50;
 
     if (_controller.position.extentAfter < height) {
       setState(() {
@@ -24,8 +24,8 @@ class _SnippetScrollControllerState extends State<SnippetScrollController> {
 
   @override
   void initState() {
-    super.initState();
     _controller = ScrollController()..addListener(_scrollListener);
+    super.initState();
   }
 
   @override

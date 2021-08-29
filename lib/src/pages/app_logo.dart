@@ -22,11 +22,11 @@ class _AppLogoState extends State<AppLogo> {
 
   @override
   void initState() {
-    super.initState();
     Timer(
       const Duration(seconds: 3),
       () => Navigator.pushReplacementNamed(context, AppRoutes.snippetWidgets),
     );
+    super.initState();
   }
 
   @override

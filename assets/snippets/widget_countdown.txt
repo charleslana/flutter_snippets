@@ -61,8 +61,8 @@ class _MyAppMaterialState extends State<MyAppMaterial> {
 
   @override
   void dispose() {
-    super.dispose();
     _timer.cancel();
+    super.dispose();    
   }
 
   @override
