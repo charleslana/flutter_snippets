@@ -54,17 +54,17 @@ class _SnippetAnimatedImageAnimatedImageState
 
   @override
   void initState() {
-    super.initState();
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
     )..repeat(reverse: true);
+    super.initState();
   }
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override
