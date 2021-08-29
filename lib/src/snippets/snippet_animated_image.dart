@@ -5,7 +5,7 @@ class SnippetAnimatedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final topPadding = MediaQuery.of(context).padding.top;
+    final double topPadding = MediaQuery.of(context).padding.top;
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
