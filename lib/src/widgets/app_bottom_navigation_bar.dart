@@ -8,7 +8,7 @@ class AppBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentRoute = ModalRoute.of(context)!.settings.name;
+    final String? currentRoute = ModalRoute.of(context)!.settings.name;
 
     return BottomAppBar(
       color: Colors.indigo,

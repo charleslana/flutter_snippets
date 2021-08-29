@@ -14,7 +14,7 @@ class AppCustomBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentRoute = ModalRoute.of(context)!.settings.name;
+    final String? currentRoute = ModalRoute.of(context)!.settings.name;
 
     return AppBar(
       title: Text(title),
