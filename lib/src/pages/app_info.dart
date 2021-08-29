@@ -104,7 +104,6 @@ class _AppInfoState extends State<AppInfo> {
                       } else {
                         final provider = Provider.of<NewsProvider>(context)
                           ..setNews(snapshot.data);
-
                         final data = provider.news;
 
                         return data.isEmpty

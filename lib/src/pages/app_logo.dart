@@ -11,7 +11,7 @@ class AppLogo extends StatefulWidget {
 }
 
 class _AppLogoState extends State<AppLogo> {
-  final logoGradient = const LinearGradient(
+  final _logoGradient = const LinearGradient(
     colors: [
       Color.fromRGBO(54, 57, 75, 1),
       Color.fromRGBO(205, 130, 222, 1),
@@ -35,7 +35,7 @@ class _AppLogoState extends State<AppLogo> {
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          gradient: logoGradient,
+          gradient: _logoGradient,
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,

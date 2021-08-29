@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_snippets/src/routes/app_routes.dart';
-import 'package:flutter_snippets/src/widgets/app_menu.dart';
 import 'package:flutter_snippets/src/constants/app_constants.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
+import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_container.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_cross_fade.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_default_text_style.dart';
@@ -136,6 +135,7 @@ import 'package:flutter_snippets/src/snippets/snippet_tooltip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_transform.dart';
 import 'package:flutter_snippets/src/snippets/snippet_vertical_divider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_visibility.dart';
+import 'package:flutter_snippets/src/widgets/app_menu.dart';
 
 class DataWidget {
   static Set<AppMenu> of(BuildContext context) {
@@ -975,7 +975,8 @@ class DataWidget {
                   AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
                     data: AppConstants.txtSnippetWidgetTransform,
-                    title: AppLocalizations.of(context)!.menuWidgetBasicTransform,
+                    title:
+                        AppLocalizations.of(context)!.menuWidgetBasicTransform,
                     widget: const SnippetTransform(),
                     tip: AppLocalizations.of(context)!.tipTransform,
                   ),

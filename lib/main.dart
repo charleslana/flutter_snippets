@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_snippets/src/l10n/l10n.dart';
 import 'package:flutter_snippets/src/pages/app_logo.dart';
@@ -16,7 +17,6 @@ import 'package:flutter_snippets/src/pages/snippet_show.dart';
 import 'package:flutter_snippets/src/widgets/app_route_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,16 +53,13 @@ class MyAppMaterial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
-    final LocaleProvider localeProvider = Provider.of<LocaleProvider>(context);
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Snippets',
-      themeMode: themeProvider.themeMode,
+      themeMode: Provider.of<ThemeProvider>(context).themeMode,
       theme: lighTheme,
       darkTheme: darkTheme,
-      locale: localeProvider.locale,
+      locale: Provider.of<LocaleProvider>(context).locale,
       supportedLocales: L10n.supportedLocales,
       localizationsDelegates: const [
         AppLocalizations.delegate,

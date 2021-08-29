@@ -114,11 +114,11 @@ class AppUtils {
     });
   }
 
-  static DateTime toDateTime(Timestamp? value) {
-    if (value == null) {
+  static DateTime toDateTime(Timestamp? timestamp) {
+    if (timestamp == null) {
       return DateTime.now();
     }
-    return value.toDate();
+    return timestamp.toDate();
   }
 
   static StreamTransformer<dynamic, dynamic> transformer<T>(

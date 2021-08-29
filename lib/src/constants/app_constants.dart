@@ -89,6 +89,7 @@ class AppConstants {
   static const txtSnippetWidgetEndDrawer = 'widget_end_drawer';
   static const txtSnippetWidgetContainerTransform =
       'widget_container_transform';
+  static const txtSnippetWidgetTransform = 'widget_transform';
   static const txtSnippetWidgetBanner = 'widget_banner';
   static const txtSnippetWidgetBorderRadius = 'widget_border_radius';
   static const txtSnippetWidgetSingleChildScrollView =
@@ -157,7 +158,6 @@ class AppConstants {
       'widget_animated_default_text_style';
   static const txtSnippetWidgetCustomPaint = 'widget_custom_paint';
   static const txtSnippetWidgetRotatingCircle = 'widget_rotating_circle';
-  static const txtSnippetWidgetTransform = 'widget_transform';
   static const txtSnippetWidgetMatrix = 'widget_matrix';
   static const txtSnippetWidgetDraggableScrollableSheet =
       'widget_draggable_scrollable_sheet';
