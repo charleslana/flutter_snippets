@@ -91,9 +91,24 @@ class _AppSettingsState extends State<AppSettings> {
               const SizedBox(
                 height: 30,
               ),
-              Text(
-                AppLocalizations.of(context)!.appSettingsTheme,
-                style: Theme.of(context).textTheme.headline6,
+              RichText(
+                text: TextSpan(
+                  children: [
+                    const WidgetSpan(
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 5),
+                        child: Icon(
+                          Icons.dark_mode,
+                          size: 20,
+                        ),
+                      ),
+                    ),
+                    TextSpan(
+                      text: AppLocalizations.of(context)!.appSettingsTheme,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 30,
@@ -112,9 +127,24 @@ class _AppSettingsState extends State<AppSettings> {
               const SizedBox(
                 height: 30,
               ),
-              Text(
-                AppLocalizations.of(context)!.appSettingsLanguage,
-                style: Theme.of(context).textTheme.headline6,
+              RichText(
+                text: TextSpan(
+                  children: [
+                    const WidgetSpan(
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 5),
+                        child: Icon(
+                          Icons.language,
+                          size: 20,
+                        ),
+                      ),
+                    ),
+                    TextSpan(
+                      text: AppLocalizations.of(context)!.appSettingsLanguage,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 30,
@@ -130,8 +160,8 @@ class _AppSettingsState extends State<AppSettings> {
                 groupValue: _language,
                 onChanged: (value) =>
                     _changeLanguage(value, L10n.supportedLocales[0]),
-                title: Text(AppLocalizations.of(context)!
-                    .appSettingsLanguageEnglish),
+                title: Text(
+                    AppLocalizations.of(context)!.appSettingsLanguageEnglish),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
               RadioListTile(
@@ -148,8 +178,8 @@ class _AppSettingsState extends State<AppSettings> {
                 groupValue: _language,
                 onChanged: (value) =>
                     _changeLanguage(value, L10n.supportedLocales[2]),
-                title: Text(
-                    AppLocalizations.of(context)!.appSettingsLanguagePortuguese),
+                title: Text(AppLocalizations.of(context)!
+                    .appSettingsLanguagePortuguese),
                 controlAffinity: ListTileControlAffinity.trailing,
               ),
             ],
