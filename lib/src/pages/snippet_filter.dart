@@ -12,7 +12,7 @@ class SnippetFilter extends StatefulWidget {
 }
 
 class _SnippetFilterState extends State<SnippetFilter> {
-  final TextEditingController _editingController = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
   late final SnippetFilterModel _filter =
       ModalRoute.of(context)!.settings.arguments as SnippetFilterModel;
   List<SnippetFilterListModel> _duplicateItems = [];
@@ -70,7 +70,7 @@ class _SnippetFilterState extends State<SnippetFilter> {
 
   @override
   void dispose() {
-    _editingController.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -89,7 +89,7 @@ class _SnippetFilterState extends State<SnippetFilter> {
                 padding: const EdgeInsets.all(8),
                 child: TextField(
                   onChanged: _filterSearchResults,
-                  controller: _editingController,
+                  controller: _controller,
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!
                         .filterSearchLabel(_filter.title),
@@ -107,35 +107,39 @@ class _SnippetFilterState extends State<SnippetFilter> {
               else
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
+                    padding: const EdgeInsets.all(10),
                     child: SingleChildScrollView(
                       physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics(),
                       ),
                       child: Wrap(
+                        spacing: 10,
+                        runSpacing: 10,
                         children: _items.map((item) {
-                          return Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                            child: TextButton(
-                              onPressed: () {
-                                FocusManager.instance.primaryFocus?.unfocus();
-                                item.onPressed();
-                                setState(() {
-                                  _editingController.clear();
-                                  if (_items.length != _duplicateItems.length) {
-                                    _items
-                                      ..clear()
-                                      ..addAll(_duplicateItems);
-                                  }
-                                });
-                              },
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.fromLTRB(30, 10, 30, 10),
-                                child: Text(
-                                  item.text,
-                                ),
+                          return ElevatedButton(
+                            onPressed: () {
+                              FocusManager.instance.primaryFocus?.unfocus();
+                              item.onPressed();
+                              setState(() {
+                                _controller.clear();
+                                if (_items.length != _duplicateItems.length) {
+                                  _items
+                                    ..clear()
+                                    ..addAll(_duplicateItems);
+                                }
+                              });
+                            },
+                            style: ElevatedButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 40,
+                                vertical: 16,
                               ),
+                              textStyle: const TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                            child: Text(
+                              item.text,
                             ),
                           );
                         }).toList(),
