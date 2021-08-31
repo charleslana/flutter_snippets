@@ -1673,6 +1673,7 @@ class DataWidget {
                     widget: const SnippetPageTransition(),
                   ),
                 ),
+                isNew: true,
               ),
             ],
           ),

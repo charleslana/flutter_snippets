@@ -22,6 +22,7 @@
     "filterSearchLabel": "Buscar {filter}",
     "filterSearchHint": "{filter}",
     "filterSearchNoResults": "No hay resultados",
+    "filterBadgeNew": "Nuevo",
     "menuBasicDart": "Dart Básico",
     "menuBasicComments": "Comentarios",
     "menuBasicVariables": "Variables",

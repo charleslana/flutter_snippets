@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/models/snippet_filter_list_model.dart';
@@ -116,30 +117,40 @@ class _SnippetFilterState extends State<SnippetFilter> {
                         spacing: 10,
                         runSpacing: 10,
                         children: _items.map((item) {
-                          return ElevatedButton(
-                            onPressed: () {
-                              FocusManager.instance.primaryFocus?.unfocus();
-                              item.onPressed();
-                              setState(() {
-                                _controller.clear();
-                                if (_items.length != _duplicateItems.length) {
-                                  _items
-                                    ..clear()
-                                    ..addAll(_duplicateItems);
-                                }
-                              });
-                            },
-                            style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 40,
-                                vertical: 16,
+                          return Badge(
+                            showBadge: item.isNew ?? false,
+                            toAnimate: false,
+                            shape: BadgeShape.square,
+                            badgeColor: Colors.purple,
+                            borderRadius: BorderRadius.circular(8),
+                            badgeContent: Text(
+                                AppLocalizations.of(context)!.filterBadgeNew,
+                                style: const TextStyle(color: Colors.white)),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                FocusManager.instance.primaryFocus?.unfocus();
+                                item.onPressed();
+                                setState(() {
+                                  _controller.clear();
+                                  if (_items.length != _duplicateItems.length) {
+                                    _items
+                                      ..clear()
+                                      ..addAll(_duplicateItems);
+                                  }
+                                });
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 40,
+                                  vertical: 16,
+                                ),
+                                textStyle: const TextStyle(
+                                  fontSize: 18,
+                                ),
                               ),
-                              textStyle: const TextStyle(
-                                fontSize: 18,
+                              child: Text(
+                                item.text,
                               ),
-                            ),
-                            child: Text(
-                              item.text,
                             ),
                           );
                         }).toList(),

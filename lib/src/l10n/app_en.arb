@@ -34,6 +34,7 @@
         }
     },
     "filterSearchNoResults": "No results",
+    "filterBadgeNew": "New",
     "menuBasicDart": "Dart Basic",
     "menuBasicComments": "Comments",
     "menuBasicVariables": "Variables",
