@@ -165,6 +165,7 @@
     "menuWidgetAdvancedLoadTxt": "LoadTxt",
     "menuWidgetAdvancedIndexedStack": "IndexedStack",
     "menuWidgetAdvancedScrollController": "ScrollController",
+    "menuWidgetAdvancedPageTransition": "PageTransition",
     "menuWidgetAppStopwatch": "Cronômetro",
     "menuWidgetAppCountdown": "Contagem regressiva",
     "menuAnimation": "Animações",

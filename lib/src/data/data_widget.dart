@@ -93,6 +93,7 @@ import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_overflow_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_padding.dart';
 import 'package:flutter_snippets/src/snippets/snippet_page_route_builder.dart';
+import 'package:flutter_snippets/src/snippets/snippet_page_transition.dart';
 import 'package:flutter_snippets/src/snippets/snippet_page_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_placeholder.dart';
@@ -1657,6 +1658,19 @@ class DataWidget {
                         .menuWidgetAdvancedScrollController,
                     widget: const SnippetScrollController(),
                     tip: AppLocalizations.of(context)!.tipScrollController,
+                  ),
+                ),
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!
+                    .menuWidgetAdvancedPageTransition,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetPageTransition,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedPageTransition,
+                    widget: const SnippetPageTransition(),
                   ),
                 ),
               ),

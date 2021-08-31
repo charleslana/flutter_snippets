@@ -75,7 +75,7 @@ class ThemeProvider extends ChangeNotifier {
   }
 }
 
-final lighTheme = ThemeData(
+final ThemeData lighTheme = ThemeData(
   scaffoldBackgroundColor: Colors.white,
   colorScheme: const ColorScheme.light().copyWith(
     primary: Colors.indigo,
@@ -145,7 +145,7 @@ final lighTheme = ThemeData(
   primaryColorDark: Colors.indigo,
 );
 
-final darkTheme = ThemeData(
+final ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: Colors.grey.shade900,
   colorScheme: const ColorScheme.dark().copyWith(
     primary: Colors.indigo,
