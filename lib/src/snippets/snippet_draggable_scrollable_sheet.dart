@@ -32,10 +32,10 @@ class _SnippetDraggableScrollableSheetState
           },
         );
       },
-    ).then((_) => toggleIcon());
+    ).then((_) => _toggleIcon());
   }
 
-  void toggleIcon() {
+  void _toggleIcon() {
     _controller.isDismissed
         ? _controller.forward().whenComplete(_showSheet)
         : _controller.reverse();
@@ -63,7 +63,7 @@ class _SnippetDraggableScrollableSheetState
           elevation: 5,
           backgroundColor: Colors.deepOrange,
           foregroundColor: Colors.white,
-          onPressed: toggleIcon,
+          onPressed: _toggleIcon,
           child: AnimatedIcon(
             icon: AnimatedIcons.menu_close,
             progress: _controller,

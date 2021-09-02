@@ -17,7 +17,7 @@ class _SnippetLoadJsonState extends State<SnippetLoadJson> {
   Future<void> _loadJson() async {
     final dynamic data =
         await rootBundle.loadString('assets/json/computer.json');
-    final jsonResponse = json.decode(data);
+    final dynamic jsonResponse = json.decode(data);
 
     final Computer computer = Computer.fromJson(jsonResponse);
 

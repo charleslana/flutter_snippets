@@ -5,7 +5,7 @@ class SnippetPopupMenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<PopupMenuButtonState<int>> _key = GlobalKey();
+    final GlobalKey<PopupMenuButtonState<int>> key = GlobalKey();
 
     return Scaffold(
       appBar: AppBar(
@@ -13,7 +13,7 @@ class SnippetPopupMenuButton extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           PopupMenuButton<int>(
-            key: _key,
+            key: key,
             icon: const Icon(Icons.settings),
             onSelected: print,
             itemBuilder: (context) {
@@ -27,7 +27,7 @@ class SnippetPopupMenuButton extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () => _key.currentState!.showButtonMenu(),
+          onPressed: () => key.currentState!.showButtonMenu(),
           child: const Text('Open menu'),
         ),
       ),

@@ -24,7 +24,7 @@ class MyAppMaterial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _todos = List.generate(
+    final todos = List.generate(
       20,
       (index) => Todo(
         'Title $index',
@@ -34,7 +34,7 @@ class MyAppMaterial extends StatelessWidget {
 
     return Scaffold(
       body: TodosScreen(
-        todos: _todos,
+        todos: todos,
       ),
     );
   }
@@ -48,7 +48,10 @@ class Todo {
 }
 
 class TodosScreen extends StatelessWidget {
-  const TodosScreen({Key? key, required this.todos}) : super(key: key);
+  const TodosScreen({
+    Key? key,
+    required this.todos,
+  }) : super(key: key);
 
   final List<Todo> todos;
 
@@ -76,7 +79,10 @@ class TodosScreen extends StatelessWidget {
 }
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({Key? key, required this.todo}) : super(key: key);
+  const DetailScreen({
+    Key? key,
+    required this.todo,
+  }) : super(key: key);
 
   final Todo todo;
 

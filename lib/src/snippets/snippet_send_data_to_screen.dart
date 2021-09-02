@@ -5,7 +5,7 @@ class SnippetSendDataToScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _todos = List.generate(
+    final todos = List.generate(
       20,
       (index) => SnippetSendDataToScreenTodo(
         'Title $index',
@@ -15,7 +15,7 @@ class SnippetSendDataToScreen extends StatelessWidget {
 
     return Scaffold(
       body: SnippetSendDataToScreenTodosScreen(
-        todos: _todos,
+        todos: todos,
       ),
     );
   }
@@ -29,8 +29,10 @@ class SnippetSendDataToScreenTodo {
 }
 
 class SnippetSendDataToScreenTodosScreen extends StatelessWidget {
-  const SnippetSendDataToScreenTodosScreen({Key? key, required this.todos})
-      : super(key: key);
+  const SnippetSendDataToScreenTodosScreen({
+    Key? key,
+    required this.todos,
+  }) : super(key: key);
 
   final List<SnippetSendDataToScreenTodo> todos;
 
@@ -59,8 +61,10 @@ class SnippetSendDataToScreenTodosScreen extends StatelessWidget {
 }
 
 class SnippetSendDataToScreenDetailScreen extends StatelessWidget {
-  const SnippetSendDataToScreenDetailScreen({Key? key, required this.todo})
-      : super(key: key);
+  const SnippetSendDataToScreenDetailScreen({
+    Key? key,
+    required this.todo,
+  }) : super(key: key);
 
   final SnippetSendDataToScreenTodo todo;
 

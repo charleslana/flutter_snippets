@@ -10,14 +10,14 @@ class SnippetScrollController extends StatefulWidget {
 
 class _SnippetScrollControllerState extends State<SnippetScrollController> {
   late ScrollController _controller;
-  List<String> items = List.generate(100, (index) => 'Init $index');
+  final List<String> _items = List.generate(100, (index) => 'Init $index');
 
   void _scrollListener() {
     final double height = MediaQuery.of(context).size.height * 0.50;
 
     if (_controller.position.extentAfter < height) {
       setState(() {
-        items.addAll(List.generate(10, (index) => 'Inserted $index'));
+        _items.addAll(List.generate(10, (index) => 'Inserted $index'));
       });
     }
   }
@@ -40,9 +40,9 @@ class _SnippetScrollControllerState extends State<SnippetScrollController> {
       body: Scrollbar(
         child: ListView.builder(
           controller: _controller,
-          itemCount: items.length,
+          itemCount: _items.length,
           itemBuilder: (context, index) {
-            return Text(items[index]);
+            return Text(_items[index]);
           },
         ),
       ),

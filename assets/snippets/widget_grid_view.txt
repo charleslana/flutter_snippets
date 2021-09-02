@@ -22,25 +22,6 @@ class MyApp extends StatelessWidget {
 class MyAppMaterial extends StatelessWidget {
   const MyAppMaterial({Key? key}) : super(key: key);
 
-  static const List<Option> _options = [
-    Option(
-      titulo: 'Home',
-      icon: Icons.home,
-    ),
-    Option(
-      titulo: 'Home 2',
-      icon: Icons.home,
-    ),
-    Option(
-      titulo: 'Home 3',
-      icon: Icons.home,
-    ),
-    Option(
-      titulo: 'Home 4',
-      icon: Icons.home,
-    ),
-  ];
-
   Widget _appCard(Option option) {
     return Card(
       color: Colors.white,
@@ -58,14 +39,32 @@ class MyAppMaterial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<Option> options = [
+      const Option(
+        titulo: 'Home',
+        icon: Icons.home,
+      ),
+      const Option(
+        titulo: 'Home 2',
+        icon: Icons.home,
+      ),
+      const Option(
+        titulo: 'Home 3',
+        icon: Icons.home,
+      ),
+      const Option(
+        titulo: 'Home 4',
+        icon: Icons.home,
+      ),
+    ];
     return Scaffold(
       body: GridView.count(
         crossAxisCount: 3,
         crossAxisSpacing: 3,
         padding: const EdgeInsets.all(10),
-        children: List.generate(_options.length, (index) {
+        children: List.generate(options.length, (index) {
           return Center(
-            child: _appCard(_options[index]),
+            child: _appCard(options[index]),
           );
         }),
       ),

@@ -131,8 +131,8 @@ class AppConstants {
   static const String txtSnippetWidgetDropdown = 'widget_dropdown';
   static const String txtSnippetWidgetDismissible = 'widget_dismissible';
   static const String txtSnippetWidgetGridView = 'widget_grid_view';
-  static const String txtSnippetWidgetSilverAppBar = 'widget_silver_app_bar';
-  static const String txtSnippetWidgetSilverGrid = 'widget_silver_grid';
+  static const String txtSnippetWidgetSliverAppBar = 'widget_sliver_app_bar';
+  static const String txtSnippetWidgetSliverGrid = 'widget_sliver_grid';
   static const String txtSnippetWidgetNavigator = 'widget_navigator';
   static const String txtSnippetWidgetNavigatorWithArguments =
       'widget_navigator_with_arguments';

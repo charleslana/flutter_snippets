@@ -27,6 +27,8 @@ class MyAppMaterial extends StatefulWidget {
 }
 
 class _MyAppMaterialState extends State<MyAppMaterial> {
+  late final List<SnippetExpansionPanelListItem> _data = _generateItems(8);
+  
   List<Item> _generateItems(int numberOfItems) {
     return List<Item>.generate(numberOfItems, (int index) {
       return Item(
@@ -35,8 +37,6 @@ class _MyAppMaterialState extends State<MyAppMaterial> {
       );
     });
   }
-
-  late final List<Item> _data = _generateItems(8);
 
   Widget _buildPanel() {
     return ExpansionPanelList(

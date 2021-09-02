@@ -9,6 +9,8 @@ class SnippetExpansionPanelList extends StatefulWidget {
 }
 
 class _SnippetExpansionPanelListState extends State<SnippetExpansionPanelList> {
+  late final List<SnippetExpansionPanelListItem> _data = _generateItems(8);
+
   List<SnippetExpansionPanelListItem> _generateItems(int numberOfItems) {
     return List<SnippetExpansionPanelListItem>.generate(numberOfItems,
         (int index) {
@@ -18,8 +20,6 @@ class _SnippetExpansionPanelListState extends State<SnippetExpansionPanelList> {
       );
     });
   }
-
-  late final List<SnippetExpansionPanelListItem> _data = _generateItems(8);
 
   Widget _buildPanel() {
     return ExpansionPanelList(

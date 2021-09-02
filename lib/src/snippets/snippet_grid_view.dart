@@ -3,25 +3,6 @@ import 'package:flutter/material.dart';
 class SnippetGridView extends StatelessWidget {
   const SnippetGridView({Key? key}) : super(key: key);
 
-  static const List<SnippetGridViewOption> _options = [
-    SnippetGridViewOption(
-      titulo: 'Home',
-      icon: Icons.home,
-    ),
-    SnippetGridViewOption(
-      titulo: 'Home 2',
-      icon: Icons.home,
-    ),
-    SnippetGridViewOption(
-      titulo: 'Home 3',
-      icon: Icons.home,
-    ),
-    SnippetGridViewOption(
-      titulo: 'Home 4',
-      icon: Icons.home,
-    ),
-  ];
-
   Widget _appCard(SnippetGridViewOption option) {
     return Card(
       color: Colors.white,
@@ -39,14 +20,33 @@ class SnippetGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<SnippetGridViewOption> options = [
+      const SnippetGridViewOption(
+        titulo: 'Home',
+        icon: Icons.home,
+      ),
+      const SnippetGridViewOption(
+        titulo: 'Home 2',
+        icon: Icons.home,
+      ),
+      const SnippetGridViewOption(
+        titulo: 'Home 3',
+        icon: Icons.home,
+      ),
+      const SnippetGridViewOption(
+        titulo: 'Home 4',
+        icon: Icons.home,
+      ),
+    ];
+
     return Scaffold(
       body: GridView.count(
         crossAxisCount: 3,
         crossAxisSpacing: 3,
         padding: const EdgeInsets.all(10),
-        children: List.generate(_options.length, (index) {
+        children: List.generate(options.length, (index) {
           return Center(
-            child: _appCard(_options[index]),
+            child: _appCard(options[index]),
           );
         }),
       ),

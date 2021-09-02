@@ -10,10 +10,9 @@ class SnippetAnimatedContainer extends StatefulWidget {
 
 class _SnippetAnimatedContainerState extends State<SnippetAnimatedContainer> {
   double _width = 100;
-  final double _height = 100;
 
   void _increaseWidth(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width * 0.7;
+    final double screenWidth = MediaQuery.of(context).size.width * 0.7;
 
     setState(() {
       _width = _width >= screenWidth ? 100 : _width += 50;
@@ -27,7 +26,7 @@ class _SnippetAnimatedContainerState extends State<SnippetAnimatedContainer> {
         duration: const Duration(milliseconds: 500),
         curve: Curves.elasticOut,
         width: _width,
-        height: _height,
+        height: 100,
         child: ElevatedButton(
           onPressed: () => _increaseWidth(context),
           child: Text('Tap to\nincrease width\n$_width'),

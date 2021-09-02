@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class SnippetSilverGrid extends StatelessWidget {
-  const SnippetSilverGrid({Key? key}) : super(key: key);
+class SnippetSliverGrid extends StatelessWidget {
+  const SnippetSliverGrid({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

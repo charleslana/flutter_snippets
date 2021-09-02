@@ -9,9 +9,9 @@ class SnippetListViewWithSearch extends StatefulWidget {
 }
 
 class _SnippetListViewWithSearchState extends State<SnippetListViewWithSearch> {
-  TextEditingController editingController = TextEditingController();
-
-  final _duplicateItems = List<String>.generate(50, (index) => 'Item $index');
+  final TextEditingController _controller = TextEditingController();
+  final List<String> _duplicateItems =
+      List<String>.generate(50, (index) => 'Item $index');
   final List<String> _items = [];
 
   @override
@@ -57,7 +57,7 @@ class _SnippetListViewWithSearchState extends State<SnippetListViewWithSearch> {
             padding: const EdgeInsets.all(8),
             child: TextField(
               onChanged: _filterSearchResults,
-              controller: editingController,
+              controller: _controller,
               decoration: const InputDecoration(
                 labelText: 'Search',
                 hintText: 'Search',

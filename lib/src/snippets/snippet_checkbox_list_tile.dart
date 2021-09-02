@@ -9,7 +9,7 @@ class SnippetCheckboxListTile extends StatefulWidget {
 }
 
 class _SnippetCheckboxListTileState extends State<SnippetCheckboxListTile> {
-  bool _value = false;
+  bool _isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +17,10 @@ class _SnippetCheckboxListTileState extends State<SnippetCheckboxListTile> {
       body: Center(
         child: CheckboxListTile(
           title: const Text('Hello World'),
-          value: _value,
+          value: _isChecked,
           onChanged: (bool? value) {
             setState(() {
-              _value = value!;
+              _isChecked = value!;
             });
           },
           secondary: const Icon(Icons.hourglass_empty),

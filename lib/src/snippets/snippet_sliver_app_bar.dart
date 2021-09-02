@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SnippetSilverAppBar extends StatelessWidget {
-  const SnippetSilverAppBar({Key? key}) : super(key: key);
+class SnippetSliverAppBar extends StatelessWidget {
+  const SnippetSliverAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        slivers: <Widget>[
+        slivers: [
           SliverAppBar(
             automaticallyImplyLeading: false,
             title: const Text('SliverAppBar'),

@@ -10,7 +10,7 @@ class SnippetMatrix extends StatefulWidget {
 class _SnippetMatrixState extends State<SnippetMatrix> {
   Offset _offset = Offset.zero;
 
-  Widget _defaultApp(BuildContext context) {
+  Widget _build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
@@ -43,7 +43,7 @@ class _SnippetMatrixState extends State<SnippetMatrix> {
       child: GestureDetector(
         onPanUpdate: (details) => setState(() => _offset += details.delta),
         onDoubleTap: () => setState(() => _offset = Offset.zero),
-        child: _defaultApp(context),
+        child: _build(context),
       ),
     );
   }

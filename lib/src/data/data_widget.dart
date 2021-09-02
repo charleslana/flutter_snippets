@@ -112,11 +112,11 @@ import 'package:flutter_snippets/src/snippets/snippet_scrollbar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_selectable_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_send_data_to_screen.dart';
 import 'package:flutter_snippets/src/snippets/snippet_shader_mask.dart';
-import 'package:flutter_snippets/src/snippets/snippet_silver_app_bar.dart';
-import 'package:flutter_snippets/src/snippets/snippet_silver_grid.dart';
 import 'package:flutter_snippets/src/snippets/snippet_single_child_scroll_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_sized_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_slider.dart';
+import 'package:flutter_snippets/src/snippets/snippet_sliver_app_bar.dart';
+import 'package:flutter_snippets/src/snippets/snippet_sliver_grid.dart';
 import 'package:flutter_snippets/src/snippets/snippet_snack_bar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_spacer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stack.dart';
@@ -1357,29 +1357,29 @@ class DataWidget {
               ),
               SnippetFilterListModel(
                 text: AppLocalizations.of(context)!
-                    .menuWidgetAdvancedSilverAppBar,
+                    .menuWidgetAdvancedSliverAppBar,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetSilverAppBar,
+                    data: AppConstants.txtSnippetWidgetSliverAppBar,
                     title: AppLocalizations.of(context)!
-                        .menuWidgetAdvancedSilverAppBar,
-                    widget: const SnippetSilverAppBar(),
-                    tip: AppLocalizations.of(context)!.tipSilverAppBar,
+                        .menuWidgetAdvancedSliverAppBar,
+                    widget: const SnippetSliverAppBar(),
+                    tip: AppLocalizations.of(context)!.tipSliverAppBar,
                   ),
                 ),
               ),
               SnippetFilterListModel(
                 text:
-                    AppLocalizations.of(context)!.menuWidgetAdvancedSilverGrid,
+                    AppLocalizations.of(context)!.menuWidgetAdvancedSliverGrid,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetSilverGrid,
+                    data: AppConstants.txtSnippetWidgetSliverGrid,
                     title: AppLocalizations.of(context)!
-                        .menuWidgetAdvancedSilverGrid,
-                    widget: const SnippetSilverGrid(),
-                    tip: AppLocalizations.of(context)!.tipSilverGrid,
+                        .menuWidgetAdvancedSliverGrid,
+                    widget: const SnippetSliverGrid(),
+                    tip: AppLocalizations.of(context)!.tipSliverGrid,
                   ),
                 ),
               ),

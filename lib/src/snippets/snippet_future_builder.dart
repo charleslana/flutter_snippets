@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class SnippetFutureBuilder extends StatelessWidget {
   const SnippetFutureBuilder({Key? key}) : super(key: key);
 
-  Future<String> getFutureData() async =>
+  Future<String> _getFutureData() async =>
       Future.delayed(const Duration(seconds: 2), () => 'Data loaded');
 
   @override
@@ -11,7 +11,7 @@ class SnippetFutureBuilder extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: FutureBuilder(
-          future: getFutureData(),
+          future: _getFutureData(),
           builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
             if (snapshot.hasData) {
               return Text(

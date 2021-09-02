@@ -11,20 +11,27 @@ class SnippetBottomNavigationBar extends StatefulWidget {
 class _SnippetBottomNavigationBarState
     extends State<SnippetBottomNavigationBar> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = [
+  final List<Widget> _widgetOptions = const [
     Text(
       'Home page',
-      style: optionStyle,
+      style: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+      ),
     ),
     Text(
       'Course page',
-      style: optionStyle,
+      style: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+      ),
     ),
     Text(
       'Mail page',
-      style: optionStyle,
+      style: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+      ),
     ),
   ];
 

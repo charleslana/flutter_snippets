@@ -27,7 +27,7 @@ class MyAppMaterial extends StatefulWidget {
 }
 
 class _MyAppMaterialState extends State<MyAppMaterial> {
-  bool _value = false;
+  bool _isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +35,10 @@ class _MyAppMaterialState extends State<MyAppMaterial> {
       body: Center(
         child: SwitchListTile(
           title: const Text('Hello World'),
-          value: _value,
+          value: _isChecked,
           onChanged: (bool? value) {
             setState(() {
-              _value = value!;
+              _isChecked = value!;
             });
           },
           secondary: const Icon(Icons.hourglass_empty),

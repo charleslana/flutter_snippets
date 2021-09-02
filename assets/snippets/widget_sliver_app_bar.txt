@@ -26,7 +26,7 @@ class MyAppMaterial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        slivers: <Widget>[
+        slivers: [
           SliverAppBar(
             automaticallyImplyLeading: false,
             title: const Text('SliverAppBar'),

@@ -8,7 +8,7 @@ class SnippetCheckbox extends StatefulWidget {
 }
 
 class _SnippetCheckboxState extends State<SnippetCheckbox> {
-  bool _value = false;
+  bool _isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +36,15 @@ class _SnippetCheckboxState extends State<SnippetCheckbox> {
                         width: 10,
                       ),
                       Text(
-                        'Hello World accept! $_value',
+                        'Hello World accept! $_isChecked',
                         style: const TextStyle(fontSize: 17),
                       ),
                       const SizedBox(width: 10),
                       Checkbox(
-                        value: _value,
+                        value: _isChecked,
                         onChanged: (value) {
                           setState(() {
-                            _value = value!;
+                            _isChecked = value!;
                           });
                         },
                       ),

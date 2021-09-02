@@ -10,7 +10,7 @@ class SnippetCountdown extends StatefulWidget {
 }
 
 class _SnippetCountdownState extends State<SnippetCountdown> {
-  final _interval = const Duration(seconds: 1);
+  final Duration _interval = const Duration(seconds: 1);
   final int _timerMaxSeconds = 10;
   int _currentSeconds = 0;
   late Timer _timer;
