@@ -83,12 +83,6 @@ final ThemeData lighTheme = ThemeData(
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     selectedItemColor: Colors.indigo,
   ),
-  textButtonTheme: TextButtonThemeData(
-    style: TextButton.styleFrom(
-      backgroundColor: Colors.indigo,
-      primary: Colors.white,
-    ),
-  ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: TextButton.styleFrom(
       backgroundColor: Colors.indigo,
@@ -152,12 +146,6 @@ final ThemeData darkTheme = ThemeData(
   ),
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     selectedItemColor: Colors.indigo.shade200,
-  ),
-  textButtonTheme: TextButtonThemeData(
-    style: TextButton.styleFrom(
-      backgroundColor: Colors.indigo,
-      primary: Colors.white,
-    ),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: TextButton.styleFrom(
