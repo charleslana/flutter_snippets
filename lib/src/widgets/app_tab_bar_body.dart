@@ -16,9 +16,7 @@ class AppTabBarBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TabBarView(
-      physics: const BouncingScrollPhysics(
-        parent: AlwaysScrollableScrollPhysics(),
-      ),
+      physics: const NeverScrollableScrollPhysics(),
       controller: tabController,
       children: [
         Padding(
@@ -27,9 +25,7 @@ class AppTabBarBody extends StatelessWidget {
               Card(
                 elevation: 0,
                 child: SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(
-                    parent: AlwaysScrollableScrollPhysics(),
-                  ),
+                  physics: const BouncingScrollPhysics(),
                   child: Text(
                     data,
                     style: const TextStyle(
@@ -48,9 +44,7 @@ class AppTabBarBody extends StatelessWidget {
               children: [
                 Expanded(
                   child: SingleChildScrollView(
-                    physics: const BouncingScrollPhysics(
-                      parent: AlwaysScrollableScrollPhysics(),
-                    ),
+                    physics: const BouncingScrollPhysics(),
                     child: Text(
                       data,
                       style: const TextStyle(

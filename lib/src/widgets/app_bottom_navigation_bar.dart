@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/utils/app_utils.dart';
 
 class AppBottomNavigationBar extends StatelessWidget {
-  const AppBottomNavigationBar({
-    Key? key,
-  }) : super(key: key);
+  const AppBottomNavigationBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
