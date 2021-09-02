@@ -9,6 +9,7 @@ import 'package:flutter_snippets/src/widgets/app_custom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:readmore/readmore.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AppInfo extends StatefulWidget {
@@ -38,6 +39,15 @@ class _AppInfoState extends State<AppInfo> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Center(
+                child: Text(
+                  AppLocalizations.of(context)!.appInfoFollowMe,
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
               Card(
                 child: Center(
                   child: Padding(
@@ -133,7 +143,24 @@ class _AppInfoState extends State<AppInfo> {
                                     return Card(
                                       child: ListTile(
                                         leading: const Icon(Icons.article),
-                                        title: Text(news.description!),
+                                        title: ReadMoreText(
+                                          news.description!,
+                                          trimLines: 5,
+                                          delimiter: '',
+                                          colorClickableText: Colors.indigo,
+                                          trimMode: TrimMode.Line,
+                                          trimCollapsedText:
+                                              '...${AppLocalizations.of(context)!.appNewsShowMore}',
+                                          trimExpandedText:
+                                              ' ${AppLocalizations.of(context)!.appNewsShowLess}',
+                                          moreStyle: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .subtitle1,
+                                        ),
                                         subtitle: Text(formattedDate),
                                       ),
                                     );
