@@ -18,9 +18,7 @@ class SnippetWidgets extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(10),
           child: ListView(
-            physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics(),
-            ),
+            physics: const BouncingScrollPhysics(),
             children: List.generate(
               DataWidget.of(context).length,
               (index) {

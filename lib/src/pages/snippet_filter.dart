@@ -110,9 +110,7 @@ class _SnippetFilterState extends State<SnippetFilter> {
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(
-                        parent: AlwaysScrollableScrollPhysics(),
-                      ),
+                      physics: const BouncingScrollPhysics(),
                       child: Wrap(
                         spacing: 10,
                         runSpacing: 10,

@@ -15,9 +15,7 @@ class SnippetDart extends StatelessWidget {
           child: Stack(
             children: [
               ListView(
-                physics: const BouncingScrollPhysics(
-                  parent: AlwaysScrollableScrollPhysics(),
-                ),
+                physics: const BouncingScrollPhysics(),
                 children: List.generate(
                   DataDart.of(context).length,
                   (index) {

@@ -128,9 +128,7 @@ class _AppInfoState extends State<AppInfo> {
                               )
                             : Expanded(
                                 child: ListView.builder(
-                                  physics: const BouncingScrollPhysics(
-                                    parent: AlwaysScrollableScrollPhysics(),
-                                  ),
+                                  physics: const BouncingScrollPhysics(),
                                   itemCount: data.length,
                                   itemBuilder: (context, index) {
                                     final news = data[index];

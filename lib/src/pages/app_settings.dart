@@ -82,9 +82,7 @@ class _AppSettingsState extends State<AppSettings> {
       child: Scaffold(
         appBar: AppCustomBar(title: AppLocalizations.of(context)!.appSettings),
         body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(
-            parent: AlwaysScrollableScrollPhysics(),
-          ),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

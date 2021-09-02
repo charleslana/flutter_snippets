@@ -83,9 +83,7 @@ class AppUtils {
           content: message == null
               ? Text(AppLocalizations.of(context)!.utilAlertNoInformation)
               : SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(
-                    parent: AlwaysScrollableScrollPhysics(),
-                  ),
+                  physics: const BouncingScrollPhysics(),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
