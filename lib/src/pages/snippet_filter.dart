@@ -99,7 +99,6 @@ class _SnippetFilterState extends State<SnippetFilter> {
                     prefixIcon: const Icon(Icons.search),
                     suffixIcon: IconButton(
                       onPressed: () {
-                        FocusManager.instance.primaryFocus?.unfocus();
                         setState(() {
                           _controller.clear();
                           if (_items.length != _duplicateItems.length) {
