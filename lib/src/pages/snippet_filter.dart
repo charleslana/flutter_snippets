@@ -116,14 +116,24 @@ class _SnippetFilterState extends State<SnippetFilter> {
                         runSpacing: 10,
                         children: _items.map((item) {
                           return Badge(
-                            showBadge: item.isNew ?? false,
+                            showBadge: item.isNew ?? item.isUpdated ?? false,
                             toAnimate: false,
                             shape: BadgeShape.square,
-                            badgeColor: Colors.purple,
+                            badgeColor: item.isNew == true
+                                ? Colors.purple
+                                : Colors.orange,
                             borderRadius: BorderRadius.circular(8),
-                            badgeContent: Text(
-                                AppLocalizations.of(context)!.filterBadgeNew,
-                                style: const TextStyle(color: Colors.white)),
+                            badgeContent: item.isNew == true
+                                ? Text(
+                                    AppLocalizations.of(context)!
+                                        .filterBadgeNew,
+                                    style: const TextStyle(color: Colors.white),
+                                  )
+                                : Text(
+                                    AppLocalizations.of(context)!
+                                        .filterBadgeUpdated,
+                                    style: const TextStyle(color: Colors.white),
+                                  ),
                             child: ElevatedButton(
                               onPressed: () {
                                 FocusManager.instance.primaryFocus?.unfocus();

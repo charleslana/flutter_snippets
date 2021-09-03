@@ -1568,6 +1568,7 @@ class DataWidget {
                     tip: AppLocalizations.of(context)!.tipExpansionPanel,
                   ),
                 ),
+                isUpdated: true,
               ),
               SnippetFilterListModel(
                 text: AppLocalizations.of(context)!.menuWidgetAdvancedPaint,

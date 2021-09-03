@@ -26,6 +26,7 @@
     "filterSearchHint": "{filter}",
     "filterSearchNoResults": "No hay resultados",
     "filterBadgeNew": "Nuevo",
+    "filterBadgeUpdated": "Actualizado",
     "menuBasicDart": "Dart Básico",
     "menuBasicComments": "Comentarios",
     "menuBasicVariables": "Variables",
