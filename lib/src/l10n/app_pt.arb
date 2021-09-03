@@ -171,6 +171,8 @@
     "menuWidgetAdvancedIndexedStack": "IndexedStack",
     "menuWidgetAdvancedScrollController": "ScrollController",
     "menuWidgetAdvancedPageTransition": "PageTransition",
+    "menuWidgetAdvancedSplashScreen": "SplashScreen",
+    "menuWidgetAdvancedPushNamed": "PushNamed",
     "menuWidgetAppStopwatch": "Cronômetro",
     "menuWidgetAppCountdown": "Contagem regressiva",
     "menuAnimation": "Animações",

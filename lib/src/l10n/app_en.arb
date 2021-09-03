@@ -183,6 +183,8 @@
     "menuWidgetAdvancedIndexedStack": "IndexedStack",
     "menuWidgetAdvancedScrollController": "ScrollController",
     "menuWidgetAdvancedPageTransition": "PageTransition",
+    "menuWidgetAdvancedSplashScreen": "SplashScreen",
+    "menuWidgetAdvancedPushNamed": "PushNamed",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",

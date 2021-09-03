@@ -99,6 +99,7 @@ import 'package:flutter_snippets/src/snippets/snippet_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_placeholder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_popup_menu_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_positioned.dart';
+import 'package:flutter_snippets/src/snippets/snippet_push_named.dart';
 import 'package:flutter_snippets/src/snippets/snippet_radio_list_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_raw_string.dart';
 import 'package:flutter_snippets/src/snippets/snippet_refresh_indicator.dart';
@@ -119,6 +120,7 @@ import 'package:flutter_snippets/src/snippets/snippet_sliver_app_bar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_sliver_grid.dart';
 import 'package:flutter_snippets/src/snippets/snippet_snack_bar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_spacer.dart';
+import 'package:flutter_snippets/src/snippets/snippet_splash_screen.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
@@ -1672,6 +1674,33 @@ class DataWidget {
                     title: AppLocalizations.of(context)!
                         .menuWidgetAdvancedPageTransition,
                     widget: const SnippetPageTransition(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!
+                    .menuWidgetAdvancedSplashScreen,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetSplashScreen,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedSplashScreen,
+                    widget: const SnippetSplashScreen(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!.menuWidgetAdvancedPushNamed,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetPushNamed,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedPushNamed,
+                    widget: const SnippetPushNamed(),
                   ),
                 ),
                 isNew: true,
