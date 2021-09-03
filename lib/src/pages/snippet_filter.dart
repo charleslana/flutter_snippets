@@ -46,6 +46,19 @@ class _SnippetFilterState extends State<SnippetFilter> {
     }
   }
 
+  void _clearFilter() {
+    FocusManager.instance.primaryFocus?.unfocus();
+    
+    setState(() {
+      _controller.clear();
+      if (_items.length != _duplicateItems.length) {
+        _items
+          ..clear()
+          ..addAll(_duplicateItems);
+      }
+    });
+  }
+
   Future<void> init() async {
     await Future<void>.delayed(Duration.zero).then((_) {
       _items = List<SnippetFilterListModel>.generate(
@@ -97,6 +110,10 @@ class _SnippetFilterState extends State<SnippetFilter> {
                     hintText: AppLocalizations.of(context)!
                         .filterSearchHint(_filter.title),
                     prefixIcon: const Icon(Icons.search),
+                    suffixIcon: IconButton(
+                      onPressed: _clearFilter,
+                      icon: const Icon(Icons.clear),
+                    ),
                     border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(25)),
                     ),
@@ -138,14 +155,6 @@ class _SnippetFilterState extends State<SnippetFilter> {
                               onPressed: () {
                                 FocusManager.instance.primaryFocus?.unfocus();
                                 item.onPressed();
-                                setState(() {
-                                  _controller.clear();
-                                  if (_items.length != _duplicateItems.length) {
-                                    _items
-                                      ..clear()
-                                      ..addAll(_duplicateItems);
-                                  }
-                                });
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
