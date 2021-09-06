@@ -137,6 +137,7 @@ final ThemeData lighTheme = ThemeData(
   ),
   primaryColorLight: Colors.indigo,
   primaryColorDark: Colors.indigo,
+  fontFamily: 'OpenSans',
 );
 
 final ThemeData darkTheme = ThemeData(
@@ -205,4 +206,5 @@ final ThemeData darkTheme = ThemeData(
   ),
   primaryColorLight: Colors.black,
   primaryColorDark: Colors.black,
+  fontFamily: 'OpenSans',
 );

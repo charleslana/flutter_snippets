@@ -8,6 +8,7 @@ import 'package:flutter_snippets/src/utils/app_utils.dart';
 import 'package:flutter_snippets/src/widgets/app_custom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:readmore/readmore.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -20,6 +21,9 @@ class AppInfo extends StatefulWidget {
 }
 
 class _AppInfoState extends State<AppInfo> {
+  String packageVersion = '';
+  String packageName = '';
+
   dynamic _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -27,6 +31,20 @@ class _AppInfoState extends State<AppInfo> {
       AppUtils.toast(
           context, '${AppLocalizations.of(context)!.appInfoLaunchError} $url');
     }
+  }
+
+  Future<void> init() async {
+    final PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    setState(() {
+      packageVersion = packageInfo.version;
+      packageName = packageInfo.appName;
+    });
+  }
+
+  @override
+  void initState() {
+    init();
+    super.initState();
   }
 
   @override
@@ -88,6 +106,29 @@ class _AppInfoState extends State<AppInfo> {
                 ),
               ),
               const Divider(),
+              ElevatedButton(
+                onPressed: () {
+                  showAboutDialog(
+                    context: context,
+                    applicationIcon: Image.asset(
+                      'assets/images/icon_flutter_snippets.png',
+                      width: 32,
+                    ),
+                    applicationName: packageName,
+                    applicationVersion: packageVersion,
+                    applicationLegalese: '©${DateTime.now().year} $packageName',
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: Text(
+                            '${AppLocalizations.of(context)!.appInfoAbout} $packageName'),
+                      ),
+                    ],
+                  );
+                },
+                child: Text(
+                    '${AppLocalizations.of(context)!.appInfoAbout} $packageName'),
+              ),
               Center(
                 child: Text(
                   AppLocalizations.of(context)!.appNewsTitle,

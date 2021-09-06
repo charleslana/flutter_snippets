@@ -11,6 +11,7 @@
     "appInfoTitle": "Info",
     "appInfoLaunchError": "Could not launch",
     "appInfoFollowMe": "Follow me",
+    "appInfoAbout": "About",
     "appNewsTitle": "News",
     "appNewsError": "Something went wrong try later",
     "appNewsNoNews": "No news",
