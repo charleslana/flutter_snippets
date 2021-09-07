@@ -124,6 +124,10 @@ class AppConstants {
   static const String txtSnippetWidgetRadioListTile = 'widget_radio_list_tile';
   static const String txtSnippetWidgetTextField = 'widget_text_field';
   static const String txtSnippetWidgetHapticFeedback = 'widget_haptic_feedback';
+  static const String txtSnippetWidgetDataTableWithSort =
+      'widget_data_table_with_sort';
+  static const String txtSnippetWidgetExpansionTile = 'widget_expansion_tile';
+  static const String txtSnippetWidgetLinearGradient = 'widget_linear_gradient';
   static const String txtSnippetWidgetRefreshIndicator =
       'widget_refresh_indicator';
   static const String txtSnippetWidgetDraggable = 'widget_draggable';
@@ -168,6 +172,12 @@ class AppConstants {
   static const String txtSnippetWidgetPushNamed = 'widget_push_named';
   static const String txtSnippetWidgetOnGenerateRoute =
       'widget_on_generate_route';
+  static const String txtSnippetWidgetWillPopScope = 'widget_will_pop_scope';
+  static const String txtSnippetWidgetStepper = 'widget_stepper';
+  static const String txtSnippetWidgetToggleButtons = 'widget_toggle_buttons';
+  static const String txtSnippetWidgetDatePicker = 'widget_date_picker';
+  static const String txtSnippetWidgetScrollToBottomOrTop =
+      'widget_scroll_to_bottom_or_top';
   static const String txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static const String txtSnippetWidgetCountdown = 'widget_countdown';
   static const String txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
@@ -190,6 +200,10 @@ class AppConstants {
   static const String txtSnippetWidgetFadeTransition = 'widget_fade_transition';
   static const String txtSnippetWidgetAnimatedSwitcher =
       'widget_animated_switcher';
+  static const String txtSnippetMainDeviceOrientation =
+      'main_device_orientation';
+  static const String txtSnippetMainSystemUIOverlayStyle =
+      'main_system_ui_overlay_style';
   static const String urlLinkedin = 'https://www.linkedin.com/in/charleslana/';
   static const String urlGithub = 'https://github.com/charleslana';
   static const String urlGooglePlay =

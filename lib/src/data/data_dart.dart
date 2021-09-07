@@ -126,13 +126,13 @@ class DataDart {
             title: AppLocalizations.of(context)!.menuAdvancedDart,
             snippets: [
               SnippetFilterListModel(
-                text: AppLocalizations.of(context)!.menuAdvancedFilterClasses,
+                text: AppLocalizations.of(context)!.menuAdvancedFilterClass,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
                     data: AppConstants.txtSnippetClass,
                     title:
-                        AppLocalizations.of(context)!.menuAdvancedFilterClasses,
+                        AppLocalizations.of(context)!.menuAdvancedFilterClass,
                   ),
                 ),
               ),

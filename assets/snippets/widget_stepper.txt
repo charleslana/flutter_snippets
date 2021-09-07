@@ -1,0 +1,174 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
+    );
+  }
+}
+
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
+  @override
+  _MyAppMaterialState createState() => _MyAppMaterialState();
+}
+
+class _MyAppMaterialState extends State<MyAppMaterial> {
+  int _currentStep = 0;
+  StepperType _stepperType = StepperType.horizontal;
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  void _switchStepsType() {
+    setState(() => _stepperType == StepperType.vertical
+        ? _stepperType = StepperType.horizontal
+        : _stepperType = StepperType.vertical);
+  }
+
+  void _tapped(int step) {
+    setState(() => _currentStep = step);
+  }
+
+  void _continued() {
+    _currentStep < 2 ? setState(() => _currentStep += 1) : _goToPage();
+  }
+
+  void _cancel() {
+    if (_currentStep > 0) {
+      setState(() => _currentStep -= 1);
+    }
+  }
+
+  void _goToPage() {
+    _formKey.currentState!.reset();
+    setState(() => _currentStep = 0);
+    Navigator.push(
+      context,
+      MaterialPageRoute<dynamic>(
+          builder: (context) => const MyAppMaterialPage()),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: Form(
+              key: _formKey,
+              child: Stepper(
+                type: _stepperType,
+                physics: const ClampingScrollPhysics(),
+                currentStep: _currentStep,
+                onStepTapped: _tapped,
+                onStepContinue: _continued,
+                onStepCancel: _cancel,
+                steps: [
+                  Step(
+                    title: const Text('Account'),
+                    content: Column(
+                      children: [
+                        TextFormField(
+                          decoration:
+                              const InputDecoration(labelText: 'Email Address'),
+                        ),
+                        TextFormField(
+                          decoration:
+                              const InputDecoration(labelText: 'Password'),
+                        ),
+                      ],
+                    ),
+                    isActive: _currentStep >= 0,
+                    state: _currentStep >= 0
+                        ? StepState.complete
+                        : StepState.disabled,
+                  ),
+                  Step(
+                    title: const Text('Address'),
+                    content: Column(
+                      children: [
+                        TextFormField(
+                          decoration:
+                              const InputDecoration(labelText: 'Home Address'),
+                        ),
+                        TextFormField(
+                          decoration:
+                              const InputDecoration(labelText: 'Postcode'),
+                        ),
+                      ],
+                    ),
+                    isActive: _currentStep >= 0,
+                    state: _currentStep >= 1
+                        ? StepState.complete
+                        : StepState.disabled,
+                  ),
+                  Step(
+                    title: const Text('Mobile Number'),
+                    content: Column(
+                      children: [
+                        TextFormField(
+                          decoration:
+                              const InputDecoration(labelText: 'Mobile Number'),
+                        ),
+                      ],
+                    ),
+                    isActive: _currentStep >= 0,
+                    state: _currentStep >= 2
+                        ? StepState.complete
+                        : StepState.disabled,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        heroTag: 'btn1',
+        onPressed: _switchStepsType,
+        child: const Icon(Icons.list),
+      ),
+    );
+  }
+}
+
+class MyAppMaterialPage extends StatelessWidget {
+  const MyAppMaterialPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Other Page'),
+            const SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

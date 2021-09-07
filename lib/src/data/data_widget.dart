@@ -41,6 +41,8 @@ import 'package:flutter_snippets/src/snippets/snippet_container_transform.dart';
 import 'package:flutter_snippets/src/snippets/snippet_countdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_custom_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_data_table.dart';
+import 'package:flutter_snippets/src/snippets/snippet_data_table_with_sort.dart';
+import 'package:flutter_snippets/src/snippets/snippet_date_picker.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dialog.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dismissible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_divider.dart';
@@ -54,6 +56,7 @@ import 'package:flutter_snippets/src/snippets/snippet_end_drawer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expanded.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expansion_panel.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expansion_panel_list.dart';
+import 'package:flutter_snippets/src/snippets/snippet_expansion_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fade_in_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fade_transition.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fitted_box.dart';
@@ -78,6 +81,7 @@ import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
 import 'package:flutter_snippets/src/snippets/snippet_interactive_viewer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_layout_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_limited_box.dart';
+import 'package:flutter_snippets/src/snippets/snippet_linear_gradient.dart';
 import 'package:flutter_snippets/src/snippets/snippet_linear_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view_with_search.dart';
@@ -111,6 +115,7 @@ import 'package:flutter_snippets/src/snippets/snippet_rotating_circle.dart';
 import 'package:flutter_snippets/src/snippets/snippet_row.dart';
 import 'package:flutter_snippets/src/snippets/snippet_safe_area.dart';
 import 'package:flutter_snippets/src/snippets/snippet_scroll_controller.dart';
+import 'package:flutter_snippets/src/snippets/snippet_scroll_to_bottom_or_top.dart';
 import 'package:flutter_snippets/src/snippets/snippet_scrollbar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_selectable_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_send_data_to_screen.dart';
@@ -126,6 +131,7 @@ import 'package:flutter_snippets/src/snippets/snippet_splash_screen.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
+import 'package:flutter_snippets/src/snippets/snippet_stepper.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stopwatch.dart';
 import 'package:flutter_snippets/src/snippets/snippet_switch_list_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_table.dart';
@@ -136,10 +142,12 @@ import 'package:flutter_snippets/src/snippets/snippet_text_default_style.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_field.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_overflow.dart';
 import 'package:flutter_snippets/src/snippets/snippet_text_style.dart';
+import 'package:flutter_snippets/src/snippets/snippet_toggle_buttons.dart';
 import 'package:flutter_snippets/src/snippets/snippet_tooltip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_transform.dart';
 import 'package:flutter_snippets/src/snippets/snippet_vertical_divider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_visibility.dart';
+import 'package:flutter_snippets/src/snippets/snippet_will_pop_scope.dart';
 import 'package:flutter_snippets/src/widgets/app_menu.dart';
 
 class DataWidget {
@@ -1255,14 +1263,57 @@ class DataWidget {
                 ),
               ),
               SnippetFilterListModel(
-                text: AppLocalizations.of(context)!.menuWidgetHapticFeedback,
+                text:
+                    AppLocalizations.of(context)!.menuWidgetBasicHapticFeedback,
                 onPressed: () => Navigator.of(context).pushNamed(
                   AppRoutes.snippetShow,
                   arguments: SnippetShowModel(
                     data: AppConstants.txtSnippetWidgetHapticFeedback,
-                    title:
-                        AppLocalizations.of(context)!.menuWidgetHapticFeedback,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetBasicHapticFeedback,
                     widget: const SnippetHapticFeedback(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!
+                    .menuWidgetBasicDataTableWithSort,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetDataTableWithSort,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetBasicDataTableWithSort,
+                    widget: const SnippetDataTableWithSort(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text:
+                    AppLocalizations.of(context)!.menuWidgetBasicExpansionTile,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetExpansionTile,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetBasicExpansionTile,
+                    widget: const SnippetExpansionTile(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text:
+                    AppLocalizations.of(context)!.menuWidgetBasicLinearGradient,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetLinearGradient,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetBasicLinearGradient,
+                    widget: const SnippetLinearGradient(),
                   ),
                 ),
                 isNew: true,
@@ -1734,6 +1785,75 @@ class DataWidget {
                 ),
                 isNew: true,
               ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!
+                    .menuWidgetAdvancedWillPopScope,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetWillPopScope,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedWillPopScope,
+                    widget: const SnippetWillPopScope(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!.menuWidgetAdvancedStepper,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetStepper,
+                    title:
+                        AppLocalizations.of(context)!.menuWidgetAdvancedStepper,
+                    widget: const SnippetStepper(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!
+                    .menuWidgetAdvancedToggleButtons,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetToggleButtons,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedToggleButtons,
+                    widget: const SnippetToggleButtons(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text:
+                    AppLocalizations.of(context)!.menuWidgetAdvancedDatePicker,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetDatePicker,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedDatePicker,
+                    widget: const SnippetDatePicker(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!
+                    .menuWidgetAdvancedScrollToBottomOrTop,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetScrollToBottomOrTop,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedScrollToBottomOrTop,
+                    widget: const SnippetScrollToBottomOrTop(),
+                  ),
+                ),
+                isNew: true,
+              ),
             ],
           ),
         ),
@@ -1962,6 +2082,43 @@ class DataWidget {
                     tip: AppLocalizations.of(context)!.tipAnimatedSwitcher,
                   ),
                 ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      AppMenu(
+        text: AppLocalizations.of(context)!.menuMain,
+        icon: Icons.home,
+        onPressed: () => Navigator.of(context).pushNamed(
+          AppRoutes.snippetFilter,
+          arguments: SnippetFilterModel(
+            title: AppLocalizations.of(context)!.menuMain,
+            snippets: [
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!.menuMainDeviceOrientation,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetMainDeviceOrientation,
+                    title:
+                        AppLocalizations.of(context)!.menuMainDeviceOrientation,
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text:
+                    AppLocalizations.of(context)!.menuMainSystemUIOverlayStyle,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetMainSystemUIOverlayStyle,
+                    title: AppLocalizations.of(context)!
+                        .menuMainSystemUIOverlayStyle,
+                  ),
+                ),
+                isNew: true,
               ),
             ],
           ),

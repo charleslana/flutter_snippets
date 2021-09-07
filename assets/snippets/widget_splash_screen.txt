@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,13 +29,23 @@ class MyAppMaterial extends StatefulWidget {
 }
 
 class _MyAppMaterialState extends State<MyAppMaterial> {
-  Future<void> init() async {
-    await Future<dynamic>.delayed(const Duration(seconds: 3)).then((_) {
+  late Timer _timer;
+  String _text = 'SplashScreen, wait for three seconds';
+
+  void init() {
+    _timer = Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute<dynamic>(
             builder: (context) => const MyAppMaterialPage()),
       );
+    });
+  }
+
+  void _cancel() {
+    _timer.cancel();
+    setState(() {
+      _text = 'Stopped';
     });
   }
 
@@ -44,22 +56,35 @@ class _MyAppMaterialState extends State<MyAppMaterial> {
   }
 
   @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text('SplashScreen, wait for three seconds'),
-            SizedBox(
+          children: [
+            Text(_text),
+            const SizedBox(
               height: 50,
             ),
-            IconButton(
+            const IconButton(
               onPressed: null,
               icon: Icon(
                 Icons.audiotrack,
                 size: 48,
               ),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(
+              onPressed: _cancel,
+              child: const Text('Stop splashscreen'),
             ),
           ],
         ),
@@ -73,9 +98,21 @@ class MyAppMaterialPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Other page'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Other page'),
+            const SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Close'),
+            ),
+          ],
+        ),
       ),
     );
   }
