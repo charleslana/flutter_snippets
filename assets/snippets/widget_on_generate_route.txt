@@ -1,0 +1,114 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      initialRoute: '/',
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case '/':
+            return PageTransition(
+              child: const MyAppMaterial(),
+              settings: settings,
+            );
+          case '/second':
+            return PageTransition(
+              child: const MyAppMaterialPage(),
+              settings: settings,
+            );
+        }
+      },
+    );
+  }
+}
+
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Hello World!'),
+            const SizedBox(
+              height: 50,
+            ),
+            const IconButton(
+              onPressed: null,
+              icon: Icon(Icons.favorite),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/second'),
+              child: const Text('Go to other page'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MyAppMaterialPage extends StatelessWidget {
+  const MyAppMaterialPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Other Page'),
+            const SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PageTransition<T> extends PageRouteBuilder<T> {
+  PageTransition({
+    required this.child,
+    required this.settings,
+  }) : super(
+          pageBuilder: (BuildContext context, Animation<double> animation,
+              Animation<double> secondaryAnimation) {
+            return child;
+          },
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+              Widget child) {
+            return FadeTransition(opacity: animation, child: child);
+          },
+        );
+
+  final Widget child;
+  @override
+  final RouteSettings settings;
+}

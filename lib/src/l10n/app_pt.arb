@@ -176,6 +176,7 @@
     "menuWidgetAdvancedPageTransition": "PageTransition",
     "menuWidgetAdvancedSplashScreen": "SplashScreen",
     "menuWidgetAdvancedPushNamed": "PushNamed",
+    "menuWidgetAdvancedOnGenerateRoute": "OnGenerateRoute",
     "menuWidgetAppStopwatch": "Cronômetro",
     "menuWidgetAppCountdown": "Contagem regressiva",
     "menuAnimation": "Animações",

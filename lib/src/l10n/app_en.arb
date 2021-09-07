@@ -188,6 +188,7 @@
     "menuWidgetAdvancedPageTransition": "PageTransition",
     "menuWidgetAdvancedSplashScreen": "SplashScreen",
     "menuWidgetAdvancedPushNamed": "PushNamed",
+    "menuWidgetAdvancedOnGenerateRoute": "OnGenerateRoute",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",

@@ -166,6 +166,8 @@ class AppConstants {
   static const String txtSnippetWidgetPageTransition = 'widget_page_transition';
   static const String txtSnippetWidgetSplashScreen = 'widget_splash_screen';
   static const String txtSnippetWidgetPushNamed = 'widget_push_named';
+  static const String txtSnippetWidgetOnGenerateRoute =
+      'widget_on_generate_route';
   static const String txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static const String txtSnippetWidgetCountdown = 'widget_countdown';
   static const String txtSnippetWidgetAnimationIcon = 'widget_animation_icon';

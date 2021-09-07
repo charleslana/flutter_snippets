@@ -89,6 +89,7 @@ import 'package:flutter_snippets/src/snippets/snippet_media_query.dart';
 import 'package:flutter_snippets/src/snippets/snippet_mouse_region.dart';
 import 'package:flutter_snippets/src/snippets/snippet_navigator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_navigator_with_arguments.dart';
+import 'package:flutter_snippets/src/snippets/snippet_on_generate_route.dart';
 import 'package:flutter_snippets/src/snippets/snippet_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_outlined_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_overflow_box.dart';
@@ -1715,6 +1716,20 @@ class DataWidget {
                     title: AppLocalizations.of(context)!
                         .menuWidgetAdvancedPushNamed,
                     widget: const SnippetPushNamed(),
+                  ),
+                ),
+                isNew: true,
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!
+                    .menuWidgetAdvancedOnGenerateRoute,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetOnGenerateRoute,
+                    title: AppLocalizations.of(context)!
+                        .menuWidgetAdvancedOnGenerateRoute,
+                    widget: const SnippetOnGenerateRoute(),
                   ),
                 ),
                 isNew: true,
