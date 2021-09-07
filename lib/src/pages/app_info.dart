@@ -121,7 +121,7 @@ class _AppInfoState extends State<AppInfo> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15),
                         child: Text(
-                            '${AppLocalizations.of(context)!.appInfoAbout} $packageName'),
+                            '$packageName ${AppLocalizations.of(context)!.appInfoAboutDescription}'),
                       ),
                     ],
                   );

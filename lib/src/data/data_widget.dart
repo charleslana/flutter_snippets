@@ -65,6 +65,7 @@ import 'package:flutter_snippets/src/snippets/snippet_future_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_gesture_detector.dart';
 import 'package:flutter_snippets/src/snippets/snippet_global_key.dart';
 import 'package:flutter_snippets/src/snippets/snippet_grid_view.dart';
+import 'package:flutter_snippets/src/snippets/snippet_haptic_feedback.dart';
 import 'package:flutter_snippets/src/snippets/snippet_hero.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon_background.dart';
@@ -1251,6 +1252,19 @@ class DataWidget {
                     tip: AppLocalizations.of(context)!.tipTextField,
                   ),
                 ),
+              ),
+              SnippetFilterListModel(
+                text: AppLocalizations.of(context)!.menuWidgetHapticFeedback,
+                onPressed: () => Navigator.of(context).pushNamed(
+                  AppRoutes.snippetShow,
+                  arguments: SnippetShowModel(
+                    data: AppConstants.txtSnippetWidgetHapticFeedback,
+                    title:
+                        AppLocalizations.of(context)!.menuWidgetHapticFeedback,
+                    widget: const SnippetHapticFeedback(),
+                  ),
+                ),
+                isNew: true,
               ),
             ],
           ),

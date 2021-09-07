@@ -53,6 +53,7 @@ class AppUtils {
     Clipboard.setData(copy).then(
       (_) => toast(context, AppLocalizations.of(context)!.utilCopyCodeMessage),
     );
+    HapticFeedback.heavyImpact();
   }
 
   static String removeDiacritics(String string) {

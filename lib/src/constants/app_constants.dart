@@ -123,6 +123,7 @@ class AppConstants {
   static const String txtSnippetWidgetOverflowBox = 'widget_overflow_box';
   static const String txtSnippetWidgetRadioListTile = 'widget_radio_list_tile';
   static const String txtSnippetWidgetTextField = 'widget_text_field';
+  static const String txtSnippetWidgetHapticFeedback = 'widget_haptic_feedback';
   static const String txtSnippetWidgetRefreshIndicator =
       'widget_refresh_indicator';
   static const String txtSnippetWidgetDraggable = 'widget_draggable';
