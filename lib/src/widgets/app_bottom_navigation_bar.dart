@@ -24,19 +24,19 @@ class AppBottomNavigationBar extends StatelessWidget {
           children: [
             IconButton(
               icon: const Icon(
-                Icons.code,
+                Icons.keyboard_arrow_left,
                 color: Colors.white,
               ),
               onPressed: () =>
-                  AppUtils.navigateToScreen(context, 0, currentRoute),
+                  AppUtils().navigateToScreen(context, 0, currentRoute),
             ),
             IconButton(
               icon: const Icon(
-                Icons.info_outline,
+                Icons.keyboard_arrow_right,
                 color: Colors.white,
               ),
               onPressed: () =>
-                  AppUtils.navigateToScreen(context, 2, currentRoute),
+                  AppUtils().navigateToScreen(context, 2, currentRoute),
             ),
           ],
         ),

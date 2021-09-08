@@ -7,8 +7,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 
 class AppUtils {
-  static void navigateToScreen(
-      BuildContext context, int index, String? currentRoute) {
+  void navigateToScreen(BuildContext context, int index, String? currentRoute) {
     switch (index) {
       case 0:
         if (currentRoute != AppRoutes.snippetDart) {
@@ -69,7 +68,7 @@ class AppUtils {
   }
 
   static void alert(BuildContext context, String? message) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
@@ -77,7 +76,7 @@ class AppUtils {
               horizontal: MediaQuery.of(context).size.width * 0.08),
           title: const Center(
             child: Icon(
-              Icons.help_outline,
+              Icons.flash_on,
               size: 40,
             ),
           ),

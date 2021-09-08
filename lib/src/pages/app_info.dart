@@ -136,7 +136,7 @@ class _AppInfoState extends State<AppInfo> {
                 ),
               ),
               StreamBuilder<List<NewsModel>>(
-                stream: FirebaseApi.readNews(),
+                stream: readNews(),
                 builder: (context, snapshot) {
                   switch (snapshot.connectionState) {
                     case ConnectionState.waiting:

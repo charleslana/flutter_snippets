@@ -17,9 +17,9 @@ class SnippetDart extends StatelessWidget {
               ListView(
                 physics: const BouncingScrollPhysics(),
                 children: List.generate(
-                  DataDart.of(context).length,
+                  getDataDart(context).length,
                   (index) {
-                    return DataDart.of(context).elementAt(index);
+                    return getDataDart(context).elementAt(index);
                   },
                 ),
               ),

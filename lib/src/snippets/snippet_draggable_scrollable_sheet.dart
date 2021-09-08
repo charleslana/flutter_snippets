@@ -15,7 +15,7 @@ class _SnippetDraggableScrollableSheetState
   final Duration _duration = const Duration(milliseconds: 500);
 
   void _showSheet() {
-    showModalBottomSheet(
+    showModalBottomSheet<dynamic>(
       context: context,
       isScrollControlled: true,
       builder: (_) {
@@ -44,13 +44,13 @@ class _SnippetDraggableScrollableSheetState
   @override
   void initState() {
     _controller = AnimationController(vsync: this, duration: _duration);
-    super.initState();    
+    super.initState();
   }
 
   @override
   void dispose() {
     _controller.dispose();
-    super.dispose();    
+    super.dispose();
   }
 
   @override

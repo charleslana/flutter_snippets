@@ -5,14 +5,14 @@ class AppFloatingActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton.extended(
+    return const FloatingActionButton.extended(
       backgroundColor: Colors.purple,
       onPressed: null,
-      icon: const Icon(
+      icon: Icon(
         Icons.widgets,
         color: Colors.white,
       ),
-      label: const Text(
+      label: Text(
         'Widgets',
         style: TextStyle(
           color: Colors.white,

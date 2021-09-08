@@ -71,7 +71,7 @@ class _SnippetShowState extends State<SnippetShow>
                 heroTag: 'show',
                 onPressed: () => AppUtils.alert(context, _snippet!.tip),
                 child: const Icon(
-                  Icons.help_outline,
+                  Icons.flash_on,
                   color: Colors.white,
                 ),
               ),

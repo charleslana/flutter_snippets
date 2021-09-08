@@ -12,7 +12,7 @@ class SnippetBottomSheet extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showModalBottomSheet(
+          showModalBottomSheet<dynamic>(
             context: context,
             builder: (BuildContext context) {
               return Wrap(

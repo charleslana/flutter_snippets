@@ -29,7 +29,7 @@ class SnippetDialog extends StatelessWidget {
       ],
     );
 
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (BuildContext context) {
         return _alert;

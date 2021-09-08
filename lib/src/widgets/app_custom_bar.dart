@@ -24,7 +24,8 @@ class AppCustomBar extends StatelessWidget implements PreferredSizeWidget {
           icon: const Icon(
             Icons.settings,
           ),
-          onPressed: () => AppUtils.navigateToScreen(context, 3, currentRoute),
+          onPressed: () =>
+              AppUtils().navigateToScreen(context, 3, currentRoute),
         ),
       ],
     );

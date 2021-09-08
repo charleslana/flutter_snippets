@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_snippets/src/l10n/l10n.dart';
 import 'package:flutter_snippets/src/provider/locale_provider.dart';
 import 'package:flutter_snippets/src/provider/theme_provider.dart';
 import 'package:flutter_snippets/src/widgets/app_custom_bar.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppSettings extends StatefulWidget {
   const AppSettings({Key? key}) : super(key: key);
@@ -47,7 +47,7 @@ class _AppSettingsState extends State<AppSettings> {
 
     setState(() {
       _isDefaultLanguage = true;
-      _language = L10n.getLanguage(localeProvider.languageCode);
+      _language = L10n().getLanguage(localeProvider.languageCode);
     });
   }
 
@@ -71,7 +71,7 @@ class _AppSettingsState extends State<AppSettings> {
       _isDefaultTheme = themeProvider.isDefaultTheme;
       _isDarkMode = themeProvider.isDarkMode;
       _isDefaultLanguage = localeProvider.isDefaultLanguage;
-      _language = L10n.getLanguage(localeProvider.locale.languageCode);
+      _language = L10n().getLanguage(localeProvider.locale.languageCode);
     });
     super.initState();
   }

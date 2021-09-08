@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class AppLogo extends StatefulWidget {
   const AppLogo({Key? key}) : super(key: key);
@@ -19,9 +20,18 @@ class _AppLogoState extends State<AppLogo> {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
   );
+  String _packageVersion = '';
+
+  Future<void> init() async {
+    final PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    setState(() {
+      _packageVersion = packageInfo.version;
+    });
+  }
 
   @override
   void initState() {
+    init();
     Timer(
       const Duration(seconds: 3),
       () => Navigator.pushReplacementNamed(context, AppRoutes.snippetWidgets),
@@ -58,16 +68,16 @@ class _AppLogoState extends State<AppLogo> {
                 alignment: Alignment.bottomCenter,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
-                      'V:1.1.1',
-                      style: TextStyle(
+                      'V:$_packageVersion',
+                      style: const TextStyle(
                         fontSize: 12,
                         color: Color(0xffc4efed),
                       ),
                     ),
-                    Text(
-                      'F:2.2.3\nL:1.6.0',
+                    const Text(
+                      'F:2.5.0\nD:2.14.0',
                       style: TextStyle(
                         fontSize: 12,
                         color: Color(0xffc4efed),

@@ -32,7 +32,7 @@ class _MyAppMaterialState extends State<MyAppMaterial>
   final Duration _duration = const Duration(milliseconds: 500);
 
   void _showSheet() {
-    showModalBottomSheet(
+    showModalBottomSheet<dynamic>(
       context: context,
       isScrollControlled: true,
       builder: (_) {

@@ -20,9 +20,9 @@ class SnippetWidgets extends StatelessWidget {
           child: ListView(
             physics: const BouncingScrollPhysics(),
             children: List.generate(
-              DataWidget.of(context).length,
+              getDataWidget(context).length,
               (index) {
-                return DataWidget.of(context).elementAt(index);
+                return getDataWidget(context).elementAt(index);
               },
             ),
           ),

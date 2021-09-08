@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class SnippetLoadJson extends StatefulWidget {
   const SnippetLoadJson({Key? key}) : super(key: key);
