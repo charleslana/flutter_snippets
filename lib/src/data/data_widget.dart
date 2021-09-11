@@ -171,7 +171,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetStateless,
+                  data: AppConstants.txtWidgetStateless,
                   title:
                       AppLocalizations.of(context)!.menuWidgetCreateStateless,
                   widget: const SnippetStateless(),
@@ -183,7 +183,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetStateful,
+                  data: AppConstants.txtWidgetStateful,
                   title: AppLocalizations.of(context)!.menuWidgetCreateStateful,
                   widget: const SnippetStateful(),
                 ),
@@ -206,7 +206,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSafeArea,
+                  data: AppConstants.txtWidgetSafeArea,
                   title: AppLocalizations.of(context)!.menuWidgetBasicSafeArea,
                   widget: const SnippetSafeArea(),
                   tip: AppLocalizations.of(context)!.tipSafeArea,
@@ -219,7 +219,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetCircularProgressIndicator,
+                  data: AppConstants.txtWidgetCircularProgressIndicator,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicCircularProgressIndicator,
                   widget: const SnippetCircularProgressIndicator(),
@@ -231,7 +231,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetContainer,
+                  data: AppConstants.txtWidgetContainer,
                   title: AppLocalizations.of(context)!.menuWidgetBasicContainer,
                   widget: const SnippetContainer(),
                   tip: AppLocalizations.of(context)!.tipContainer,
@@ -243,7 +243,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetText,
+                  data: AppConstants.txtWidgetText,
                   title: AppLocalizations.of(context)!.menuWidgetBasicText,
                   widget: const SnippetText(),
                   tip: AppLocalizations.of(context)!.tipText,
@@ -255,7 +255,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTextOverflow,
+                  data: AppConstants.txtWidgetTextOverflow,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicTextOverflow,
                   widget: const SnippetTextOverflow(),
@@ -267,7 +267,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTextStyle,
+                  data: AppConstants.txtWidgetTextStyle,
                   title: AppLocalizations.of(context)!.menuWidgetBasicTextStyle,
                   widget: const SnippetTextStyle(),
                 ),
@@ -279,7 +279,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTextDefaultStyle,
+                  data: AppConstants.txtWidgetTextDefaultStyle,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicTextDefaultStyle,
                   widget: const SnippetTextDefaultStyle(),
@@ -291,7 +291,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetRichText,
+                  data: AppConstants.txtWidgetRichText,
                   title: AppLocalizations.of(context)!.menuWidgetBasicRichText,
                   widget: const SnippetRichText(),
                   tip: AppLocalizations.of(context)!.tipRichText,
@@ -303,7 +303,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetColumn,
+                  data: AppConstants.txtWidgetColumn,
                   title: AppLocalizations.of(context)!.menuWidgetBasicColumn,
                   widget: const SnippetColumn(),
                   tip: AppLocalizations.of(context)!.tipColumn,
@@ -315,7 +315,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetRow,
+                  data: AppConstants.txtWidgetRow,
                   title: AppLocalizations.of(context)!.menuWidgetBasicRow,
                   widget: const SnippetRow(),
                   tip: AppLocalizations.of(context)!.tipRow,
@@ -327,7 +327,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDivider,
+                  data: AppConstants.txtWidgetDivider,
                   title: AppLocalizations.of(context)!.menuWidgetBasicDivider,
                   widget: const SnippetDivider(),
                   tip: AppLocalizations.of(context)!.tipDivider,
@@ -340,7 +340,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetVerticalDivider,
+                  data: AppConstants.txtWidgetVerticalDivider,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicVerticalDivider,
                   widget: const SnippetVerticalDivider(),
@@ -353,7 +353,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTextButton,
+                  data: AppConstants.txtWidgetTextButton,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicTextButton,
                   widget: const SnippetTextButton(),
@@ -366,7 +366,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetElevatedButton,
+                  data: AppConstants.txtWidgetElevatedButton,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicElevatedButton,
                   widget: const SnippetElevatedButton(),
@@ -379,7 +379,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetElevatedButtonIcon,
+                  data: AppConstants.txtWidgetElevatedButtonIcon,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicElevatedButtonIcon,
                   widget: const SnippetElevatedButtonIcon(),
@@ -391,7 +391,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetOutlinedButton,
+                  data: AppConstants.txtWidgetOutlinedButton,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicOutlinedButton,
                   widget: const SnippetOutlinedButton(),
@@ -403,7 +403,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetIcon,
+                  data: AppConstants.txtWidgetIcon,
                   title: AppLocalizations.of(context)!.menuWidgetBasicIcon,
                   widget: const SnippetIcon(),
                   tip: AppLocalizations.of(context)!.tipIcon,
@@ -415,7 +415,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetIconBackground,
+                  data: AppConstants.txtWidgetIconBackground,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicIconBackground,
                   widget: const SnippetIconBackground(),
@@ -427,7 +427,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetImage,
+                  data: AppConstants.txtWidgetImage,
                   title: AppLocalizations.of(context)!.menuWidgetBasicImage,
                   widget: const SnippetImage(),
                   tip: AppLocalizations.of(context)!.tipImage,
@@ -439,7 +439,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBottomSheet,
+                  data: AppConstants.txtWidgetBottomSheet,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicBottomSheet,
                   widget: const SnippetBottomSheet(),
@@ -452,7 +452,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetMediaQuery,
+                  data: AppConstants.txtWidgetMediaQuery,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicMediaQuery,
                   widget: const SnippetMediaQuery(),
@@ -466,7 +466,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetGestureDetector,
+                  data: AppConstants.txtWidgetGestureDetector,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicGestureDetector,
                   widget: const SnippetGestureDetector(),
@@ -479,7 +479,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetInkWell,
+                  data: AppConstants.txtWidgetInkWell,
                   title: AppLocalizations.of(context)!.menuWidgetBasicInkWell,
                   widget: const SnippetInkWell(),
                   tip: AppLocalizations.of(context)!.tipInkWell,
@@ -491,7 +491,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetCard,
+                  data: AppConstants.txtWidgetCard,
                   title: AppLocalizations.of(context)!.menuWidgetBasicCard,
                   widget: const SnippetCard(),
                   tip: AppLocalizations.of(context)!.tipCard,
@@ -503,7 +503,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFutureBuilder,
+                  data: AppConstants.txtWidgetFutureBuilder,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicFutureBuilder,
                   widget: const SnippetFutureBuilder(),
@@ -516,7 +516,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetStack,
+                  data: AppConstants.txtWidgetStack,
                   title: AppLocalizations.of(context)!.menuWidgetBasicStack,
                   widget: const SnippetStack(),
                   tip: AppLocalizations.of(context)!.tipStack,
@@ -528,7 +528,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPageView,
+                  data: AppConstants.txtWidgetPageView,
                   title: AppLocalizations.of(context)!.menuWidgetBasicPageView,
                   widget: const SnippetPageView(),
                   tip: AppLocalizations.of(context)!.tipPageView,
@@ -540,7 +540,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTable,
+                  data: AppConstants.txtWidgetTable,
                   title: AppLocalizations.of(context)!.menuWidgetBasicTable,
                   widget: const SnippetTable(),
                   tip: AppLocalizations.of(context)!.tipTable,
@@ -552,7 +552,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSnackBar,
+                  data: AppConstants.txtWidgetSnackBar,
                   title: AppLocalizations.of(context)!.menuWidgetBasicSnackBar,
                   widget: const SnippetSnackBar(),
                   tip: AppLocalizations.of(context)!.tipSnackBar,
@@ -564,7 +564,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDialog,
+                  data: AppConstants.txtWidgetDialog,
                   title: AppLocalizations.of(context)!.menuWidgetBasicDialog,
                   widget: const SnippetDialog(),
                   tip: AppLocalizations.of(context)!.tipDialog,
@@ -576,7 +576,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetListView,
+                  data: AppConstants.txtWidgetListView,
                   title: AppLocalizations.of(context)!.menuWidgetBasicListView,
                   widget: const SnippetListView(),
                   tip: AppLocalizations.of(context)!.tipListView,
@@ -588,7 +588,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetRotatedBox,
+                  data: AppConstants.txtWidgetRotatedBox,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicRotatedBox,
                   widget: const SnippetRotatedBox(),
@@ -601,7 +601,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetClipRect,
+                  data: AppConstants.txtWidgetClipRect,
                   title: AppLocalizations.of(context)!.menuWidgetBasicClipRect,
                   widget: const SnippetClipRect(),
                   tip: AppLocalizations.of(context)!.tipClipRect,
@@ -613,7 +613,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetClipRRect,
+                  data: AppConstants.txtWidgetClipRRect,
                   title: AppLocalizations.of(context)!.menuWidgetBasicClipRRect,
                   widget: const SnippetClipRRect(),
                   tip: AppLocalizations.of(context)!.tipClipRRect,
@@ -625,7 +625,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetClipOval,
+                  data: AppConstants.txtWidgetClipOval,
                   title: AppLocalizations.of(context)!.menuWidgetBasicClipOval,
                   widget: const SnippetClipOval(),
                   tip: AppLocalizations.of(context)!.tipClipOval,
@@ -637,7 +637,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFlexible,
+                  data: AppConstants.txtWidgetFlexible,
                   title: AppLocalizations.of(context)!.menuWidgetBasicFlexible,
                   widget: const SnippetFlexible(),
                   tip: AppLocalizations.of(context)!.tipFlexible,
@@ -649,7 +649,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetExpanded,
+                  data: AppConstants.txtWidgetExpanded,
                   title: AppLocalizations.of(context)!.menuWidgetBasicExpanded,
                   widget: const SnippetExpanded(),
                   tip: AppLocalizations.of(context)!.tipExpanded,
@@ -661,7 +661,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetCircleAvatar,
+                  data: AppConstants.txtWidgetCircleAvatar,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicCircleAvatar,
                   widget: const SnippetCircleAvatar(),
@@ -674,7 +674,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFittedBox,
+                  data: AppConstants.txtWidgetFittedBox,
                   title: AppLocalizations.of(context)!.menuWidgetBasicFittedBox,
                   widget: const SnippetFittedBox(),
                   tip: AppLocalizations.of(context)!.tipFittedBox,
@@ -686,7 +686,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetVisibility,
+                  data: AppConstants.txtWidgetVisibility,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicVisibility,
                   widget: const SnippetVisibility(),
@@ -699,7 +699,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBoxDecoration,
+                  data: AppConstants.txtWidgetBoxDecoration,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicBoxDecoration,
                   widget: const SnippetBoxDecoration(),
@@ -712,7 +712,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSelectableText,
+                  data: AppConstants.txtWidgetSelectableText,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicSelectableText,
                   widget: const SnippetSelectableText(),
@@ -726,7 +726,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetInteractiveViewer,
+                  data: AppConstants.txtWidgetInteractiveViewer,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicInteractiveViewer,
                   widget: const SnippetInteractiveViewer(),
@@ -739,7 +739,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAspectRatio,
+                  data: AppConstants.txtWidgetAspectRatio,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicAspectRatio,
                   widget: const SnippetAspectRatio(),
@@ -752,7 +752,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPlaceholder,
+                  data: AppConstants.txtWidgetPlaceholder,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicPlaceholder,
                   widget: const SnippetPlaceholder(),
@@ -765,7 +765,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSpacer,
+                  data: AppConstants.txtWidgetSpacer,
                   title: AppLocalizations.of(context)!.menuWidgetBasicSpacer,
                   widget: const SnippetSpacer(),
                   tip: AppLocalizations.of(context)!.tipSpacer,
@@ -778,7 +778,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetListWheelScrollView,
+                  data: AppConstants.txtWidgetListWheelScrollView,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicListWheelScrollView,
                   widget: const SnippetListWheelScrollView(),
@@ -791,7 +791,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetOpacity,
+                  data: AppConstants.txtWidgetOpacity,
                   title: AppLocalizations.of(context)!.menuWidgetBasicOpacity,
                   widget: const SnippetOpacity(),
                   tip: AppLocalizations.of(context)!.tipOpacity,
@@ -803,7 +803,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetConstrainedBox,
+                  data: AppConstants.txtWidgetConstrainedBox,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicConstrainedBox,
                   widget: const SnippetConstrainedBox(),
@@ -816,7 +816,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAlign,
+                  data: AppConstants.txtWidgetAlign,
                   title: AppLocalizations.of(context)!.menuWidgetBasicAlign,
                   widget: const SnippetAlign(),
                   tip: AppLocalizations.of(context)!.tipAlign,
@@ -828,7 +828,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPadding,
+                  data: AppConstants.txtWidgetPadding,
                   title: AppLocalizations.of(context)!.menuWidgetBasicPadding,
                   widget: const SnippetPadding(),
                   tip: AppLocalizations.of(context)!.tipPadding,
@@ -840,7 +840,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAbsorbPointer,
+                  data: AppConstants.txtWidgetAbsorbPointer,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicAbsorbPointer,
                   widget: const SnippetAbsorbPointer(),
@@ -853,7 +853,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetIgnorePointer,
+                  data: AppConstants.txtWidgetIgnorePointer,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicIgnorePointer,
                   widget: const SnippetIgnorePointer(),
@@ -866,7 +866,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTooltip,
+                  data: AppConstants.txtWidgetTooltip,
                   title: AppLocalizations.of(context)!.menuWidgetBasicTooltip,
                   widget: const SnippetTooltip(),
                   tip: AppLocalizations.of(context)!.tipTooltip,
@@ -878,7 +878,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetColors,
+                  data: AppConstants.txtWidgetColors,
                   title: AppLocalizations.of(context)!.menuWidgetBasicColors,
                   widget: const SnippetColors(),
                 ),
@@ -889,7 +889,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFlutterLogo,
+                  data: AppConstants.txtWidgetFlutterLogo,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicFlutterLogo,
                   widget: const SnippetFlutterLogo(),
@@ -902,7 +902,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSizedBox,
+                  data: AppConstants.txtWidgetSizedBox,
                   title: AppLocalizations.of(context)!.menuWidgetBasicSizedBox,
                   widget: const SnippetSizedBox(),
                   tip: AppLocalizations.of(context)!.tipSizedBox,
@@ -915,7 +915,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFloatingActionButton,
+                  data: AppConstants.txtWidgetFloatingActionButton,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicFloatingActionButton,
                   widget: const SnippetFloatingActionButton(),
@@ -928,7 +928,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetCheckbox,
+                  data: AppConstants.txtWidgetCheckbox,
                   title: AppLocalizations.of(context)!.menuWidgetBasicCheckbox,
                   widget: const SnippetCheckbox(),
                   tip: AppLocalizations.of(context)!.tipCheckbox,
@@ -940,7 +940,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetEndDrawer,
+                  data: AppConstants.txtWidgetEndDrawer,
                   title: AppLocalizations.of(context)!.menuWidgetBasicEndDrawer,
                   widget: const SnippetEndDrawer(),
                   tip: AppLocalizations.of(context)!.tipEndDrawer,
@@ -953,7 +953,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetContainerTransform,
+                  data: AppConstants.txtWidgetContainerTransform,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicContainerTransform,
                   widget: const SnippetContainerTransform(),
@@ -965,7 +965,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTransform,
+                  data: AppConstants.txtWidgetTransform,
                   title: AppLocalizations.of(context)!.menuWidgetBasicTransform,
                   widget: const SnippetTransform(),
                   tip: AppLocalizations.of(context)!.tipTransform,
@@ -977,7 +977,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBanner,
+                  data: AppConstants.txtWidgetBanner,
                   title: AppLocalizations.of(context)!.menuWidgetBasicBanner,
                   widget: const SnippetBanner(),
                   tip: AppLocalizations.of(context)!.tipBanner,
@@ -989,7 +989,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBorderRadius,
+                  data: AppConstants.txtWidgetBorderRadius,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicBorderRadius,
                   widget: const SnippetBorderRadius(),
@@ -1003,7 +1003,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSingleChildScrollView,
+                  data: AppConstants.txtWidgetSingleChildScrollView,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicSingleChildScrollView,
                   widget: const SnippetSingleChildScrollView(),
@@ -1016,7 +1016,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBoxShadow,
+                  data: AppConstants.txtWidgetBoxShadow,
                   title: AppLocalizations.of(context)!.menuWidgetBasicBoxShadow,
                   widget: const SnippetBoxShadow(),
                   tip: AppLocalizations.of(context)!.tipBoxShadow,
@@ -1028,7 +1028,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetShaderMask,
+                  data: AppConstants.txtWidgetShaderMask,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicShaderMask,
                   widget: const SnippetShaderMask(),
@@ -1041,7 +1041,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetColorFiltered,
+                  data: AppConstants.txtWidgetColorFiltered,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicColorFiltered,
                   widget: const SnippetColorFiltered(),
@@ -1054,7 +1054,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDataTable,
+                  data: AppConstants.txtWidgetDataTable,
                   title: AppLocalizations.of(context)!.menuWidgetBasicDataTable,
                   widget: const SnippetDataTable(),
                   tip: AppLocalizations.of(context)!.tipDataTable,
@@ -1066,7 +1066,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetImageFiltered,
+                  data: AppConstants.txtWidgetImageFiltered,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicImageFiltered,
                   widget: const SnippetImageFiltered(),
@@ -1079,7 +1079,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPositioned,
+                  data: AppConstants.txtWidgetPositioned,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicPositioned,
                   widget: const SnippetPositioned(),
@@ -1093,7 +1093,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetLinearProgressIndicator,
+                  data: AppConstants.txtWidgetLinearProgressIndicator,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicLinearProgressIndicator,
                   widget: const SnippetLinearProgressIndicator(),
@@ -1106,7 +1106,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetRawString,
+                  data: AppConstants.txtWidgetRawString,
                   title: AppLocalizations.of(context)!.menuWidgetBasicRawString,
                   widget: const SnippetRawString(),
                 ),
@@ -1117,7 +1117,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetLimitedBox,
+                    data: AppConstants.txtWidgetLimitedBox,
                     title:
                         AppLocalizations.of(context)!.menuWidgetBasicLimitedBox,
                     widget: const SnippetLimitedBox(),
@@ -1130,7 +1130,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetCheckboxListTile,
+                  data: AppConstants.txtWidgetCheckboxListTile,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicCheckboxListTile,
                   widget: const SnippetCheckboxListTile(),
@@ -1143,7 +1143,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSwitchListTile,
+                  data: AppConstants.txtWidgetSwitchListTile,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicSwitchListTile,
                   widget: const SnippetSwitchListTile(),
@@ -1157,7 +1157,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetExpansionPanelList,
+                  data: AppConstants.txtWidgetExpansionPanelList,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicExpansionPanelList,
                   widget: const SnippetExpansionPanelList(),
@@ -1171,7 +1171,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFractionallySizedBox,
+                  data: AppConstants.txtWidgetFractionallySizedBox,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicFractionallySizedBox,
                   widget: const SnippetFractionallySizedBox(),
@@ -1184,7 +1184,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetScrollbar,
+                  data: AppConstants.txtWidgetScrollbar,
                   title: AppLocalizations.of(context)!.menuWidgetBasicScrollbar,
                   widget: const SnippetScrollbar(),
                   tip: AppLocalizations.of(context)!.tipScrollbar,
@@ -1196,7 +1196,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetOverflowBox,
+                  data: AppConstants.txtWidgetOverflowBox,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicOverflowBox,
                   widget: const SnippetOverflowBox(),
@@ -1209,7 +1209,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetRadioListTile,
+                  data: AppConstants.txtWidgetRadioListTile,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicRadioListTile,
                   widget: const SnippetRadioListTile(),
@@ -1222,7 +1222,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTextField,
+                  data: AppConstants.txtWidgetTextField,
                   title: AppLocalizations.of(context)!.menuWidgetBasicTextField,
                   widget: const SnippetTextField(),
                   tip: AppLocalizations.of(context)!.tipTextField,
@@ -1234,7 +1234,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetHapticFeedback,
+                  data: AppConstants.txtWidgetHapticFeedback,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicHapticFeedback,
                   widget: const SnippetHapticFeedback(),
@@ -1248,7 +1248,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDataTableWithSort,
+                  data: AppConstants.txtWidgetDataTableWithSort,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicDataTableWithSort,
                   widget: const SnippetDataTableWithSort(),
@@ -1261,7 +1261,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetExpansionTile,
+                  data: AppConstants.txtWidgetExpansionTile,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicExpansionTile,
                   widget: const SnippetExpansionTile(),
@@ -1274,7 +1274,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetLinearGradient,
+                  data: AppConstants.txtWidgetLinearGradient,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicLinearGradient,
                   widget: const SnippetLinearGradient(),
@@ -1287,7 +1287,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBaseline,
+                  data: AppConstants.txtWidgetBaseline,
                   title: AppLocalizations.of(context)!.menuWidgetBasicBaseline,
                   widget: const SnippetBaseline(),
                 ),
@@ -1299,7 +1299,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetActionChip,
+                  data: AppConstants.txtWidgetActionChip,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicActionChip,
                   widget: const SnippetActionChip(),
@@ -1312,7 +1312,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBackdropFilter,
+                  data: AppConstants.txtWidgetBackdropFilter,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicBackdropFilter,
                   widget: const SnippetBackdropFilter(),
@@ -1325,7 +1325,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetExpandIcon,
+                  data: AppConstants.txtWidgetExpandIcon,
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicExpandIcon,
                   widget: const SnippetExpandIcon(),
@@ -1339,7 +1339,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetShapeDecoration,
+                  data: AppConstants.txtWidgetShapeDecoration,
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicShapeDecoration,
                   widget: const SnippetShapeDecoration(),
@@ -1365,7 +1365,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetRefreshIndicator,
+                  data: AppConstants.txtWidgetRefreshIndicator,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedRefreshIndicator,
                   widget: const SnippetRefreshIndicator(),
@@ -1378,7 +1378,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDraggable,
+                  data: AppConstants.txtWidgetDraggable,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedDraggable,
                   widget: const SnippetDraggable(),
@@ -1391,7 +1391,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetGlobalKey,
+                  data: AppConstants.txtWidgetGlobalKey,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedGlobalKey,
                   widget: const SnippetGlobalKey(),
@@ -1404,7 +1404,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDrawer,
+                  data: AppConstants.txtWidgetDrawer,
                   title: AppLocalizations.of(context)!.menuWidgetAdvancedDrawer,
                   widget: const SnippetDrawer(),
                   tip: AppLocalizations.of(context)!.tipDrawer,
@@ -1416,7 +1416,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDropdown,
+                  data: AppConstants.txtWidgetDropdown,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedDropdown,
                   widget: const SnippetDropdown(),
@@ -1429,7 +1429,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDismissible,
+                  data: AppConstants.txtWidgetDismissible,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedDismissible,
                   widget: const SnippetDismissible(),
@@ -1442,7 +1442,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetGridView,
+                  data: AppConstants.txtWidgetGridView,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedGridView,
                   widget: const SnippetGridView(),
@@ -1456,7 +1456,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSliverAppBar,
+                  data: AppConstants.txtWidgetSliverAppBar,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedSliverAppBar,
                   widget: const SnippetSliverAppBar(),
@@ -1469,7 +1469,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSliverGrid,
+                  data: AppConstants.txtWidgetSliverGrid,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedSliverGrid,
                   widget: const SnippetSliverGrid(),
@@ -1482,7 +1482,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetNavigator,
+                  data: AppConstants.txtWidgetNavigator,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedNavigator,
                   widget: const SnippetNavigator(),
@@ -1496,7 +1496,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetNavigatorWithArguments,
+                  data: AppConstants.txtWidgetNavigatorWithArguments,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedNavigatorWithArguments,
                   widget: const SnippetNavigatorWithArguments(),
@@ -1509,7 +1509,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSendDataToScreen,
+                  data: AppConstants.txtWidgetSendDataToScreen,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedSendDataToScreen,
                   widget: const SnippetSendDataToScreen(),
@@ -1523,7 +1523,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPopupMenuButton,
+                  data: AppConstants.txtWidgetPopupMenuButton,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedPopupMenuButton,
                   widget: const SnippetPopupMenuButton(),
@@ -1536,7 +1536,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetTabs,
+                  data: AppConstants.txtWidgetTabs,
                   title: AppLocalizations.of(context)!.menuWidgetAdvancedTabs,
                   widget: const SnippetTabs(),
                   tip: AppLocalizations.of(context)!.tipTabs,
@@ -1548,7 +1548,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                    data: AppConstants.txtSnippetWidgetClipPath,
+                    data: AppConstants.txtWidgetClipPath,
                     title: AppLocalizations.of(context)!
                         .menuWidgetAdvancedClipPath,
                     widget: const SnippetClipPath(),
@@ -1560,7 +1560,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSlider,
+                  data: AppConstants.txtWidgetSlider,
                   title: AppLocalizations.of(context)!.menuWidgetAdvancedSlider,
                   widget: const SnippetSlider(),
                   tip: AppLocalizations.of(context)!.tipSlider,
@@ -1573,7 +1573,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetListViewWithSearch,
+                  data: AppConstants.txtWidgetListViewWithSearch,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedListViewWithSearch,
                   widget: const SnippetListViewWithSearch(),
@@ -1585,7 +1585,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetChip,
+                  data: AppConstants.txtWidgetChip,
                   title: AppLocalizations.of(context)!.menuWidgetAdvancedChip,
                   widget: const SnippetChip(),
                   tip: AppLocalizations.of(context)!.tipChip,
@@ -1598,7 +1598,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetImageLoadingBuilder,
+                  data: AppConstants.txtWidgetImageLoadingBuilder,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedImageLoadingBuilder,
                   widget: const SnippetImageLoadingBuilder(),
@@ -1611,7 +1611,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetMouseRegion,
+                  data: AppConstants.txtWidgetMouseRegion,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedMouseRegion,
                   widget: const SnippetMouseRegion(),
@@ -1625,7 +1625,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetLayoutBuilder,
+                  data: AppConstants.txtWidgetLayoutBuilder,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedLayoutBuilder,
                   widget: const SnippetLayoutBuilder(),
@@ -1639,7 +1639,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetBottomNavigationBar,
+                  data: AppConstants.txtWidgetBottomNavigationBar,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedBottomNavigationBar,
                   widget: const SnippetBottomNavigationBar(),
@@ -1653,7 +1653,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetExpansionPanel,
+                  data: AppConstants.txtWidgetExpansionPanel,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedExpansionPanel,
                   widget: const SnippetExpansionPanel(),
@@ -1667,7 +1667,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPaint,
+                  data: AppConstants.txtWidgetPaint,
                   title: AppLocalizations.of(context)!.menuWidgetAdvancedPaint,
                   widget: const SnippetPaint(),
                   tip: AppLocalizations.of(context)!.tipPaint,
@@ -1679,7 +1679,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetLoadJson,
+                  data: AppConstants.txtWidgetLoadJson,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedLoadJson,
                   widget: const SnippetLoadJson(),
@@ -1691,7 +1691,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetClipboard,
+                  data: AppConstants.txtWidgetClipboard,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedClipboard,
                   widget: const SnippetClipboard(),
@@ -1705,7 +1705,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPageRouteBuilder,
+                  data: AppConstants.txtWidgetPageRouteBuilder,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedPageRouteBuilder,
                   widget: const SnippetPageRouteBuilder(),
@@ -1718,7 +1718,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetLoadTxt,
+                  data: AppConstants.txtWidgetLoadTxt,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedLoadTxt,
                   widget: const SnippetLoadTxt(),
@@ -1731,7 +1731,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetIndexedStack,
+                  data: AppConstants.txtWidgetIndexedStack,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedIndexedStack,
                   widget: const SnippetIndexedStack(),
@@ -1745,7 +1745,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetScrollController,
+                  data: AppConstants.txtWidgetScrollController,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedScrollController,
                   widget: const SnippetScrollController(),
@@ -1759,7 +1759,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPageTransition,
+                  data: AppConstants.txtWidgetPageTransition,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedPageTransition,
                   widget: const SnippetPageTransition(),
@@ -1773,7 +1773,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetSplashScreen,
+                  data: AppConstants.txtWidgetSplashScreen,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedSplashScreen,
                   widget: const SnippetSplashScreen(),
@@ -1786,7 +1786,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetPushNamed,
+                  data: AppConstants.txtWidgetPushNamed,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedPushNamed,
                   widget: const SnippetPushNamed(),
@@ -1800,7 +1800,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetOnGenerateRoute,
+                  data: AppConstants.txtWidgetOnGenerateRoute,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedOnGenerateRoute,
                   widget: const SnippetOnGenerateRoute(),
@@ -1814,7 +1814,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetWillPopScope,
+                  data: AppConstants.txtWidgetWillPopScope,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedWillPopScope,
                   widget: const SnippetWillPopScope(),
@@ -1827,7 +1827,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetStepper,
+                  data: AppConstants.txtWidgetStepper,
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedStepper,
                   widget: const SnippetStepper(),
@@ -1841,7 +1841,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetToggleButtons,
+                  data: AppConstants.txtWidgetToggleButtons,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedToggleButtons,
                   widget: const SnippetToggleButtons(),
@@ -1854,7 +1854,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDatePicker,
+                  data: AppConstants.txtWidgetDatePicker,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedDatePicker,
                   widget: const SnippetDatePicker(),
@@ -1868,7 +1868,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetScrollToBottomOrTop,
+                  data: AppConstants.txtWidgetScrollToBottomOrTop,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedScrollToBottomOrTop,
                   widget: const SnippetScrollToBottomOrTop(),
@@ -1882,7 +1882,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAutocomplete,
+                  data: AppConstants.txtWidgetAutocomplete,
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedAutocomplete,
                   widget: const SnippetAutocomplete(),
@@ -1907,18 +1907,19 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetStopwtach,
+                  data: AppConstants.txtWidgetStopwtach,
                   title: AppLocalizations.of(context)!.menuWidgetAppStopwatch,
                   widget: const SnippetStopwatch(),
                 ),
               ),
+              isUpdated: true,
             ),
             SnippetFilterListModel(
               text: AppLocalizations.of(context)!.menuWidgetAppCountdown,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetCountdown,
+                  data: AppConstants.txtWidgetCountdown,
                   title: AppLocalizations.of(context)!.menuWidgetAppCountdown,
                   widget: const SnippetCountdown(),
                 ),
@@ -1941,7 +1942,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAnimationIcon,
+                  data: AppConstants.txtWidgetAnimationIcon,
                   title:
                       AppLocalizations.of(context)!.menuAnimationAnimationIcon,
                   widget: const SnippetAnimationIcon(),
@@ -1954,7 +1955,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAnimatedContainer,
+                  data: AppConstants.txtWidgetAnimatedContainer,
                   title: AppLocalizations.of(context)!
                       .menuAnimationAnimatedContainer,
                   widget: const SnippetAnimatedContainer(),
@@ -1967,7 +1968,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAnimatedOpacity,
+                  data: AppConstants.txtWidgetAnimatedOpacity,
                   title: AppLocalizations.of(context)!
                       .menuAnimationAnimatedOpacity,
                   widget: const SnippetAnimatedOpacity(),
@@ -1981,7 +1982,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAnimatedCrossFade,
+                  data: AppConstants.txtWidgetAnimatedCrossFade,
                   title: AppLocalizations.of(context)!
                       .menuAnimationAnimatedCrossFade,
                   widget: const SnippetAnimatedCrossFade(),
@@ -1995,7 +1996,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAnimatedDefaultTextStyle,
+                  data: AppConstants.txtWidgetAnimatedDefaultTextStyle,
                   title: AppLocalizations.of(context)!
                       .menuAnimationAnimatedDefaultTextStyle,
                   widget: const SnippetAnimatedDefaultTextStyle(),
@@ -2009,19 +2010,20 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetCustomPaint,
+                  data: AppConstants.txtWidgetCustomPaint,
                   title: AppLocalizations.of(context)!.menuAnimationCustomPaint,
                   widget: const SnippetCustomPaint(),
                   tip: AppLocalizations.of(context)!.tipCustomPaint,
                 ),
               ),
+              isUpdated: true,
             ),
             SnippetFilterListModel(
               text: AppLocalizations.of(context)!.menuAnimationRotatingCircle,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetRotatingCircle,
+                  data: AppConstants.txtWidgetRotatingCircle,
                   title:
                       AppLocalizations.of(context)!.menuAnimationRotatingCircle,
                   widget: const SnippetRotatingCircle(),
@@ -2033,7 +2035,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetMatrix,
+                  data: AppConstants.txtWidgetMatrix,
                   title: AppLocalizations.of(context)!.menuAnimationMatrix,
                   widget: const SnippetMatrix(),
                 ),
@@ -2045,7 +2047,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetDraggableScrollableSheet,
+                  data: AppConstants.txtWidgetDraggableScrollableSheet,
                   title: AppLocalizations.of(context)!
                       .menuAnimationDraggableScrollableSheet,
                   widget: const SnippetDraggableScrollableSheet(),
@@ -2059,7 +2061,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAnimatedImage,
+                  data: AppConstants.txtWidgetAnimatedImage,
                   title:
                       AppLocalizations.of(context)!.menuAnimationAnimatedImage,
                   widget: const SnippetAnimatedImage(),
@@ -2071,7 +2073,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetHero,
+                  data: AppConstants.txtWidgetHero,
                   title: AppLocalizations.of(context)!.menuAnimationHero,
                   widget: const SnippetHero(),
                 ),
@@ -2082,7 +2084,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFadeInImage,
+                  data: AppConstants.txtWidgetFadeInImage,
                   title: AppLocalizations.of(context)!.menuAnimationFadeInImage,
                   widget: const SnippetFadeInImage(),
                   tip: AppLocalizations.of(context)!.tipFadeInImage,
@@ -2094,7 +2096,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetFadeTransition,
+                  data: AppConstants.txtWidgetFadeTransition,
                   title:
                       AppLocalizations.of(context)!.menuAnimationFadeTransition,
                   widget: const SnippetFadeTransition(),
@@ -2107,7 +2109,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetWidgetAnimatedSwitcher,
+                  data: AppConstants.txtWidgetAnimatedSwitcher,
                   title: AppLocalizations.of(context)!
                       .menuAnimationAnimatedSwitcher,
                   widget: const SnippetAnimatedSwitcher(),
@@ -2132,7 +2134,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetMainDeviceOrientation,
+                  data: AppConstants.txtMainDeviceOrientation,
                   title:
                       AppLocalizations.of(context)!.menuMainDeviceOrientation,
                 ),
@@ -2144,7 +2146,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetMainSystemUIOverlayStyle,
+                  data: AppConstants.txtMainSystemUIOverlayStyle,
                   title: AppLocalizations.of(context)!
                       .menuMainSystemUIOverlayStyle,
                 ),

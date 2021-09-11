@@ -69,7 +69,6 @@ class _SnippetStopwatchState extends State<SnippetStopwatch> {
 
   @override
   void dispose() {
-    _timer.cancel();
     _watch.stop();
     super.dispose();
   }

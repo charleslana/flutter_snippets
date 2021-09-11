@@ -10,102 +10,106 @@ import 'package:flutter_snippets/src/widgets/app_menu.dart';
 Set<AppMenu> getDataDart(BuildContext context) {
   return {
     AppMenu(
-      text: AppLocalizations.of(context)!.menuBasicDart,
+      text: AppLocalizations.of(context)!.menuDartBasicDart,
       icon: Icons.source,
       onPressed: () => Navigator.of(context).pushNamed(
         AppRoutes.snippetFilter,
         arguments: SnippetFilterModel(
-          title: AppLocalizations.of(context)!.menuBasicDart,
+          title: AppLocalizations.of(context)!.menuDartBasicDart,
           snippets: [
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicComments,
+              text: AppLocalizations.of(context)!.menuDartBasicComments,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetComments,
-                  title: AppLocalizations.of(context)!.menuBasicComments,
+                  data: AppConstants.txtDartComments,
+                  title: AppLocalizations.of(context)!.menuDartBasicComments,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicVariables,
+              text: AppLocalizations.of(context)!.menuDartBasicVariables,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetVariables,
-                  title: AppLocalizations.of(context)!.menuBasicVariables,
+                  data: AppConstants.txtDartVariables,
+                  title: AppLocalizations.of(context)!.menuDartBasicVariables,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicNomenclatures,
+              text: AppLocalizations.of(context)!.menuDartBasicNomenclatures,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetNomenclatures,
-                  title: AppLocalizations.of(context)!.menuBasicNomenclatures,
+                  data: AppConstants.txtDartNomenclatures,
+                  title:
+                      AppLocalizations.of(context)!.menuDartBasicNomenclatures,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicTypes,
+              text: AppLocalizations.of(context)!.menuDartBasicTypes,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetTypes,
-                  title: AppLocalizations.of(context)!.menuBasicTypes,
+                  data: AppConstants.txtDartTypes,
+                  title: AppLocalizations.of(context)!.menuDartBasicTypes,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicMathOperations,
+              text: AppLocalizations.of(context)!.menuDartBasicMathOperations,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetMathOperations,
-                  title: AppLocalizations.of(context)!.menuBasicMathOperations,
+                  data: AppConstants.txtDartMathOperations,
+                  title:
+                      AppLocalizations.of(context)!.menuDartBasicMathOperations,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicConcatenationStrings,
+              text: AppLocalizations.of(context)!
+                  .menuDartBasicConcatenationStrings,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetConcatenationStrings,
+                  data: AppConstants.txtDartConcatenationStrings,
                   title: AppLocalizations.of(context)!
-                      .menuBasicConcatenationStrings,
+                      .menuDartBasicConcatenationStrings,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicNullSafety,
+              text: AppLocalizations.of(context)!.menuDartBasicNullSafety,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetNullSafety,
-                  title: AppLocalizations.of(context)!.menuBasicNullSafety,
+                  data: AppConstants.txtDartNullSafety,
+                  title: AppLocalizations.of(context)!.menuDartBasicNullSafety,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicFluxControl,
+              text: AppLocalizations.of(context)!.menuDartBasicFluxControl,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetFluxControl,
-                  title: AppLocalizations.of(context)!.menuBasicFluxControl,
+                  data: AppConstants.txtDartFluxControl,
+                  title: AppLocalizations.of(context)!.menuDartBasicFluxControl,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuBasicFunctionsParameters,
+              text: AppLocalizations.of(context)!
+                  .menuDartBasicFunctionsParameters,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetFunctionsParameters,
+                  data: AppConstants.txtDartFunctionsParameters,
                   title: AppLocalizations.of(context)!
-                      .menuBasicFunctionsParameters,
+                      .menuDartBasicFunctionsParameters,
                 ),
               ),
             ),
@@ -114,162 +118,178 @@ Set<AppMenu> getDataDart(BuildContext context) {
       ),
     ),
     AppMenu(
-      text: AppLocalizations.of(context)!.menuAdvancedDart,
+      text: AppLocalizations.of(context)!.menuDartAdvancedDart,
       icon: Icons.integration_instructions,
       onPressed: () => Navigator.of(context).pushNamed(
         AppRoutes.snippetFilter,
         arguments: SnippetFilterModel(
-          title: AppLocalizations.of(context)!.menuAdvancedDart,
+          title: AppLocalizations.of(context)!.menuDartAdvancedDart,
           snippets: [
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedFilterClass,
+              text: AppLocalizations.of(context)!.menuDartAdvancedFilterClass,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClass,
-                  title: AppLocalizations.of(context)!.menuAdvancedFilterClass,
+                  data: AppConstants.txtDartClass,
+                  title:
+                      AppLocalizations.of(context)!.menuDartAdvancedFilterClass,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuDartAdvancedFilterPrivatePublic,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartClassPrivatePublic,
+                  title: AppLocalizations.of(context)!
+                      .menuDartAdvancedFilterPrivatePublic,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuDartAdvancedFilterGetterSetter,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartClassGetterSetter,
+                  title: AppLocalizations.of(context)!
+                      .menuDartAdvancedFilterGetterSetter,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuDartAdvancedFilterConstructor,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartClassConstructor,
+                  title: AppLocalizations.of(context)!
+                      .menuDartAdvancedFilterConstructor,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuDartAdvancedFilterExtends,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartClassExtends,
+                  title: AppLocalizations.of(context)!
+                      .menuDartAdvancedFilterExtends,
                 ),
               ),
             ),
             SnippetFilterListModel(
               text:
-                  AppLocalizations.of(context)!.menuAdvancedFilterPrivatePublic,
+                  AppLocalizations.of(context)!.menuDartAdvancedFilterAbstract,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClassPrivatePublic,
+                  data: AppConstants.txtDartClassAbstract,
                   title: AppLocalizations.of(context)!
-                      .menuAdvancedFilterPrivatePublic,
+                      .menuDartAdvancedFilterAbstract,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuDartAdvancedFilterImplements,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartClassImplements,
+                  title: AppLocalizations.of(context)!
+                      .menuDartAdvancedFilterImplements,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuDartAdvancedFilterPolymorphism,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartClassPolymorphism,
+                  title: AppLocalizations.of(context)!
+                      .menuDartAdvancedFilterPolymorphism,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuDartAdvancedList,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartList,
+                  title: AppLocalizations.of(context)!.menuDartAdvancedList,
+                ),
+              ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuDartAdvancedMap,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartMap,
+                  title: AppLocalizations.of(context)!.menuDartAdvancedMap,
                 ),
               ),
             ),
             SnippetFilterListModel(
               text:
-                  AppLocalizations.of(context)!.menuAdvancedFilterGetterSetter,
+                  AppLocalizations.of(context)!.menuDartAdvancedOperatorSpread,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClassGetterSetter,
+                  data: AppConstants.txtDartOperatorSpread,
                   title: AppLocalizations.of(context)!
-                      .menuAdvancedFilterGetterSetter,
-                ),
-              ),
-            ),
-            SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedFilterConstructor,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AppRoutes.snippetShow,
-                arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClassConstructor,
-                  title: AppLocalizations.of(context)!
-                      .menuAdvancedFilterConstructor,
-                ),
-              ),
-            ),
-            SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedFilterExtends,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AppRoutes.snippetShow,
-                arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClassExtends,
-                  title:
-                      AppLocalizations.of(context)!.menuAdvancedFilterExtends,
-                ),
-              ),
-            ),
-            SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedFilterAbstract,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AppRoutes.snippetShow,
-                arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClassAbstract,
-                  title:
-                      AppLocalizations.of(context)!.menuAdvancedFilterAbstract,
-                ),
-              ),
-            ),
-            SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedFilterImplements,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AppRoutes.snippetShow,
-                arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClassImplements,
-                  title: AppLocalizations.of(context)!
-                      .menuAdvancedFilterImplements,
+                      .menuDartAdvancedOperatorSpread,
                 ),
               ),
             ),
             SnippetFilterListModel(
               text:
-                  AppLocalizations.of(context)!.menuAdvancedFilterPolymorphism,
+                  AppLocalizations.of(context)!.menuDartAdvancedCascadeOperator,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetClassPolymorphism,
+                  data: AppConstants.txtDartCascadeOperator,
                   title: AppLocalizations.of(context)!
-                      .menuAdvancedFilterPolymorphism,
+                      .menuDartAdvancedCascadeOperator,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedList,
+              text: AppLocalizations.of(context)!.menuDartAdvancedPubSpec,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetList,
-                  title: AppLocalizations.of(context)!.menuAdvancedList,
+                  data: AppConstants.txtDartPubSpec,
+                  title: AppLocalizations.of(context)!.menuDartAdvancedPubSpec,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedMap,
+              text: AppLocalizations.of(context)!.menuDartAdvancedTypedef,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetMap,
-                  title: AppLocalizations.of(context)!.menuAdvancedMap,
+                  data: AppConstants.txtDartTypedef,
+                  title: AppLocalizations.of(context)!.menuDartAdvancedTypedef,
                 ),
               ),
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedOperatorSpread,
+              text: AppLocalizations.of(context)!.menuDartAdvancedSplit,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetOperatorSpread,
-                  title:
-                      AppLocalizations.of(context)!.menuAdvancedOperatorSpread,
-                ),
-              ),
-            ),
-            SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedCascadeOperator,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AppRoutes.snippetShow,
-                arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetCascadeOperator,
-                  title:
-                      AppLocalizations.of(context)!.menuAdvancedCascadeOperator,
-                ),
-              ),
-            ),
-            SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedPubSpec,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AppRoutes.snippetShow,
-                arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetPubSpec,
-                  title: AppLocalizations.of(context)!.menuAdvancedPubSpec,
-                ),
-              ),
-            ),
-            SnippetFilterListModel(
-              text: AppLocalizations.of(context)!.menuAdvancedTypedef,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AppRoutes.snippetShow,
-                arguments: SnippetShowModel(
-                  data: AppConstants.txtSnippetTypedef,
-                  title: AppLocalizations.of(context)!.menuAdvancedTypedef,
+                  data: AppConstants.txtDartSplit,
+                  title: AppLocalizations.of(context)!.menuDartAdvancedSplit,
                 ),
               ),
             ),

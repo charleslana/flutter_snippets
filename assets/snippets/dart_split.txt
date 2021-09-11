@@ -1,0 +1,21 @@
+void main() {
+  const String text = 'Dart,Flutter,Programming';
+  final List<String> result = text.split(',');
+  print(result);
+
+  const String text2 = 'Android iOS Linux Windows MacOS';
+  final List<String> result2 = text2.split(' ');
+  print(result2);
+
+  const String text3 = 'axbxxcd';
+  final List<String> result3 = text3.split('x');
+  print(result3);
+
+  const String text4 = 'axbxxcd';
+  final List<String> result4 = text4.split(RegExp('x+'));
+  print(result4);
+
+  const String text5 = 'dart';
+  final List<String> result5 = text5.split('');
+  print(result5);
+}

@@ -37,7 +37,7 @@ class _MyAppMaterialState extends State<MyAppMaterial>
         vsync: this, duration: const Duration(milliseconds: 3000))
       ..repeat();
 
-    _animation = Tween(begin: 5, end: 3.0).animate(
+    _animation = Tween(begin: 5.1, end: 3.1).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeIn),
     );
     super.initState();
