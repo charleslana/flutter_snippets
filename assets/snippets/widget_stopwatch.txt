@@ -54,6 +54,7 @@ class _MyAppMaterialState extends State<MyAppMaterial> {
     setState(() {
       _startStop = true;
       _watch.stop();
+      _timer.cancel();
       _setTime();
     });
   }

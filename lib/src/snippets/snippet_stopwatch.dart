@@ -35,6 +35,7 @@ class _SnippetStopwatchState extends State<SnippetStopwatch> {
     setState(() {
       _startStop = true;
       _watch.stop();
+      _timer.cancel();
       _setTime();
     });
   }
