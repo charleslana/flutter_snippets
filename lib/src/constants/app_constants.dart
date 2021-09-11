@@ -24,6 +24,7 @@ class AppConstants {
   static const String txtSnippetOperatorSpread = 'dart_operator_spread';
   static const String txtSnippetCascadeOperator = 'dart_cascade_operator';
   static const String txtSnippetPubSpec = 'dart_pubspec';
+  static const String txtSnippetTypedef = 'dart_typedef';
   static const String txtSnippetWidgetStateless = 'widget_stateless';
   static const String txtSnippetWidgetStateful = 'widget_stateful';
   static const String txtSnippetWidgetSafeArea = 'widget_safe_area';
@@ -128,6 +129,9 @@ class AppConstants {
       'widget_data_table_with_sort';
   static const String txtSnippetWidgetExpansionTile = 'widget_expansion_tile';
   static const String txtSnippetWidgetLinearGradient = 'widget_linear_gradient';
+  static const String txtSnippetWidgetBaseline = 'widget_baseline';
+  static const String txtSnippetWidgetActionChip = 'widget_action_chip';
+  static const String txtSnippetWidgetBackdropFilter = 'widget_backdrop_filter';
   static const String txtSnippetWidgetRefreshIndicator =
       'widget_refresh_indicator';
   static const String txtSnippetWidgetDraggable = 'widget_draggable';

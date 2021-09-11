@@ -1,0 +1,54 @@
+typedef IntOperation<int> = int Function(int a, int b);
+typedef ScoreList = List<int>;
+
+int processTwoInts(IntOperation<int> intOperation, int a, int b) {
+  return intOperation(a, b);
+}
+
+class MyClass {
+  MyClass(this.intOperation);
+
+  IntOperation<int> intOperation;
+
+  int doIntOperation(int a, int b) {
+    return intOperation(a, b);
+  }
+}
+
+class MyOtherClass {
+  MyOtherClass({required this.currentScores});
+
+  ScoreList currentScores;
+
+  ScoreList get scores => currentScores;
+
+  set scores(ScoreList currentScores) {
+    this.currentScores = currentScores;
+  }
+
+  ScoreList getMultipliedScores(int multiplyFactor) {
+    final List<int> result = [];
+
+    for (final element in currentScores) {
+      result.add(element * multiplyFactor);
+    }
+
+    return result;
+  }
+}
+
+void main() {
+  int sumTwoNumbers(int a, int b) => a + b;
+  print(sumTwoNumbers(1, 1));
+
+  print(processTwoInts(sumTwoNumbers, 1, 2));
+
+  final MyClass myClass = MyClass(sumTwoNumbers);
+  print(myClass.doIntOperation(3, 4));
+
+  final MyOtherClass myOtherClass = MyOtherClass(currentScores: [60, 80, 70])
+    ..scores = [70, 90];
+  print(myOtherClass.currentScores);
+
+  print(myOtherClass.getMultipliedScores(2));
+}

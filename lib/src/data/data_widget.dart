@@ -6,6 +6,7 @@ import 'package:flutter_snippets/src/models/snippet_filter_model.dart';
 import 'package:flutter_snippets/src/models/snippet_show_model.dart';
 import 'package:flutter_snippets/src/routes/app_routes.dart';
 import 'package:flutter_snippets/src/snippets/snippet_absorb_pointer.dart';
+import 'package:flutter_snippets/src/snippets/snippet_action_chip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_align.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_container.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_cross_fade.dart';
@@ -15,7 +16,9 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_switcher.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_aspect_ratio.dart';
+import 'package:flutter_snippets/src/snippets/snippet_backdrop_filter.dart';
 import 'package:flutter_snippets/src/snippets/snippet_banner.dart';
+import 'package:flutter_snippets/src/snippets/snippet_baseline.dart';
 import 'package:flutter_snippets/src/snippets/snippet_border_radius.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
@@ -1272,6 +1275,44 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicLinearGradient,
                   widget: const SnippetLinearGradient(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicBaseline,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtSnippetWidgetBaseline,
+                  title: AppLocalizations.of(context)!.menuWidgetBasicBaseline,
+                  widget: const SnippetBaseline(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicActionChip,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtSnippetWidgetActionChip,
+                  title:
+                      AppLocalizations.of(context)!.menuWidgetBasicActionChip,
+                  widget: const SnippetActionChip(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicBackdropFilter,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtSnippetWidgetBackdropFilter,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetBasicBackdropFilter,
+                  widget: const SnippetBackdropFilter(),
                 ),
               ),
               isNew: true,

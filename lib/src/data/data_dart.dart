@@ -263,6 +263,16 @@ Set<AppMenu> getDataDart(BuildContext context) {
                 ),
               ),
             ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuAdvancedTypedef,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtSnippetTypedef,
+                  title: AppLocalizations.of(context)!.menuAdvancedTypedef,
+                ),
+              ),
+            ),
           ],
         ),
       ),
