@@ -127,6 +127,8 @@ class AppConstants {
   static const String txtWidgetBackdropFilter = 'widget_backdrop_filter';
   static const String txtWidgetExpandIcon = 'widget_expand_icon';
   static const String txtWidgetShapeDecoration = 'widget_shape_decoration';
+  static const String txtWidgetImageIcon = 'widget_image_icon';
+  static const String txtWidgetChoiceChip = 'widget_choice_chip';
   static const String txtWidgetRefreshIndicator = 'widget_refresh_indicator';
   static const String txtWidgetDraggable = 'widget_draggable';
   static const String txtWidgetGlobalKey = 'widget_global_key';
@@ -190,6 +192,8 @@ class AppConstants {
   static const String txtWidgetFadeInImage = 'widget_fade_in_image';
   static const String txtWidgetFadeTransition = 'widget_fade_transition';
   static const String txtWidgetAnimatedSwitcher = 'widget_animated_switcher';
+  static const String txtWidgetAnimatedList = 'widget_animated_list';
+  static const String txtWidgetSlideTransition = 'widget_slide_transition';
   static const String txtMainDeviceOrientation = 'main_device_orientation';
   static const String txtMainSystemUIOverlayStyle =
       'main_system_ui_overlay_style';

@@ -12,6 +12,7 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_container.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_cross_fade.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_default_text_style.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_image.dart';
+import 'package:flutter_snippets/src/snippets/snippet_animated_list.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_switcher.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
@@ -29,6 +30,7 @@ import 'package:flutter_snippets/src/snippets/snippet_card.dart';
 import 'package:flutter_snippets/src/snippets/snippet_checkbox.dart';
 import 'package:flutter_snippets/src/snippets/snippet_checkbox_list_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_chip.dart';
+import 'package:flutter_snippets/src/snippets/snippet_choice_chip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circle_avatar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_circular_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_clip_oval.dart';
@@ -80,6 +82,7 @@ import 'package:flutter_snippets/src/snippets/snippet_icon_background.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ignore_pointer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_image_filtered.dart';
+import 'package:flutter_snippets/src/snippets/snippet_image_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_image_loading_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_indexed_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
@@ -128,6 +131,7 @@ import 'package:flutter_snippets/src/snippets/snippet_shader_mask.dart';
 import 'package:flutter_snippets/src/snippets/snippet_shape_decoration.dart';
 import 'package:flutter_snippets/src/snippets/snippet_single_child_scroll_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_sized_box.dart';
+import 'package:flutter_snippets/src/snippets/snippet_slide_transition.dart';
 import 'package:flutter_snippets/src/snippets/snippet_slider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_sliver_app_bar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_sliver_grid.dart';
@@ -1347,6 +1351,31 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               ),
               isNew: true,
             ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicImageIcon,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetImageIcon,
+                  title: AppLocalizations.of(context)!.menuWidgetBasicImageIcon,
+                  widget: const SnippetImageIcon(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicChoiceChip,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetChoiceChip,
+                  title:
+                      AppLocalizations.of(context)!.menuWidgetBasicChoiceChip,
+                  widget: const SnippetChoiceChip(),
+                ),
+              ),
+              isNew: true,
+            ),
           ],
         ),
       ),
@@ -2116,6 +2145,32 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   tip: AppLocalizations.of(context)!.tipAnimatedSwitcher,
                 ),
               ),
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuAnimationAnimatedList,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetAnimatedList,
+                  title:
+                      AppLocalizations.of(context)!.menuAnimationAnimatedList,
+                  widget: const SnippetAnimatedList(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuAnimationSlideTransition,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetSlideTransition,
+                  title: AppLocalizations.of(context)!
+                      .menuAnimationSlideTransition,
+                  widget: const SnippetSlideTransition(),
+                ),
+              ),
+              isNew: true,
             ),
           ],
         ),
