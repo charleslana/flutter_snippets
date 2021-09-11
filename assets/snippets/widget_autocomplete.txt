@@ -1,0 +1,128 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
+    );
+  }
+}
+
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
+  @override
+  _MyAppMaterialState createState() => _MyAppMaterialState();
+}
+
+class _MyAppMaterialState extends State<MyAppMaterial> {
+  final List<RandomText> continentOptions = const [
+    RandomText(
+      id: 1,
+      name: 'First',
+    ),
+    RandomText(
+      id: 2,
+      name: 'Second',
+    ),
+    RandomText(
+      id: 3,
+      name: 'Third',
+    ),
+    RandomText(
+      id: 4,
+      name: 'Fourth',
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Autocomplete<RandomText>(
+          optionsBuilder: (TextEditingValue textEditingValue) {
+            return continentOptions
+                .where((RandomText continent) => continent.name
+                    .toLowerCase()
+                    .startsWith(textEditingValue.text.toLowerCase()))
+                .toList();
+          },
+          displayStringForOption: (RandomText option) => option.name,
+          fieldViewBuilder: (BuildContext context,
+              TextEditingController fieldTextEditingController,
+              FocusNode fieldFocusNode,
+              VoidCallback onFieldSubmitted) {
+            return TextField(
+              controller: fieldTextEditingController,
+              focusNode: fieldFocusNode,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Please enter a search text',
+              ),
+            );
+          },
+          onSelected: (RandomText selection) {},
+          optionsViewBuilder: (BuildContext context,
+              AutocompleteOnSelected<RandomText> onSelected,
+              Iterable<RandomText> options) {
+            return Align(
+              alignment: Alignment.topLeft,
+              child: Material(
+                child: Container(
+                  width: 300,
+                  color: Colors.blue,
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(10),
+                    itemCount: options.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      final RandomText option = options.elementAt(index);
+
+                      return GestureDetector(
+                        onTap: () {
+                          onSelected(option);
+                        },
+                        child: ListTile(
+                          title: Text(
+                            option.toString(),
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class RandomText {
+  const RandomText({
+    required this.id,
+    required this.name,
+  });
+
+  final int id;
+  final String name;
+
+  @override
+  String toString() {
+    return name;
+  }
+}

@@ -16,6 +16,7 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_switcher.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_aspect_ratio.dart';
+import 'package:flutter_snippets/src/snippets/snippet_autocomplete.dart';
 import 'package:flutter_snippets/src/snippets/snippet_backdrop_filter.dart';
 import 'package:flutter_snippets/src/snippets/snippet_banner.dart';
 import 'package:flutter_snippets/src/snippets/snippet_baseline.dart';
@@ -56,6 +57,7 @@ import 'package:flutter_snippets/src/snippets/snippet_dropdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button.dart';
 import 'package:flutter_snippets/src/snippets/snippet_elevated_button_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_end_drawer.dart';
+import 'package:flutter_snippets/src/snippets/snippet_expand_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expanded.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expansion_panel.dart';
 import 'package:flutter_snippets/src/snippets/snippet_expansion_panel_list.dart';
@@ -123,6 +125,7 @@ import 'package:flutter_snippets/src/snippets/snippet_scrollbar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_selectable_text.dart';
 import 'package:flutter_snippets/src/snippets/snippet_send_data_to_screen.dart';
 import 'package:flutter_snippets/src/snippets/snippet_shader_mask.dart';
+import 'package:flutter_snippets/src/snippets/snippet_shape_decoration.dart';
 import 'package:flutter_snippets/src/snippets/snippet_single_child_scroll_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_sized_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_slider.dart';
@@ -1317,6 +1320,33 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               ),
               isNew: true,
             ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicExpandIcon,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtSnippetWidgetExpandIcon,
+                  title:
+                      AppLocalizations.of(context)!.menuWidgetBasicExpandIcon,
+                  widget: const SnippetExpandIcon(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text:
+                  AppLocalizations.of(context)!.menuWidgetBasicShapeDecoration,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtSnippetWidgetShapeDecoration,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetBasicShapeDecoration,
+                  widget: const SnippetShapeDecoration(),
+                ),
+              ),
+              isNew: true,
+            ),
           ],
         ),
       ),
@@ -1842,6 +1872,20 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedScrollToBottomOrTop,
                   widget: const SnippetScrollToBottomOrTop(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text:
+                  AppLocalizations.of(context)!.menuWidgetAdvancedAutocomplete,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtSnippetWidgetAutocomplete,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedAutocomplete,
+                  widget: const SnippetAutocomplete(),
                 ),
               ),
               isNew: true,

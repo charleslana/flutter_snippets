@@ -132,6 +132,9 @@ class AppConstants {
   static const String txtSnippetWidgetBaseline = 'widget_baseline';
   static const String txtSnippetWidgetActionChip = 'widget_action_chip';
   static const String txtSnippetWidgetBackdropFilter = 'widget_backdrop_filter';
+  static const String txtSnippetWidgetExpandIcon = 'widget_expand_icon';
+  static const String txtSnippetWidgetShapeDecoration =
+      'widget_shape_decoration';
   static const String txtSnippetWidgetRefreshIndicator =
       'widget_refresh_indicator';
   static const String txtSnippetWidgetDraggable = 'widget_draggable';
@@ -182,6 +185,7 @@ class AppConstants {
   static const String txtSnippetWidgetDatePicker = 'widget_date_picker';
   static const String txtSnippetWidgetScrollToBottomOrTop =
       'widget_scroll_to_bottom_or_top';
+  static const String txtSnippetWidgetAutocomplete = 'widget_autocomplete';
   static const String txtSnippetWidgetStopwtach = 'widget_stopwatch';
   static const String txtSnippetWidgetCountdown = 'widget_countdown';
   static const String txtSnippetWidgetAnimationIcon = 'widget_animation_icon';
