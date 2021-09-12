@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
+    );
+  }
+}
+
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
+  @override
+  _MyAppMaterialState createState() => _MyAppMaterialState();
+}
+
+class _MyAppMaterialState extends State<MyAppMaterial> {
+  int _selectedIndex = 0;
+
+  List<NavigationRailDestination> _buildDestinations() {
+    const Icon icon = Icon(Icons.check_circle_outline);
+
+    return [
+      const NavigationRailDestination(
+        icon: icon,
+        label: Text('Menu 1'),
+      ),
+      const NavigationRailDestination(
+        icon: icon,
+        label: Text('Menu 2'),
+      ),
+      const NavigationRailDestination(
+        icon: icon,
+        label: Text('Menu 3'),
+      ),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: [
+          NavigationRail(
+            selectedIndex: _selectedIndex,
+            destinations: _buildDestinations(),
+            onDestinationSelected: (int index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
+          ),
+          const VerticalDivider(),
+          Expanded(
+            child: Center(
+              child: Text('Content of Menu $_selectedIndex'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

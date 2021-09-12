@@ -14,6 +14,7 @@ import 'package:flutter_snippets/src/snippets/snippet_animated_default_text_styl
 import 'package:flutter_snippets/src/snippets/snippet_animated_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_list.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_opacity.dart';
+import 'package:flutter_snippets/src/snippets/snippet_animated_size.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animated_switcher.dart';
 import 'package:flutter_snippets/src/snippets/snippet_animation_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_aspect_ratio.dart';
@@ -70,6 +71,7 @@ import 'package:flutter_snippets/src/snippets/snippet_fade_transition.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fitted_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flexible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_floating_action_button.dart';
+import 'package:flutter_snippets/src/snippets/snippet_flow.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flutter_logo.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fractionally_sized_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_future_builder.dart';
@@ -101,6 +103,7 @@ import 'package:flutter_snippets/src/snippets/snippet_load_txt.dart';
 import 'package:flutter_snippets/src/snippets/snippet_matrix.dart';
 import 'package:flutter_snippets/src/snippets/snippet_media_query.dart';
 import 'package:flutter_snippets/src/snippets/snippet_mouse_region.dart';
+import 'package:flutter_snippets/src/snippets/snippet_navigation_rail.dart';
 import 'package:flutter_snippets/src/snippets/snippet_navigator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_navigator_with_arguments.dart';
 import 'package:flutter_snippets/src/snippets/snippet_on_generate_route.dart';
@@ -1949,6 +1952,32 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               ),
               isNew: true,
             ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuWidgetAdvancedNavigationRail,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetNavigationRail,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedNavigationRail,
+                  widget: const SnippetNavigationRail(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetAdvancedFlow,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetFlow,
+                  title: AppLocalizations.of(context)!.menuWidgetAdvancedFlow,
+                  widget: const SnippetFlow(),
+                ),
+              ),
+              isNew: true,
+            ),
           ],
         ),
       ),
@@ -2198,6 +2227,19 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuAnimationSlideTransition,
                   widget: const SnippetSlideTransition(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuAnimationAnimatedSize,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetAnimatedSize,
+                  title:
+                      AppLocalizations.of(context)!.menuAnimationAnimatedSize,
+                  widget: const SnippetAnimatedSize(),
                 ),
               ),
               isNew: true,

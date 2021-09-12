@@ -178,6 +178,8 @@ class AppConstants {
       'widget_scroll_to_bottom_or_top';
   static const String txtWidgetAutocomplete = 'widget_autocomplete';
   static const String txtWidgetHideKeyboard = 'widget_hide_keyboard';
+  static const String txtWidgetNavigationRail = 'widget_navigation_rail';
+  static const String txtWidgetFlow = 'widget_flow';
   static const String txtWidgetStopwtach = 'widget_stopwatch';
   static const String txtWidgetCountdown = 'widget_countdown';
   static const String txtWidgetAnimationIcon = 'widget_animation_icon';
@@ -198,6 +200,7 @@ class AppConstants {
   static const String txtWidgetAnimatedSwitcher = 'widget_animated_switcher';
   static const String txtWidgetAnimatedList = 'widget_animated_list';
   static const String txtWidgetSlideTransition = 'widget_slide_transition';
+  static const String txtWidgetAnimatedSize = 'widget_animated_size';
   static const String txtMainDeviceOrientation = 'main_device_orientation';
   static const String txtMainSystemUIOverlayStyle =
       'main_system_ui_overlay_style';
