@@ -50,9 +50,7 @@ class MyApp extends StatelessWidget {
             create: (_) => LocaleProvider(sharedPreferences)),
         ChangeNotifierProvider(create: (_) => NewsProvider()),
       ],
-      child: MyAppMaterial(
-        appName: packageInfo!.appName,
-      ),
+      child: MyAppMaterial(appName: packageInfo!.appName),
     );
   }
 }
