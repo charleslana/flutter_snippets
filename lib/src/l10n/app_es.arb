@@ -55,6 +55,8 @@
     "menuDartAdvancedPubSpec": "PubSpec",
     "menuDartAdvancedTypedef": "Typedef",
     "menuDartAdvancedSplit": "Split",
+    "menuDartAdvancedJoin": "Join",
+    "menuDartAdvancedConvert": "Convertir",
     "menuWidgetCreate": "Widgets de Creación",
     "menuWidgetCreateStateless": "Widget Apátrida",
     "menuWidgetCreateStateful": "Widget Con el estado",

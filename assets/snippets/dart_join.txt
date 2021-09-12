@@ -1,0 +1,5 @@
+void main() {
+  final List<String> values = [' dart', 'flutter ', 'programming'];
+  final String result = values.map((value) => value.trim()).join(',');
+  print(result);
+}

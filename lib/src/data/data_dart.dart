@@ -282,6 +282,7 @@ Set<AppMenu> getDataDart(BuildContext context) {
                   title: AppLocalizations.of(context)!.menuDartAdvancedTypedef,
                 ),
               ),
+              isNew: true,
             ),
             SnippetFilterListModel(
               text: AppLocalizations.of(context)!.menuDartAdvancedSplit,
@@ -292,6 +293,29 @@ Set<AppMenu> getDataDart(BuildContext context) {
                   title: AppLocalizations.of(context)!.menuDartAdvancedSplit,
                 ),
               ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuDartAdvancedJoin,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartJoin,
+                  title: AppLocalizations.of(context)!.menuDartAdvancedJoin,
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuDartAdvancedConvert,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtDartConvert,
+                  title: AppLocalizations.of(context)!.menuDartAdvancedConvert,
+                ),
+              ),
+              isNew: true,
             ),
           ],
         ),

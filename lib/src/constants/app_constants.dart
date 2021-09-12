@@ -24,6 +24,8 @@ class AppConstants {
   static const String txtDartPubSpec = 'dart_pubspec';
   static const String txtDartTypedef = 'dart_typedef';
   static const String txtDartSplit = 'dart_split';
+  static const String txtDartJoin = 'dart_join';
+  static const String txtDartConvert = 'dart_convert';
   static const String txtWidgetStateless = 'widget_stateless';
   static const String txtWidgetStateful = 'widget_stateful';
   static const String txtWidgetSafeArea = 'widget_safe_area';
