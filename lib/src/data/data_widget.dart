@@ -2038,6 +2038,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedDatePicker,
                   widget: const SnippetDatePicker(),
+                  tip: AppLocalizations.of(context)!.tipDatePicker,
                 ),
               ),
               isNew: true,
