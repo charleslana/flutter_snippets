@@ -27,6 +27,7 @@ import 'package:flutter_snippets/src/snippets/snippet_border_side.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
 import 'package:flutter_snippets/src/snippets/snippet_box_decoration.dart';
+import 'package:flutter_snippets/src/snippets/snippet_box_fit.dart';
 import 'package:flutter_snippets/src/snippets/snippet_box_shadow.dart';
 import 'package:flutter_snippets/src/snippets/snippet_card.dart';
 import 'package:flutter_snippets/src/snippets/snippet_checkbox.dart';
@@ -48,6 +49,7 @@ import 'package:flutter_snippets/src/snippets/snippet_container.dart';
 import 'package:flutter_snippets/src/snippets/snippet_container_transform.dart';
 import 'package:flutter_snippets/src/snippets/snippet_countdown.dart';
 import 'package:flutter_snippets/src/snippets/snippet_custom_paint.dart';
+import 'package:flutter_snippets/src/snippets/snippet_custom_single_child_layout.dart';
 import 'package:flutter_snippets/src/snippets/snippet_data_table.dart';
 import 'package:flutter_snippets/src/snippets/snippet_data_table_with_sort.dart';
 import 'package:flutter_snippets/src/snippets/snippet_date_picker.dart';
@@ -69,6 +71,7 @@ import 'package:flutter_snippets/src/snippets/snippet_expansion_panel_list.dart'
 import 'package:flutter_snippets/src/snippets/snippet_expansion_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fade_in_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fade_transition.dart';
+import 'package:flutter_snippets/src/snippets/snippet_filter_chip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_fitted_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_flexible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_floating_action_button.dart';
@@ -91,6 +94,7 @@ import 'package:flutter_snippets/src/snippets/snippet_image_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_image_loading_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_indexed_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
+import 'package:flutter_snippets/src/snippets/snippet_input_chip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_interactive_viewer.dart';
 import 'package:flutter_snippets/src/snippets/snippet_intrinsic_width.dart';
 import 'package:flutter_snippets/src/snippets/snippet_layout_builder.dart';
@@ -150,6 +154,7 @@ import 'package:flutter_snippets/src/snippets/snippet_stateful.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stateless.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stepper.dart';
 import 'package:flutter_snippets/src/snippets/snippet_stopwatch.dart';
+import 'package:flutter_snippets/src/snippets/snippet_switch.dart';
 import 'package:flutter_snippets/src/snippets/snippet_switch_list_tile.dart';
 import 'package:flutter_snippets/src/snippets/snippet_table.dart';
 import 'package:flutter_snippets/src/snippets/snippet_tabs.dart';
@@ -1439,6 +1444,30 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               ),
               isNew: true,
             ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicSwitch,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetSwitch,
+                  title: AppLocalizations.of(context)!.menuWidgetBasicSwitch,
+                  widget: const SnippetSwitch(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicBoxFit,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetBoxFit,
+                  title: AppLocalizations.of(context)!.menuWidgetBasicBoxFit,
+                  widget: const SnippetBoxFit(),
+                ),
+              ),
+              isNew: true,
+            ),
           ],
         ),
       ),
@@ -2018,6 +2047,46 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   data: AppConstants.txtWidgetFlow,
                   title: AppLocalizations.of(context)!.menuWidgetAdvancedFlow,
                   widget: const SnippetFlow(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuWidgetAdvancedCustomSingleChildLayout,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetCustomSingleChildLayout,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedCustomSingleChildLayout,
+                  widget: const SnippetCustomSingleChildLayout(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetAdvancedFilterChip,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetFilterChip,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedFilterChip,
+                  widget: const SnippetFilterChip(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetAdvancedInputChip,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetInputChip,
+                  title:
+                      AppLocalizations.of(context)!.menuWidgetAdvancedInputChip,
+                  widget: const SnippetInputChip(),
                 ),
               ),
               isNew: true,

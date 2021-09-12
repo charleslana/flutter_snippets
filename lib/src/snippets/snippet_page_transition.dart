@@ -7,129 +7,133 @@ class SnippetPageTransition extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('Hello World!'),
-            const SizedBox(
-              height: 50,
-            ),
-            const IconButton(
-              onPressed: null,
-              icon: Icon(Icons.favorite),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Wrap(
-              spacing: 10,
-              runSpacing: 10,
-              children: [
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.fade,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Hello World!'),
+              const SizedBox(
+                height: 10,
+              ),
+              const IconButton(
+                onPressed: null,
+                icon: Icon(Icons.favorite),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                children: [
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType.fade,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Fade'),
                   ),
-                  child: const Text('Fade'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.downToUp,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType.downToUp,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Down to up'),
                   ),
-                  child: const Text('Down to up'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.leftToRight,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type:
+                            SnippetPageTransitionPageTransitionType.leftToRight,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Left to right'),
                   ),
-                  child: const Text('Left to right'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType
-                          .leftToRightWithFade,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType
+                            .leftToRightWithFade,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Left to right with fade'),
                   ),
-                  child: const Text('Left to right with fade'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.rightToLeft,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type:
+                            SnippetPageTransitionPageTransitionType.rightToLeft,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Right to left'),
                   ),
-                  child: const Text('Right to left'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType
-                          .rightToLeftWithFade,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType
+                            .rightToLeftWithFade,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Right to left with fade'),
                   ),
-                  child: const Text('Right to left with fade'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.rotate,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType.rotate,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Rotate'),
                   ),
-                  child: const Text('Rotate'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.scale,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType.scale,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Scale'),
                   ),
-                  child: const Text('Scale'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.size,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType.size,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Size'),
                   ),
-                  child: const Text('Size'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition<dynamic>(
-                      type: SnippetPageTransitionPageTransitionType.upToDown,
-                      child: const SnippetPageTransitionMyAppMaterialPage(),
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      PageTransition<dynamic>(
+                        type: SnippetPageTransitionPageTransitionType.upToDown,
+                        child: const SnippetPageTransitionMyAppMaterialPage(),
+                      ),
                     ),
+                    child: const Text('Up to down'),
                   ),
-                  child: const Text('Up to down'),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -148,14 +152,14 @@ class SnippetPageTransitionMyAppMaterialPage extends StatelessWidget {
           children: [
             const Text('Page'),
             const SizedBox(
-              height: 50,
+              height: 10,
             ),
             const IconButton(
               onPressed: null,
               icon: Icon(Icons.beach_access),
             ),
             const SizedBox(
-              height: 50,
+              height: 10,
             ),
             ElevatedButton(
               onPressed: () => Navigator.pop(context),

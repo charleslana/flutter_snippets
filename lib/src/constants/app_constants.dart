@@ -135,6 +135,8 @@ class AppConstants {
   static const String txtWidgetUnconstrainedBox = 'widget_unconstrained_box';
   static const String txtWidgetIntrinsicWidth = 'widget_intrinsic_width';
   static const String txtWidgetBorderSide = 'widget_border_side';
+  static const String txtWidgetSwitch = 'widget_switch';
+  static const String txtWidgetBoxFit = 'widget_box_fit';
   static const String txtWidgetRefreshIndicator = 'widget_refresh_indicator';
   static const String txtWidgetDraggable = 'widget_draggable';
   static const String txtWidgetGlobalKey = 'widget_global_key';
@@ -183,6 +185,10 @@ class AppConstants {
   static const String txtWidgetHideKeyboard = 'widget_hide_keyboard';
   static const String txtWidgetNavigationRail = 'widget_navigation_rail';
   static const String txtWidgetFlow = 'widget_flow';
+  static const String txtWidgetCustomSingleChildLayout =
+      'widget_custom_single_child_layout';
+  static const String txtWidgetFilterChip = 'widget_filter_chip';
+  static const String txtWidgetInputChip = 'widget_input_chip';
   static const String txtWidgetStopwtach = 'widget_stopwatch';
   static const String txtWidgetCountdown = 'widget_countdown';
   static const String txtWidgetAnimationIcon = 'widget_animation_icon';

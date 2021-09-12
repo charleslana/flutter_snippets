@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
+    );
+  }
+}
+
+class MyAppMaterial extends StatelessWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final ValueNotifier<Size> size = ValueNotifier<Size>(const Size(200, 100));
+
+    return Scaffold(
+      body: Column(
+        children: [
+          CustomSingleChildLayout(
+            delegate: CustomLayoutDelegate(size),
+            child: Container(
+              color: Colors.teal,
+              width: 50,
+              height: 300,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomLayoutDelegate extends SingleChildLayoutDelegate {
+  CustomLayoutDelegate(this.size) : super(relayout: size);
+
+  final ValueNotifier<Size> size;
+
+  @override
+  Size getSize(BoxConstraints constraints) {
+    return size.value;
+  }
+
+  @override
+  BoxConstraints getConstraintsForChild(BoxConstraints constraints) {
+    return BoxConstraints.tight(size.value / 2);
+  }
+
+  @override
+  Offset getPositionForChild(Size size, Size childSize) {
+    return Offset(size.width / 4, size.height / 4);
+  }
+
+  @override
+  bool shouldRelayout(CustomLayoutDelegate oldDelegate) {
+    return size != oldDelegate.size;
+  }
+}
