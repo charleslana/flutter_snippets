@@ -23,6 +23,7 @@ import 'package:flutter_snippets/src/snippets/snippet_backdrop_filter.dart';
 import 'package:flutter_snippets/src/snippets/snippet_banner.dart';
 import 'package:flutter_snippets/src/snippets/snippet_baseline.dart';
 import 'package:flutter_snippets/src/snippets/snippet_border_radius.dart';
+import 'package:flutter_snippets/src/snippets/snippet_border_side.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_navigation_bar.dart';
 import 'package:flutter_snippets/src/snippets/snippet_bottom_sheet.dart';
 import 'package:flutter_snippets/src/snippets/snippet_box_decoration.dart';
@@ -296,6 +297,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   widget: const SnippetTextDefaultStyle(),
                 ),
               ),
+              isUpdated: true,
             ),
             SnippetFilterListModel(
               text: AppLocalizations.of(context)!.menuWidgetBasicRichText,
@@ -1398,29 +1400,41 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               isNew: true,
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!
-                  .menuWidgetAdvancedUnconstrainedBox,
+              text:
+                  AppLocalizations.of(context)!.menuWidgetBasicUnconstrainedBox,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
                   data: AppConstants.txtWidgetUnconstrainedBox,
                   title: AppLocalizations.of(context)!
-                      .menuWidgetAdvancedUnconstrainedBox,
+                      .menuWidgetBasicUnconstrainedBox,
                   widget: const SnippetUnconstrainedBox(),
                 ),
               ),
               isNew: true,
             ),
             SnippetFilterListModel(
-              text: AppLocalizations.of(context)!
-                  .menuWidgetAdvancedIntrinsicWidth,
+              text: AppLocalizations.of(context)!.menuWidgetBasicIntrinsicWidth,
               onPressed: () => Navigator.of(context).pushNamed(
                 AppRoutes.snippetShow,
                 arguments: SnippetShowModel(
                   data: AppConstants.txtWidgetIntrinsicWidth,
                   title: AppLocalizations.of(context)!
-                      .menuWidgetAdvancedIntrinsicWidth,
+                      .menuWidgetBasicIntrinsicWidth,
                   widget: const SnippetIntrinsicWidth(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!.menuWidgetBasicBorderSide,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetBorderSide,
+                  title:
+                      AppLocalizations.of(context)!.menuWidgetBasicBorderSide,
+                  widget: const SnippetBorderSide(),
                 ),
               ),
               isNew: true,

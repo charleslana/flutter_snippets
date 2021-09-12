@@ -6,11 +6,33 @@ class SnippetTextDefaultStyle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          'Default style',
-          style: DefaultTextStyle.of(context).style,
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          DefaultTextStyle(
+            style: const TextStyle(
+              fontSize: 36,
+              color: Colors.blue,
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text('The first text'),
+                  Text(
+                    'The second text',
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  Text(
+                    'The third text',
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const Text('The fourth text'),
+        ],
       ),
     );
   }
