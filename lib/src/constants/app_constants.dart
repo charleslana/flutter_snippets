@@ -189,6 +189,7 @@ class AppConstants {
       'widget_custom_single_child_layout';
   static const String txtWidgetFilterChip = 'widget_filter_chip';
   static const String txtWidgetInputChip = 'widget_input_chip';
+  static const String txtWidgetListViewBuilder = 'widget_list_view_builder';
   static const String txtWidgetStopwtach = 'widget_stopwatch';
   static const String txtWidgetCountdown = 'widget_countdown';
   static const String txtWidgetAnimationIcon = 'widget_animation_icon';

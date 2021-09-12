@@ -102,6 +102,7 @@ import 'package:flutter_snippets/src/snippets/snippet_limited_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_linear_gradient.dart';
 import 'package:flutter_snippets/src/snippets/snippet_linear_progress_indicator.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view.dart';
+import 'package:flutter_snippets/src/snippets/snippet_list_view_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_view_with_search.dart';
 import 'package:flutter_snippets/src/snippets/snippet_list_wheel_scroll_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_load_json.dart';
@@ -2087,6 +2088,20 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedInputChip,
                   widget: const SnippetInputChip(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuWidgetAdvancedListViewBuilder,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetListViewBuilder,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedListViewBuilder,
+                  widget: const SnippetListViewBuilder(),
                 ),
               ),
               isNew: true,

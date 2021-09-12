@@ -220,6 +220,7 @@
     "menuWidgetAdvancedCustomSingleChildLayout": "CustomSingleChildLayout",
     "menuWidgetAdvancedFilterChip": "FilterChip",
     "menuWidgetAdvancedInputChip": "InputChip",
+    "menuWidgetAdvancedListViewBuilder": "ListViewBuilder",
     "menuWidgetAppStopwatch": "Stopwatch",
     "menuWidgetAppCountdown": "Countdown",
     "menuAnimation": "Animations",

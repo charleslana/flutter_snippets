@@ -208,6 +208,7 @@
     "menuWidgetAdvancedCustomSingleChildLayout": "CustomSingleChildLayout",
     "menuWidgetAdvancedFilterChip": "FilterChip",
     "menuWidgetAdvancedInputChip": "InputChip",
+    "menuWidgetAdvancedListViewBuilder": "ListViewBuilder",
     "menuWidgetAppStopwatch": "Cronógrafo",
     "menuWidgetAppCountdown": "Cuenta Regresiva",
     "menuAnimation": "Animaciones",
