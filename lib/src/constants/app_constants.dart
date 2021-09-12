@@ -137,6 +137,8 @@ class AppConstants {
   static const String txtWidgetBorderSide = 'widget_border_side';
   static const String txtWidgetSwitch = 'widget_switch';
   static const String txtWidgetBoxFit = 'widget_box_fit';
+  static const String txtWidgetAppBar = 'widget_app_bar';
+  static const String txtWidgetMaterialBanner = 'widget_material_banner';
   static const String txtWidgetRefreshIndicator = 'widget_refresh_indicator';
   static const String txtWidgetDraggable = 'widget_draggable';
   static const String txtWidgetGlobalKey = 'widget_global_key';
@@ -190,8 +192,13 @@ class AppConstants {
   static const String txtWidgetFilterChip = 'widget_filter_chip';
   static const String txtWidgetInputChip = 'widget_input_chip';
   static const String txtWidgetListViewBuilder = 'widget_list_view_builder';
+  static const String txtWidgetOverlayEntry = 'widget_overlay_entry';
+  static const String txtWidgetLongPressDraggable =
+      'widget_long_press_draggable';
   static const String txtWidgetStopwtach = 'widget_stopwatch';
   static const String txtWidgetCountdown = 'widget_countdown';
+  static const String txtWidgetQuiz = 'widget_quiz';
+  static const String txtWidgetCalculator = 'widget_calculator';
   static const String txtWidgetAnimationIcon = 'widget_animation_icon';
   static const String txtWidgetAnimatedContainer = 'widget_animated_container';
   static const String txtWidgetAnimatedCrossFade = 'widget_animated_cross_fade';
@@ -211,6 +218,11 @@ class AppConstants {
   static const String txtWidgetAnimatedList = 'widget_animated_list';
   static const String txtWidgetSlideTransition = 'widget_slide_transition';
   static const String txtWidgetAnimatedSize = 'widget_animated_size';
+  static const String txtWidgetAnimatedPadding = 'widget_animated_padding';
+  static const String txtWidgetAnimatedModalBarrier =
+      'widget_animated_modal_barrier';
+  static const String txtWidgetRotationTransition =
+      'widget_rotation_transition';
   static const String txtMainDeviceOrientation = 'main_device_orientation';
   static const String txtMainSystemUIOverlayStyle =
       'main_system_ui_overlay_style';

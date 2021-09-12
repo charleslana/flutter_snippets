@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+
+class SnippetAnimatedModalBarrier extends StatefulWidget {
+  const SnippetAnimatedModalBarrier({Key? key}) : super(key: key);
+
+  @override
+  _SnippetAnimatedModalBarrierState createState() =>
+      _SnippetAnimatedModalBarrierState();
+}
+
+class _SnippetAnimatedModalBarrierState
+    extends State<SnippetAnimatedModalBarrier>
+    with SingleTickerProviderStateMixin {
+  bool _isLoading = false;
+  late Widget _animatedModalBarrier;
+  late AnimationController _animationController;
+  late Animation<Color?> _colorTweenAnimation;
+
+  List<Widget> _buildWidgetList(BuildContext context) {
+    final List<Widget> widgets = [
+      ElevatedButton(
+        onPressed: () {
+          setState(() {
+            _isLoading = true;
+          });
+
+          _animationController
+            ..reset()
+            ..forward();
+
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Button is pressed'),
+            ),
+          );
+
+          Future.delayed(const Duration(seconds: 5), () {
+            setState(() {
+              _isLoading = false;
+            });
+          });
+        },
+        child: const Text('Button'),
+      ),
+    ];
+
+    if (_isLoading) {
+      widgets.add(_animatedModalBarrier);
+    }
+
+    return widgets;
+  }
+
+  @override
+  void initState() {
+    final ColorTween _colorTween = ColorTween(
+      begin: const Color.fromARGB(100, 255, 255, 255),
+      end: const Color.fromARGB(100, 127, 127, 127),
+    );
+
+    _animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 3));
+    _colorTweenAnimation = _colorTween.animate(_animationController);
+
+    _animatedModalBarrier = AnimatedModalBarrier(
+      color: _colorTweenAnimation,
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Builder(
+        builder: (context) => Center(
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 100,
+                  width: 250,
+                  child: Stack(
+                    alignment: AlignmentDirectional.center,
+                    children: _buildWidgetList(context),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

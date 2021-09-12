@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
+    );
+  }
+}
+
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
+  @override
+  _MyAppMaterialState createState() => _MyAppMaterialState();
+}
+
+class _MyAppMaterialState extends State<MyAppMaterial> {
+  Offset _offset = Offset.zero;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          return Stack(
+            children: [
+              Positioned(
+                left: _offset.dx,
+                top: _offset.dy,
+                child: LongPressDraggable(
+                  onDragEnd: (details) {
+                    setState(() {
+                      final double adjustment =
+                          MediaQuery.of(context).size.height -
+                              constraints.maxHeight;
+                      _offset = Offset(
+                          details.offset.dx, details.offset.dy - adjustment);
+                    });
+                  },
+                  feedback: const Text(
+                    'Press and Move',
+                    style: TextStyle(
+                      color: Colors.yellow,
+                      fontSize: 36,
+                    ),
+                  ),
+                  childWhenDragging: const Text(
+                    'Press and Move',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 36,
+                    ),
+                  ),
+                  child: const Text(
+                    'Press and Move',
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontSize: 36,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}

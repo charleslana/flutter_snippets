@@ -1,0 +1,312 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyAppMaterial(),
+    );
+  }
+}
+
+class MyAppMaterial extends StatefulWidget {
+  const MyAppMaterial({Key? key}) : super(key: key);
+
+  @override
+  _MyAppMaterialState createState() => _MyAppMaterialState();
+}
+
+class _MyAppMaterialState extends State<MyAppMaterial> {
+  String num1 = '0';
+  String num2 = '0';
+  String answerText = '0';
+  double answer = 0;
+  String operator = '';
+  int flag = 0;
+
+  void _clear() {
+    setState(() {
+      num1 = '0';
+      num2 = '0';
+      answerText = '0';
+      answer = 0;
+      operator = '';
+      flag = 0;
+    });
+  }
+
+  void _add() {
+    setState(() {
+      operator = '+';
+      answerText = operator;
+      if (flag == 0) {
+        num2 = num1;
+      } else {
+        num2 = answerText;
+      }
+      num1 = '0';
+    });
+  }
+
+  void _sub() {
+    setState(() {
+      operator = '-';
+      answerText = operator;
+      if (flag == 0) {
+        num2 = num1;
+      } else {
+        num2 = answerText;
+      }
+      num1 = '0';
+    });
+  }
+
+  void _mul() {
+    setState(() {
+      operator = '*';
+      answerText = operator;
+      if (flag == 0) {
+        num2 = num1;
+      } else {
+        num2 = answerText;
+      }
+      num1 = '0';
+    });
+  }
+
+  void _div() {
+    setState(() {
+      operator = '/';
+      answerText = operator;
+      if (flag == 0) {
+        num2 = num1;
+      } else {
+        num2 = answerText;
+      }
+      num1 = '0';
+    });
+  }
+
+  void _one() {
+    setState(() {
+      num1 += '1';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _two() {
+    setState(() {
+      num1 += '2';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _three() {
+    setState(() {
+      num1 += '3';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _four() {
+    setState(() {
+      num1 += '4';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _five() {
+    setState(() {
+      num1 += '5';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _six() {
+    setState(() {
+      num1 += '6';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _seven() {
+    setState(() {
+      num1 += '7';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _eight() {
+    setState(() {
+      num1 += '8';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _nine() {
+    setState(() {
+      num1 += '9';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _zero() {
+    setState(() {
+      num1 += '0';
+      answer = double.parse(num1);
+      answerText = '$answer';
+    });
+  }
+
+  void _disp() {
+    setState(() {
+      if (operator == '+') {
+        answer = double.parse(num1) + double.parse(num2);
+        flag++;
+      } else if (operator == '-') {
+        answer = double.parse(num2) - double.parse(num1);
+        flag++;
+      } else if (operator == '*') {
+        answer = double.parse(num2) * double.parse(num1);
+        flag++;
+      } else if (operator == '/') {
+        answer = double.parse(num2) / double.parse(num1);
+        flag++;
+      }
+      answerText = '$answer';
+      num1 = '0';
+      num2 = '0';
+      operator = '';
+      flag = 0;
+    });
+  }
+
+  Widget _button(String number, VoidCallback voidCallback) {
+    final double height = MediaQuery.of(context).size.height * 0.10;
+
+    return MaterialButton(
+      height: height,
+      textColor: Colors.black,
+      color: Colors.grey[100],
+      onPressed: voidCallback,
+      child: Text(
+        number,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 24,
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            constraints: const BoxConstraints.expand(
+              height: 50,
+            ),
+            alignment: Alignment.bottomRight,
+            child: Text(
+              answerText,
+              style: const TextStyle(
+                fontSize: 50,
+              ),
+              textAlign: TextAlign.right,
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: _button('9', _nine),
+              ),
+              Expanded(
+                child: _button('8', _eight),
+              ),
+              Expanded(
+                child: _button('7', _seven),
+              ),
+              Expanded(
+                child: _button('+', _add),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: _button('6', _six),
+              ),
+              Expanded(
+                child: _button('5', _five),
+              ),
+              Expanded(
+                child: _button('4', _four),
+              ),
+              Expanded(
+                child: _button('-', _sub),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: _button('3', _three),
+              ),
+              Expanded(
+                child: _button('2', _two),
+              ),
+              Expanded(
+                child: _button('1', _one),
+              ),
+              Expanded(
+                child: _button('*', _mul),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: _button('C', _clear),
+              ),
+              Expanded(
+                child: _button('0', _zero),
+              ),
+              Expanded(
+                child: _button('=', _disp),
+              ),
+              Expanded(
+                child: _button('/', _div),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}

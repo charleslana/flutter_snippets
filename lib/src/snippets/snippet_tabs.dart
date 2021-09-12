@@ -9,18 +9,31 @@ class SnippetTabs extends StatefulWidget {
 
 class _SnippetTabsState extends State<SnippetTabs>
     with TickerProviderStateMixin {
-  late TabController _controller;
+  late TabController _tabController;
+
+  final List<Tab> _tabs = const [
+    Tab(icon: Icon(Icons.looks_one), child: Text('Tab One')),
+    Tab(icon: Icon(Icons.looks_two), text: 'Tab Two'),
+    Tab(icon: Icon(Icons.looks_3), text: 'Tab Three'),
+    Tab(icon: Icon(Icons.looks_4), text: 'Tab Four'),
+    Tab(icon: Icon(Icons.looks_5), text: 'Tab Five'),
+    Tab(icon: Icon(Icons.looks_6), text: 'Tab Six'),
+  ];
+
+  final List<Widget> _views = const [
+    Center(child: Text('Content of Tab One')),
+    Center(child: Text('Content of Tab Two')),
+    Center(child: Text('Content of Tab Three')),
+    Center(child: Text('Content of Tab Four')),
+    Center(child: Text('Content of Tab Five')),
+    Center(child: Text('Content of Tab Six')),
+  ];
 
   @override
   void initState() {
-    _controller = TabController(vsync: this, length: 3);
+    _tabController = TabController(length: 6, vsync: this);
+    _tabController.animateTo(2);
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 
   @override
@@ -28,59 +41,50 @@ class _SnippetTabsState extends State<SnippetTabs>
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        bottom: TabBar(
-          controller: _controller,
-          tabs: const [
-            Tab(
-              text: 'First',
-            ),
-            Tab(
-              text: 'Second',
-            ),
-            Tab(
-              text: 'Third',
-            ),
-          ],
+        title: const Text(
+          'TabBar',
+          style: TextStyle(color: Colors.black),
         ),
-        title: const Text('Tabs'),
+        backgroundColor: Colors.grey[200],
+        bottom: TabBar(
+          labelColor: Colors.white,
+          unselectedLabelColor: Colors.grey,
+          labelStyle: const TextStyle(fontWeight: FontWeight.bold),
+          unselectedLabelStyle: const TextStyle(fontStyle: FontStyle.italic),
+          overlayColor:
+              MaterialStateColor.resolveWith((Set<MaterialState> states) {
+            if (states.contains(MaterialState.pressed)) {
+              return Colors.white;
+            }
+            if (states.contains(MaterialState.focused)) {
+              return Colors.orange;
+            } else if (states.contains(MaterialState.hovered)) {
+              return Colors.deepPurple;
+            }
+
+            return Colors.transparent;
+          }),
+          indicatorWeight: 10,
+          indicatorColor: Colors.deepPurple,
+          indicatorSize: TabBarIndicatorSize.tab,
+          indicatorPadding: const EdgeInsets.all(5),
+          indicator: BoxDecoration(
+            border: Border.all(color: Colors.deepPurple),
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.deepPurple,
+          ),
+          isScrollable: true,
+          physics: const BouncingScrollPhysics(),
+          onTap: (int index) {},
+          enableFeedback: true,
+          controller: _tabController,
+          tabs: _tabs,
+        ),
       ),
       body: TabBarView(
-        controller: _controller,
-        children: [
-          Container(
-            color: Colors.deepOrangeAccent,
-            child: const Center(
-              child: Text(
-                'First tab',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.blueGrey,
-            child: const Center(
-              child: Text(
-                'Second tab',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.teal,
-            child: const Center(
-              child: Text(
-                'Third tab',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-        ],
+        physics: const BouncingScrollPhysics(),
+        controller: _tabController,
+        children: _views,
       ),
     );
   }
