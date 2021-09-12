@@ -1,7 +1,7 @@
 name: flutter_snippets
 description: A new Flutter project.
 publish_to: 'none'
-version: 1.1.1+4
+version: 1.2.0+4
 
 environment:
   sdk: ">=2.14.0 <3.0.0"
