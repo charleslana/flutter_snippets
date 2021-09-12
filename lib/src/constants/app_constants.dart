@@ -132,6 +132,8 @@ class AppConstants {
   static const String txtWidgetImageIcon = 'widget_image_icon';
   static const String txtWidgetChoiceChip = 'widget_choice_chip';
   static const String txtWidgetDecorationImage = 'widget_decoration_image';
+  static const String txtWidgetUnconstrainedBox = 'widget_unconstrained_box';
+  static const String txtWidgetIntrinsicWidth = 'widget_intrinsic_width';
   static const String txtWidgetRefreshIndicator = 'widget_refresh_indicator';
   static const String txtWidgetDraggable = 'widget_draggable';
   static const String txtWidgetGlobalKey = 'widget_global_key';

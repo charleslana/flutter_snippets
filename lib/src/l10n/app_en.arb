@@ -170,6 +170,8 @@
     "menuWidgetBasicChoiceChip": "ChoiceChip",
     "menuWidgetBasicDecorationImage": "DecorationImage",
     "menuWidgetAdvancedRefreshIndicator": "RefreshIndicator",
+    "menuWidgetAdvancedUnconstrainedBox": "UnconstrainedBox",
+    "menuWidgetAdvancedIntrinsicWidth": "IntrinsicWidth",
     "menuWidgetAdvancedDraggable": "Drag and Drop",
     "menuWidgetAdvancedGlobalKey": "GlobalKey",
     "menuWidgetAdvancedDrawer": "Drawer",

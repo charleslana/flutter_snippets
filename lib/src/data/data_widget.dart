@@ -91,6 +91,7 @@ import 'package:flutter_snippets/src/snippets/snippet_image_loading_builder.dart
 import 'package:flutter_snippets/src/snippets/snippet_indexed_stack.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ink_well.dart';
 import 'package:flutter_snippets/src/snippets/snippet_interactive_viewer.dart';
+import 'package:flutter_snippets/src/snippets/snippet_intrinsic_width.dart';
 import 'package:flutter_snippets/src/snippets/snippet_layout_builder.dart';
 import 'package:flutter_snippets/src/snippets/snippet_limited_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_linear_gradient.dart';
@@ -160,6 +161,7 @@ import 'package:flutter_snippets/src/snippets/snippet_text_style.dart';
 import 'package:flutter_snippets/src/snippets/snippet_toggle_buttons.dart';
 import 'package:flutter_snippets/src/snippets/snippet_tooltip.dart';
 import 'package:flutter_snippets/src/snippets/snippet_transform.dart';
+import 'package:flutter_snippets/src/snippets/snippet_unconstrained_box.dart';
 import 'package:flutter_snippets/src/snippets/snippet_vertical_divider.dart';
 import 'package:flutter_snippets/src/snippets/snippet_visibility.dart';
 import 'package:flutter_snippets/src/snippets/snippet_will_pop_scope.dart';
@@ -1391,6 +1393,34 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicDecorationImage,
                   widget: const SnippetDecorationImage(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuWidgetAdvancedUnconstrainedBox,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetUnconstrainedBox,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedUnconstrainedBox,
+                  widget: const SnippetUnconstrainedBox(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text: AppLocalizations.of(context)!
+                  .menuWidgetAdvancedIntrinsicWidth,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetIntrinsicWidth,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedIntrinsicWidth,
+                  widget: const SnippetIntrinsicWidth(),
                 ),
               ),
               isNew: true,
