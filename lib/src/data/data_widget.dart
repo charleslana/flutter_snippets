@@ -49,6 +49,7 @@ import 'package:flutter_snippets/src/snippets/snippet_custom_paint.dart';
 import 'package:flutter_snippets/src/snippets/snippet_data_table.dart';
 import 'package:flutter_snippets/src/snippets/snippet_data_table_with_sort.dart';
 import 'package:flutter_snippets/src/snippets/snippet_date_picker.dart';
+import 'package:flutter_snippets/src/snippets/snippet_decoration_image.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dialog.dart';
 import 'package:flutter_snippets/src/snippets/snippet_dismissible.dart';
 import 'package:flutter_snippets/src/snippets/snippet_divider.dart';
@@ -77,6 +78,7 @@ import 'package:flutter_snippets/src/snippets/snippet_global_key.dart';
 import 'package:flutter_snippets/src/snippets/snippet_grid_view.dart';
 import 'package:flutter_snippets/src/snippets/snippet_haptic_feedback.dart';
 import 'package:flutter_snippets/src/snippets/snippet_hero.dart';
+import 'package:flutter_snippets/src/snippets/snippet_hide_keyboard.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon.dart';
 import 'package:flutter_snippets/src/snippets/snippet_icon_background.dart';
 import 'package:flutter_snippets/src/snippets/snippet_ignore_pointer.dart';
@@ -1376,6 +1378,20 @@ Set<AppMenu> getDataWidget(BuildContext context) {
               ),
               isNew: true,
             ),
+            SnippetFilterListModel(
+              text:
+                  AppLocalizations.of(context)!.menuWidgetBasicDecorationImage,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetDecorationImage,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetBasicDecorationImage,
+                  widget: const SnippetDecorationImage(),
+                ),
+              ),
+              isNew: true,
+            ),
           ],
         ),
       ),
@@ -1915,6 +1931,20 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedAutocomplete,
                   widget: const SnippetAutocomplete(),
+                ),
+              ),
+              isNew: true,
+            ),
+            SnippetFilterListModel(
+              text:
+                  AppLocalizations.of(context)!.menuWidgetAdvancedHideKeyboard,
+              onPressed: () => Navigator.of(context).pushNamed(
+                AppRoutes.snippetShow,
+                arguments: SnippetShowModel(
+                  data: AppConstants.txtWidgetHideKeyboard,
+                  title: AppLocalizations.of(context)!
+                      .menuWidgetAdvancedHideKeyboard,
+                  widget: const SnippetHideKeyboard(),
                 ),
               ),
               isNew: true,

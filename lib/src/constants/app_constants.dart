@@ -131,6 +131,7 @@ class AppConstants {
   static const String txtWidgetShapeDecoration = 'widget_shape_decoration';
   static const String txtWidgetImageIcon = 'widget_image_icon';
   static const String txtWidgetChoiceChip = 'widget_choice_chip';
+  static const String txtWidgetDecorationImage = 'widget_decoration_image';
   static const String txtWidgetRefreshIndicator = 'widget_refresh_indicator';
   static const String txtWidgetDraggable = 'widget_draggable';
   static const String txtWidgetGlobalKey = 'widget_global_key';
@@ -176,6 +177,7 @@ class AppConstants {
   static const String txtWidgetScrollToBottomOrTop =
       'widget_scroll_to_bottom_or_top';
   static const String txtWidgetAutocomplete = 'widget_autocomplete';
+  static const String txtWidgetHideKeyboard = 'widget_hide_keyboard';
   static const String txtWidgetStopwtach = 'widget_stopwatch';
   static const String txtWidgetCountdown = 'widget_countdown';
   static const String txtWidgetAnimationIcon = 'widget_animation_icon';
