@@ -286,6 +286,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicTextOverflow,
                   widget: const SnippetTextOverflow(),
+                  tip: AppLocalizations.of(context)!.tipTextOverflow,
                 ),
               ),
             ),
@@ -1266,6 +1267,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicHapticFeedback,
                   widget: const SnippetHapticFeedback(),
+                  tip: AppLocalizations.of(context)!.tipHapticFeedback,
                 ),
               ),
               isNew: true,
@@ -1293,6 +1295,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicExpansionTile,
                   widget: const SnippetExpansionTile(),
+                  tip: AppLocalizations.of(context)!.tipExpansionTile,
                 ),
               ),
               isNew: true,
@@ -1306,6 +1309,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicLinearGradient,
                   widget: const SnippetLinearGradient(),
+                  tip: AppLocalizations.of(context)!.tipLinearGradient,
                 ),
               ),
               isNew: true,
@@ -1318,6 +1322,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   data: AppConstants.txtWidgetBaseline,
                   title: AppLocalizations.of(context)!.menuWidgetBasicBaseline,
                   widget: const SnippetBaseline(),
+                  tip: AppLocalizations.of(context)!.tipBaseline,
                 ),
               ),
               isNew: true,
@@ -1331,6 +1336,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicActionChip,
                   widget: const SnippetActionChip(),
+                  tip: AppLocalizations.of(context)!.tipActionChip,
                 ),
               ),
               isNew: true,
@@ -1344,6 +1350,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicBackdropFilter,
                   widget: const SnippetBackdropFilter(),
+                  tip: AppLocalizations.of(context)!.tipBackdropFilter,
                 ),
               ),
               isNew: true,
@@ -1357,6 +1364,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicExpandIcon,
                   widget: const SnippetExpandIcon(),
+                  tip: AppLocalizations.of(context)!.tipExpandIcon,
                 ),
               ),
               isNew: true,
@@ -1371,6 +1379,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicShapeDecoration,
                   widget: const SnippetShapeDecoration(),
+                  tip: AppLocalizations.of(context)!.tipShapeDecoration,
                 ),
               ),
               isNew: true,
@@ -1396,6 +1405,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicChoiceChip,
                   widget: const SnippetChoiceChip(),
+                  tip: AppLocalizations.of(context)!.tipChoiceChip,
                 ),
               ),
               isNew: true,
@@ -1410,6 +1420,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicDecorationImage,
                   widget: const SnippetDecorationImage(),
+                  tip: AppLocalizations.of(context)!.tipDecorationImage,
                 ),
               ),
               isNew: true,
@@ -1424,6 +1435,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicUnconstrainedBox,
                   widget: const SnippetUnconstrainedBox(),
+                  tip: AppLocalizations.of(context)!.tipUnconstrainedBox,
                 ),
               ),
               isNew: true,
@@ -1437,6 +1449,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicIntrinsicWidth,
                   widget: const SnippetIntrinsicWidth(),
+                  tip: AppLocalizations.of(context)!.tipIntrinsicWidth,
                 ),
               ),
               isNew: true,
@@ -1450,6 +1463,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetBasicBorderSide,
                   widget: const SnippetBorderSide(),
+                  tip: AppLocalizations.of(context)!.tipBorderSide,
                 ),
               ),
               isNew: true,
@@ -1462,6 +1476,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   data: AppConstants.txtWidgetSwitch,
                   title: AppLocalizations.of(context)!.menuWidgetBasicSwitch,
                   widget: const SnippetSwitch(),
+                  tip: AppLocalizations.of(context)!.tipSwitch,
                 ),
               ),
               isNew: true,
@@ -1486,6 +1501,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   data: AppConstants.txtWidgetAppBar,
                   title: AppLocalizations.of(context)!.menuWidgetBasicAppBar,
                   widget: const SnippetAppBar(),
+                  tip: AppLocalizations.of(context)!.tipAppBar,
                 ),
               ),
               isNew: true,
@@ -1499,6 +1515,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetBasicMaterialBanner,
                   widget: const SnippetMaterialBanner(),
+                  tip: AppLocalizations.of(context)!.tipMaterialBanner,
                 ),
               ),
               isNew: true,
@@ -1934,6 +1951,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedSplashScreen,
                   widget: const SnippetSplashScreen(),
+                  tip: AppLocalizations.of(context)!.tipSplashScreen,
                 ),
               ),
               isNew: true,
@@ -1947,6 +1965,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedPushNamed,
                   widget: const SnippetPushNamed(),
+                  tip: AppLocalizations.of(context)!.tipPushNamed,
                 ),
               ),
               isNew: true,
@@ -1961,6 +1980,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedOnGenerateRoute,
                   widget: const SnippetOnGenerateRoute(),
+                  tip: AppLocalizations.of(context)!.tipOnGenerateRoute,
                 ),
               ),
               isNew: true,
@@ -1975,6 +1995,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedWillPopScope,
                   widget: const SnippetWillPopScope(),
+                  tip: AppLocalizations.of(context)!.tipWillPopScope,
                 ),
               ),
               isNew: true,
@@ -1988,6 +2009,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedStepper,
                   widget: const SnippetStepper(),
+                  tip: AppLocalizations.of(context)!.tipStepper,
                 ),
               ),
               isNew: true,
@@ -2002,6 +2024,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedToggleButtons,
                   widget: const SnippetToggleButtons(),
+                  tip: AppLocalizations.of(context)!.tipToggleButtons,
                 ),
               ),
               isNew: true,
@@ -2043,6 +2066,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedAutocomplete,
                   widget: const SnippetAutocomplete(),
+                  tip: AppLocalizations.of(context)!.tipAutocomplete,
                 ),
               ),
               isNew: true,
@@ -2071,6 +2095,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedNavigationRail,
                   widget: const SnippetNavigationRail(),
+                  tip: AppLocalizations.of(context)!.tipNavigationRail,
                 ),
               ),
               isNew: true,
@@ -2083,6 +2108,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   data: AppConstants.txtWidgetFlow,
                   title: AppLocalizations.of(context)!.menuWidgetAdvancedFlow,
                   widget: const SnippetFlow(),
+                  tip: AppLocalizations.of(context)!.tipFlow,
                 ),
               ),
               isNew: true,
@@ -2097,6 +2123,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedCustomSingleChildLayout,
                   widget: const SnippetCustomSingleChildLayout(),
+                  tip: AppLocalizations.of(context)!.tipCustomSingleChildLayout,
                 ),
               ),
               isNew: true,
@@ -2110,6 +2137,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedFilterChip,
                   widget: const SnippetFilterChip(),
+                  tip: AppLocalizations.of(context)!.tipFilterChip,
                 ),
               ),
               isNew: true,
@@ -2123,6 +2151,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuWidgetAdvancedInputChip,
                   widget: const SnippetInputChip(),
+                  tip: AppLocalizations.of(context)!.tipInputChip,
                 ),
               ),
               isNew: true,
@@ -2151,6 +2180,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuWidgetAdvancedOverlayEntry,
                   widget: const SnippetOverlayEntry(),
+                  tip: AppLocalizations.of(context)!.tipOverlayEntry,
                 ),
               ),
               isNew: true,
@@ -2429,6 +2459,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuAnimationAnimatedList,
                   widget: const SnippetAnimatedList(),
+                  tip: AppLocalizations.of(context)!.tipAnimatedList,
                 ),
               ),
               isNew: true,
@@ -2442,6 +2473,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuAnimationSlideTransition,
                   widget: const SnippetSlideTransition(),
+                  tip: AppLocalizations.of(context)!.tipSlideTransition,
                 ),
               ),
               isNew: true,
@@ -2455,6 +2487,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title:
                       AppLocalizations.of(context)!.menuAnimationAnimatedSize,
                   widget: const SnippetAnimatedSize(),
+                  tip: AppLocalizations.of(context)!.tipAnimatedSize,
                 ),
               ),
               isNew: true,
@@ -2468,6 +2501,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuAnimationAnimatedPadding,
                   widget: const SnippetAnimatedPadding(),
+                  tip: AppLocalizations.of(context)!.tipAnimatedPadding,
                 ),
               ),
               isNew: true,
@@ -2482,6 +2516,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   title: AppLocalizations.of(context)!
                       .menuAnimationAnimatedModalBarrier,
                   widget: const SnippetAnimatedModalBarrier(),
+                  tip: AppLocalizations.of(context)!.tipAnimatedModalBarrier,
                 ),
               ),
               isNew: true,
@@ -2520,6 +2555,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   data: AppConstants.txtMainDeviceOrientation,
                   title:
                       AppLocalizations.of(context)!.menuMainDeviceOrientation,
+                  tip: AppLocalizations.of(context)!.tipDeviceOrientation,
                 ),
               ),
               isNew: true,
@@ -2532,6 +2568,7 @@ Set<AppMenu> getDataWidget(BuildContext context) {
                   data: AppConstants.txtMainSystemUIOverlayStyle,
                   title: AppLocalizations.of(context)!
                       .menuMainSystemUIOverlayStyle,
+                  tip: AppLocalizations.of(context)!.tipSystemUIOverlayStyle,
                 ),
               ),
               isNew: true,

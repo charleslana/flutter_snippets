@@ -280,6 +280,7 @@ Set<AppMenu> getDataDart(BuildContext context) {
                 arguments: SnippetShowModel(
                   data: AppConstants.txtDartTypedef,
                   title: AppLocalizations.of(context)!.menuDartAdvancedTypedef,
+                  tip: AppLocalizations.of(context)!.tipTypedef,
                 ),
               ),
               isNew: true,
@@ -291,6 +292,7 @@ Set<AppMenu> getDataDart(BuildContext context) {
                 arguments: SnippetShowModel(
                   data: AppConstants.txtDartSplit,
                   title: AppLocalizations.of(context)!.menuDartAdvancedSplit,
+                  tip: AppLocalizations.of(context)!.tipSplit,
                 ),
               ),
               isNew: true,
@@ -302,6 +304,7 @@ Set<AppMenu> getDataDart(BuildContext context) {
                 arguments: SnippetShowModel(
                   data: AppConstants.txtDartJoin,
                   title: AppLocalizations.of(context)!.menuDartAdvancedJoin,
+                  tip: AppLocalizations.of(context)!.tipJoin,
                 ),
               ),
               isNew: true,
