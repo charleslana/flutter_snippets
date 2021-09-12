@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class SnippetAnimatedModalBarrier extends StatefulWidget {
@@ -15,6 +17,7 @@ class _SnippetAnimatedModalBarrierState
   late Widget _animatedModalBarrier;
   late AnimationController _animationController;
   late Animation<Color?> _colorTweenAnimation;
+  late Timer _timer = Timer(const Duration(seconds: 5), () {});
 
   List<Widget> _buildWidgetList(BuildContext context) {
     final List<Widget> widgets = [
@@ -34,7 +37,7 @@ class _SnippetAnimatedModalBarrierState
             ),
           );
 
-          Future.delayed(const Duration(seconds: 5), () {
+          _timer = Timer(const Duration(seconds: 5), () {
             setState(() {
               _isLoading = false;
             });
@@ -70,6 +73,7 @@ class _SnippetAnimatedModalBarrierState
 
   @override
   void dispose() {
+    _timer.cancel();
     _animationController.dispose();
     super.dispose();
   }

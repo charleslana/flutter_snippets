@@ -226,7 +226,7 @@ class _MyAppMaterialState extends State<MyAppMaterial> {
         children: [
           Container(
             constraints: const BoxConstraints.expand(
-              height: 50,
+              height: 80,
             ),
             alignment: Alignment.bottomRight,
             child: Text(

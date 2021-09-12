@@ -207,7 +207,7 @@ class _SnippetCalculatorState extends State<SnippetCalculator> {
         children: [
           Container(
             constraints: const BoxConstraints.expand(
-              height: 50,
+              height: 80,
             ),
             alignment: Alignment.bottomRight,
             child: Text(

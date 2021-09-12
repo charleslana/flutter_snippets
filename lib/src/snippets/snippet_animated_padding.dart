@@ -14,55 +14,55 @@ class _SnippetAnimatedPaddingState extends State<SnippetAnimatedPadding> {
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.width;
-
     return Scaffold(
       body: Builder(
         builder: (context) => Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AnimatedPadding(
-                padding: EdgeInsets.all(_paddingValue),
-                duration: const Duration(seconds: 1),
-                onEnd: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('Animation ends'),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 400,
-                  height: 200,
-                  color: Colors.blue,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AnimatedPadding(
+                  padding: EdgeInsets.all(_paddingValue),
+                  duration: const Duration(seconds: 1),
+                  onEnd: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Animation ends'),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 400,
+                    height: 200,
+                    color: Colors.blue,
+                  ),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 100,
-                    height: 35,
-                    child: TextFormField(
-                      controller: _textController,
-                      keyboardType: TextInputType.number,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 100,
+                      height: 35,
+                      child: TextFormField(
+                        controller: _textController,
+                        keyboardType: TextInputType.number,
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 15),
-                  ElevatedButton(
-                    onPressed: () {
-                      if (int.parse(_textController.text) < height) {
-                        setState(() {
-                          _paddingValue = double.parse(_textController.text);
-                        });
-                      }
-                    },
-                    child: const Text('Set'),
-                  ),
-                ],
-              ),
-            ],
+                    const SizedBox(width: 15),
+                    ElevatedButton(
+                      onPressed: () {
+                        if (int.parse(_textController.text) <= 100) {
+                          setState(() {
+                            _paddingValue = double.parse(_textController.text);
+                          });
+                        }
+                      },
+                      child: const Text('Set'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
